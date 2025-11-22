@@ -1,0 +1,146 @@
+[
+	{
+		"position": 1,
+		"name": "Kölle, Tobias",
+		"wins": 5,
+		"remis": 2,
+		"lost": 0,
+		"points": 17.0,
+		"buchholz": 77.0
+	},
+	{
+		"position": 2,
+		"name": "Gheng, Josef",
+		"wins": 4,
+		"remis": 3,
+		"lost": 0,
+		"points": 15.0,
+		"buchholz": 74.0
+	},
+	{
+		"position": 3,
+		"name": "Portnov, Dmytro",
+		"wins": 4,
+		"remis": 1,
+		"lost": 2,
+		"points": 13.0,
+		"buchholz": 77.0
+	},
+	{
+		"position": 4,
+		"name": "Junesch, Gerhard",
+		"wins": 4,
+		"remis": 1,
+		"lost": 2,
+		"points": 13.0,
+		"buchholz": 73.0
+	},
+	{
+		"position": 5,
+		"name": "Wurmbauer, Nils",
+		"wins": 3,
+		"remis": 2,
+		"lost": 2,
+		"points": 11.0,
+		"buchholz": 67.0
+	},
+	{
+		"position": 6,
+		"name": "Haas, Wilhelm",
+		"wins": 3,
+		"remis": 1,
+		"lost": 3,
+		"points": 10.0,
+		"buchholz": 82.0
+	},
+	{
+		"position": 7,
+		"name": "Lehmann, Stefan",
+		"wins": 3,
+		"remis": 1,
+		"lost": 3,
+		"points": 10.0,
+		"buchholz": 70.0
+	},
+	{
+		"position": 7,
+		"name": "Principe, Nico",
+		"wins": 3,
+		"remis": 1,
+		"lost": 3,
+		"points": 10.0,
+		"buchholz": 70.0
+	},
+	{
+		"position": 9,
+		"name": "Gustain, Marc",
+		"wins": 2,
+		"remis": 4,
+		"lost": 1,
+		"points": 10.0,
+		"buchholz": 69.0
+	},
+	{
+		"position": 10,
+		"name": "Cilo, Selimhan",
+		"wins": 3,
+		"remis": 0,
+		"lost": 4,
+		"points": 9.0,
+		"buchholz": 51.0
+	},
+	{
+		"position": 11,
+		"name": "Schallner, Marc",
+		"wins": 2,
+		"remis": 2,
+		"lost": 3,
+		"points": 8.0,
+		"buchholz": 87.0
+	},
+	{
+		"position": 12,
+		"name": "Staub, Gerhard",
+		"wins": 2,
+		"remis": 2,
+		"lost": 3,
+		"points": 8.0,
+		"buchholz": 65.0
+	},
+	{
+		"position": 13,
+		"name": "Dekan, Hans",
+		"wins": 2,
+		"remis": 1,
+		"lost": 4,
+		"points": 7.0,
+		"buchholz": 57.0
+	},
+	{
+		"position": 14,
+		"name": "Wonisch, Ferdinand",
+		"wins": 2,
+		"remis": 0,
+		"lost": 5,
+		"points": 6.0,
+		"buchholz": 55.0
+	},
+	{
+		"position": 15,
+		"name": "Gheng, Simona",
+		"wins": 1,
+		"remis": 2,
+		"lost": 4,
+		"points": 5.0,
+		"buchholz": 60.0
+	},
+	{
+		"position": 16,
+		"name": "Lederer, Leia",
+		"wins": 1,
+		"remis": 1,
+		"lost": 5,
+		"points": 4.0,
+		"buchholz": 58.0
+	}
+]

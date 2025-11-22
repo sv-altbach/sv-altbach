@@ -1,0 +1,48 @@
+[
+	{
+		"id": "A",
+		"players": ["Uhl,Lars", "Goldinov,Daniel", "Kölle,Tobias"]
+	},
+	{
+		"id": "D",
+		"players": ["Kaykan,Harun", "Sandros Izzi,Diego", "Sandrou Izzi,Milena"]
+	},
+	{
+		"id": "H",
+		"players": ["Cilo,Selimhan", "Heilig,Tim Markus", "Martirosyan,Arman"]
+	},
+	{
+		"id": "I",
+		"players": ["Cöllen,Florian", "Lehmann,Stefan"]
+	},
+	{
+		"id": "J",
+		"players": ["Ruff,Marc", "Bacher,David", "Charalambakis,Michail"]
+	},
+	{
+		"id": "K",
+		"players": ["Ogloblin,Ilia", "Bodriyenko,Markiyan", "Nunez Grégoire,Daniel"]
+	},
+	{
+		"id": "L",
+		"players": ["Gheng,Simona", "Weber,Frank", "Weber,Selim"]
+	},
+	{
+		"id": "M",
+		"players": ["Gheng,Lucas", "Karabetyan,Levon", "Traub,Leon"]
+	},
+	{
+		"id": "O",
+		"players": ["Fabry,Laurin", "Gutsche,Jan-Frederic", "Principe,Nico"]
+	},
+	{
+		"id": "P",
+		"players": ["Dilthey,Lennart", "Wonisch,Ferdinand"],
+		"registrationEntry": 3
+	},
+	{
+		"id": "Q",
+		"players": ["Pillath,Marcus", "Levchenko,Iryna", "Wang,Enya Marie"],
+		"registrationEntry": 3
+	}
+]

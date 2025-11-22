@@ -1,0 +1,11 @@
+{
+	"recommendations": [
+		"biomejs.biome",
+		"oven.bun-vscode",
+		"usernamehw.errorlens",
+		"github.vscode-github-actions",
+		"yoavbls.pretty-ts-errors",
+		"bradlc.vscode-tailwindcss",
+		"stivo.tailwind-fold"
+	]
+}

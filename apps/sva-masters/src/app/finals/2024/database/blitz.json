@@ -1,0 +1,146 @@
+[
+	{
+		"position": 1,
+		"name": "Kölle, Tobias",
+		"wins": 7,
+		"remis": 0,
+		"lost": 0,
+		"points": 21.0,
+		"buchholz": 83.0
+	},
+	{
+		"position": 2,
+		"name": "Gheng, Josef",
+		"wins": 6,
+		"remis": 0,
+		"lost": 1,
+		"points": 18.0,
+		"buchholz": 83.0
+	},
+	{
+		"position": 3,
+		"name": "Portnov, Dmytro",
+		"wins": 4,
+		"remis": 1,
+		"lost": 2,
+		"points": 13.0,
+		"buchholz": 88.0
+	},
+	{
+		"position": 4,
+		"name": "Junesch, Gerhard",
+		"wins": 4,
+		"remis": 0,
+		"lost": 3,
+		"points": 12.0,
+		"buchholz": 87.0
+	},
+	{
+		"position": 5,
+		"name": "Haas, Wilhelm",
+		"wins": 4,
+		"remis": 0,
+		"lost": 3,
+		"points": 12.0,
+		"buchholz": 80.0
+	},
+	{
+		"position": 6,
+		"name": "Gustain, Marc",
+		"wins": 4,
+		"remis": 0,
+		"lost": 3,
+		"points": 12.0,
+		"buchholz": 78.0
+	},
+	{
+		"position": 7,
+		"name": "Schallner, Marc",
+		"wins": 4,
+		"remis": 0,
+		"lost": 3,
+		"points": 12.0,
+		"buchholz": 74.0
+	},
+	{
+		"position": 8,
+		"name": "Wurmbauer, Nils",
+		"wins": 3,
+		"remis": 1,
+		"lost": 3,
+		"points": 10.0,
+		"buchholz": 81.0
+	},
+	{
+		"position": 9,
+		"name": "Staub, Gerhard",
+		"wins": 3,
+		"remis": 1,
+		"lost": 3,
+		"points": 10.0,
+		"buchholz": 50.0
+	},
+	{
+		"position": 10,
+		"name": "Principe, Nico",
+		"wins": 3,
+		"remis": 0,
+		"lost": 4,
+		"points": 9.0,
+		"buchholz": 83.0
+	},
+	{
+		"position": 11,
+		"name": "Gheng, Simona",
+		"wins": 3,
+		"remis": 0,
+		"lost": 4,
+		"points": 9.0,
+		"buchholz": 66.0
+	},
+	{
+		"position": 12,
+		"name": "Lederer, Leia",
+		"wins": 3,
+		"remis": 0,
+		"lost": 4,
+		"points": 9.0,
+		"buchholz": 53.0
+	},
+	{
+		"position": 13,
+		"name": "Cilo, Selimhan",
+		"wins": 2,
+		"remis": 0,
+		"lost": 5,
+		"points": 6.0,
+		"buchholz": 67.0
+	},
+	{
+		"position": 14,
+		"name": "Wonisch, Ferdinand",
+		"wins": 2,
+		"remis": 0,
+		"lost": 5,
+		"points": 6.0,
+		"buchholz": 65.0
+	},
+	{
+		"position": 15,
+		"name": "Dekan, Hans",
+		"wins": 1,
+		"remis": 1,
+		"lost": 5,
+		"points": 4.0,
+		"buchholz": 65.0
+	},
+	{
+		"position": 16,
+		"name": "Lehmann, Stefan",
+		"wins": 1,
+		"remis": 0,
+		"lost": 6,
+		"points": 3.0,
+		"buchholz": 59.0
+	}
+]

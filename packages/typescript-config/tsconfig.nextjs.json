@@ -1,0 +1,13 @@
+{
+	"extends": "./tsconfig.base.json",
+	"compilerOptions": {
+		"plugins": [{ "name": "next" }],
+
+		// Bundler mode
+		"module": "Preserve",
+		"moduleResolution": "Bundler",
+		"allowJs": true,
+		"jsx": "preserve",
+		"noEmit": true
+	}
+}
