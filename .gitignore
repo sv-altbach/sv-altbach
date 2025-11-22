@@ -5,7 +5,10 @@ node_modules
 out
 dist
 *.tgz
+
+# Next.js
 .next
+next-env.d.ts
 
 # dotenv environment variable files
 .env*.local
