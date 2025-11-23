@@ -1,5 +1,5 @@
 import { Link, Table } from "@radix-ui/themes";
-import classNames from "classnames";
+import { cn } from "@/utils";
 
 interface Props {
 	announcementPath?: string | null;
@@ -22,10 +22,10 @@ function AnnouncementPDF({
 					href={announcementPath}
 					download
 					underline="always"
-					className={classNames({
-						"cursor-pointer!": !isRegisterButtonDisabled,
-						"cursor-not-allowed!": isRegisterButtonDisabled,
-					})}
+					className={cn([
+						!isRegisterButtonDisabled && "cursor-pointer!",
+						isRegisterButtonDisabled && "cursor-not-allowed!",
+					])}
 				>
 					Ausschreibung herunterladen
 				</Link>

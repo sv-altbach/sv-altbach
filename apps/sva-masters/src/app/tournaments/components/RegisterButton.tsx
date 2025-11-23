@@ -1,5 +1,5 @@
 import { Button } from "@radix-ui/themes";
-import classNames from "classnames";
+import { cn } from "@/utils";
 
 interface Props {
 	isFinalTournament: boolean;
@@ -22,10 +22,9 @@ function RegisterButton({
 			size="4"
 			mt="5"
 			disabled={isRegisterButtonDisabled}
-			className={classNames({
-				"cursor-pointer!": !isRegisterButtonDisabled,
-				"cursor-not-allowed!": isRegisterButtonDisabled,
-			})}
+			className={cn([
+				isRegisterButtonDisabled ? "cursor-not-allowed!" : "cursor-pointer!",
+			])}
 		>
 			{isRegisterButtonDisabled ? (
 				<span>Jetzt Anmelden</span>

@@ -1,8 +1,8 @@
 import { Table, Tooltip } from "@radix-ui/themes";
-import classNames from "classnames";
 import { MdOutlineKeyboardDoubleArrowUp } from "react-icons/md";
 import { pointMapping } from "@/app/scoreboard/utils/pointMapping";
 import type { Player, Team } from "@/types";
+import { cn } from "@/utils";
 import { getPlayerName } from "@/utils/utils";
 
 interface Props {
@@ -15,11 +15,11 @@ const TableRow = ({ player, team, index }: Props) => {
 	if (!player && team) {
 		return (
 			<Table.Row
-				className={classNames({
-					"bg-[#FFD700]": index === 0,
-					"bg-[#C0C0C0]": index === 1,
-					"bg-[#CD7F32]": index === 2,
-				})}
+				className={cn([
+					index === 0 && "bg-[#FFD700]",
+					index === 1 && "bg-[#C0C0C0]",
+					index === 2 && "bg-[#CD7F32]",
+				])}
 			>
 				<Table.RowHeaderCell>{index + 1}</Table.RowHeaderCell>
 				<Table.Cell>{getTeamName(team)}</Table.Cell>
@@ -36,11 +36,11 @@ const TableRow = ({ player, team, index }: Props) => {
 	if (!team && player) {
 		return (
 			<Table.Row
-				className={classNames({
-					"bg-[#FFD700]": index === 0,
-					"bg-[#C0C0C0]": index === 1,
-					"bg-[#CD7F32]": index === 2,
-				})}
+				className={cn([
+					index === 0 && "bg-[#FFD700]",
+					index === 1 && "bg-[#C0C0C0]",
+					index === 2 && "bg-[#CD7F32]",
+				])}
 			>
 				<Table.RowHeaderCell>{index + 1}</Table.RowHeaderCell>
 				<Table.Cell className="flex items-center">

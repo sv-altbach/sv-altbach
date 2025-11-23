@@ -6,10 +6,10 @@ import {
 	Table,
 	Text,
 } from "@radix-ui/themes";
-import classNames from "classnames";
 import Link from "next/link";
 import { Fragment } from "react";
 import { getTournamentResults } from "@/app/finals/2024/utils/getTournamentResults";
+import { cn } from "@/utils";
 import { getPlayerName } from "@/utils/utils";
 
 const Final2024 = () => {
@@ -100,11 +100,11 @@ const Final2024 = () => {
 									{tournament.data.map((player) => (
 										<Table.Row
 											key={player.name}
-											className={classNames({
-												"bg-[#FFD700]": player.position === 1,
-												"bg-[#C0C0C0]": player.position === 2,
-												"bg-[#CD7F32]": player.position === 3,
-											})}
+											className={cn([
+												player.position === 1 && "bg-[#FFD700]",
+												player.position === 2 && "bg-[#C0C0C0]",
+												player.position === 3 && "bg-[#CD7F32]",
+											])}
 										>
 											<Table.RowHeaderCell>
 												{player.position}
