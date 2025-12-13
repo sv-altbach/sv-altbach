@@ -9,13 +9,13 @@ const Sponsoring = () => {
 		<>
 			<section>
 				<Heading size="8" mb="2" as="h2">
-					Sponsoren
+					Sponsoren & Partner
 				</Heading>
-				<Text as="p">Wir danken allen unseren Sponsoren.</Text>
+				<Text as="p">Wir danken allen unseren Sponsoren und Partnern.</Text>
 			</section>
 
 			<section className="mt-5">
-				<Grid columns="4" align="center">
+				<Grid columns={{ initial: "1", sm: "3" }} align="center" gap="8">
 					<a
 						href="https://www.cit.de/"
 						target="_blank"
@@ -39,6 +39,21 @@ const Sponsoring = () => {
 							loader={imageLoader}
 							src="logo_allianz.png"
 							alt="Allianz Logo"
+							width={500}
+							height={500}
+						/>
+					</a>
+
+					<a
+						href="https://taplo.de/"
+						target="_blank"
+						rel="noreferrer noopener"
+						className="ml-5"
+					>
+						<Image
+							loader={imageLoader}
+							src="logo_taplo.png"
+							alt="Tanschule Plochingen Logo"
 							width={500}
 							height={500}
 						/>
