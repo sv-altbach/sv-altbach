@@ -1,13 +1,13 @@
 import { Table, Tabs } from "@radix-ui/themes";
-import AnnouncementPDF from "@/app/tournaments/components/AnnouncementPDF";
-import AwardOfPoints from "@/app/tournaments/components/AwardOfPoints";
-import BasicInformation from "@/app/tournaments/components/BasicInformation";
-import EntryFees from "@/app/tournaments/components/EntryFees";
-import ListOfAttendeesLink from "@/app/tournaments/components/ListOfAttendeesLink";
-import PointRules from "@/app/tournaments/components/PointRules";
-import Prices from "@/app/tournaments/components/Prices";
-import RegisterButton from "@/app/tournaments/components/RegisterButton";
-import Venue from "@/app/tournaments/components/Venue";
+import AnnouncementPDF from "@/app/sub/masters/tournaments/components/AnnouncementPDF";
+import AwardOfPoints from "@/app/sub/masters/tournaments/components/AwardOfPoints";
+import BasicInformation from "@/app/sub/masters/tournaments/components/BasicInformation";
+import EntryFees from "@/app/sub/masters/tournaments/components/EntryFees";
+import ListOfAttendeesLink from "@/app/sub/masters/tournaments/components/ListOfAttendeesLink";
+import PointRules from "@/app/sub/masters/tournaments/components/PointRules";
+import Prices from "@/app/sub/masters/tournaments/components/Prices";
+import RegisterButton from "@/app/sub/masters/tournaments/components/RegisterButton";
+import Venue from "@/app/sub/masters/tournaments/components/Venue";
 
 interface Props {
 	type?: "blitz" | "rapid" | "960" | "final";

@@ -1,8 +1,8 @@
 "use client";
 
 import { Box, Tabs } from "@radix-ui/themes";
-import TournamentContent from "@/app/tournaments/TournamentContent";
-import tournamentData from "../tournaments.json";
+import TournamentContent from "@/app/sub/masters/tournaments/TournamentContent";
+import tournamentData from "@/app/tournaments.json";
 
 const Tournaments = () => {
 	return (

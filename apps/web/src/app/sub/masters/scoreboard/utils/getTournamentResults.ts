@@ -2,9 +2,12 @@ import fs from "node:fs";
 import type { TournamentResult } from "@/types";
 
 export function getTournamentResults(): TournamentResult[] {
-	const tournamentFiles = fs.readdirSync("src/app/scoreboard/database", {
-		encoding: "utf-8",
-	});
+	const tournamentFiles = fs.readdirSync(
+		"src/app/sub/masters/scoreboard/database",
+		{
+			encoding: "utf-8",
+		},
+	);
 
 	return tournamentFiles
 		.flatMap((tournamentFileName) => {
@@ -13,7 +16,7 @@ export function getTournamentResults(): TournamentResult[] {
 			}
 
 			const tournamentFileContent = fs.readFileSync(
-				`src/app/scoreboard/database/${tournamentFileName}`,
+				`src/app/sub/masters/scoreboard/database/${tournamentFileName}`,
 				{ encoding: "utf-8" },
 			);
 			return JSON.parse(tournamentFileContent);

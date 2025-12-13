@@ -8,9 +8,9 @@ import {
 } from "@radix-ui/themes";
 import Link from "next/link";
 import { Fragment } from "react";
-import { getTournamentResults } from "@/app/finals/2024/utils/getTournamentResults";
 import { cn } from "@/utils";
 import { getPlayerName } from "@/utils/utils";
+import { getTournamentResults } from "./utils/getTournamentResults";
 
 const Final2024 = () => {
 	const results = getTournamentResults();

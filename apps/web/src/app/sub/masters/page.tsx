@@ -5,7 +5,7 @@ import Contact from "@/app/Contact";
 import Footer from "@/app/Footer";
 import Header from "@/app/Header";
 import Sponsoring from "@/app/Sponsoring";
-import Tournaments from "@/app/tournaments/Tournaments";
+import Tournaments from "@/app/sub/masters/tournaments/Tournaments";
 
 export default function Home() {
 	return (

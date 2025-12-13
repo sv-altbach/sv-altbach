@@ -1,7 +1,7 @@
 import { Flex, Table, Text } from "@radix-ui/themes";
 import { MdOutlineKeyboardDoubleArrowUp } from "react-icons/md";
-import TableRow from "@/app/scoreboard/components/TableRow";
-import { getPlayers, getTeams } from "@/app/scoreboard/getPlayers";
+import TableRow from "@/app/sub/masters/scoreboard/components/TableRow";
+import { getPlayers, getTeams } from "@/app/sub/masters/scoreboard/getPlayers";
 
 interface Props {
 	isPlayerTable: boolean;

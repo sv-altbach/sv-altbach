@@ -1,6 +1,6 @@
 import fs from "node:fs";
-import { hasPlayedAllTournaments } from "@/app/scoreboard/utils/playerUtils";
-import { pointMapping } from "@/app/scoreboard/utils/pointMapping";
+import { hasPlayedAllTournaments } from "@/app/sub/masters/scoreboard/utils/playerUtils";
+import { pointMapping } from "@/app/sub/masters/scoreboard/utils/pointMapping";
 import type { Player, Team, TournamentResult } from "@/types";
 
 export const fillPlayerDatabase = (
@@ -86,9 +86,12 @@ export const fillPlayerDatabase = (
 };
 
 function getTeam(tournamentResult: TournamentResult) {
-	const databaseFiles = fs.readdirSync("src/app/scoreboard/database", {
-		encoding: "utf-8",
-	});
+	const databaseFiles = fs.readdirSync(
+		"src/app/sub/masters/scoreboard/database",
+		{
+			encoding: "utf-8",
+		},
+	);
 
 	const teams: Team[] = databaseFiles
 		.flatMap((databaseFile) => {
@@ -97,7 +100,7 @@ function getTeam(tournamentResult: TournamentResult) {
 			}
 
 			const teamsFileContent = fs.readFileSync(
-				`src/app/scoreboard/database/${databaseFile}`,
+				`src/app/sub/masters/scoreboard/database/${databaseFile}`,
 				{ encoding: "utf-8" },
 			);
 			return JSON.parse(teamsFileContent);
@@ -110,9 +113,12 @@ function getTeam(tournamentResult: TournamentResult) {
 }
 
 function getTeamId(tournamentResult: TournamentResult) {
-	const databaseFiles = fs.readdirSync("src/app/scoreboard/database", {
-		encoding: "utf-8",
-	});
+	const databaseFiles = fs.readdirSync(
+		"src/app/sub/masters/scoreboard/database",
+		{
+			encoding: "utf-8",
+		},
+	);
 
 	const teams: Team[] = databaseFiles
 		.flatMap((databaseFile) => {
@@ -121,7 +127,7 @@ function getTeamId(tournamentResult: TournamentResult) {
 			}
 
 			const teamsFileContent = fs.readFileSync(
-				`src/app/scoreboard/database/${databaseFile}`,
+				`src/app/sub/masters/scoreboard/database/${databaseFile}`,
 				{ encoding: "utf-8" },
 			);
 			return JSON.parse(teamsFileContent);

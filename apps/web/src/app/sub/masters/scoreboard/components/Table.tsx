@@ -1,6 +1,6 @@
 import { Table as RadixTable } from "@radix-ui/themes";
-import TableBody from "@/app/scoreboard/components/TableBody";
-import TableHead from "@/app/scoreboard/components/TableHead";
+import TableBody from "@/app/sub/masters/scoreboard/components/TableBody";
+import TableHead from "@/app/sub/masters/scoreboard/components/TableHead";
 
 interface TableProps {
 	mode: "player" | "team";
