@@ -6,7 +6,7 @@ import tournamentData from "../tournaments.json";
 
 const Tournaments = () => {
 	return (
-		<Tabs.Root defaultValue="tournament_5">
+		<Tabs.Root defaultValue="tournament_final">
 			<Tabs.List size="2">
 				<Tabs.Trigger value="tournament_1" className="cursor-pointer!">
 					Turnier 1

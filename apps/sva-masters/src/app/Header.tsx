@@ -12,7 +12,7 @@ const Header = () => {
 			</Heading>
 
 			<Text as="p" size="5" className="text-white">
-				29. November 2025, 73207 Plochingen
+				18. April 2026, 73776 Altbach
 			</Text>
 
 			<Flex gap="4" mt="5">
