@@ -12,9 +12,6 @@
 			"react": "recommended"
 		},
 		"rules": {
-			"suspicious": {
-				"noDoubleEquals": "info"
-			},
 			"nursery": {
 				"useSortedClasses": {
 					"level": "info",
