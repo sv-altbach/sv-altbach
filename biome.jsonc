@@ -24,6 +24,9 @@
 			}
 		}
 	},
+	"formatter": {
+		"lineEnding": "auto"
+	},
 	"css": {
 		"parser": {
 			"tailwindDirectives": true
