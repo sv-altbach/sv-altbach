@@ -27,7 +27,7 @@ const TableBody = ({ isPlayerTable }: Props) => {
 					>
 						<Flex justify="center" align="center">
 							<MdOutlineKeyboardDoubleArrowUp className="text-3xl text-red-600" />
-							<Text>Vorläufig für das Finale qualifiziert</Text>
+							<Text>Für das Finale qualifiziert</Text>
 							<MdOutlineKeyboardDoubleArrowUp className="text-3xl text-red-600" />
 						</Flex>
 					</Table.Cell>

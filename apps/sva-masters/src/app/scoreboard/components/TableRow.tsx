@@ -91,7 +91,7 @@ function renderHasPlayedAllTournamentsIndicator(player: Player, index: number) {
 			<p>
 				<Tooltip
 					width="180px"
-					content="Vorläufig fürs Finale qualifiziert. Bei allen Turnieren dabei gewesen."
+					content="Für das Finale qualifiziert. Bei allen Turnieren dabei gewesen."
 				>
 					<MdOutlineKeyboardDoubleArrowUp
 						className="text-3xl text-red-600"
@@ -99,7 +99,7 @@ function renderHasPlayedAllTournamentsIndicator(player: Player, index: number) {
 					/>
 				</Tooltip>
 				<span className="sr-only">
-					Vorläufig fürs Finale qualifiziert. Bei allen Turnieren dabei gewesen.
+					Für das Finale qualifiziert. Bei allen Turnieren dabei gewesen.
 				</span>
 			</p>
 		);
