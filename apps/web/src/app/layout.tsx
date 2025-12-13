@@ -1,6 +1,7 @@
 import { Theme } from "@radix-ui/themes";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+
 import "@radix-ui/themes/styles.css";
 import "./globals.css";
 
@@ -12,14 +13,10 @@ export const metadata: Metadata = {
 		"Die offizielle Turnierseite der SVA Masters des Schachverein Altbach.",
 };
 
-export default function RootLayout({
-	children,
-}: {
-	children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: React.PropsWithChildren) {
 	return (
 		<html lang="en">
-			<body className={inter.className}>
+			<body className={`${inter.className} antialiased`}>
 				<Theme accentColor="red">{children}</Theme>
 			</body>
 		</html>

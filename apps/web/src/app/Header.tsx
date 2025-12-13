@@ -1,8 +1,9 @@
-import { Button, Flex, Heading, Text } from "@radix-ui/themes";
+import { Flex, Heading, Text } from "@radix-ui/themes";
 import Link from "next/link";
 import { FaChessKnight } from "react-icons/fa6";
+import { Button } from "@/components/ui/button";
 
-const Header = () => {
+export default function Header() {
 	return (
 		<>
 			<FaChessKnight className="mb-5 text-5xl text-white" />
@@ -17,17 +18,13 @@ const Header = () => {
 
 			<Flex gap="4" mt="5">
 				<Button
-					asChild
-					className="cursor-pointer!"
-					variant="solid"
-					size="4"
-					color="red"
+					render={<Link href="/scoreboard" />}
+					nativeButton={false}
+					size="xl"
 				>
-					<Link href="/scoreboard">Zur Rangliste</Link>
+					Zur Rangliste
 				</Button>
 			</Flex>
 		</>
 	);
-};
-
-export default Header;
+}

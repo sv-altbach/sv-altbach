@@ -1,5 +1,4 @@
-import { Button } from "@radix-ui/themes";
-import { cn } from "@/utils";
+import { Button } from "@/components/ui/button";
 
 interface Props {
 	isFinalTournament: boolean;
@@ -16,26 +15,34 @@ function RegisterButton({
 		return null;
 	}
 
+	if (isRegisterButtonDisabled) {
+		return (
+			<Button
+				variant="soft"
+				size="xl"
+				disabled
+				className="mt-5 cursor-not-allowed!"
+			>
+				Jetzt Anmelden
+			</Button>
+		);
+	}
+
 	return (
 		<Button
-			variant="soft"
-			size="4"
-			mt="5"
-			disabled={isRegisterButtonDisabled}
-			className={cn([
-				isRegisterButtonDisabled ? "cursor-not-allowed!" : "cursor-pointer!",
-			])}
-		>
-			{isRegisterButtonDisabled ? (
-				<span>Jetzt Anmelden</span>
-			) : (
+			render={
 				<a
 					href={`mailto:masters@svaltbach.de,lars@uhl-inter.net?subject=Anmeldung Turnier am ${date}`}
+					aria-label={`Jetzt Anmelden für das Turnier am ${date}`}
 				>
 					Jetzt Anmelden
 				</a>
-			)}
-		</Button>
+			}
+			nativeButton={false}
+			variant="soft"
+			size="xl"
+			className="mt-5"
+		/>
 	);
 }
 

@@ -1,8 +1,9 @@
-import { Box, Button, Container, Heading, Tabs, Text } from "@radix-ui/themes";
+import { Box, Container, Heading, Tabs, Text } from "@radix-ui/themes";
 import Link from "next/link";
 import { MdOutlineKeyboardDoubleArrowUp } from "react-icons/md";
 import Footer from "@/app/Footer";
 import Table from "@/app/sub/masters/scoreboard/components/Table";
+import { Button } from "@/components/ui/button";
 
 const ScoreboardPage = () => {
 	return (
@@ -10,8 +11,13 @@ const ScoreboardPage = () => {
 			<section className="mx-5 my-20">
 				<Container>
 					<header>
-						<Button variant="soft" mb="2" asChild>
-							<Link href="/">Zurück</Link>
+						<Button
+							render={<Link href="/" />}
+							nativeButton={false}
+							variant="soft"
+							className="mb-2"
+						>
+							Zurück
 						</Button>
 
 						<Heading as="h1" size="8">
@@ -57,20 +63,17 @@ const ScoreboardPage = () => {
 							</p>
 
 							<Button
-								asChild
-								className="cursor-pointer!"
-								variant="solid"
-								size="2"
-								color="red"
+								render={
+									<Link
+										href="https://lichess.org/study/jyWjPTXd/J3FiRZpa#0"
+										target="_blank"
+										rel="noreferrer noopener"
+									/>
+								}
+								nativeButton={false}
 								aria-label="Live-Spiele von Turnier 5 auf lichess.org ansehen"
 							>
-								<Link
-									href="https://lichess.org/study/jyWjPTXd/J3FiRZpa#0"
-									target="_blank"
-									rel="noreferrer noopener"
-								>
-									Live-Spiele Turnier 5 auf lichess.org ansehen
-								</Link>
+								Live-Spiele Turnier 5 auf lichess.org ansehen
 							</Button>
 						</section>
 

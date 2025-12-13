@@ -1,5 +1,5 @@
 import { Link, Table } from "@radix-ui/themes";
-import { cn } from "@/utils";
+import { cn } from "@/utils/ui";
 
 interface Props {
 	announcementPath?: string | null;

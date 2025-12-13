@@ -2,7 +2,7 @@ import { Table, Tooltip } from "@radix-ui/themes";
 import { MdOutlineKeyboardDoubleArrowUp } from "react-icons/md";
 import { pointMapping } from "@/app/sub/masters/scoreboard/utils/pointMapping";
 import type { Player, Team } from "@/types";
-import { cn } from "@/utils";
+import { cn } from "@/utils/ui";
 import { getPlayerName } from "@/utils/utils";
 
 interface Props {

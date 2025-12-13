@@ -9,14 +9,17 @@
 		"check:types": "next typegen && tsc --noEmit"
 	},
 	"dependencies": {
+		"@base-ui/react": "^1.0.0",
 		"@radix-ui/react-icons": "^1.3.2",
 		"@radix-ui/themes": "^3.2.1",
+		"class-variance-authority": "^0.7.1",
 		"clsx": "^2.1.1",
 		"next": "^16.0.10",
 		"react": "^19.2.3",
 		"react-dom": "^19.2.3",
 		"react-icons": "^5.5.0",
-		"tailwind-merge": "^3.4.0"
+		"tailwind-merge": "^3.4.0",
+		"tw-animate-css": "^1.4.0"
 	},
 	"devDependencies": {
 		"@sv-altbach/typescript-config": "workspace:*",
@@ -26,6 +29,7 @@
 		"@types/react-dom": "^19.2.3",
 		"babel-plugin-react-compiler": "^1.0.0",
 		"postcss": "^8.5.6",
+		"shadcn": "^3.6.1",
 		"tailwindcss": "^4.1.18",
 		"typescript": "^5.9.3"
 	}

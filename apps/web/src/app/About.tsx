@@ -1,8 +1,9 @@
-import { Box, Button, Flex, Grid, Heading, Text } from "@radix-ui/themes";
+import { Box, Flex, Grid, Heading, Text } from "@radix-ui/themes";
 import Link from "next/link";
 import News from "@/components/News";
+import { Button } from "@/components/ui/button";
 
-const About = () => {
+export default function About() {
 	return (
 		<>
 			<Flex
@@ -169,20 +170,18 @@ const About = () => {
 							</Grid>
 
 							<Button
-								asChild
-								className="mt-4 cursor-pointer!"
-								variant="solid"
-								size="2"
-								color="red"
+								render={
+									<Link
+										href="/finals/2024"
+										target="_blank"
+										rel="noreferrer noopener"
+									/>
+								}
+								nativeButton={false}
+								variant="default"
 								aria-label="Ergebnisse in neuem Tab öffnen"
 							>
-								<Link
-									href="/finals/2024"
-									target="_blank"
-									rel="noreferrer noopener"
-								>
-									Ergebnisse
-								</Link>
+								Ergebnisse
 							</Button>
 						</Box>
 					</Box>
@@ -258,6 +257,4 @@ const About = () => {
 			</section>
 		</>
 	);
-};
-
-export default About;
+}
