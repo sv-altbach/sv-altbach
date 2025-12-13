@@ -16,11 +16,11 @@
 		"packages/*"
 	],
 	"devDependencies": {
-		"@biomejs/biome": "2.3.7",
+		"@biomejs/biome": "2.3.8",
 		"@types/bun": "latest",
-		"turbo": "2.6.1"
+		"turbo": "2.6.3"
 	},
 	"peerDependencies": {
-		"typescript": "^5"
+		"typescript": "^5.9.3"
 	}
 }
