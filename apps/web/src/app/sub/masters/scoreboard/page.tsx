@@ -39,6 +39,41 @@ const ScoreboardPage = () => {
 					</header>
 
 					<main className="my-10">
+						<section className="my-10">
+							<Heading as="h3" size="6" mb="2">
+								Live Spiele
+							</Heading>
+
+							<p className="mb-4">
+								In Turnier 5 (Chess960) wurden digitale Bretter verwendet. Du
+								kannst dir jetzt alle Spiele, die mit diesen Brettern gespielt
+								wurden, auf lichess.org nochmals ansehen.
+							</p>
+
+							<p className="my-4">
+								Alle Spiele, die dort hochgeladen wurden, sind nicht auf
+								lichess.org nicht gelistet und können nur über den unten
+								stehenden Link aufgerufen werden.
+							</p>
+
+							<Button
+								asChild
+								className="cursor-pointer!"
+								variant="solid"
+								size="2"
+								color="red"
+								aria-label="Live-Spiele von Turnier 5 auf lichess.org ansehen"
+							>
+								<Link
+									href="https://lichess.org/study/jyWjPTXd/J3FiRZpa#0"
+									target="_blank"
+									rel="noreferrer noopener"
+								>
+									Live-Spiele Turnier 5 auf lichess.org ansehen
+								</Link>
+							</Button>
+						</section>
+
 						<Tabs.Root defaultValue="player">
 							<Tabs.List>
 								<Tabs.Trigger value="player">Spieler</Tabs.Trigger>
