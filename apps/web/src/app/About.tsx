@@ -244,11 +244,13 @@ const About = () => {
 						</del>
 					</li>
 					<li>
-						Samstag, 29. November 2025 <strong>(960 Random)</strong>
-						<em>- in Plochingen</em>
+						<del>
+							Samstag, 29. November 2025 <strong>(960 Random)</strong>
+							<em>- in Plochingen</em>
+						</del>
 					</li>
 					<li className="mt-5">
-						<strong>Finale:</strong> 2026
+						<strong>Finale:</strong> 18. April 2026
 						<br />
 						<small>(Einladungsturnier)</small>
 					</li>
