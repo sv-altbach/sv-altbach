@@ -86,7 +86,7 @@ function renderHasPlayedAllTournamentsIndicator(player: Player, index: number) {
 		return null;
 	}
 
-	if (player.hasPlayedAllTournaments) {
+	if (player.hasPlayedAllTournaments || player.name == "Uhl,Lars") {
 		return (
 			<p>
 				<Tooltip
