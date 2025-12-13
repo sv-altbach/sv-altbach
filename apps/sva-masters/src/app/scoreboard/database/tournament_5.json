@@ -1,0 +1,134 @@
+[
+	{
+		"position": 1,
+		"name": "Kölle,Tobias",
+		"eloPerformance": 2903,
+		"tournament": 5
+	},
+	{
+		"position": 2,
+		"name": "Kvetny,Mark",
+		"eloPerformance": 2447,
+		"tournament": 5
+	},
+	{
+		"position": 3,
+		"name": "Lehmann,Stefan",
+		"eloPerformance": 2208,
+		"tournament": 5
+	},
+	{
+		"position": 4,
+		"name": "Schnepp,Gunnar",
+		"eloPerformance": 2156,
+		"tournament": 5
+	},
+	{
+		"position": 5,
+		"name": "Gustain,Marc",
+		"eloPerformance": 2126,
+		"tournament": 5
+	},
+	{
+		"position": 6,
+		"name": "Gheng,Josef",
+		"eloPerformance": 2170,
+		"tournament": 5
+	},
+	{
+		"position": 7,
+		"name": "Cilo,Selimhan (J)",
+		"eloPerformance": 2106,
+		"tournament": 5
+	},
+	{
+		"position": 8,
+		"name": "Fabry,Laurin",
+		"eloPerformance": 2086,
+		"tournament": 5
+	},
+	{
+		"position": 9,
+		"name": "Ogloblin,Ilia (J)",
+		"eloPerformance": 1922,
+		"tournament": 5
+	},
+	{
+		"position": 10,
+		"name": "Goldinov,Daniel (J)",
+		"eloPerformance": 2012,
+		"tournament": 5
+	},
+	{
+		"position": 11,
+		"name": "Cilo,Seyyid (J)",
+		"eloPerformance": 1872,
+		"tournament": 5
+	},
+	{
+		"position": 12,
+		"name": "Wadiei,Soroush",
+		"eloPerformance": 1959,
+		"tournament": 5
+	},
+	{
+		"position": 13,
+		"name": "Retzlaff,Kian (J)",
+		"eloPerformance": 1894,
+		"tournament": 5
+	},
+	{
+		"position": 14,
+		"name": "Cöllen,Florian",
+		"eloPerformance": 1795,
+		"tournament": 5
+	},
+	{
+		"position": 15,
+		"name": "Herrmann,Dietmar",
+		"eloPerformance": 1843,
+		"tournament": 5
+	},
+	{
+		"position": 16,
+		"name": "Heilig,Tim Markus",
+		"eloPerformance": 1833,
+		"tournament": 5
+	},
+	{
+		"position": 17,
+		"name": "Ruff,Marc",
+		"eloPerformance": 1830,
+		"tournament": 5
+	},
+	{
+		"position": 18,
+		"name": "Retzlaff,Nick (J)",
+		"eloPerformance": 1834,
+		"tournament": 5
+	},
+	{
+		"position": 19,
+		"name": "Gheng,Lucas (J)",
+		"eloPerformance": 1682,
+		"tournament": 5
+	},
+	{
+		"position": 20,
+		"name": "Wonisch,Ferdinand",
+		"eloPerformance": 1669,
+		"tournament": 5
+	},
+	{
+		"position": 21,
+		"name": "Hader,Sören,Dr.",
+		"eloPerformance": 1548,
+		"tournament": 5
+	},
+	{
+		"position": 22,
+		"name": "Pillath,Marcus",
+		"eloPerformance": 1568,
+		"tournament": 5
+	}
+]
