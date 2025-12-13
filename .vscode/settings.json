@@ -1,4 +1,4 @@
 {
 	"typescript.tsdk": "node_modules\\typescript\\lib",
-	"conventionalCommits.scopes": ["sva-masters", "npm"]
+	"conventionalCommits.scopes": ["sva-masters", "npm", "formatting"]
 }
