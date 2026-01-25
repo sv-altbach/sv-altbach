@@ -37,7 +37,7 @@
 	},
 	{
 		"position": 7,
-		"name": "Cilo,Selimhan (J)",
+		"name": "Cilo,Selimhan",
 		"eloPerformance": 2106,
 		"tournament": 5
 	},
@@ -49,19 +49,19 @@
 	},
 	{
 		"position": 9,
-		"name": "Ogloblin,Ilia (J)",
+		"name": "Ogloblin,Ilia",
 		"eloPerformance": 1922,
 		"tournament": 5
 	},
 	{
 		"position": 10,
-		"name": "Goldinov,Daniel (J)",
+		"name": "Goldinov,Daniel",
 		"eloPerformance": 2012,
 		"tournament": 5
 	},
 	{
 		"position": 11,
-		"name": "Cilo,Seyyid (J)",
+		"name": "Cilo,Seyyid",
 		"eloPerformance": 1872,
 		"tournament": 5
 	},
@@ -73,7 +73,7 @@
 	},
 	{
 		"position": 13,
-		"name": "Retzlaff,Kian (J)",
+		"name": "Retzlaff,Kian",
 		"eloPerformance": 1894,
 		"tournament": 5
 	},
@@ -103,13 +103,13 @@
 	},
 	{
 		"position": 18,
-		"name": "Retzlaff,Nick (J)",
+		"name": "Retzlaff,Nick",
 		"eloPerformance": 1834,
 		"tournament": 5
 	},
 	{
 		"position": 19,
-		"name": "Gheng,Lucas (J)",
+		"name": "Gheng,Lucas",
 		"eloPerformance": 1682,
 		"tournament": 5
 	},
