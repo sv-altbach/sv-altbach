@@ -22,7 +22,10 @@ function PointRules({ isFinalTournament }: Props) {
 				</ul>
 
 				{isFinalTournament ? (
-					<p className="mt-5">Die Feinwertung ist Buchholz.</p>
+					<p className="mt-5">
+						Die Zweitwertung ist der direkte Vergleich, die Drittwertung ist
+						Buchholz.
+					</p>
 				) : null}
 			</Table.Cell>
 		</Table.Row>

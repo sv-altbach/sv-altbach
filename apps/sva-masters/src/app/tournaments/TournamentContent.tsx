@@ -68,7 +68,7 @@ const TournamentContent = ({
 							{type === "blitz" ? "Blitz" : null}
 							{type === "rapid" ? "Rapid" : null}
 							{type === "960" ? "Rapid Chess960" : null}
-							{type === "final" ? "Info bald verfügbar" : null}
+							{type === "final" ? "Blizt, Rapid, Rapid Chess960" : null}
 						</Table.Cell>
 					</Table.Row>
 
