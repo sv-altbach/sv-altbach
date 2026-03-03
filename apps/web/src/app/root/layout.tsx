@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { Navigation } from "./components/navigation";
+import { RootFooter } from "./components/root-footer";
 
 export const metadata: Metadata = {
 	title: "Schachverein Altbach e.V.",
@@ -7,5 +9,11 @@ export const metadata: Metadata = {
 };
 
 export default function RootSiteLayout({ children }: LayoutProps<"/root">) {
-	return children;
+	return (
+		<div className="flex min-h-screen flex-col">
+			<Navigation />
+			<div className="flex-1">{children}</div>
+			<RootFooter />
+		</div>
+	);
 }

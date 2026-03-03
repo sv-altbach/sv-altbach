@@ -10,6 +10,7 @@ import {
 	SheetTitle,
 	SheetTrigger,
 } from "@/components/ui/sheet";
+import { subdomainHref } from "@/utils/routing";
 
 const navItems = [
 	{ href: "#basicInfo", label: "Verein" },
@@ -39,12 +40,12 @@ export function Navigation() {
 	};
 
 	return (
-		<nav className="w-full">
+		<nav className="fixed top-0 right-0 left-0 z-50 bg-gray-900">
 			<div className="container mx-auto px-4">
 				<div className="flex h-16 items-center justify-between">
 					{/* Logo/Brand */}
 					<Link
-						href="/root"
+						href={subdomainHref("/root")}
 						className="font-bold text-white text-xl transition-colors hover:text-primary"
 					>
 						SVA

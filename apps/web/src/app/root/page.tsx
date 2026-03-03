@@ -5,8 +5,6 @@ import { BlogSection } from "./components/blog-section";
 import { ContactForm } from "./components/contact-form";
 import { HeroSection } from "./components/hero-section";
 import { MembershipSection } from "./components/membership-section";
-import { Navigation } from "./components/navigation";
-import { RootFooter } from "./components/root-footer";
 import { TournamentsSection } from "./components/tournaments-section";
 import { TrainingSection } from "./components/training-section";
 
@@ -27,7 +25,6 @@ export default function RootPage() {
 				</div>
 
 				<div className="relative z-10">
-					<Navigation />
 					<HeroSection />
 				</div>
 			</header>
@@ -40,7 +37,6 @@ export default function RootPage() {
 				<BlogSection />
 				<ContactForm />
 			</main>
-			<RootFooter />
 		</>
 	);
 }
