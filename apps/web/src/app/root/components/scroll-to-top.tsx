@@ -1,7 +1,7 @@
 "use client";
 
 import { IconArrowUp } from "@tabler/icons-react";
-import { Activity, useEffect, useEffectEvent, useState } from "react";
+import { useEffect, useEffectEvent, useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import { cn } from "@/utils/ui";
@@ -9,31 +9,35 @@ import { cn } from "@/utils/ui";
 export function ScrollToTopButton({
 	className,
 	children,
+	...props
 }: React.ComponentProps<typeof Button>) {
-	const [visibility, setVisibility] = useState<"visible" | "hidden">("hidden");
+	const [visible, setVisible] = useState(false);
 
-	const handleScroll = useEffectEvent(() => {
+	const updateVisibility = useEffectEvent(() => {
 		const scrolled = window.scrollY;
 		const total = document.documentElement.scrollHeight - window.innerHeight;
-		setVisibility(total > 0 && scrolled >= total / 2 ? "visible" : "hidden");
+		setVisible(total > 0 && scrolled >= total / 2);
 	});
 
 	useEffect(() => {
-		window.addEventListener("scroll", handleScroll, { passive: true });
-		return () => window.removeEventListener("scroll", handleScroll);
+		window.addEventListener("scroll", updateVisibility, { passive: true });
+		return () => window.removeEventListener("scroll", updateVisibility);
 	}, []);
 
 	return (
-		<Activity mode={visibility}>
-			<Button
-				variant="default"
-				size="icon-xl"
-				className={cn("rounded-full", className)}
-				onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-				aria-label="Scroll to top"
-			>
-				{children ?? <IconArrowUp />}
-			</Button>
-		</Activity>
+		<Button
+			variant="default"
+			size="icon-xl"
+			className={cn(
+				"rounded-full transition-opacity duration-200",
+				visible ? "opacity-100" : "pointer-events-none opacity-0",
+				className,
+			)}
+			onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+			aria-label="Scroll to top"
+			{...props}
+		>
+			{children ?? <IconArrowUp className="size-6" />}
+		</Button>
 	);
 }
