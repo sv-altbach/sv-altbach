@@ -1,12 +1,12 @@
 import { Table as RadixTable } from "@radix-ui/themes";
-import TableBody from "@/app/sub/masters/scoreboard/components/TableBody";
-import TableHead from "@/app/sub/masters/scoreboard/components/TableHead";
+import { TableBody } from "@/app/sub/masters/scoreboard/components/table-body";
+import { TableHead } from "@/app/sub/masters/scoreboard/components/table-head";
 
 interface TableProps {
 	mode: "player" | "team";
 }
 
-const Table = ({ mode }: TableProps) => {
+export function Table({ mode }: TableProps) {
 	const isPlayerTable = mode === "player";
 
 	return (
@@ -22,6 +22,4 @@ const Table = ({ mode }: TableProps) => {
 			<TableBody isPlayerTable={isPlayerTable} />
 		</RadixTable.Root>
 	);
-};
-
-export default Table;
+}

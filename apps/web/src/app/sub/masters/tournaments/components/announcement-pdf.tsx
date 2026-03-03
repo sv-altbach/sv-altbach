@@ -6,7 +6,7 @@ interface Props {
 	isRegisterButtonDisabled?: boolean;
 }
 
-function AnnouncementPDF({
+export function AnnouncementPDF({
 	announcementPath,
 	isRegisterButtonDisabled,
 }: Props) {
@@ -33,5 +33,3 @@ function AnnouncementPDF({
 		</Table.Row>
 	);
 }
-
-export default AnnouncementPDF;

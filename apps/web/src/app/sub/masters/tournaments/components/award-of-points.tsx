@@ -4,7 +4,7 @@ interface Props {
 	isFinalTournament: boolean;
 }
 
-function AwardOfPoints({ isFinalTournament }: Props) {
+export function AwardOfPoints({ isFinalTournament }: Props) {
 	return (
 		<>
 			{!isFinalTournament ? (
@@ -30,5 +30,3 @@ function AwardOfPoints({ isFinalTournament }: Props) {
 		</>
 	);
 }
-
-export default AwardOfPoints;

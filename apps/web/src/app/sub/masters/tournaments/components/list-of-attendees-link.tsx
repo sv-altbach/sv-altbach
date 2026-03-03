@@ -6,7 +6,7 @@ interface Props {
 	url?: string | null;
 }
 
-function ListOfAttendeesLink({ url }: Props) {
+export function ListOfAttendeesLink({ url }: Props) {
 	if (!url) {
 		return null;
 	}
@@ -37,5 +37,3 @@ function ListOfAttendeesLink({ url }: Props) {
 		</Table.Row>
 	);
 }
-
-export default ListOfAttendeesLink;

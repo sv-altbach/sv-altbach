@@ -1,9 +1,9 @@
 import { Box, Container, Heading, Tabs, Text } from "@radix-ui/themes";
 import Link from "next/link";
 import { MdOutlineKeyboardDoubleArrowUp } from "react-icons/md";
-import Footer from "@/app/Footer";
-import Table from "@/app/sub/masters/scoreboard/components/Table";
+import { Table } from "@/app/sub/masters/scoreboard/components/table";
 import { Button } from "@/components/ui/button";
+import { Footer } from "../components/footer";
 
 const ScoreboardPage = () => {
 	return (

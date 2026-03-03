@@ -4,7 +4,7 @@ interface Props {
 	isFinalTournament: boolean;
 }
 
-function PointRules({ isFinalTournament }: Props) {
+export function PointRules({ isFinalTournament }: Props) {
 	return (
 		<Table.Row>
 			<Table.RowHeaderCell>Punkteregel (Turnier)</Table.RowHeaderCell>
@@ -28,5 +28,3 @@ function PointRules({ isFinalTournament }: Props) {
 		</Table.Row>
 	);
 }
-
-export default PointRules;

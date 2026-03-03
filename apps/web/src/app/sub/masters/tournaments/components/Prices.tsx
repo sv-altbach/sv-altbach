@@ -5,7 +5,7 @@ interface Props {
 	value?: string;
 }
 
-function Prices({ isFinalTournament, value }: Props) {
+export function Prices({ isFinalTournament, value }: Props) {
 	return (
 		<Table.Row>
 			<Table.RowHeaderCell width="250px">
@@ -169,5 +169,3 @@ function Prices({ isFinalTournament, value }: Props) {
 		</Table.Row>
 	);
 }
-
-export default Prices;

@@ -4,7 +4,7 @@ interface Props {
 	isPlayerTable: boolean;
 }
 
-const TableHead = ({ isPlayerTable }: Props) => {
+export function TableHead({ isPlayerTable }: Props) {
 	return (
 		<Table.Header>
 			<Table.Row>
@@ -52,6 +52,4 @@ const TableHead = ({ isPlayerTable }: Props) => {
 			</Table.Row>
 		</Table.Header>
 	);
-};
-
-export default TableHead;
+}

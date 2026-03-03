@@ -6,7 +6,7 @@ interface Props {
 	date: string;
 }
 
-function RegisterButton({
+export function RegisterButton({
 	isFinalTournament,
 	isRegisterButtonDisabled,
 	date,
@@ -45,5 +45,3 @@ function RegisterButton({
 		/>
 	);
 }
-
-export default RegisterButton;

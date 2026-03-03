@@ -4,7 +4,7 @@ interface Props extends React.PropsWithChildren {
 	title: string;
 }
 
-function News({ title, children }: Props) {
+export function News({ title, children }: Props) {
 	return (
 		<Flex align="start" direction={{ initial: "column", md: "row" }}>
 			<Badge
@@ -28,5 +28,3 @@ function News({ title, children }: Props) {
 		</Flex>
 	);
 }
-
-export default News;

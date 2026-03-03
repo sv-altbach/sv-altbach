@@ -1,11 +1,11 @@
 import { Container, Flex } from "@radix-ui/themes";
-import About from "@/app/About";
-import AddToCalendar from "@/app/AddToCalendar";
-import Contact from "@/app/Contact";
-import Footer from "@/app/Footer";
-import Header from "@/app/Header";
-import Sponsoring from "@/app/Sponsoring";
-import Tournaments from "@/app/sub/masters/tournaments/Tournaments";
+import { About } from "./components/about";
+import { AddToCalendar } from "./components/add-to-calendar";
+import { Contact } from "./components/contact";
+import { Footer } from "./components/footer";
+import { Header } from "./components/header";
+import { Sponsoring } from "./components/sponsoring";
+import { Tournaments } from "./tournaments/tournaments";
 
 export default function Home() {
 	return (

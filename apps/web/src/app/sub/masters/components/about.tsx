@@ -1,9 +1,9 @@
 import { Box, Flex, Grid, Heading, Text } from "@radix-ui/themes";
 import Link from "next/link";
-import News from "@/components/News";
+import { News } from "@/app/sub/masters/components/news";
 import { Button } from "@/components/ui/button";
 
-export default function About() {
+export function About() {
 	return (
 		<>
 			<Flex

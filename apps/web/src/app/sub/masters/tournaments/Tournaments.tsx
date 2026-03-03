@@ -1,10 +1,10 @@
 "use client";
 
 import { Box, Tabs } from "@radix-ui/themes";
-import TournamentContent from "@/app/sub/masters/tournaments/TournamentContent";
 import tournamentData from "@/app/tournaments.json";
+import { TournamentContent } from "./tournament-content";
 
-const Tournaments = () => {
+export function Tournaments() {
 	return (
 		<Tabs.Root defaultValue="tournament_final">
 			<Tabs.List size="2">
@@ -49,6 +49,4 @@ const Tournaments = () => {
 			</Box>
 		</Tabs.Root>
 	);
-};
-
-export default Tournaments;
+}

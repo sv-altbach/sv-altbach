@@ -5,19 +5,19 @@ interface Props {
 	value?: string;
 }
 
-function BasicInformation({ withMusic, value }: Props) {
+export function BasicInformation({ withMusic, value }: Props) {
 	return (
 		<Table.Row>
 			<Table.RowHeaderCell>Hinweise</Table.RowHeaderCell>
 			<Table.Cell>
-				{getBasicInformation(value)}
-				{getMusicInformation(withMusic, value)}
+				<BasicInformationContent value={value} />
+				<MusicInformation withMusic={withMusic} value={value} />
 			</Table.Cell>
 		</Table.Row>
 	);
 }
 
-function getBasicInformation(value?: string) {
+function BasicInformationContent({ value }: { value?: string }) {
 	if (value === "tournament_3") {
 		return (
 			<Text as="p">
@@ -46,7 +46,13 @@ function getBasicInformation(value?: string) {
 	}
 }
 
-function getMusicInformation(withMusic?: boolean, value?: string) {
+function MusicInformation({
+	withMusic,
+	value,
+}: {
+	withMusic?: boolean;
+	value?: string;
+}) {
 	if (value === "tournament_3") {
 		return null;
 	}
@@ -59,5 +65,3 @@ function getMusicInformation(withMusic?: boolean, value?: string) {
 		</Text>
 	);
 }
-
-export default BasicInformation;

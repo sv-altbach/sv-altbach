@@ -4,7 +4,7 @@ import { Grid, Heading, Text } from "@radix-ui/themes";
 import Image from "next/image";
 import { imageLoader } from "@/utils/utils";
 
-const Sponsoring = () => {
+export function Sponsoring() {
 	return (
 		<>
 			<section>
@@ -62,6 +62,4 @@ const Sponsoring = () => {
 			</section>
 		</>
 	);
-};
-
-export default Sponsoring;
+}

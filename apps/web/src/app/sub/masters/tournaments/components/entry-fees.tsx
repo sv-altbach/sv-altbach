@@ -5,16 +5,24 @@ interface Props {
 	value: string;
 }
 
-function EntryFees({ isFinalTournament, value }: Props) {
+export function EntryFees({ isFinalTournament, value }: Props) {
 	return (
 		<Table.Row>
 			<Table.RowHeaderCell>Startgeld</Table.RowHeaderCell>
-			<Table.Cell>{getEntryFeeMarkup(isFinalTournament, value)}</Table.Cell>
+			<Table.Cell>
+				<EntryFeeMarkup isFinalTournament={isFinalTournament} value={value} />
+			</Table.Cell>
 		</Table.Row>
 	);
 }
 
-function getEntryFeeMarkup(isFinalTournament: boolean, value: string) {
+function EntryFeeMarkup({
+	isFinalTournament,
+	value,
+}: {
+	isFinalTournament: boolean;
+	value: string;
+}) {
 	if (isFinalTournament) {
 		return <Text as="p">Einladungsturnier. Startgeld entfällt.</Text>;
 	}
@@ -43,5 +51,3 @@ function getEntryFeeMarkup(isFinalTournament: boolean, value: string) {
 		</>
 	);
 }
-
-export default EntryFees;

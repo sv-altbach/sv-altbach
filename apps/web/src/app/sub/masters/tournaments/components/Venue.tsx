@@ -4,16 +4,18 @@ interface Props {
 	value?: string;
 }
 
-function Venue({ value }: Props) {
+export function Venue({ value }: Props) {
 	return (
 		<Table.Row>
 			<Table.RowHeaderCell>Spiellokal</Table.RowHeaderCell>
-			<Table.Cell>{getVenue(value)}</Table.Cell>
+			<Table.Cell>
+				<VenueContent value={value} />
+			</Table.Cell>
 		</Table.Row>
 	);
 }
 
-function getVenue(value?: string) {
+function VenueContent({ value }: { value?: string }) {
 	if (value === "tournament_3") {
 		return (
 			<>
@@ -46,5 +48,3 @@ function getVenue(value?: string) {
 		<Text as="p">Sporthalle Altbach, Esslinger Straße 90, 73776 Altbach</Text>
 	);
 }
-
-export default Venue;

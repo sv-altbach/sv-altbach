@@ -1,6 +1,6 @@
 import { Heading, Text } from "@radix-ui/themes";
 
-const Contact = () => {
+export function Contact() {
 	return (
 		<>
 			<section>
@@ -35,5 +35,3 @@ const Contact = () => {
 		</>
 	);
 };
-
-export default Contact;

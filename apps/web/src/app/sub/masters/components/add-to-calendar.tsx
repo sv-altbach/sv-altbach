@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import { TbCalendarPlus } from "react-icons/tb";
 
-function AddToCalendar() {
+export function AddToCalendar() {
 	return (
 		<>
 			<Heading as="h3">Kalender abonnieren</Heading>
@@ -25,5 +25,3 @@ function AddToCalendar() {
 		</>
 	);
 }
-
-export default AddToCalendar;

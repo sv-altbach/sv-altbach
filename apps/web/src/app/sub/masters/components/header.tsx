@@ -3,7 +3,7 @@ import Link from "next/link";
 import { FaChessKnight } from "react-icons/fa6";
 import { Button } from "@/components/ui/button";
 
-export default function Header() {
+export function Header() {
 	return (
 		<>
 			<FaChessKnight className="mb-5 text-5xl text-white" />

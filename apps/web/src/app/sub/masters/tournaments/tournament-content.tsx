@@ -1,13 +1,13 @@
 import { Table, Tabs } from "@radix-ui/themes";
-import AnnouncementPDF from "@/app/sub/masters/tournaments/components/AnnouncementPDF";
-import AwardOfPoints from "@/app/sub/masters/tournaments/components/AwardOfPoints";
-import BasicInformation from "@/app/sub/masters/tournaments/components/BasicInformation";
-import EntryFees from "@/app/sub/masters/tournaments/components/EntryFees";
-import ListOfAttendeesLink from "@/app/sub/masters/tournaments/components/ListOfAttendeesLink";
-import PointRules from "@/app/sub/masters/tournaments/components/PointRules";
-import Prices from "@/app/sub/masters/tournaments/components/Prices";
-import RegisterButton from "@/app/sub/masters/tournaments/components/RegisterButton";
-import Venue from "@/app/sub/masters/tournaments/components/Venue";
+import { AnnouncementPDF } from "@/app/sub/masters/tournaments/components/announcement-pdf";
+import { AwardOfPoints } from "@/app/sub/masters/tournaments/components/award-of-points";
+import { BasicInformation } from "@/app/sub/masters/tournaments/components/basic-information";
+import { EntryFees } from "@/app/sub/masters/tournaments/components/entry-fees";
+import { ListOfAttendeesLink } from "@/app/sub/masters/tournaments/components/list-of-attendees-link";
+import { PointRules } from "@/app/sub/masters/tournaments/components/point-rules";
+import { Prices } from "@/app/sub/masters/tournaments/components/prices";
+import { RegisterButton } from "@/app/sub/masters/tournaments/components/register-button";
+import { Venue } from "@/app/sub/masters/tournaments/components/venue";
 
 interface Props {
 	type?: "blitz" | "rapid" | "960" | "final";
@@ -22,7 +22,7 @@ interface Props {
 	withMusic?: boolean;
 }
 
-const TournamentContent = ({
+export function TournamentContent({
 	value,
 	type,
 	mode,
@@ -33,7 +33,7 @@ const TournamentContent = ({
 	announcementPath,
 	listOfAttendeesUrl,
 	withMusic,
-}: Props) => {
+}: Props) {
 	const isFinalTournament = value === "tournament_final";
 	const isRegisterButtonDisabled = false;
 	const isRegisterButtonHidden =
@@ -112,6 +112,4 @@ const TournamentContent = ({
 			)}
 		</Tabs.Content>
 	);
-};
-
-export default TournamentContent;
+}

@@ -7,7 +7,7 @@ import {
 	Text,
 } from "@radix-ui/themes";
 
-const Footer = () => {
+export function Footer() {
 	return (
 		<footer className="bg-[#0D1321] p-10">
 			<Container>
@@ -87,5 +87,3 @@ const Footer = () => {
 		</footer>
 	);
 };
-
-export default Footer;

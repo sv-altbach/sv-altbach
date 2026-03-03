@@ -11,7 +11,7 @@ interface Props {
 	index: number;
 }
 
-const TableRow = ({ player, team, index }: Props) => {
+export function TableRow({ player, team, index }: Props) {
 	if (!player && team) {
 		return (
 			<Table.Row
@@ -79,7 +79,7 @@ const TableRow = ({ player, team, index }: Props) => {
 	}
 
 	return null;
-};
+}
 
 function renderHasPlayedAllTournamentsIndicator(player: Player, index: number) {
 	if (index < 16) {
@@ -115,5 +115,3 @@ function getTeamName(team: Team) {
 
 	return playerNames.join(", ");
 }
-
-export default TableRow;
