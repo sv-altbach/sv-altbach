@@ -13,7 +13,7 @@ export function AboutUsTimeline() {
 
 			<div className="relative">
 				{/* Vertical line - visible only on desktop */}
-				<div className="-translate-x-1/2 absolute top-0 bottom-0 left-1/2 hidden w-0.5 bg-[#e1e1e1] md:block" />
+				<div className="absolute top-0 bottom-0 left-1/2 hidden w-0.5 -translate-x-1/2 bg-[#e1e1e1] md:block" />
 
 				{timelineEvents.map((event, index) => {
 					const isEven = index % 2 === 0;
