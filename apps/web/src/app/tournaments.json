@@ -60,12 +60,12 @@
 	{
 		"type": "final",
 		"date": "Samstag, 18. April 2026",
-		"startTime": "Info bald verfügbar",
-		"endTime": "Info bald verfügbar",
-		"mode": "Info bald verfügbar",
+		"startTime": "10:00 Uhr - Meldeschluss bis spätestens 09:45 Uhr",
+		"endTime": "ca. 16:15 Uhr",
+		"mode": "Siehe Ausschreibung",
 		"value": "tournament_final",
 		"evaluation": "Elo",
-		"announcementPath": null,
+		"announcementPath": "/announcements/Ausschreibung_Turnier-Finale_SVA-Masters.pdf",
 		"withMusic": false
 	}
 ]

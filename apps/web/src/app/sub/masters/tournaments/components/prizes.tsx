@@ -5,7 +5,7 @@ interface Props {
 	value?: string;
 }
 
-export function Prices({ isFinalTournament, value }: Props) {
+export function Prizes({ isFinalTournament, value }: Props) {
 	return (
 		<Table.Row>
 			<Table.RowHeaderCell width="250px">
@@ -13,10 +13,8 @@ export function Prices({ isFinalTournament, value }: Props) {
 				<Text as="p">
 					{isFinalTournament ? (
 						<small>
-							Blitz- und Schnellschach-Ergebnis werden für die Gesamtwertung
-							addiert. Preisverteilung nach Hort-System. Keine Doppelpreise. Der
-							höherwertige Preis wird ausgeschüttet. Als TWZ ziehen wir die
-							Blitzschach- bzw. Schnellschach-Elo heran.
+							Keine Doppelpreise. Der höherwertige Preis wird ausgeschüttet. Als
+							TWZ ziehen wir die Blitzschach- bzw. Schnellschach-Elo heran.
 						</small>
 					) : null}
 
@@ -47,15 +45,15 @@ export function Prices({ isFinalTournament, value }: Props) {
 						Hauptpreise
 					</Text>
 
-					{isFinalTournament ? <Text as="p">Info bald verfügbar</Text> : null}
+					{/*{isFinalTournament ? <Text as="p">Info bald verfügbar</Text> : null}*/}
 
-					{/*{isFinalTournament ? (*/}
-					{/*    <ul>*/}
-					{/*        <li>Platz 1: 300 &euro;</li>*/}
-					{/*        <li>Platz 2: 200 &euro;</li>*/}
-					{/*        <li>Platz 3: 100 &euro;</li>*/}
-					{/*    </ul>*/}
-					{/*) : null}*/}
+					{isFinalTournament ? (
+						<ul>
+							<li>Platz 1: 300 &euro; + Pokal</li>
+							<li>Platz 2: 200 &euro;</li>
+							<li>Platz 3: 100 &euro;</li>
+						</ul>
+					) : null}
 
 					{value === "tournament_3" ? (
 						<ul>
@@ -79,13 +77,14 @@ export function Prices({ isFinalTournament, value }: Props) {
 						Jugendpreise (U18) <span aria-hidden="true">*</span>
 					</Text>
 
-					{isFinalTournament ? <Text as="p">Info bald verfügbar</Text> : null}
+					{/*{isFinalTournament ? <Text as="p">Info bald verfügbar</Text> : null}*/}
 
-					{/*{isFinalTournament ? (*/}
-					{/*    <ul>*/}
-					{/*        <li>Platz 1: 60 &euro;</li>*/}
-					{/*    </ul>*/}
-					{/*) : null}*/}
+					{isFinalTournament ? (
+						<ul>
+							<li>Platz 1: 50 &euro;</li>
+							<li>Platz 2: 25 &euro;</li>
+						</ul>
+					) : null}
 
 					{value === "tournament_3" ? (
 						<ul>
@@ -102,33 +101,35 @@ export function Prices({ isFinalTournament, value }: Props) {
 					) : null}
 				</section>
 
-				<section>
-					<Text as="p" size="3" className="font-bold">
-						Frauenpreis <span aria-hidden="true">*</span>
-					</Text>
+				{!isFinalTournament ? (
+					<section>
+						<Text as="p" size="3" className="font-bold">
+							Frauenpreis <span aria-hidden="true">*</span>
+						</Text>
 
-					{isFinalTournament ? <Text as="p">Info bald verfügbar</Text> : null}
+						{/*{isFinalTournament ? <Text as="p">Finale ohne </Text> : null}*/}
 
-					{/*{isFinalTournament ? (*/}
-					{/*    <ul>*/}
-					{/*        <li>Platz 1: 60 &euro;</li>*/}
-					{/*    </ul>*/}
-					{/*) : null}*/}
+						{/*{isFinalTournament ? (*/}
+						{/*    <ul>*/}
+						{/*        <li>Platz 1: 60 &euro;</li>*/}
+						{/*    </ul>*/}
+						{/*) : null}*/}
 
-					{value === "tournament_3" ? (
-						<ul>
-							<li>Platz 1: 50 &euro;</li>
-							<li>Platz 2: 30 &euro;</li>
-						</ul>
-					) : null}
+						{value === "tournament_3" ? (
+							<ul>
+								<li>Platz 1: 50 &euro;</li>
+								<li>Platz 2: 30 &euro;</li>
+							</ul>
+						) : null}
 
-					{!isFinalTournament && value !== "tournament_3" ? (
-						<ul>
-							<li>Platz 1: 50 &euro;</li>
-							<li>Platz 2: 25 &euro;</li>
-						</ul>
-					) : null}
-				</section>
+						{!isFinalTournament && value !== "tournament_3" ? (
+							<ul>
+								<li>Platz 1: 50 &euro;</li>
+								<li>Platz 2: 25 &euro;</li>
+							</ul>
+						) : null}
+					</section>
+				) : null}
 
 				{value === "tournament_3" ? (
 					<section>
@@ -147,14 +148,14 @@ export function Prices({ isFinalTournament, value }: Props) {
 						TWZ Preise *
 					</Text>
 
-					{isFinalTournament ? <Text as="p">Info bald verfügbar</Text> : null}
+					{/*{isFinalTournament ? <Text as="p">Info bald verfügbar</Text> : null}*/}
 
-					{/*{isFinalTournament ? (*/}
-					{/*    <ul>*/}
-					{/*        <li>TWZ {'< 2000'}: 60 &euro;</li>*/}
-					{/*        <li>TWZ {'< 1850'}: 60 &euro;</li>*/}
-					{/*    </ul>*/}
-					{/*) : null}*/}
+					{isFinalTournament ? (
+						<ul>
+							<li>TWZ {"< 2100"}: 60 &euro;</li>
+							<li>TWZ {"< 1850"}: 60 &euro;</li>
+						</ul>
+					) : null}
 
 					{!isFinalTournament ? (
 						<ul>

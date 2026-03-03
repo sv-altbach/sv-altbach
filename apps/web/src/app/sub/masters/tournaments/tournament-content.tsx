@@ -5,7 +5,7 @@ import { BasicInformation } from "@/app/sub/masters/tournaments/components/basic
 import { EntryFees } from "@/app/sub/masters/tournaments/components/entry-fees";
 import { ListOfAttendeesLink } from "@/app/sub/masters/tournaments/components/list-of-attendees-link";
 import { PointRules } from "@/app/sub/masters/tournaments/components/point-rules";
-import { Prices } from "@/app/sub/masters/tournaments/components/prices";
+import { Prizes } from "@/app/sub/masters/tournaments/components/prizes";
 import { RegisterButton } from "@/app/sub/masters/tournaments/components/register-button";
 import { Venue } from "@/app/sub/masters/tournaments/components/venue";
 
@@ -68,7 +68,7 @@ export function TournamentContent({
 							{type === "blitz" ? "Blitz" : null}
 							{type === "rapid" ? "Rapid" : null}
 							{type === "960" ? "Rapid Chess960" : null}
-							{type === "final" ? "Info bald verfügbar" : null}
+							{type === "final" ? "Blizt, Rapid, Rapid Chess960" : null}
 						</Table.Cell>
 					</Table.Row>
 
@@ -88,7 +88,7 @@ export function TournamentContent({
 
 					<Venue value={value} />
 
-					<Prices isFinalTournament={isFinalTournament} value={value} />
+					<Prizes isFinalTournament={isFinalTournament} value={value} />
 
 					<AwardOfPoints isFinalTournament={isFinalTournament} />
 

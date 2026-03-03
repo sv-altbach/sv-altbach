@@ -240,58 +240,58 @@ const winners = [
 export default function SiegerPage() {
 	return (
 		<section className="py-20">
-				<div className="container mx-auto px-4">
-					<h1 className="mb-10 text-center font-bold text-3xl md:text-4xl">
-						Vereinsmeister
-					</h1>
-					<div className="overflow-x-auto">
-						<Table>
-							<TableHeader>
-								<TableRow>
-									<TableHead className="text-center">Jahr</TableHead>
-									<TableHead className="text-center">Vereinsmeister</TableHead>
-									<TableHead className="text-center">Pokalsieger</TableHead>
-									<TableHead className="text-center">
-										Bernhard-Frey-Pokal-Sieger
-									</TableHead>
-									<TableHead className="text-center">Jugendmeister</TableHead>
-									<TableHead className="text-center">Blitzmeister</TableHead>
-									<TableHead className="text-center">
-										Jugend-Blitzmeister
-									</TableHead>
+			<div className="container mx-auto px-4">
+				<h1 className="mb-10 text-center font-bold text-3xl md:text-4xl">
+					Vereinsmeister
+				</h1>
+				<div className="overflow-x-auto">
+					<Table>
+						<TableHeader>
+							<TableRow>
+								<TableHead className="text-center">Jahr</TableHead>
+								<TableHead className="text-center">Vereinsmeister</TableHead>
+								<TableHead className="text-center">Pokalsieger</TableHead>
+								<TableHead className="text-center">
+									Bernhard-Frey-Pokal-Sieger
+								</TableHead>
+								<TableHead className="text-center">Jugendmeister</TableHead>
+								<TableHead className="text-center">Blitzmeister</TableHead>
+								<TableHead className="text-center">
+									Jugend-Blitzmeister
+								</TableHead>
+							</TableRow>
+						</TableHeader>
+						<TableBody>
+							{winners.map((winner) => (
+								<TableRow key={winner.year}>
+									<TableCell className="text-center">{winner.year}</TableCell>
+									<TableCell className="text-center">
+										{winner.vereinsmeister}
+									</TableCell>
+									<TableCell className="text-center">
+										{winner.pokalsieger}
+									</TableCell>
+									<TableCell className="text-center">
+										{winner.bernhardFreyPokal}
+									</TableCell>
+									<TableCell className="text-center">
+										{winner.jugendmeister}
+									</TableCell>
+									<TableCell className="text-center">
+										{winner.blitzmeister}
+									</TableCell>
+									<TableCell className="text-center">
+										{winner.jugendBlitzmeister}
+									</TableCell>
 								</TableRow>
-							</TableHeader>
-							<TableBody>
-								{winners.map((winner) => (
-									<TableRow key={winner.year}>
-										<TableCell className="text-center">{winner.year}</TableCell>
-										<TableCell className="text-center">
-											{winner.vereinsmeister}
-										</TableCell>
-										<TableCell className="text-center">
-											{winner.pokalsieger}
-										</TableCell>
-										<TableCell className="text-center">
-											{winner.bernhardFreyPokal}
-										</TableCell>
-										<TableCell className="text-center">
-											{winner.jugendmeister}
-										</TableCell>
-										<TableCell className="text-center">
-											{winner.blitzmeister}
-										</TableCell>
-										<TableCell className="text-center">
-											{winner.jugendBlitzmeister}
-										</TableCell>
-									</TableRow>
-								))}
-							</TableBody>
-						</Table>
-					</div>
-					<p className="mt-6 text-center text-muted-foreground text-sm">
-						Historische Einzelergebnisse des Schachverein Altbach e.V.
-					</p>
+							))}
+						</TableBody>
+					</Table>
 				</div>
-			</section>
+				<p className="mt-6 text-center text-muted-foreground text-sm">
+					Historische Einzelergebnisse des Schachverein Altbach e.V.
+				</p>
+			</div>
+		</section>
 	);
 }
