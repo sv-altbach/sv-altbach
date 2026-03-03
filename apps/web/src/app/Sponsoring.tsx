@@ -23,7 +23,7 @@ const Sponsoring = () => {
 					>
 						<Image
 							loader={imageLoader}
-							src="logo_cit.png"
+							src="masters/logo_cit.png"
 							alt="cit GmbH Logo"
 							width={500}
 							height={500}
@@ -37,7 +37,7 @@ const Sponsoring = () => {
 					>
 						<Image
 							loader={imageLoader}
-							src="logo_allianz.png"
+							src="masters/logo_allianz.png"
 							alt="Allianz Logo"
 							width={500}
 							height={500}
@@ -52,7 +52,7 @@ const Sponsoring = () => {
 					>
 						<Image
 							loader={imageLoader}
-							src="logo_taplo.png"
+							src="masters/logo_taplo.png"
 							alt="Tanschule Plochingen Logo"
 							width={500}
 							height={500}

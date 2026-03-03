@@ -7,7 +7,7 @@
 		"mode": "13 Runden Schweizer System - Bedenkzeit: 3 Minuten + 2 Sekunden pro Zug je Spieler und Partie",
 		"value": "tournament_1",
 		"evaluation": "Blitz-Elo-Auswertung nach Blitz-Anhang",
-		"announcementPath": "/announcements/Ausschreibung_Turnier-1_SVA-Masters.pdf",
+		"announcementPath": "/masters/Ausschreibung_Turnier-1_SVA-Masters.pdf",
 		"withMusic": false
 	},
 	{
@@ -18,7 +18,7 @@
 		"mode": "13 Runden Schweizer System - Bedenkzeit: 3 Minuten + 2 Sekunden pro Zug je Spieler und Partie",
 		"value": "tournament_2",
 		"evaluation": "Keine Auswertung",
-		"announcementPath": "/announcements/Ausschreibung_Turnier-2_SVA-Masters.pdf",
+		"announcementPath": "/masters/Ausschreibung_Turnier-2_SVA-Masters.pdf",
 		"withMusic": true
 	},
 	{
@@ -29,7 +29,7 @@
 		"mode": "9 Runden Schweizer System - Bedenkzeit: 12 Minuten + 3 Sekunden pro Zug je Spieler und Partie",
 		"value": "tournament_3",
 		"evaluation": "Rapid-Elo-Auswertung nach Anhang",
-		"announcementPath": "/announcements/Ausschreibung_Turnier-3_SVA-Masters.pdf",
+		"announcementPath": "/masters/Ausschreibung_Turnier-3_SVA-Masters.pdf",
 		"listOfAttendeesUrl": "https://chess-results.com/tnr1181352.aspx?lan=0",
 		"withMusic": false
 	},
@@ -41,7 +41,7 @@
 		"mode": "9 Runden Schweizer System - Bedenkzeit: 12 Minuten + 3 Sekunden pro Zug je Spieler und Partie",
 		"value": "tournament_4",
 		"evaluation": "Rapid-Elo-Auswertung nach Anhang",
-		"announcementPath": "/announcements/Ausschreibung_Turnier-4_SVA-Masters.pdf",
+		"announcementPath": "/masters/Ausschreibung_Turnier-4_SVA-Masters.pdf",
 		"listOfAttendeesUrl": "https://chess-results.com/tnr1197203.aspx?lan=0",
 		"withMusic": false
 	},
@@ -53,7 +53,7 @@
 		"mode": "7 Runden Schweizer System nach Anhang A Rapid und Richtlinie II für Chess960 - Bedenkzeit: 15 Minuten + 5 Sekunden pro Zug je Spieler und Partie",
 		"value": "tournament_5",
 		"evaluation": "Keine Auswertung",
-		"announcementPath": "/announcements/Ausschreibung_Turnier-5_SVA-Masters.pdf",
+		"announcementPath": "/masters/Ausschreibung_Turnier-5_SVA-Masters.pdf",
 		"listOfAttendeesUrl": "https://s3.chess-results.com/tnr1246155.aspx?lan=0&SNode=S0",
 		"withMusic": true
 	},
