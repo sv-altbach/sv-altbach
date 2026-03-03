@@ -1,4 +1,4 @@
-export default function BlogSection() {
+export function BlogSection() {
 	return (
 		<section id="blog" className="bg-gray-50 py-20">
 			<div className="container mx-auto px-4">

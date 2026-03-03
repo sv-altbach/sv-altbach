@@ -1,7 +1,7 @@
 import type { Route } from "next";
 import Link from "next/link";
 import { subdomainHref } from "@/utils/routing";
-import FunktionaereDialog from "./funktionaere-dialog";
+import { FunktionaereDialog } from "./funktionaere-dialog";
 
 const footerLinks = {
 	links: [
@@ -70,7 +70,7 @@ const footerLinks = {
 	],
 };
 
-export default function RootFooter() {
+export function RootFooter() {
 	return (
 		<>
 			<footer className="py-10">

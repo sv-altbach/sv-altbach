@@ -7,8 +7,8 @@ import {
 	TableHeader,
 	TableRow,
 } from "@/components/ui/table";
-import Navigation from "../components/navigation";
-import RootFooter from "../components/root-footer";
+import { Navigation } from "../components/navigation";
+import { RootFooter } from "../components/root-footer";
 
 // Simplified data structure with recent winners
 const winners = [

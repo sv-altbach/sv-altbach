@@ -18,7 +18,7 @@ import {
 } from "@/components/ui/table";
 import { funktionaere } from "../data/funktionaere";
 
-export default function FunktionaereDialog() {
+export function FunktionaereDialog() {
 	return (
 		<Dialog>
 			<DialogTrigger

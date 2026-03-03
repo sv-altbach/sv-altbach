@@ -1,5 +1,5 @@
-import Navigation from "../components/navigation";
-import RootFooter from "../components/root-footer";
+import { Navigation } from "../components/navigation";
+import { RootFooter } from "../components/root-footer";
 
 export default function ImpressumPage() {
 	return (

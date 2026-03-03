@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { timelineEvents } from "../data/timeline";
 
-export default function AboutUsTimeline() {
+export function AboutUsTimeline() {
 	return (
 		<section id="aboutUs" className="bg-white py-20">
 			<div className="container mx-auto px-4">

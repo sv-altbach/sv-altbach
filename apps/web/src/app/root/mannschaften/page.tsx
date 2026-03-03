@@ -7,8 +7,8 @@ import {
 	TableHeader,
 	TableRow,
 } from "@/components/ui/table";
-import Navigation from "../components/navigation";
-import RootFooter from "../components/root-footer";
+import { Navigation } from "../components/navigation";
+import { RootFooter } from "../components/root-footer";
 
 // Simplified data - in production, this would come from a data file
 const teamResults = [

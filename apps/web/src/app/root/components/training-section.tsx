@@ -11,7 +11,7 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { trainingTypes } from "../data/training";
 
-export default function TrainingSection() {
+export function TrainingSection() {
 	return (
 		<section id="training" className="bg-white py-20">
 			<div className="container mx-auto px-4">

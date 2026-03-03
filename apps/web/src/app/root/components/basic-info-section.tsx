@@ -55,7 +55,7 @@ const infoItems = [
 	},
 ];
 
-export default function BasicInfoSection() {
+export function BasicInfoSection() {
 	const handleScroll = () => {
 		const element = document.querySelector("#contact");
 		if (element) {

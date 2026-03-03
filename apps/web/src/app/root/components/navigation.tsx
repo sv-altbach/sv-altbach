@@ -21,7 +21,7 @@ const navItems = [
 	{ href: "#contact", label: "Kontakt" },
 ];
 
-export default function Navigation() {
+export function Navigation() {
 	const [open, setOpen] = useState(false);
 
 	const handleNavClick = (

@@ -32,7 +32,7 @@ const membershipPlans = [
 	},
 ];
 
-export default function MembershipSection() {
+export function MembershipSection() {
 	const handleScroll = () => {
 		const element = document.querySelector("#contact");
 		if (element) {

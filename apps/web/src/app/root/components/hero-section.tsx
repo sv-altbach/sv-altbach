@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 
-export default function HeroSection() {
+export function HeroSection() {
 	const handleScroll = () => {
 		const element = document.querySelector("#basicInfo");
 		if (element) {

@@ -110,7 +110,7 @@ const tournaments = [
 	},
 ];
 
-export default function TournamentsSection() {
+export function TournamentsSection() {
 	return (
 		<section id="tournaments" className="bg-gray-50 py-20">
 			<div className="container mx-auto px-4">
