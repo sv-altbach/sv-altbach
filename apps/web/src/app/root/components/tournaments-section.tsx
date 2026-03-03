@@ -1,3 +1,4 @@
+import Link from "next/link";
 import {
 	Accordion,
 	AccordionContent,
@@ -13,6 +14,7 @@ import {
 	TableHeader,
 	TableRow,
 } from "@/components/ui/table";
+import { subdomainHref } from "@/utils/routing";
 
 const tournaments = [
 	{
@@ -44,13 +46,18 @@ const tournaments = [
 			{
 				label: "Weitere Infos",
 				value: (
-					<a
-						href="https://masters.svaltbach.de/"
-						target="_blank"
-						rel="noopener noreferrer"
+					<Button
+						render={
+							<Link
+								href={subdomainHref("/sub/masters")}
+								target="_blank"
+								rel="noopener noreferrer"
+							/>
+						}
+						nativeButton={false}
 					>
-						<Button>Homepage SVA Masters</Button>
-					</a>
+						Homepage SVA Masters
+					</Button>
 				),
 			},
 		],
@@ -85,13 +92,18 @@ const tournaments = [
 			{
 				label: "Weitere Infos",
 				value: (
-					<a
-						href="/root/docs/AUS-Altbacher Turniere_Schachzeitung_2026.pdf"
-						target="_blank"
-						rel="noopener noreferrer"
+					<Button
+						render={
+							<Link
+								href="/root/docs/AUS-Altbacher Turniere_Schachzeitung_2026.pdf"
+								target="_blank"
+								rel="noopener noreferrer"
+							/>
+						}
+						nativeButton={false}
 					>
-						<Button>Ausschreibung</Button>
-					</a>
+						Ausschreibung
+					</Button>
 				),
 			},
 		],

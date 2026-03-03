@@ -1,5 +1,6 @@
 import type { Route } from "next";
 import Link from "next/link";
+import { subdomainHref } from "@/utils/routing";
 import FunktionaereDialog from "./funktionaere-dialog";
 
 const footerLinks = {
@@ -28,11 +29,11 @@ const footerLinks = {
 			external: true,
 		},
 		{
-			href: "/root/mannschaften",
+			href: subdomainHref("/root/mannschaften"),
 			label: "Mannschaften",
 			external: false,
 		},
-		{ href: "/root/sieger", label: "Einzel", external: false },
+		{ href: subdomainHref("/root/sieger"), label: "Einzel", external: false },
 		{
 			href: "https://svw-schach.liga.nu/cgi-bin/WebObjects/nuLigaSCHACHDE.woa/wa/home",
 			label: "Liga-Ergebnisdienst",
