@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { RootFooter } from "./components/root-footer";
+import { RootFooter } from "./components/footer";
 
 export const metadata: Metadata = {
 	title: "Schachverein Altbach e.V.",

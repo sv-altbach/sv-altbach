@@ -1,12 +1,12 @@
 import { AboutUsTimeline } from "./components/about-us-timeline";
-import { BasicInfoSection } from "./components/basic-info-section";
-import { BlogSection } from "./components/blog-section";
+import { BasicInfoSection } from "./components/basic-info";
+import { BlogSection } from "./components/blog";
 import { ContactForm } from "./components/contact-form";
-import { HeroSection } from "./components/hero-section";
-import { MembershipSection } from "./components/membership-section";
+import { HeroSection } from "./components/hero";
+import { MembershipSection } from "./components/membership";
 import { ScrollToTopButton } from "./components/scroll-to-top";
-import { TournamentsSection } from "./components/tournaments-section";
-import { TrainingSection } from "./components/training-section";
+import { TournamentsSection } from "./components/tournaments";
+import { TrainingSection } from "./components/training";
 
 const SECTIONS = [
 	{
