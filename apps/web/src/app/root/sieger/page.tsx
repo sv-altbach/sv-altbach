@@ -239,8 +239,7 @@ const winners = [
 
 export default function SiegerPage() {
 	return (
-		<main className="min-h-screen bg-white pt-16">
-			<section className="py-20">
+		<section className="py-20">
 				<div className="container mx-auto px-4">
 					<h1 className="mb-10 text-center font-bold text-3xl md:text-4xl">
 						Vereinsmeister
@@ -294,6 +293,5 @@ export default function SiegerPage() {
 					</p>
 				</div>
 			</section>
-		</main>
 	);
 }

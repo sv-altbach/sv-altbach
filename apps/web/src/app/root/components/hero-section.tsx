@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
 export function HeroSection() {
@@ -11,12 +12,16 @@ export function HeroSection() {
 	};
 
 	return (
-		<section
-			id="hero"
-			className="flex min-h-screen items-center justify-center"
-		>
-			{/* Content */}
-			<div className="container mx-auto px-4 text-center">
+		<>
+			<Image
+				src="/root/images/header-bg.jpg"
+				alt=""
+				fill
+				className="object-cover brightness-50"
+				priority
+			/>
+
+			<div className="relative z-10 pt-16 text-center">
 				<p className="mb-2 text-lg text-white/90 italic md:text-xl">
 					Willkommen in unserem Verein
 				</p>
@@ -27,6 +32,6 @@ export function HeroSection() {
 					Über den Verein
 				</Button>
 			</div>
-		</section>
+		</>
 	);
 }

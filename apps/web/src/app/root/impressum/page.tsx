@@ -1,7 +1,6 @@
 export default function ImpressumPage() {
 	return (
-		<main className="min-h-screen bg-white pt-16">
-			<section className="py-20">
+		<section className="py-20">
 				<div className="container mx-auto px-4">
 					<div className="mx-auto max-w-4xl">
 						<h1 className="mb-8 font-bold text-3xl md:text-4xl">Impressum:</h1>
@@ -60,6 +59,5 @@ export default function ImpressumPage() {
 					</div>
 				</div>
 			</section>
-		</main>
 	);
 }

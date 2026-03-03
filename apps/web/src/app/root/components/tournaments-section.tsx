@@ -112,51 +112,47 @@ const tournaments = [
 
 export function TournamentsSection() {
 	return (
-		<section id="tournaments" className="bg-gray-50 py-20">
-			<div className="container mx-auto px-4">
-				<h2 className="mb-2 text-center font-bold text-3xl uppercase md:text-4xl">
-					Turniere
-				</h2>
-				<p className="mb-10 text-center text-muted-foreground italic">
-					Alles über unsere Turniere
-				</p>
+		<div>
+			<h2 className="mb-2 text-center font-bold text-3xl uppercase md:text-4xl">
+				Turniere
+			</h2>
+			<p className="mb-10 text-center text-muted-foreground italic">
+				Alles über unsere Turniere
+			</p>
 
-				<div className="mx-auto max-w-4xl">
-					<Accordion defaultValue={["masters"]}>
-						{tournaments.map((tournament) => (
-							<AccordionItem key={tournament.id} value={tournament.id}>
-								<AccordionTrigger className="font-semibold text-lg">
-									{tournament.title}
-								</AccordionTrigger>
-								<AccordionContent>
-									<div className="overflow-x-auto">
-										<Table>
-											<TableHeader>
-												<TableRow>
-													<TableHead>#</TableHead>
-													<TableHead>
-														{tournament.subtitle || tournament.title}
-													</TableHead>
+			<div className="mx-auto max-w-4xl">
+				<Accordion defaultValue={["masters"]}>
+					{tournaments.map((tournament) => (
+						<AccordionItem key={tournament.id} value={tournament.id}>
+							<AccordionTrigger className="font-semibold text-lg">
+								{tournament.title}
+							</AccordionTrigger>
+							<AccordionContent>
+								<div className="overflow-x-auto">
+									<Table>
+										<TableHeader>
+											<TableRow>
+												<TableHead>#</TableHead>
+												<TableHead>
+													{tournament.subtitle || tournament.title}
+												</TableHead>
+											</TableRow>
+										</TableHeader>
+										<TableBody>
+											{tournament.details.map((detail) => (
+												<TableRow key={detail.label}>
+													<TableHead className="w-32">{detail.label}</TableHead>
+													<TableCell>{detail.value}</TableCell>
 												</TableRow>
-											</TableHeader>
-											<TableBody>
-												{tournament.details.map((detail) => (
-													<TableRow key={detail.label}>
-														<TableHead className="w-32">
-															{detail.label}
-														</TableHead>
-														<TableCell>{detail.value}</TableCell>
-													</TableRow>
-												))}
-											</TableBody>
-										</Table>
-									</div>
-								</AccordionContent>
-							</AccordionItem>
-						))}
-					</Accordion>
-				</div>
+											))}
+										</TableBody>
+									</Table>
+								</div>
+							</AccordionContent>
+						</AccordionItem>
+					))}
+				</Accordion>
 			</div>
-		</section>
+		</div>
 	);
 }

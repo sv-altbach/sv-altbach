@@ -1,7 +1,6 @@
 export default function DatenschutzPage() {
 	return (
-		<main className="min-h-screen bg-white pt-16">
-			<section className="py-20">
+		<section className="py-20">
 				<div className="container mx-auto px-4">
 					<div className="prose prose-lg mx-auto max-w-4xl">
 						<h1>Datenschutzerklärung</h1>
@@ -236,6 +235,5 @@ export default function DatenschutzPage() {
 					</div>
 				</div>
 			</section>
-		</main>
 	);
 }

@@ -64,42 +64,40 @@ export function BasicInfoSection() {
 	};
 
 	return (
-		<section id="basicInfo" className="bg-white py-20">
-			<div className="container mx-auto px-4">
-				<p className="my-5 text-center text-muted-foreground italic">
-					Seit 1969 agiert der Schachverein Altbach als selbstständiger Verein.
-					Davor wurde schon 15 Jahre als Schachabteilung des VdK gespielt, seit
-					2008 sind wir ein eingetragener Verein. Neben der Nachwuchsförderung
-					haben sich auch unsere Turnier-Veranstaltungen etabliert.
-				</p>
+		<div>
+			<p className="my-5 text-center text-muted-foreground italic">
+				Seit 1969 agiert der Schachverein Altbach als selbstständiger Verein.
+				Davor wurde schon 15 Jahre als Schachabteilung des VdK gespielt, seit
+				2008 sind wir ein eingetragener Verein. Neben der Nachwuchsförderung
+				haben sich auch unsere Turnier-Veranstaltungen etabliert.
+			</p>
 
-				<div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4">
-					{infoItems.map((item) => {
-						const Icon = item.icon;
-						return (
-							<Card key={item.title} className="text-center">
-								<CardHeader>
-									<div className="mb-3 flex justify-center">
-										<Icon className="h-8 w-8 text-primary" />
-									</div>
-									<CardTitle className="uppercase">{item.title}</CardTitle>
-								</CardHeader>
-								<CardContent>
-									<CardDescription className="text-sm">
-										{item.description}
-									</CardDescription>
-								</CardContent>
-							</Card>
-						);
-					})}
-				</div>
-
-				<div className="mt-8 text-center">
-					<Button className="uppercase" onClick={handleScroll}>
-						Schreib uns
-					</Button>
-				</div>
+			<div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4">
+				{infoItems.map((item) => {
+					const Icon = item.icon;
+					return (
+						<Card key={item.title} className="text-center">
+							<CardHeader>
+								<div className="mb-3 flex justify-center">
+									<Icon className="h-8 w-8 text-primary" />
+								</div>
+								<CardTitle className="uppercase">{item.title}</CardTitle>
+							</CardHeader>
+							<CardContent>
+								<CardDescription className="text-sm">
+									{item.description}
+								</CardDescription>
+							</CardContent>
+						</Card>
+					);
+				})}
 			</div>
-		</section>
+
+			<div className="mt-8 text-center">
+				<Button className="uppercase" onClick={handleScroll}>
+					Schreib uns
+				</Button>
+			</div>
+		</div>
 	);
 }

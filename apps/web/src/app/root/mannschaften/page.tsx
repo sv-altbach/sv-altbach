@@ -195,65 +195,61 @@ const teamResults = [
 
 export default function MannschaftenPage() {
 	return (
-		<main className="min-h-screen bg-white pt-16">
-			<section className="py-20">
-				<div className="container mx-auto px-4">
-					<h1 className="mb-10 text-center font-bold text-3xl md:text-4xl">
-						Mannschaften
-					</h1>
-					<div className="overflow-x-auto">
-						<Table>
-							<TableHeader>
-								<TableRow>
-									<TableHead className="text-center">Saison</TableHead>
-									<TableHead className="text-center">Landesliga</TableHead>
-									<TableHead className="text-center">Bezirksliga</TableHead>
-									<TableHead className="text-center" colSpan={2}>
-										Kreisklasse
-									</TableHead>
-									<TableHead className="text-center" colSpan={2}>
-										A-Klasse
-									</TableHead>
-									<TableHead className="text-center" colSpan={2}>
-										B-Klasse
-									</TableHead>
-									<TableHead className="text-center" colSpan={3}>
-										C-Klasse
-									</TableHead>
-									<TableHead className="text-center">D-Klasse</TableHead>
+		<section className="py-20">
+			<div className="container mx-auto px-4">
+				<h1 className="mb-10 text-center font-bold text-3xl md:text-4xl">
+					Mannschaften
+				</h1>
+				<div className="overflow-x-auto">
+					<Table>
+						<TableHeader>
+							<TableRow>
+								<TableHead className="text-center">Saison</TableHead>
+								<TableHead className="text-center">Landesliga</TableHead>
+								<TableHead className="text-center">Bezirksliga</TableHead>
+								<TableHead className="text-center" colSpan={2}>
+									Kreisklasse
+								</TableHead>
+								<TableHead className="text-center" colSpan={2}>
+									A-Klasse
+								</TableHead>
+								<TableHead className="text-center" colSpan={2}>
+									B-Klasse
+								</TableHead>
+								<TableHead className="text-center" colSpan={3}>
+									C-Klasse
+								</TableHead>
+								<TableHead className="text-center">D-Klasse</TableHead>
+							</TableRow>
+						</TableHeader>
+						<TableBody>
+							{teamResults.map((result) => (
+								<TableRow key={result.saison}>
+									<TableCell className="text-center">{result.saison}</TableCell>
+									<TableCell className="text-center">-</TableCell>
+									<TableCell className="text-center">-</TableCell>
+									<TableCell className="text-center" colSpan={2}>
+										{result.kreisklasse || "-"}
+									</TableCell>
+									<TableCell className="text-center" colSpan={2}>
+										{result.aKlasse || "-"}
+									</TableCell>
+									<TableCell className="text-center" colSpan={2}>
+										{result.bKlasse || "-"}
+									</TableCell>
+									<TableCell className="text-center" colSpan={3}>
+										{result.cKlasse || "-"}
+									</TableCell>
+									<TableCell className="text-center">-</TableCell>
 								</TableRow>
-							</TableHeader>
-							<TableBody>
-								{teamResults.map((result) => (
-									<TableRow key={result.saison}>
-										<TableCell className="text-center">
-											{result.saison}
-										</TableCell>
-										<TableCell className="text-center">-</TableCell>
-										<TableCell className="text-center">-</TableCell>
-										<TableCell className="text-center" colSpan={2}>
-											{result.kreisklasse || "-"}
-										</TableCell>
-										<TableCell className="text-center" colSpan={2}>
-											{result.aKlasse || "-"}
-										</TableCell>
-										<TableCell className="text-center" colSpan={2}>
-											{result.bKlasse || "-"}
-										</TableCell>
-										<TableCell className="text-center" colSpan={3}>
-											{result.cKlasse || "-"}
-										</TableCell>
-										<TableCell className="text-center">-</TableCell>
-									</TableRow>
-								))}
-							</TableBody>
-						</Table>
-					</div>
-					<p className="mt-6 text-center text-muted-foreground text-sm">
-						Historische Mannschaftsergebnisse des Schachverein Altbach e.V.
-					</p>
+							))}
+						</TableBody>
+					</Table>
 				</div>
-			</section>
-		</main>
+				<p className="mt-6 text-center text-muted-foreground text-sm">
+					Historische Mannschaftsergebnisse des Schachverein Altbach e.V.
+				</p>
+			</div>
+		</section>
 	);
 }
