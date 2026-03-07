@@ -1,3 +1,4 @@
+import { Theme } from "@radix-ui/themes";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -9,5 +10,5 @@ export const metadata: Metadata = {
 export default function MastersLayout({
 	children,
 }: LayoutProps<"/sub/masters">) {
-	return children;
+	return <Theme accentColor="red">{children}</Theme>;
 }
