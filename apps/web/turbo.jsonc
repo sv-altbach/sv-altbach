@@ -1,0 +1,14 @@
+{
+	"$schema": "https://turborepo.com/schema.json",
+	"extends": ["//"],
+	"tasks": {
+		"typegen": {
+			"inputs": ["src/**/*.ts", "src/**/*.tsx", "next.config.ts"],
+			"outputs": [".next/types/**/*.ts"]
+		},
+		"check:types": {
+			"inputs": ["src/**/*.ts", "src/**/*.tsx", "tsconfig.json"],
+			"dependsOn": ["typegen"]
+		}
+	}
+}
