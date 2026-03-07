@@ -31,7 +31,9 @@ export default function Site() {
 				<section
 					key={section.id}
 					id={section.id}
-					className={section.className ?? "container mx-auto px-4 py-10 md:px-10"}
+					className={
+						section.className ?? "container mx-auto px-4 py-10 md:px-10"
+					}
 				>
 					{section.component}
 				</section>
