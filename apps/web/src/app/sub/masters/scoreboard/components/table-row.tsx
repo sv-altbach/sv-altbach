@@ -1,5 +1,5 @@
 import { Table, Tooltip } from "@radix-ui/themes";
-import { MdOutlineKeyboardDoubleArrowUp } from "react-icons/md";
+import { IconArrowBadgeUp } from "@tabler/icons-react";
 import { pointMapping } from "@/app/sub/masters/scoreboard/utils/pointMapping";
 import type { Player, Team } from "@/types";
 import { cn } from "@/utils/ui";
@@ -93,7 +93,7 @@ function renderHasPlayedAllTournamentsIndicator(player: Player, index: number) {
 					width="180px"
 					content="Für das Finale qualifiziert. Bei allen Turnieren dabei gewesen."
 				>
-					<MdOutlineKeyboardDoubleArrowUp
+					<IconArrowBadgeUp
 						className="text-3xl text-red-600"
 						aria-hidden="true"
 					/>

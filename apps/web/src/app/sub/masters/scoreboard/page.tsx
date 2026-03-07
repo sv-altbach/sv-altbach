@@ -1,6 +1,6 @@
 import { Box, Container, Heading, Tabs, Text } from "@radix-ui/themes";
+import { IconArrowBadgeUp } from "@tabler/icons-react";
 import Link from "next/link";
-import { MdOutlineKeyboardDoubleArrowUp } from "react-icons/md";
 import { Table } from "@/app/sub/masters/scoreboard/components/table";
 import { Button } from "@/components/ui/button";
 import { Footer } from "../components/footer";
@@ -36,7 +36,7 @@ const ScoreboardPage = () => {
 						<Text as="p" aria-hidden="true">
 							Spieler, die neben ihrem Namen einen doppelten Pfeil nach oben
 							haben
-							<MdOutlineKeyboardDoubleArrowUp
+							<IconArrowBadgeUp
 								className="inline text-lg text-red-600"
 								aria-hidden="true"
 							/>

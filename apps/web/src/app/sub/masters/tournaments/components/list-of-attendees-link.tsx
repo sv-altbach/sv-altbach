@@ -1,6 +1,6 @@
 import { Link, Table, Text } from "@radix-ui/themes";
 
-import { LuExternalLink } from "react-icons/lu";
+import { IconExternalLink } from "@tabler/icons-react";
 
 interface Props {
 	url?: string | null;
@@ -25,7 +25,7 @@ export function ListOfAttendeesLink({ url }: Props) {
 					<span className="flex items-center gap-1">
 						<span>Teilnehmerliste öffnen</span>
 						<span className="sr-only">Öffnet in neuem Tab</span>
-						<LuExternalLink aria-hidden="true" />
+						<IconExternalLink aria-hidden="true" size="16" />
 					</span>
 				</Link>
 

@@ -1,5 +1,5 @@
 import { Flex, Table, Text } from "@radix-ui/themes";
-import { MdOutlineKeyboardDoubleArrowUp } from "react-icons/md";
+import { IconArrowBadgeUp } from "@tabler/icons-react";
 import { TableRow } from "@/app/sub/masters/scoreboard/components/table-row";
 import { getPlayers, getTeams } from "@/app/sub/masters/scoreboard/getPlayers";
 
@@ -25,9 +25,9 @@ export function TableBody({ isPlayerTable }: Props) {
 					colSpan={10}
 				>
 					<Flex justify="center" align="center">
-						<MdOutlineKeyboardDoubleArrowUp className="text-3xl text-red-600" />
+						<IconArrowBadgeUp className="text-3xl text-red-600" />
 						<Text>Für das Finale qualifiziert</Text>
-						<MdOutlineKeyboardDoubleArrowUp className="text-3xl text-red-600" />
+						<IconArrowBadgeUp className="text-3xl text-red-600" />
 					</Flex>
 				</Table.Cell>
 			</Table.Row>
