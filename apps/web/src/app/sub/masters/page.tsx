@@ -5,7 +5,7 @@ import { Contact } from "./components/contact";
 import { Footer } from "./components/footer";
 import { Header } from "./components/header";
 import { Sponsoring } from "./components/sponsoring";
-import { Tournaments } from "./tournaments/tournaments";
+import { Tournaments } from "./tournaments/Tournaments";
 
 export default function Home() {
 	return (

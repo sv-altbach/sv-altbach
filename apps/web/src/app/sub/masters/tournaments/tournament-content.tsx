@@ -7,7 +7,7 @@ import { ListOfAttendeesLink } from "@/app/sub/masters/tournaments/components/li
 import { PointRules } from "@/app/sub/masters/tournaments/components/point-rules";
 import { Prizes } from "@/app/sub/masters/tournaments/components/prizes";
 import { RegisterButton } from "@/app/sub/masters/tournaments/components/register-button";
-import { Venue } from "@/app/sub/masters/tournaments/components/venue";
+import { Venue } from "@/app/sub/masters/tournaments/components/Venue";
 
 interface Props {
 	type?: "blitz" | "rapid" | "960" | "final";

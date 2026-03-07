@@ -1,7 +1,7 @@
 import { Box, Container, Heading, Tabs, Text } from "@radix-ui/themes";
 import { IconArrowBadgeUp } from "@tabler/icons-react";
 import Link from "next/link";
-import { Table } from "@/app/sub/masters/scoreboard/components/table";
+import { Table } from "@/app/sub/masters/scoreboard/components/Table";
 import { Button } from "@/components/ui/button";
 import { Footer } from "../components/footer";
 
