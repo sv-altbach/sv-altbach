@@ -31,26 +31,39 @@ function normalizeWhitespace(value: string) {
 }
 
 function decodeHtmlEntities(value: string) {
-	return value
-		.replace(/&#(\d+);/g, (_, codePoint) =>
-			String.fromCodePoint(Number.parseInt(codePoint, 10)),
-		)
-		.replace(/&#x([\da-f]+);/gi, (_, codePoint) =>
-			String.fromCodePoint(Number.parseInt(codePoint, 16)),
-		)
-		.replace(/&amp;/g, "&")
-		.replace(/&lt;/g, "<")
-		.replace(/&gt;/g, ">")
-		.replace(/&quot;/g, '"')
-		.replace(/&#39;/g, "'");
+	return value.replace(
+		/&(?:amp|lt|gt|quot|#39|#\d+|#x[\da-f]+);/gi,
+		(entity) => {
+			switch (entity.toLowerCase()) {
+				case "&amp;":
+					return "&";
+				case "&lt;":
+					return "<";
+				case "&gt;":
+					return ">";
+				case "&quot;":
+					return '"';
+				case "&#39;":
+					return "'";
+				default:
+					if (entity.startsWith("&#x") || entity.startsWith("&#X")) {
+						return String.fromCodePoint(
+							Number.parseInt(entity.slice(3, -1), 16),
+						);
+					}
+
+					return String.fromCodePoint(Number.parseInt(entity.slice(2, -1), 10));
+			}
+		},
+	);
 }
 
 function stripHtml(value: string) {
 	return normalizeWhitespace(
 		decodeHtmlEntities(
 			value
-				.replace(/<script[\s\S]*?<\/script>/gi, " ")
-				.replace(/<style[\s\S]*?<\/style>/gi, " ")
+				.replace(/<script[\s\S]*?<\/script\b[^>]*>/gi, " ")
+				.replace(/<style[\s\S]*?<\/style\b[^>]*>/gi, " ")
 				.replace(/<[^>]+>/g, " "),
 		),
 	);
