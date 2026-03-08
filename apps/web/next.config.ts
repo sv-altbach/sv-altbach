@@ -1,18 +1,12 @@
 import type { NextConfig } from "next";
 
-const escapeRegex = (value: string) =>
-	value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-
-const isDefined = (value: string | undefined): value is string =>
-	Boolean(value);
-
 const DEPLOYMENT_DOMAINS = [
 	process.env.VERCEL_URL,
 	process.env.VERCEL_BRANCH_URL,
 	process.env.VERCEL_PROJECT_PRODUCTION_URL,
 ]
-	.filter(isDefined)
-	.map(escapeRegex)
+	.filter((domain) => domain !== undefined)
+	.map((domain) => RegExp.escape(domain))
 	.join("|");
 
 const ROOT_DOMAIN = process.env.VERCEL_ENV
