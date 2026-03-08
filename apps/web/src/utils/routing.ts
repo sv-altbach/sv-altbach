@@ -1,16 +1,48 @@
-import type { Route } from "next";
-
 const SUB_ROUTE_RE = /^\/sub\/([^/]+)(\/.*)?$/;
 const ROOT_ROUTE_RE = /^\/root(\/.*)?$/;
 
-function getRootDomain(): { domain: string; port: string; protocol: string } {
+export type OriginInfo = {
+	protocol: "http" | "https";
+	domain: string;
+	port?: string;
+	currentSubdomain?: Subdomain;
+};
+
+const SUBDOMAINS = ["root", "masters"] as const;
+export type Subdomain = (typeof SUBDOMAINS)[number];
+
+function isSubdomain(value: string): value is Subdomain {
+	return SUBDOMAINS.includes(value as Subdomain);
+}
+
+function getRootDomain(hostname: string): string {
+	const isLocal = hostname === "localhost" || hostname.endsWith(".localhost");
+	return isLocal ? "localhost" : hostname.split(".").slice(-2).join(".");
+}
+
+function getCurrentSubdomain(
+	hostname: string,
+	domain: string,
+): Subdomain | undefined {
+	if (hostname === domain) return "root";
+
+	const suffix = `.${domain}`;
+	if (!hostname.endsWith(suffix)) return undefined;
+
+	const candidate = hostname.slice(0, -suffix.length);
+	return isSubdomain(candidate) ? candidate : undefined;
+}
+
+export function resolveOriginInfo(): OriginInfo {
 	if (typeof window !== "undefined") {
 		const { hostname, port, protocol } = window.location;
-		const isLocal = hostname === "localhost" || hostname.endsWith(".localhost");
-		const domain = isLocal
-			? "localhost"
-			: hostname.split(".").slice(-2).join(".");
-		return { domain, port, protocol: protocol.replace(":", "") };
+		const domain = getRootDomain(hostname);
+		return {
+			domain,
+			port: port || undefined,
+			protocol: protocol.replace(":", "") as OriginInfo["protocol"],
+			currentSubdomain: getCurrentSubdomain(hostname, domain),
+		};
 	}
 
 	// Server-side: mirror next.config.ts — VERCEL_ENV presence means we're on Vercel.
@@ -22,7 +54,7 @@ function getRootDomain(): { domain: string; port: string; protocol: string } {
 			process.env.VERCEL_BRANCH_URL ??
 			process.env.VERCEL_URL ??
 			"localhost";
-		return { domain, port: "", protocol: "https" };
+		return { domain, protocol: "https" };
 	}
 
 	return {
@@ -32,38 +64,81 @@ function getRootDomain(): { domain: string; port: string; protocol: string } {
 	};
 }
 
-/**
- * Converts a route into the correct absolute URL for cross-subdomain navigation
- * with next/link. Handles two patterns:
- *
- * - /sub/:subdomain/:path* — routes to that subdomain
- * - /root/:path*           — routes to the root domain (no subdomain prefix)
- *
- * All other routes are returned unchanged.
- *
- * @example
- * // on localhost:3000
- * subdomainHref("/sub/masters/scoreboard") // → "http://masters.localhost:3000/scoreboard"
- * subdomainHref("/sub/root/impressum")     // → "http://localhost:3000/impressum"
- * subdomainHref("/root/mannschaften")      // → "http://localhost:3000/mannschaften"
- * subdomainHref("/other/page")             // → "/other/page"  (unchanged)
- */
-export function subdomainHref(route: Route): Route {
-	const { domain, port, protocol } = getRootDomain();
-	const portSuffix = port ? `:${port}` : "";
-
+export function parseInternalSubdomainRoute(
+	route: string,
+): { subdomain: Subdomain; path: string } | null {
 	const subMatch = route.match(SUB_ROUTE_RE);
 	if (subMatch) {
-		const [, subdomain, path = "/"] = subMatch;
-		const host = subdomain === "root" ? domain : `${subdomain}.${domain}`;
-		return `${protocol}://${host}${portSuffix}${path}` as Route;
+		const [, rawSubdomain, path = "/"] = subMatch;
+		if (!rawSubdomain || !isSubdomain(rawSubdomain)) {
+			return null;
+		}
+
+		return { subdomain: rawSubdomain, path };
 	}
 
 	const rootMatch = route.match(ROOT_ROUTE_RE);
 	if (rootMatch) {
 		const [, path = "/"] = rootMatch;
-		return `${protocol}://${domain}${portSuffix}${path}` as Route;
+		return { subdomain: "root", path };
 	}
 
-	return route as Route;
+	return null;
+}
+
+/**
+ * Resolves a public path to either a same-origin relative href or a
+ * cross-subdomain absolute URL.
+ *
+ * @example
+ * // on localhost:3000
+ * buildSubdomainHref("/mannschaften", {
+ *   subdomain: "root",
+ *   origin: resolveOriginInfo(),
+ * })
+ * // -> "/mannschaften"
+ *
+ * buildSubdomainHref("/scoreboard", {
+ *   subdomain: "masters",
+ *   origin: resolveOriginInfo(),
+ * })
+ * // -> "http://masters.localhost:3000/scoreboard"
+ */
+export function buildSubdomainHref<Pathname extends string>(
+	href: Pathname,
+	opts: {
+		subdomain?: Subdomain;
+		origin: OriginInfo;
+	},
+): Pathname | string {
+	const targetSubdomain = opts.subdomain ?? "root";
+	const currentSubdomain = opts.origin.currentSubdomain ?? "root";
+
+	if (targetSubdomain === currentSubdomain) return href;
+
+	const host =
+		targetSubdomain === "root"
+			? opts.origin.domain
+			: `${targetSubdomain}.${opts.origin.domain}`;
+
+	const port = opts.origin.port ? `:${opts.origin.port}` : "";
+
+	return `${opts.origin.protocol}://${host}${port}${href}`;
+}
+
+/**
+ * Backwards-compatible adapter for internal `/root/...` and `/sub/...` routes.
+ */
+export function subdomainHrefFromInternalRoute(
+	route: string,
+	origin: OriginInfo,
+): string {
+	const target = parseInternalSubdomainRoute(route);
+
+	return target
+		? buildSubdomainHref(target.path, {
+				subdomain: target.subdomain,
+				origin,
+			})
+		: route;
 }

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SubdomainLink } from "@/components/subdomain-link";
 import {
 	Accordion,
 	AccordionContent,
@@ -14,7 +15,6 @@ import {
 	TableHeader,
 	TableRow,
 } from "@/components/ui/table";
-import { subdomainHref } from "@/utils/routing";
 
 const tournaments = [
 	{
@@ -48,8 +48,9 @@ const tournaments = [
 				value: (
 					<Button
 						render={
-							<Link
-								href={subdomainHref("/sub/masters")}
+							<SubdomainLink
+								href="/"
+								subdomain="masters"
 								target="_blank"
 								rel="noopener noreferrer"
 							/>

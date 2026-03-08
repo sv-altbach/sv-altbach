@@ -1,9 +1,20 @@
-import type { Route } from "next";
-import Link from "next/link";
-import { subdomainHref } from "@/utils/routing";
+import { SubdomainLink } from "@/components/subdomain-link";
+import type { Subdomain } from "@/utils/routing";
 import { FunktionaereDialog } from "./funktionaere-dialog";
 
-const footerLinks = {
+type FooterLink = {
+	href: string;
+	label: string;
+	external?: boolean;
+	subdomain?: Subdomain;
+};
+
+const footerLinks: {
+	links: FooterLink[];
+	kategorien: FooterLink[];
+	social: FooterLink[];
+	rechtliches: FooterLink[];
+} = {
 	links: [
 		{ href: "https://schachmatt.net/schach-lernen/", label: "Schach lernen!" },
 		{ href: "http://www.schachdepot.de/", label: "Schachartikel online" },
@@ -29,11 +40,17 @@ const footerLinks = {
 			external: true,
 		},
 		{
-			href: subdomainHref("/root/mannschaften"),
+			href: "/mannschaften",
+			subdomain: "root",
 			label: "Mannschaften",
 			external: false,
 		},
-		{ href: subdomainHref("/root/sieger"), label: "Einzel", external: false },
+		{
+			href: "/sieger",
+			subdomain: "root",
+			label: "Einzel",
+			external: false,
+		},
 		{
 			href: "https://svw-schach.liga.nu/cgi-bin/WebObjects/nuLigaSCHACHDE.woa/wa/home",
 			label: "Liga-Ergebnisdienst",
@@ -65,8 +82,18 @@ const footerLinks = {
 		{ href: "https://www.tumblr.com/svaltbach-blog", label: "Tumblr" },
 	],
 	rechtliches: [
-		{ href: "/root/impressum", label: "Impressum", external: false },
-		{ href: "/root/datenschutz", label: "Datenschutz", external: false },
+		{
+			href: "/impressum",
+			label: "Impressum",
+			external: false,
+			subdomain: "root",
+		},
+		{
+			href: "/datenschutz",
+			label: "Datenschutz",
+			external: false,
+			subdomain: "root",
+		},
 	],
 };
 
@@ -104,22 +131,21 @@ export function RootFooter() {
 										return (
 											<li key={link.href} className="text-sm">
 												Historisch:{" "}
-												<Link
-													href={link.href as Route}
+												<SubdomainLink
+													href={link.href}
+													subdomain={link.subdomain}
 													className="text-muted-foreground transition-colors hover:text-primary"
 												>
 													Mannschaften
-												</Link>{" "}
+												</SubdomainLink>{" "}
 												/{" "}
-												<Link
-													href={
-														(footerLinks.kategorien[2]?.href ??
-															"/root/sieger") as Route
-													}
+												<SubdomainLink
+													href={footerLinks.kategorien[2]?.href ?? "/sieger"}
+													subdomain={footerLinks.kategorien[2]?.subdomain}
 													className="text-muted-foreground transition-colors hover:text-primary"
 												>
 													Einzel
-												</Link>
+												</SubdomainLink>
 											</li>
 										);
 									}
@@ -152,12 +178,13 @@ export function RootFooter() {
 													{link.label}
 												</a>
 											) : (
-												<Link
-													href={link.href as Route}
+												<SubdomainLink
+													href={link.href}
+													subdomain={link.subdomain}
 													className="text-muted-foreground text-sm transition-colors hover:text-primary"
 												>
 													{link.label}
-												</Link>
+												</SubdomainLink>
 											)}
 										</li>
 									);
@@ -190,12 +217,13 @@ export function RootFooter() {
 							<ul className="space-y-2">
 								{footerLinks.rechtliches.map((link) => (
 									<li key={link.href}>
-										<Link
-											href={link.href as Route}
+										<SubdomainLink
+											href={link.href}
+											subdomain={link.subdomain}
 											className="text-muted-foreground text-sm transition-colors hover:text-primary"
 										>
 											{link.label}
-										</Link>
+										</SubdomainLink>
 									</li>
 								))}
 							</ul>
