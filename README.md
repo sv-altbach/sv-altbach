@@ -72,7 +72,7 @@ bun run check:types # TypeScript type check
 The website homepage includes a Tumblr-powered blog section that fetches and displays the latest 5 posts from `https://svaltbach-blog.tumblr.com/`.
 
 - Blog data is cached with Next.js cache components and revalidated weekly.
-- The cache tag used for the blog is refreshed through `POST /api/revalidate`.
+- The homepage blog data can be refreshed manually through `POST /api/revalidate`.
 
 ### Environment variables
 

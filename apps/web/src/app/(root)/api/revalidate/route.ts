@@ -1,7 +1,6 @@
 import { timingSafeEqual } from "node:crypto";
-import { revalidateTag } from "next/cache";
+import { revalidatePath } from "next/cache";
 import { NextResponse } from "next/server";
-import { BLOG_CACHE_TAG } from "../../components/blog.data";
 
 function hasValidApiKey(providedApiKey: string | null, expectedApiKey: string) {
 	if (providedApiKey === null) {
@@ -34,11 +33,11 @@ export async function POST(request: Request) {
 		);
 	}
 
-	revalidateTag(BLOG_CACHE_TAG, "max");
+	revalidatePath("/");
 
 	return NextResponse.json({
 		revalidated: true,
-		tag: BLOG_CACHE_TAG,
+		path: "/",
 		revalidatedAt: new Date().toISOString(),
 	});
 }

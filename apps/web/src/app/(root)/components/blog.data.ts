@@ -1,11 +1,10 @@
-import { cacheLife, cacheTag } from "next/cache";
+import { cacheLife } from "next/cache";
 
 const DEFAULT_TUMBLR_BLOG_API_URL =
 	"https://svaltbach-blog.tumblr.com/api/read/json?num=5&start=0";
 const FALLBACK_BLOG_POST_TITLE = "Tumblr-Beitrag";
 const MAX_POSTS = 5;
 
-export const BLOG_CACHE_TAG = "tumblr-blog-posts";
 export const TUMBLR_BLOG_URL = "https://www.tumblr.com/svaltbach-blog";
 
 type TumblrReadApiPost = Record<string, unknown>;
@@ -32,9 +31,11 @@ function normalizeWhitespace(value: string) {
 
 function decodeHtmlEntities(value: string) {
 	return value.replace(
-		/&(?:amp|lt|gt|quot|#39|#\d+|#x[\da-f]+);/gi,
+		/&(?:amp;|lt;|gt;|quot;|#39;|#\d+;|#x[\da-f]+;)/gi,
 		(entity) => {
-			switch (entity.toLowerCase()) {
+			const normalizedEntity = entity.toLowerCase();
+
+			switch (normalizedEntity) {
 				case "&amp;":
 					return "&";
 				case "&lt;":
@@ -45,14 +46,25 @@ function decodeHtmlEntities(value: string) {
 					return '"';
 				case "&#39;":
 					return "'";
-				default:
-					if (entity.startsWith("&#x") || entity.startsWith("&#X")) {
-						return String.fromCodePoint(
-							Number.parseInt(entity.slice(3, -1), 16),
+				default: {
+					if (normalizedEntity.startsWith("&#x")) {
+						const parsedCodePoint = Number.parseInt(
+							normalizedEntity.slice(3, -1),
+							16,
 						);
+						return Number.isNaN(parsedCodePoint)
+							? entity
+							: String.fromCodePoint(parsedCodePoint);
 					}
 
-					return String.fromCodePoint(Number.parseInt(entity.slice(2, -1), 10));
+					const parsedCodePoint = Number.parseInt(
+						normalizedEntity.slice(2, -1),
+						10,
+					);
+					return Number.isNaN(parsedCodePoint)
+						? entity
+						: String.fromCodePoint(parsedCodePoint);
+				}
 			}
 		},
 	);
@@ -62,8 +74,8 @@ function stripHtml(value: string) {
 	return normalizeWhitespace(
 		decodeHtmlEntities(
 			value
-				.replace(/<script[\s\S]*?<\/script\b[^>]*>/gi, " ")
-				.replace(/<style[\s\S]*?<\/style\b[^>]*>/gi, " ")
+				.replace(/<script[\s\S]*?<\/script[^>]*>/gi, " ")
+				.replace(/<style[\s\S]*?<\/style[^>]*>/gi, " ")
 				.replace(/<[^>]+>/g, " "),
 		),
 	);
@@ -196,7 +208,6 @@ export async function getLatestBlogPosts() {
 	"use cache";
 
 	cacheLife("weeks");
-	cacheTag(BLOG_CACHE_TAG);
 
 	try {
 		const response = await fetch(getTumblrBlogApiUrl(), {
