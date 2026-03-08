@@ -19,6 +19,7 @@ const REWRITE_SOURCE_PATTERN =
 export default {
 	typedRoutes: true,
 	reactCompiler: true,
+	cacheComponents: true,
 
 	rewrites: () => ({
 		beforeFiles: [
