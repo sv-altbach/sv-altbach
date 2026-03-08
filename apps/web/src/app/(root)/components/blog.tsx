@@ -5,7 +5,7 @@ import {
 	CardHeader,
 	CardTitle,
 } from "@/components/ui/card";
-import { getLatestBlogPosts, TUMBLR_BLOG_URL } from "@/utils/blog";
+import { getLatestBlogPosts, TUMBLR_BLOG_URL } from "./blog.data";
 
 const publishedAtFormatter = new Intl.DateTimeFormat("de-DE", {
 	day: "2-digit",

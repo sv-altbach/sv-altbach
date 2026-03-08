@@ -1,7 +1,7 @@
 import { timingSafeEqual } from "node:crypto";
 import { revalidateTag } from "next/cache";
 import { NextResponse } from "next/server";
-import { BLOG_CACHE_TAG } from "@/utils/blog";
+import { BLOG_CACHE_TAG } from "../../components/blog.data";
 
 function hasValidApiKey(providedApiKey: string | null, expectedApiKey: string) {
 	if (providedApiKey === null) {
