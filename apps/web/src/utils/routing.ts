@@ -1,5 +1,4 @@
 const SUB_ROUTE_RE = /^\/sub\/([^/]+)(\/.*)?$/;
-const ROOT_ROUTE_RE = /^\/root(\/.*)?$/;
 
 export type OriginInfo = {
 	protocol: "http" | "https";
@@ -77,10 +76,18 @@ export function parseInternalSubdomainRoute(
 		return { subdomain: rawSubdomain, path };
 	}
 
-	const rootMatch = route.match(ROOT_ROUTE_RE);
-	if (rootMatch) {
-		const [, path = "/"] = rootMatch;
-		return { subdomain: "root", path };
+	// New pathless root-group structure rewrites root domain requests to `/:path*`.
+	// Keep compatibility with legacy `/root/...` routes.
+	if (!route.startsWith("/sub/")) {
+		if (route === "/root") {
+			return { subdomain: "root", path: "/" };
+		}
+
+		if (route.startsWith("/root/")) {
+			return { subdomain: "root", path: route.slice("/root".length) };
+		}
+
+		return { subdomain: "root", path: route || "/" };
 	}
 
 	return null;
@@ -127,7 +134,8 @@ export function buildSubdomainHref<Pathname extends string>(
 }
 
 /**
- * Backwards-compatible adapter for internal `/root/...` and `/sub/...` routes.
+ * Adapter for internal root (`/...`) and subdomain (`/sub/...`) routes.
+ * Legacy `/root/...` routes are still supported.
  */
 export function subdomainHrefFromInternalRoute(
 	route: string,

@@ -28,11 +28,11 @@ export default {
 				has: [{ type: "host", value: `(?<subdomain>[^.]+)\\.${ROOT_DOMAIN}` }],
 				destination: "/sub/:subdomain/:path*",
 			},
-			// * route root domain requests to /root/:path*
+			// * route root domain requests to /:path*
 			{
 				source: REWRITE_SOURCE_PATTERN,
 				has: [{ type: "host", value: ROOT_DOMAIN }],
-				destination: "/root/:path*",
+				destination: "/:path*",
 			},
 		],
 	}),
