@@ -1,0 +1,15 @@
+{
+	"version": 1,
+	"skills": {
+		"resend": {
+			"source": "resend/resend-skills",
+			"sourceType": "github",
+			"computedHash": "1fb1c75f577ad8aa8a9ec13b2273baa5612a1e5a539eaeacb6416ca68ebd64cd"
+		},
+		"shadcn": {
+			"source": "shadcn/ui",
+			"sourceType": "github",
+			"computedHash": "b1cc1defe03f0e8f78652b7d20e4d4e6421babc2b45835d4f361afe684dc47a2"
+		}
+	}
+}
