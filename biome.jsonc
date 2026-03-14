@@ -15,6 +15,9 @@
 			"react": "recommended"
 		},
 		"rules": {
+			"suspicious": {
+				"noArrayIndexKey": "off"
+			},
 			"nursery": {
 				"useSortedClasses": {
 					"level": "info",
