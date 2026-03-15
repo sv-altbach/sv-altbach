@@ -1,4 +1,4 @@
-/** biome-ignore-all lint/a11y/noLabelWithoutControl: Will be added in usage */
+/** biome-ignore-all lint/a11y/noLabelWithoutControl: Added by consumer */
 "use client";
 
 import type * as React from "react";

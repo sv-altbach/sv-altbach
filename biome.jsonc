@@ -5,6 +5,9 @@
 		"enabled": true,
 		"useIgnoreFile": true
 	},
+	"files": {
+		"includes": ["**", "!!.agents"]
+	},
 	"linter": {
 		"domains": {
 			"project": "recommended",
@@ -12,6 +15,9 @@
 			"react": "recommended"
 		},
 		"rules": {
+			"suspicious": {
+				"noArrayIndexKey": "off"
+			},
 			"nursery": {
 				"useSortedClasses": {
 					"level": "info",
