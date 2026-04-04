@@ -6,19 +6,15 @@ import {
 } from "@tanstack/react-form-nextjs";
 import { headers } from "next/headers";
 import { EMAIL_ADDRESSES, resend } from "@/integrations/email";
-import {
-	ContactFormSchema,
-	type ContactFormValues,
-	contactFormOptions,
-} from "./options";
+import { ContactFormFields, contactFormOptions } from "./options";
 
 const serverValidate = createServerValidate({
 	...contactFormOptions,
-	onServerValidate: ContactFormSchema,
+	onServerValidate: ContactFormFields,
 });
 
 export async function contactFormAction(_prev: unknown, formData: FormData) {
-	let inputs: ContactFormValues;
+	let inputs: ContactFormFields;
 	try {
 		inputs = await serverValidate(formData);
 	} catch (error) {

@@ -10,7 +10,7 @@ import { Button } from "@/components/ui/button";
 import { FieldGroup } from "@/components/ui/field";
 import { useAppForm } from "@/hooks/form";
 import { contactFormAction } from "./action";
-import { ContactFormSchema, contactFormOptions } from "./options";
+import { ContactFormFields, contactFormOptions } from "./options";
 
 function RequiredFieldAsterisk() {
 	return <span className="text-destructive">*</span>;
@@ -31,8 +31,8 @@ export function ContactForm() {
 		...contactFormOptions,
 		transform,
 		validators: {
-			onBlur: ContactFormSchema,
-			onSubmit: ContactFormSchema,
+			onBlur: ContactFormFields,
+			onSubmit: ContactFormFields,
 		},
 		onSubmit: async ({ formApi, value }) => {
 			alert(JSON.stringify(value, null, 2));
