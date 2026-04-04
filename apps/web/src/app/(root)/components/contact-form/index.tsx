@@ -8,6 +8,7 @@ import {
 import { useActionState } from "react";
 import { Button } from "@/components/ui/button";
 import { FieldGroup } from "@/components/ui/field";
+import { Spinner } from "@/components/ui/spinner";
 import { useAppForm } from "@/hooks/form";
 import { contactFormAction } from "./action";
 import { ContactFormFields, contactFormOptions } from "./options";
@@ -17,26 +18,21 @@ function RequiredFieldAsterisk() {
 }
 
 export function ContactForm() {
-	const [actionState, action] = useActionState(contactFormAction, {
-		formState: initialFormState,
-	});
+	const [actionState, action, isPending] = useActionState(
+		contactFormAction,
+		initialFormState,
+	);
 
 	const transform = useTransform(
-		(baseForm) =>
-			actionState ? mergeForm(baseForm, actionState.formState) : baseForm,
-		[actionState?.formState],
+		(baseForm) => (actionState ? mergeForm(baseForm, actionState) : baseForm),
+		[actionState],
 	);
 
 	const form = useAppForm({
 		...contactFormOptions,
 		transform,
 		validators: {
-			onBlur: ContactFormFields,
 			onSubmit: ContactFormFields,
-		},
-		onSubmit: async ({ formApi, value }) => {
-			alert(JSON.stringify(value, null, 2));
-			formApi.reset();
 		},
 	});
 
@@ -124,9 +120,17 @@ export function ContactForm() {
 			</div>
 
 			<div className="mt-6 text-center">
-				<Button type="submit" className="uppercase">
-					Senden
-				</Button>
+				<form.Subscribe selector={({ canSubmit }) => canSubmit}>
+					{(canSubmit) => (
+						<Button
+							type="submit"
+							className="uppercase"
+							disabled={!canSubmit || isPending}
+						>
+							{isPending ? <Spinner /> : "Senden"}
+						</Button>
+					)}
+				</form.Subscribe>
 			</div>
 
 			<p className="mt-4 text-center text-muted-foreground text-sm">

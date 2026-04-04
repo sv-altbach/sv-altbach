@@ -19,7 +19,7 @@ export async function contactFormAction(_prev: unknown, formData: FormData) {
 		inputs = await serverValidate(formData);
 	} catch (error) {
 		if (!(error instanceof ServerValidateError)) throw error;
-		return { formState: error.formState };
+		return error.formState;
 	}
 
 	const requestHeaders = await headers();
