@@ -18,32 +18,32 @@ export async function BlogSection() {
 
 	return posts.length > 0 ? (
 		<div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
-					{posts.map((post) => (
-						<Card key={post.id} className="h-full">
-							<CardHeader>
-								<p className="text-muted-foreground text-sm">
-									<time dateTime={post.publishedAt}>
-										{publishedAtFormatter.format(new Date(post.publishedAt))}
-									</time>
-								</p>
-								<CardTitle>{post.title}</CardTitle>
-							</CardHeader>
-							<CardContent className="flex-1">
-								<p className="text-muted-foreground">{post.excerpt}</p>
-							</CardContent>
-							<CardFooter>
-								<a
-									href={post.url}
-									target="_blank"
-									rel="noopener noreferrer"
-									className="font-medium text-primary text-sm hover:underline"
-								>
-									Zum Beitrag
-								</a>
-							</CardFooter>
-						</Card>
-					))}
-			</div>
+			{posts.map((post) => (
+				<Card key={post.id} className="h-full">
+					<CardHeader>
+						<p className="text-muted-foreground text-sm">
+							<time dateTime={post.publishedAt}>
+								{publishedAtFormatter.format(new Date(post.publishedAt))}
+							</time>
+						</p>
+						<CardTitle>{post.title}</CardTitle>
+					</CardHeader>
+					<CardContent className="flex-1">
+						<p className="text-muted-foreground">{post.excerpt}</p>
+					</CardContent>
+					<CardFooter>
+						<a
+							href={post.url}
+							target="_blank"
+							rel="noopener noreferrer"
+							className="font-medium text-primary text-sm hover:underline"
+						>
+							Zum Beitrag
+						</a>
+					</CardFooter>
+				</Card>
+			))}
+		</div>
 	) : (
 		<div className="text-balance rounded-xl border border-dashed p-6 text-center text-muted-foreground">
 			<p className="mb-2">Der Blog ist aktuell nicht erreichbar.</p>

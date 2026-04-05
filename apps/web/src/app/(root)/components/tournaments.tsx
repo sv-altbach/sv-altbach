@@ -114,37 +114,37 @@ const tournaments = [
 export function TournamentsSection() {
 	return (
 		<div className="mx-auto max-w-4xl">
-				<Accordion defaultValue={["masters"]}>
-					{tournaments.map((tournament) => (
-						<AccordionItem key={tournament.id} value={tournament.id}>
-							<AccordionTrigger className="font-semibold text-lg">
-								{tournament.title}
-							</AccordionTrigger>
-							<AccordionContent>
-								<div className="overflow-x-auto">
-									<Table>
-										<TableHeader>
-											<TableRow>
-												<TableHead>#</TableHead>
-												<TableHead>
-													{tournament.subtitle || tournament.title}
-												</TableHead>
+			<Accordion defaultValue={["masters"]}>
+				{tournaments.map((tournament) => (
+					<AccordionItem key={tournament.id} value={tournament.id}>
+						<AccordionTrigger className="font-semibold text-lg">
+							{tournament.title}
+						</AccordionTrigger>
+						<AccordionContent>
+							<div className="overflow-x-auto">
+								<Table>
+									<TableHeader>
+										<TableRow>
+											<TableHead>#</TableHead>
+											<TableHead>
+												{tournament.subtitle || tournament.title}
+											</TableHead>
+										</TableRow>
+									</TableHeader>
+									<TableBody>
+										{tournament.details.map((detail) => (
+											<TableRow key={detail.label}>
+												<TableHead className="w-32">{detail.label}</TableHead>
+												<TableCell>{detail.value}</TableCell>
 											</TableRow>
-										</TableHeader>
-										<TableBody>
-											{tournament.details.map((detail) => (
-												<TableRow key={detail.label}>
-													<TableHead className="w-32">{detail.label}</TableHead>
-													<TableCell>{detail.value}</TableCell>
-												</TableRow>
-											))}
-										</TableBody>
-									</Table>
-								</div>
-							</AccordionContent>
-						</AccordionItem>
-					))}
-				</Accordion>
+										))}
+									</TableBody>
+								</Table>
+							</div>
+						</AccordionContent>
+					</AccordionItem>
+				))}
+			</Accordion>
 		</div>
 	);
 }

@@ -42,31 +42,31 @@ export function MembershipSection() {
 
 	return (
 		<div className="mx-auto grid max-w-4xl grid-cols-1 gap-6 md:grid-cols-2">
-				{membershipPlans.map((plan) => (
-					<Card key={plan.title} className="flex h-full flex-col">
-						<CardHeader className="text-center">
-							<CardTitle>{plan.title}</CardTitle>
-							<CardDescription>{plan.subtitle}</CardDescription>
-						</CardHeader>
-						<CardContent className="flex flex-1 flex-col text-center">
-							<div className="mb-6">
-								<span className="font-bold text-4xl">{plan.price} €</span>
-								<span className="text-muted-foreground"> / Jahr</span>
-							</div>
-							<ul className="mb-6 space-y-2 text-left">
-								{plan.features.map((feature) => (
-									<li key={feature} className="flex items-start">
-										<span className="mr-2">•</span>
-										<span>{feature}</span>
-									</li>
-								))}
-							</ul>
-							<Button className="w-full uppercase" onClick={handleScroll}>
-								Kontakt
-							</Button>
-						</CardContent>
-					</Card>
-				))}
+			{membershipPlans.map((plan) => (
+				<Card key={plan.title} className="flex h-full flex-col">
+					<CardHeader className="text-center">
+						<CardTitle>{plan.title}</CardTitle>
+						<CardDescription>{plan.subtitle}</CardDescription>
+					</CardHeader>
+					<CardContent className="flex flex-1 flex-col text-center">
+						<div className="mb-6">
+							<span className="font-bold text-4xl">{plan.price} €</span>
+							<span className="text-muted-foreground"> / Jahr</span>
+						</div>
+						<ul className="mb-6 space-y-2 text-left">
+							{plan.features.map((feature) => (
+								<li key={feature} className="flex items-start">
+									<span className="mr-2">•</span>
+									<span>{feature}</span>
+								</li>
+							))}
+						</ul>
+						<Button className="w-full uppercase" onClick={handleScroll}>
+							Kontakt
+						</Button>
+					</CardContent>
+				</Card>
+			))}
 		</div>
 	);
 }
