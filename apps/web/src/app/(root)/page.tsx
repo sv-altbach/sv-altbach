@@ -1,7 +1,7 @@
 import { AboutUsTimeline } from "./components/about-us-timeline";
 import { BasicInfoSection } from "./components/basic-info";
 import { BlogSection } from "./components/blog";
-import { ContactForm } from "./components/contact-form";
+import { ContactSection } from "./components/contact-section";
 import { HeroSection } from "./components/hero";
 import { MembershipSection } from "./components/membership";
 import { ScrollToTopButton } from "./components/scroll-to-top";
@@ -21,7 +21,7 @@ const SECTIONS = [
 	{ id: "tournaments", component: <TournamentsSection /> },
 	{ id: "costs", component: <MembershipSection /> },
 	{ id: "blog", component: <BlogSection /> },
-	{ id: "contact", component: <ContactForm /> },
+	{ id: "contact", component: <ContactSection /> },
 ];
 
 export default function Site() {
