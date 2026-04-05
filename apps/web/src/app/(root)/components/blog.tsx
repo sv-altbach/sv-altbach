@@ -18,10 +18,10 @@ export async function BlogSection() {
 
 	return (
 		<div>
-			<h2 className="mb-2 text-center font-bold text-3xl uppercase md:text-4xl">
+			<h2 className="mb-2 text-balance text-center font-bold text-3xl uppercase md:text-4xl">
 				Blog
 			</h2>
-			<p className="mb-10 text-center text-muted-foreground italic">
+			<p className="mb-10 text-balance text-center text-muted-foreground italic">
 				Die neuesten Artikel vom Verein
 			</p>
 
@@ -54,7 +54,7 @@ export async function BlogSection() {
 					))}
 				</div>
 			) : (
-				<div className="rounded-xl border border-dashed p-6 text-center text-muted-foreground">
+				<div className="text-balance rounded-xl border border-dashed p-6 text-center text-muted-foreground">
 					<p className="mb-2">Der Blog ist aktuell nicht erreichbar.</p>
 					<a
 						href={TUMBLR_BLOG_URL}

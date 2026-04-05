@@ -241,22 +241,30 @@ export default function SiegerPage() {
 	return (
 		<section className="py-20">
 			<div className="container mx-auto px-4">
-				<h1 className="mb-10 text-center font-bold text-3xl md:text-4xl">
+				<h1 className="mb-10 text-balance text-center font-bold text-3xl md:text-4xl">
 					Vereinsmeister
 				</h1>
 				<div className="overflow-x-auto">
 					<Table>
 						<TableHeader>
 							<TableRow>
-								<TableHead className="text-center">Jahr</TableHead>
-								<TableHead className="text-center">Vereinsmeister</TableHead>
-								<TableHead className="text-center">Pokalsieger</TableHead>
-								<TableHead className="text-center">
+								<TableHead className="text-balance text-center">Jahr</TableHead>
+								<TableHead className="text-balance text-center">
+									Vereinsmeister
+								</TableHead>
+								<TableHead className="text-balance text-center">
+									Pokalsieger
+								</TableHead>
+								<TableHead className="text-balance text-center">
 									Bernhard-Frey-Pokal-Sieger
 								</TableHead>
-								<TableHead className="text-center">Jugendmeister</TableHead>
-								<TableHead className="text-center">Blitzmeister</TableHead>
-								<TableHead className="text-center">
+								<TableHead className="text-balance text-center">
+									Jugendmeister
+								</TableHead>
+								<TableHead className="text-balance text-center">
+									Blitzmeister
+								</TableHead>
+								<TableHead className="text-balance text-center">
 									Jugend-Blitzmeister
 								</TableHead>
 							</TableRow>
@@ -264,23 +272,25 @@ export default function SiegerPage() {
 						<TableBody>
 							{winners.map((winner) => (
 								<TableRow key={winner.year}>
-									<TableCell className="text-center">{winner.year}</TableCell>
-									<TableCell className="text-center">
+									<TableCell className="text-balance text-center">
+										{winner.year}
+									</TableCell>
+									<TableCell className="text-balance text-center">
 										{winner.vereinsmeister}
 									</TableCell>
-									<TableCell className="text-center">
+									<TableCell className="text-balance text-center">
 										{winner.pokalsieger}
 									</TableCell>
-									<TableCell className="text-center">
+									<TableCell className="text-balance text-center">
 										{winner.bernhardFreyPokal}
 									</TableCell>
-									<TableCell className="text-center">
+									<TableCell className="text-balance text-center">
 										{winner.jugendmeister}
 									</TableCell>
-									<TableCell className="text-center">
+									<TableCell className="text-balance text-center">
 										{winner.blitzmeister}
 									</TableCell>
-									<TableCell className="text-center">
+									<TableCell className="text-balance text-center">
 										{winner.jugendBlitzmeister}
 									</TableCell>
 								</TableRow>
@@ -288,7 +298,7 @@ export default function SiegerPage() {
 						</TableBody>
 					</Table>
 				</div>
-				<p className="mt-6 text-center text-muted-foreground text-sm">
+				<p className="mt-6 text-balance text-center text-muted-foreground text-sm">
 					Historische Einzelergebnisse des Schachverein Altbach e.V.
 				</p>
 			</div>

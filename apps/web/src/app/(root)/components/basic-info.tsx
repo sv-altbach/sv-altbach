@@ -65,7 +65,7 @@ export function BasicInfoSection() {
 
 	return (
 		<div>
-			<p className="my-5 text-center text-muted-foreground italic">
+			<p className="my-5 text-balance text-center text-muted-foreground italic">
 				Seit 1969 agiert der Schachverein Altbach als selbstständiger Verein.
 				Davor wurde schon 15 Jahre als Schachabteilung des VdK gespielt, seit
 				2008 sind wir ein eingetragener Verein. Neben der Nachwuchsförderung
@@ -76,7 +76,7 @@ export function BasicInfoSection() {
 				{infoItems.map((item) => {
 					const Icon = item.icon;
 					return (
-						<Card key={item.title} className="text-center">
+						<Card key={item.title} className="text-balance text-center">
 							<CardHeader>
 								<div className="mb-3 flex justify-center">
 									<Icon className="h-8 w-8 text-primary" />
@@ -93,7 +93,7 @@ export function BasicInfoSection() {
 				})}
 			</div>
 
-			<div className="mt-8 text-center">
+			<div className="mt-8 text-balance text-center">
 				<Button className="uppercase" onClick={handleScroll}>
 					Schreib uns
 				</Button>

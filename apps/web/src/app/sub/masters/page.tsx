@@ -12,7 +12,7 @@ export default function Home() {
 		<section className="h-screen bg-center bg-cover bg-header bg-no-repeat">
 			<Container m="0">
 				<Flex
-					className="h-screen space-y-5 p-5 text-center"
+					className="h-screen space-y-5 text-balance p-5 text-center"
 					asChild
 					justify="center"
 					align="center"

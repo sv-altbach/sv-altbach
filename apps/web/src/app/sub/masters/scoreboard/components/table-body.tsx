@@ -21,7 +21,7 @@ export function TableBody({ isPlayerTable }: Props) {
 
 			<Table.Row>
 				<Table.Cell
-					className="py-5 text-center font-bold uppercase"
+					className="text-balance py-5 text-center font-bold uppercase"
 					colSpan={10}
 				>
 					<Flex justify="center" align="center">

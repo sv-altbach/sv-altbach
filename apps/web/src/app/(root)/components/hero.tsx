@@ -21,7 +21,7 @@ export function HeroSection() {
 				priority
 			/>
 
-			<div className="relative z-10 pt-16 text-center">
+			<div className="relative z-10 text-balance pt-16 text-center">
 				<p className="mb-2 text-lg text-white/90 italic md:text-xl">
 					Willkommen in unserem Verein
 				</p>

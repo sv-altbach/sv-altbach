@@ -12,10 +12,10 @@ import { trainingTypes } from "../data/training";
 export function TrainingSection() {
 	return (
 		<div>
-			<h2 className="mb-2 text-center font-bold text-3xl uppercase md:text-4xl">
+			<h2 className="mb-2 text-balance text-center font-bold text-3xl uppercase md:text-4xl">
 				Training
 			</h2>
-			<p className="mb-10 text-center text-muted-foreground italic">
+			<p className="mb-10 text-balance text-center text-muted-foreground italic">
 				Unser Training, abgestimmt auf dich
 			</p>
 

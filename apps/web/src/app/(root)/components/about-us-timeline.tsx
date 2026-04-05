@@ -4,10 +4,10 @@ import { timelineEvents } from "../data/timeline";
 export function AboutUsTimeline() {
 	return (
 		<div>
-			<h2 className="mb-2 text-center font-bold text-3xl uppercase md:text-4xl">
+			<h2 className="mb-2 text-balance text-center font-bold text-3xl uppercase md:text-4xl">
 				Über uns
 			</h2>
-			<p className="mb-10 text-center text-muted-foreground italic">
+			<p className="mb-10 text-balance text-center text-muted-foreground italic">
 				Ein Verein mit Tradition
 			</p>
 
@@ -30,13 +30,13 @@ export function AboutUsTimeline() {
 							/>
 						</div>
 						<div className="order-1 col-span-12 mb-5 flex flex-col justify-center sm:order-2 sm:col-span-9 md:col-span-5 group-even/item:md:order-1 group-even/item:md:col-start-1 group-even/item:md:text-right group-odd/item:md:col-start-8">
-							<h5 className="mb-1 text-center font-bold text-lg sm:text-left group-even/item:md:text-right">
+							<h5 className="mb-1 text-balance text-center font-bold text-lg sm:text-left group-even/item:md:text-right">
 								{event.year}
 							</h5>
-							<h6 className="mb-2 text-center text-base sm:text-left group-even/item:md:text-right">
+							<h6 className="mb-2 text-balance text-center text-base sm:text-left group-even/item:md:text-right">
 								{event.title}
 							</h6>
-							<p className="text-center text-muted-foreground text-sm leading-relaxed sm:text-left group-even/item:md:text-right">
+							<p className="text-balance text-center text-muted-foreground text-sm leading-relaxed sm:text-left group-even/item:md:text-right">
 								{event.description}
 							</p>
 						</div>

@@ -147,7 +147,7 @@ export function ContactForm() {
 				</FieldGroup>
 			</div>
 
-			<div className="mt-6 text-center">
+			<div className="mt-6 text-balance text-center">
 				<form.Subscribe selector={({ canSubmit }) => canSubmit}>
 					{(canSubmit) => (
 						<Button
@@ -161,7 +161,7 @@ export function ContactForm() {
 				</form.Subscribe>
 			</div>
 
-			<p className="mt-4 text-center text-muted-foreground text-sm">
+			<p className="mt-4 text-balance text-center text-muted-foreground text-sm">
 				Alle Felder, die mit einem Sternchen (*) markiert sind, sind
 				Pflichtfelder.
 			</p>
