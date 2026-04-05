@@ -9,12 +9,6 @@ import { TournamentsSection } from "./components/tournaments";
 import { TrainingSection } from "./components/training";
 
 const SECTIONS = [
-	{
-		id: "hero",
-		className:
-			"relative flex min-h-screen items-center justify-center bg-gray-900",
-		component: <HeroSection />,
-	},
 	{ id: "basicInfo", component: <BasicInfoSection /> },
 	{ id: "aboutUs", component: <AboutUsTimeline /> },
 	{ id: "training", component: <TrainingSection /> },
@@ -26,18 +20,20 @@ const SECTIONS = [
 
 export default function Site() {
 	return (
-		<div className="flex flex-col gap-y-20">
-			{SECTIONS.map((section) => (
-				<section
-					key={section.id}
-					id={section.id}
-					className={
-						section.className ?? "container mx-auto px-4 py-10 md:px-10"
-					}
-				>
-					{section.component}
-				</section>
-			))}
+		<div className="flex flex-col gap-20">
+			<section
+				id="hero"
+				className="relative flex min-h-screen items-center justify-center bg-gray-900"
+			>
+				<HeroSection />
+			</section>
+			<div className="container mx-auto mb-30 flex flex-col gap-30 px-4 md:px-10">
+				{SECTIONS.map((section) => (
+					<section key={section.id} id={section.id}>
+						{section.component}
+					</section>
+				))}
+			</div>
 			<ScrollToTopButton className="fixed right-6 bottom-6 z-50" />
 		</div>
 	);
