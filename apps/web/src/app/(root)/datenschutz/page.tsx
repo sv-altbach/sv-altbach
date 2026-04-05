@@ -215,12 +215,12 @@ export default function DatenschutzPage() {
 						betroffenen Personen. Zum Versand und zur Zustellung der E-Mails
 						beauftragen wir die Plus Five Five, Inc. (Betreiberin des Dienstes
 						„Resend“), mit Sitz in den USA („Resend“), als Auftragsverarbeiter.
-						Mit Resend besteht ei Datenübermittlung in die USA erfolgen. Angemebilden
-						Dabei kann eine das Angemessenheitsbeschlussverfahren gemäß Art. 4
-						Garantien bilden (EU-US-Datenrahmen, Data Privacy Framework) sowie –t
-						DSGVO erforderlich – die in der Auftragsverarbeitungsvereinbarung von
-						Resend vereinbarten Standardvertragsklauseln; weitere Informationen
-						finden Sie in der{" "}
+						Mit Resend besteht ei Datenübermittlung in die USA erfolgen.
+						Angemebilden Dabei kann eine das Angemessenheitsbeschlussverfahren
+						gemäß Art. 4 Garantien bilden (EU-US-Datenrahmen, Data Privacy
+						Framework) sowie –t DSGVO erforderlich – die in der
+						Auftragsverarbeitungsvereinbarung von Resend vereinbarten
+						Standardvertragsklauseln; weitere Informationen finden Sie in der{" "}
 						<a
 							href="https://resend.com/legal/dpa"
 							target="_blank"
@@ -242,15 +242,15 @@ export default function DatenschutzPage() {
 					</p>
 					<p>
 						Rechtsgrundlage für Anfragen, die der Anbahnung oder Durchführung
-						eines Vertragsverhältnisses mit uns dienen, ist Art. 6 Abs. 1 lit. b)
-						DSGVO. Für sonstige Anfragen ist Rechtsgrundlage Art. 6 Abs. 1 lit
-						b) f DSGVO; unser berechtigtes Interesse liegt in der Beantwortun
-						lit. Ihrer Kontaktaufnahme und der zuverlässigen Bereitstellung des
-						Kommunikationswegs. Soweit die Übermittlung in die USA auf unser
-						Auftragsverarbeitungsverhältnis mit Resend gestützt wird, kann
-						zusätzlich Art. 28 DSGVO in Verbindung mit den Schutzklauseln gemäß
-						Art. 46 Abs. 2 lit. c DSGVO bzw. Art. 45 DSGVO (Data Privacy
-						Framework) einschlägig sein.
+						eines Vertragsverhältnisses mit uns dienen, ist Art. 6 Abs. 1 lit.
+						b) DSGVO. Für sonstige Anfragen ist Rechtsgrundlage Art. 6 Abs. 1
+						lit b) f DSGVO; unser berechtigtes Interesse liegt in der
+						Beantwortun lit. Ihrer Kontaktaufnahme und der zuverlässigen
+						Bereitstellung des Kommunikationswegs. Soweit die Übermittlung in
+						die USA auf unser Auftragsverarbeitungsverhältnis mit Resend
+						gestützt wird, kann zusätzlich Art. 28 DSGVO in Verbindung mit den
+						Schutzklauseln gemäß Art. 46 Abs. 2 lit. c DSGVO bzw. Art. 45 DSGVO
+						(Data Privacy Framework) einschlägig sein.
 					</p>
 					<p>
 						Die Angabe Ihrer Daten ist weder gesetzlich noch vertraglich
