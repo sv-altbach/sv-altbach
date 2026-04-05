@@ -33,7 +33,7 @@
 		"@tailwindcss/postcss": "^4.2.2",
 		"@tanstack/react-devtools": "^0.10.1",
 		"@tanstack/react-form-devtools": "^0.2.20",
-		"@types/node": "^22.19.17",
+		"@types/node": "^24.12.2",
 		"@types/react": "^19.2.14",
 		"@types/react-dom": "^19.2.3",
 		"babel-plugin-react-compiler": "^1.0.0",
