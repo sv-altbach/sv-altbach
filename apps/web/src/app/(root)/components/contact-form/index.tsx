@@ -1,30 +1,29 @@
 "use client";
 
-import {
-	initialFormState,
-	mergeForm,
-	useTransform,
-} from "@tanstack/react-form-nextjs";
-import { useActionState } from "react";
+import { mergeForm, useTransform } from "@tanstack/react-form-nextjs";
+import React from "react";
+import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { FieldGroup } from "@/components/ui/field";
 import { Spinner } from "@/components/ui/spinner";
 import { useAppForm } from "@/hooks/form";
+import type { ContactFormActionState } from "./action";
 import { contactFormAction } from "./action";
 import { ContactFormFields, contactFormOptions } from "./options";
 
-function RequiredFieldAsterisk() {
-	return <span className="text-destructive">*</span>;
-}
+const initialActionState: ContactFormActionState = { status: "idle" };
 
 export function ContactForm() {
-	const [actionState, action, isPending] = useActionState(
+	const [actionState, action, isPending] = React.useActionState(
 		contactFormAction,
-		initialFormState,
+		initialActionState,
 	);
 
 	const transform = useTransform(
-		(baseForm) => (actionState ? mergeForm(baseForm, actionState) : baseForm),
+		(baseForm) =>
+			actionState.status === "validation_error"
+				? mergeForm(baseForm, actionState.formState)
+				: baseForm,
 		[actionState],
 	);
 
@@ -35,6 +34,25 @@ export function ContactForm() {
 			onSubmit: ContactFormFields,
 		},
 	});
+
+	React.useEffect(() => {
+		switch (actionState.status) {
+			case "success":
+				toast.success("Nachricht gesendet!", {
+					description:
+						"Vielen Dank für Ihre Kontaktanfrage. Wir melden uns schnellstmöglich bei Ihnen.",
+				});
+				form.reset();
+				break;
+			case "error":
+				toast.error("Fehler beim Senden", {
+					description: actionState.message,
+				});
+				break;
+			default:
+				break;
+		}
+	}, [actionState, form.reset]);
 
 	return (
 		<form
@@ -139,4 +157,8 @@ export function ContactForm() {
 			</p>
 		</form>
 	);
+}
+
+function RequiredFieldAsterisk() {
+	return <span className="text-destructive">*</span>;
 }
