@@ -1,5 +1,7 @@
 import dynamic from "next/dynamic";
 import { Inter } from "next/font/google";
+import { ThemeProvider } from "@/components/theme-provider";
+import { Toaster } from "@/components/ui/sonner";
 
 import "@radix-ui/themes/styles.css";
 import "./globals.css";
@@ -13,10 +15,13 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
 	return (
-		<html lang="en">
+		<html lang="en" suppressHydrationWarning>
 			<body className={`${inter.className} antialiased`}>
-				{children}
-				<Devtools />
+				<ThemeProvider attribute="class" enableSystem>
+					{children}
+					<Toaster richColors />
+					<Devtools />
+				</ThemeProvider>
 			</body>
 		</html>
 	);
