@@ -11,15 +11,7 @@ import { trainingTypes } from "../data/training";
 
 export function TrainingSection() {
 	return (
-		<div>
-			<h2 className="mb-2 text-balance text-center font-bold text-3xl uppercase md:text-4xl">
-				Training
-			</h2>
-			<p className="mb-10 text-balance text-center text-muted-foreground italic">
-				Unser Training, abgestimmt auf dich
-			</p>
-
-			<Tabs defaultValue="jugend" className="w-full">
+		<Tabs defaultValue="jugend" className="w-full">
 				<TabsList className="mb-6 grid w-full grid-cols-3">
 					{trainingTypes.map((type) => (
 						<TabsTrigger key={type.id} value={type.id}>
@@ -65,6 +57,5 @@ export function TrainingSection() {
 					</TabsContent>
 				))}
 			</Tabs>
-		</div>
 	);
 }

@@ -3,17 +3,9 @@ import { timelineEvents } from "../data/timeline";
 
 export function AboutUsTimeline() {
 	return (
-		<div>
-			<h2 className="mb-2 text-balance text-center font-bold text-3xl uppercase md:text-4xl">
-				Über uns
-			</h2>
-			<p className="mb-10 text-balance text-center text-muted-foreground italic">
-				Ein Verein mit Tradition
-			</p>
-
-			<div className="relative">
-				{/* Vertical line - visible only on desktop */}
-				<div className="absolute top-0 bottom-0 left-1/2 hidden w-0.5 -translate-x-1/2 bg-[#e1e1e1] md:block" />
+		<div className="relative">
+			{/* Vertical line - visible only on desktop */}
+			<div className="absolute top-0 bottom-0 left-1/2 hidden w-0.5 -translate-x-1/2 bg-[#e1e1e1] md:block" />
 
 				{timelineEvents.map((event) => (
 					<div
@@ -42,7 +34,6 @@ export function AboutUsTimeline() {
 						</div>
 					</div>
 				))}
-			</div>
 		</div>
 	);
 }

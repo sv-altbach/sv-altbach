@@ -41,15 +41,7 @@ export function MembershipSection() {
 	};
 
 	return (
-		<div>
-			<h2 className="mb-2 text-center font-bold text-3xl uppercase md:text-4xl">
-				Mitgliedschaft
-			</h2>
-			<p className="mb-10 text-center text-muted-foreground italic">
-				Alles über unsere Mitgliedschaftsgebühren
-			</p>
-
-			<div className="mx-auto grid max-w-4xl grid-cols-1 gap-6 md:grid-cols-2">
+		<div className="mx-auto grid max-w-4xl grid-cols-1 gap-6 md:grid-cols-2">
 				{membershipPlans.map((plan) => (
 					<Card key={plan.title} className="flex h-full flex-col">
 						<CardHeader className="text-center">
@@ -75,7 +67,6 @@ export function MembershipSection() {
 						</CardContent>
 					</Card>
 				))}
-			</div>
 		</div>
 	);
 }

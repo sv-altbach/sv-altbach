@@ -113,15 +113,7 @@ const tournaments = [
 
 export function TournamentsSection() {
 	return (
-		<div>
-			<h2 className="mb-2 text-balance text-center font-bold text-3xl uppercase md:text-4xl">
-				Turniere
-			</h2>
-			<p className="mb-10 text-balance text-center text-muted-foreground italic">
-				Alles über unsere Turniere
-			</p>
-
-			<div className="mx-auto max-w-4xl">
+		<div className="mx-auto max-w-4xl">
 				<Accordion defaultValue={["masters"]}>
 					{tournaments.map((tournament) => (
 						<AccordionItem key={tournament.id} value={tournament.id}>
@@ -153,7 +145,6 @@ export function TournamentsSection() {
 						</AccordionItem>
 					))}
 				</Accordion>
-			</div>
 		</div>
 	);
 }
