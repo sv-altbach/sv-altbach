@@ -5,7 +5,6 @@ import {
 	type ServerFormState,
 	ServerValidateError,
 } from "@tanstack/react-form-nextjs";
-import { headers } from "next/headers";
 import { EMAIL_ADDRESSES, resend } from "@/integrations/email";
 import { ContactFormFields, contactFormOptions } from "./options";
 
@@ -23,6 +22,15 @@ const serverValidate = createServerValidate({
 	onServerValidate: ContactFormFields,
 });
 
+function escapeHtml(text: string): string {
+	return text
+		.replace(/&/g, "&amp;")
+		.replace(/</g, "&lt;")
+		.replace(/>/g, "&gt;")
+		.replace(/"/g, "&quot;")
+		.replace(/'/g, "&#39;");
+}
+
 export async function contactFormAction(
 	_prev: ContactFormActionState,
 	formData: FormData,
@@ -35,12 +43,10 @@ export async function contactFormAction(
 		return { status: "validation_error", formState: error.formState };
 	}
 
-	const requestHeaders = await headers();
-	const forwardedForHeader = requestHeaders.get("x-forwarded-for") ?? "unknown";
-	const sourceIp =
-		forwardedForHeader.split(",")[0]?.trim() ||
-		requestHeaders.get("x-real-ip") ||
-		"unknown";
+	const safeName = escapeHtml(inputs.name);
+	const safeEmail = escapeHtml(inputs.email);
+	const safeSubject = escapeHtml(inputs.subject);
+	const safeMessage = escapeHtml(inputs.message).replace(/\r\n|\r|\n/g, "<br>");
 
 	const { error } = await resend.batch.send([
 		{
@@ -48,18 +54,17 @@ export async function contactFormAction(
 			to: EMAIL_ADDRESSES.inquiries,
 			replyTo: inputs.email,
 			subject: `Neue Kontaktanfrage: ${inputs.subject}`,
-			html: `<p>Neue Kontaktanfrage: ${inputs.subject}</p> 
-                <p>Name: ${inputs.name}</p> 
-                <p>Email: ${inputs.email}</p> 
-                <p>Nachricht: ${inputs.message}</p>
-                <p>IP-Adresse: ${sourceIp}</p>
-                <pre>Headers: ${JSON.stringify(await headers(), null, 2)}</pre>`,
+			html: `<p>Neue Kontaktanfrage: ${safeSubject}</p>
+				<p>Name: ${safeName}</p>
+				<p>E-Mail: ${safeEmail}</p>
+				<p>Nachricht:</p>
+				<p>${safeMessage}</p>`,
 		},
 		{
 			from: `"Kontaktformular svaltbach.de" <${EMAIL_ADDRESSES.inquiries}>`,
 			to: inputs.email,
 			subject: "Kontaktformular svaltbach.de",
-			html: `<p>Vielen Dank für Ihre Kontaktanfrage. Wir werden uns schnellstmöglich um Ihre Anfrage kümmern.</p>`,
+			html: `<p>Vielen Dank für Ihre Kontaktanfrage. Wir werden uns schnellstmöglich um Ihre Anfrage bemühen.</p>`,
 		},
 	]);
 

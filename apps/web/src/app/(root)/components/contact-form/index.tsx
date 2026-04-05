@@ -1,6 +1,7 @@
 "use client";
 
 import { mergeForm, useTransform } from "@tanstack/react-form-nextjs";
+import Link from "next/link";
 import React from "react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
@@ -92,8 +93,17 @@ export function ContactForm() {
 									required
 								/>
 								<field.Error />
-								<field.Description>
-									Wir geben deine Email an keine Dritten.
+								<field.Description className="text-xs">
+									Sichere Verarbeitung Ihrer Daten durch E-Mail-Dienst Resend.
+									<Button
+										render={<Link href="/datenschutz" />}
+										nativeButton={false}
+										variant="link"
+										size="xs"
+										className="px-0 font-normal"
+									>
+										Datenschutzerklärung
+									</Button>
 								</field.Description>
 							</field.Root>
 						)}
@@ -120,7 +130,7 @@ export function ContactForm() {
 				<FieldGroup>
 					<form.AppField name="message">
 						{(field) => (
-							<field.Root>
+							<field.Root className="flex-1">
 								<field.Label htmlFor="contact-message">
 									Nachricht <RequiredFieldAsterisk />
 								</field.Label>
@@ -128,7 +138,7 @@ export function ContactForm() {
 									id="contact-message"
 									required
 									placeholder="Bitte trage hier deine Nachricht ein"
-									className="min-h-[200px]"
+									className="flex-1"
 								/>
 								<field.Error />
 							</field.Root>

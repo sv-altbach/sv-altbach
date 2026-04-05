@@ -61,8 +61,13 @@ export default function DatenschutzPage() {
 						<br />
 						E-Mail: am2702@aol.com
 					</p>
-					<p>Datenschutzbeauftragte/r beim Anbieter ist:</p>
-					<p>Alexander Hande</p>
+					<p>Die oder der Datenschutzbeauftragte beim Anbieter ist:</p>
+					<p>
+						Alexander Hande
+						<br />
+						Erreichbar über die oben genannten Kontaktdaten des Verantwortlichen
+						(Telefon, E-Mail).
+					</p>
 
 					<h3>II. Rechte der Nutzer und Betroffenen</h3>
 					<p>
@@ -192,24 +197,74 @@ export default function DatenschutzPage() {
 						gelöscht.
 					</p>
 
-					<h4>Kontaktanfragen / Kontaktmöglichkeit</h4>
+					<h4>Kontaktanfragen / Kontaktformular</h4>
 					<p>
-						Sofern Sie per Kontaktformular oder E-Mail mit uns in Kontakt
-						treten, werden die dabei von Ihnen angegebenen Daten zur Bearbeitung
-						Ihrer Anfrage genutzt. Die Angabe der Daten ist zur Bearbeitung und
-						Beantwortung Ihre Anfrage erforderlich - ohne deren Bereitstellung
-						können wir Ihre Anfrage nicht oder allenfalls eingeschränkt
-						beantworten.
+						Nehmen Sie über unser Kontaktformular oder per E-Mail Kontakt zu uns
+						auf, verarbeiten wir die von Ihnen angegebenen Daten (insbesondere
+						Name, E-Mail-Adresse, Betreff und Nachricht) sowie die für den
+						Versand der E-Mail erforderlichen technischen Informationen beim
+						Dienstleister.
 					</p>
 					<p>
-						Rechtsgrundlage für diese Verarbeitung ist Art. 6 Abs. 1 lit. b)
-						DSGVO.
+						Zwecke sind die Entgegennahme und Bearbeitung Ihrer Anfrage sowie –
+						sofern Sie das Kontaktformular nutzen – der Versand einer
+						Bestätigungsnachricht an Ihre E-Mail-Adresse.
 					</p>
 					<p>
-						Ihre Daten werden gelöscht, sofern Ihre Anfrage abschließend
-						beantwortet worden ist und der Löschung keine gesetzlichen
-						Aufbewahrungspflichten entgegenstehen, wie bspw. bei einer sich
-						etwaig anschließenden Vertragsabwicklung.
+						Empfänger sind die beim Verantwortlichen mit der Bearbeitung
+						betroffenen Personen. Zum Versand und zur Zustellung der E-Mails
+						beauftragen wir die Plus Five Five, Inc. (Betreiberin des Dienstes
+						„Resend“), mit Sitz in den USA („Resend“), als Auftragsverarbeiter.
+						Mit Resend besteht ei Datenübermittlung in die USA erfolgen. Angemebilden
+						Dabei kann eine das Angemessenheitsbeschlussverfahren gemäß Art. 4
+						Garantien bilden (EU-US-Datenrahmen, Data Privacy Framework) sowie –t
+						DSGVO erforderlich – die in der Auftragsverarbeitungsvereinbarung von
+						Resend vereinbarten Standardvertragsklauseln; weitere Informationen
+						finden Sie in der{" "}
+						<a
+							href="https://resend.com/legal/dpa"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="text-primary hover:underline"
+						>
+							Datenverarbeitungsvereinbarung (DPA)
+						</a>{" "}
+						und bei Resend unter{" "}
+						<a
+							href="https://resend.com/security/gdpr"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="text-primary hover:underline"
+						>
+							GDPR-Informationen
+						</a>
+						.
+					</p>
+					<p>
+						Rechtsgrundlage für Anfragen, die der Anbahnung oder Durchführung
+						eines Vertragsverhältnisses mit uns dienen, ist Art. 6 Abs. 1 lit. b)
+						DSGVO. Für sonstige Anfragen ist Rechtsgrundlage Art. 6 Abs. 1 lit
+						b) f DSGVO; unser berechtigtes Interesse liegt in der Beantwortun
+						lit. Ihrer Kontaktaufnahme und der zuverlässigen Bereitstellung des
+						Kommunikationswegs. Soweit die Übermittlung in die USA auf unser
+						Auftragsverarbeitungsverhältnis mit Resend gestützt wird, kann
+						zusätzlich Art. 28 DSGVO in Verbindung mit den Schutzklauseln gemäß
+						Art. 46 Abs. 2 lit. c DSGVO bzw. Art. 45 DSGVO (Data Privacy
+						Framework) einschlägig sein.
+					</p>
+					<p>
+						Die Angabe Ihrer Daten ist weder gesetzlich noch vertraglich
+						vorgeschrieben. Ohne die für die jeweilige Kontaktaufnahme nötigen
+						Angaben können wir Ihre Anfrage jedoch nicht bearbeiten. Es erfolgt
+						keine automatisierte Entscheidungsfindung einschließlich Profiling.
+					</p>
+					<p>
+						Wir löschen Ihre in diesem Zusammenhang verarbeiteten Daten, sobald
+						die Anfrage abschließend erledigt ist und keine gesetzlichen
+						Aufbewahrungspflichten entgegenstehen (z. B. bei anschließender
+						Vertragsbeziehung). Sofern keine Aufbewahrungspflichten bestehen,
+						werden Kontaktanfragen in der Regel spätestens 12 Monate nach
+						abschließender Bearbeitung gelöscht.
 					</p>
 
 					<p className="mt-8">
