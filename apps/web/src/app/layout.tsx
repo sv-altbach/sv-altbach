@@ -19,7 +19,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
 			<body className={`${inter.className} antialiased`}>
 				<ThemeProvider attribute="class" enableSystem>
 					{children}
-					<Toaster richColors />
+					<Toaster position="bottom-center" closeButton richColors />
 					<Devtools />
 				</ThemeProvider>
 			</body>
