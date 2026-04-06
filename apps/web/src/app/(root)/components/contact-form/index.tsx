@@ -1,56 +1,40 @@
 "use client";
 
-import { mergeForm, useTransform } from "@tanstack/react-form-nextjs";
 import Link from "next/link";
-import React from "react";
+import { useActionState, useEffect } from "react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { FieldGroup } from "@/components/ui/field";
 import { Spinner } from "@/components/ui/spinner";
 import { useAppForm } from "@/hooks/form";
-import type { ContactFormActionState } from "./action";
 import { contactFormAction } from "./action";
-import { ContactFormFields, contactFormOptions } from "./options";
-
-const initialActionState: ContactFormActionState = { status: "idle" };
+import {
+	ContactFormFields,
+	contactFormOptions,
+	initialActionState,
+} from "./options";
 
 export function ContactForm() {
-	const [actionState, action, isPending] = React.useActionState(
+	const [actionState, action, isPending] = useActionState(
 		contactFormAction,
 		initialActionState,
 	);
 
-	const transform = useTransform(
-		(baseForm) =>
-			actionState.status === "validation_error"
-				? mergeForm(baseForm, actionState.formState)
-				: baseForm,
-		[actionState],
-	);
-
 	const form = useAppForm({
 		...contactFormOptions,
-		transform,
 		validators: {
 			onSubmit: ContactFormFields,
 		},
 	});
 
-	React.useEffect(() => {
+	useEffect(() => {
 		switch (actionState.status) {
-			case "success":
-				toast.success("Nachricht gesendet!", {
-					description:
-						"Vielen Dank für Ihre Kontaktanfrage. Wir melden uns schnellstmöglich bei Ihnen.",
-				});
+			case "SUCCESS":
+				toast.success(actionState.message);
 				form.reset();
 				break;
-			case "error":
-				toast.error("Fehler beim Senden", {
-					description: actionState.message,
-				});
-				break;
-			default:
+			case "ERROR":
+				toast.error(actionState.message);
 				break;
 		}
 	}, [actionState, form.reset]);
