@@ -97,6 +97,8 @@ const footerLinks: {
 	],
 };
 
+const CURRENT_YEAR = new Date().getFullYear();
+
 export function RootFooter() {
 	return (
 		<>
@@ -235,7 +237,9 @@ export function RootFooter() {
 			{/* Copyright */}
 			<section className="py-4 text-white">
 				<div className="container mx-auto px-4">
-					<p className="text-sm">&copy; Copyright 2019 SV Altbach e.V.</p>
+					<p className="text-sm">
+						&copy; Copyright {CURRENT_YEAR} SV Altbach e.V.
+					</p>
 				</div>
 			</section>
 		</>
