@@ -1,9 +1,10 @@
 "use client";
 
 import Image from "next/image";
+import type { ReactNode } from "react";
 import { Button } from "@/components/ui/button";
 
-export function HeroSection() {
+export function HeroSection({ children }: { children?: ReactNode }) {
 	const handleScroll = () => {
 		const element = document.querySelector("#basicInfo");
 		if (element) {
@@ -21,7 +22,7 @@ export function HeroSection() {
 				priority
 			/>
 
-			<div className="relative z-10 text-balance pt-16 text-center">
+			<div className="relative z-10 flex flex-col items-center text-balance pt-16 text-center">
 				<p className="mb-2 text-lg text-white/90 italic md:text-xl">
 					Willkommen in unserem Verein
 				</p>
@@ -31,6 +32,7 @@ export function HeroSection() {
 				<Button size="xl" className="uppercase" onClick={handleScroll}>
 					Über den Verein
 				</Button>
+				{children}
 			</div>
 		</>
 	);

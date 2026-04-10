@@ -2,6 +2,7 @@ import { AboutUsTimeline } from "./components/about-us-timeline";
 import { BasicInfoSection } from "./components/basic-info";
 import { BlogSection } from "./components/blog";
 import { ContactForm } from "./components/contact-form";
+import { CrowdfundingBanner } from "./components/crowdfunding-banner";
 import { HeroSection } from "./components/hero";
 import { MembershipSection } from "./components/membership";
 import { ScrollToTopButton } from "./components/scroll-to-top";
@@ -86,7 +87,9 @@ export default function Site() {
 				id="hero"
 				className="relative flex min-h-screen items-center justify-center bg-gray-900"
 			>
-				<HeroSection />
+				<HeroSection>
+					<CrowdfundingBanner />
+				</HeroSection>
 			</section>
 			<div className="container mx-auto mb-30 flex flex-col gap-30 px-4 md:px-10">
 				{SECTIONS.map((section) => (
