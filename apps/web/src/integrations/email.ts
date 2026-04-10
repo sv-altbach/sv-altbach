@@ -30,7 +30,7 @@ export const EMAIL_ADDRESSES = v.parse(EmailAddresses, {
 		name: "Kontaktformular svaltbach.de",
 		address:
 			process.env.NODE_ENV === "production"
-				? (process.env.INTERNTAL_CONTACT_EMAIL as string)
-				: (`info@${process.env.RESEND_DOMAIN}` as string),
+				? process.env.INTERNAL_CONTACT_EMAIL
+				: `info@${process.env.RESEND_DOMAIN}`,
 	},
 });
