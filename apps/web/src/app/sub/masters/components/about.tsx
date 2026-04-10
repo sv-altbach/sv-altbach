@@ -152,7 +152,7 @@ export function About() {
 							Ehemalige Sieger
 						</Heading>
 
-						<Box className="h-fit rounded-md bg-red-50 p-5">
+						<Box className="h-fit rounded-md bg-muted p-5">
 							<Grid
 								asChild
 								columns="repeat(2, 100px)"
@@ -161,10 +161,14 @@ export function About() {
 								width="min-content"
 							>
 								<dl>
-									<dt className="font-bold text-red-700">Name</dt>
+									<dt className="font-bold text-red-700 dark:text-red-400">
+										Name
+									</dt>
 									<dd>Tobias Kölle</dd>
 
-									<dt className="font-bold text-red-700">Jahr</dt>
+									<dt className="font-bold text-red-700 dark:text-red-400">
+										Jahr
+									</dt>
 									<dd>2024</dd>
 								</dl>
 							</Grid>

@@ -24,6 +24,7 @@ SV Altbach is a Bun-powered Next.js monorepo for the club website. The main app 
   - `src/app/sub/masters` – `masters` subdomain pages
   - `src/components` – shared UI primitives
   - `src/utils` – general utilities shared across the app
+  - `emails/` – React Email templates (preview via `email:dev`; imported for Resend)
 - `packages/typescript-config` – shared TypeScript configuration
 
 ## Getting started
@@ -65,7 +66,12 @@ bun run build       # build the Next.js app
 bun run start       # start the production server
 bun run typegen     # generate Next.js route/cache types
 bun run check:types # TypeScript type check
+bun run email:dev   # React Email preview UI (port 3001; run alongside `bun run dev` if needed)
 ```
+
+## Transactional email (React Email + Resend)
+
+Contact mail is sent with [Resend](https://resend.com) using [React Email](https://react.email) templates under `apps/web/emails/`. Templates are rendered to HTML and plain text with `@react-email/render` before calling the API (works reliably with `resend.batch.send`).
 
 ## Blog section
 
