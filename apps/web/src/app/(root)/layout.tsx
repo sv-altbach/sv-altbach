@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ThemeProvider } from "@/components/theme-provider";
 import { RootFooter } from "./components/footer";
 
 export const metadata: Metadata = {
@@ -9,9 +10,11 @@ export const metadata: Metadata = {
 
 export default function SiteLayout({ children }: LayoutProps<"/">) {
 	return (
-		<div className="flex min-h-screen flex-col">
-			<main className="min-h-screen">{children}</main>
-			<RootFooter />
-		</div>
+		<ThemeProvider>
+			<div className="flex min-h-screen flex-col">
+				<main className="min-h-screen">{children}</main>
+				<RootFooter />
+			</div>
+		</ThemeProvider>
 	);
 }
