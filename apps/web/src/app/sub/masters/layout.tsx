@@ -1,6 +1,8 @@
 import { Theme } from "@radix-ui/themes";
 import type { Metadata } from "next";
 
+import "@radix-ui/themes/styles.css";
+
 export const metadata: Metadata = {
 	title: "SVA Masters",
 	description:
