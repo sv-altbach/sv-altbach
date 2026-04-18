@@ -4,10 +4,10 @@ import {
 	Table as RadixTable,
 	Table,
 	Text,
+	Button
 } from "@radix-ui/themes";
 import Link from "next/link";
 import { Fragment } from "react";
-import { Button } from "@/components/ui/button";
 import { cn } from "@/utils/ui";
 import { getPlayerName } from "@/utils/utils";
 import { getTournamentResults } from "./utils/getTournamentResults";
@@ -20,12 +20,13 @@ const Final2024 = () => {
 			<Container>
 				<header>
 					<Button
-						render={<Link href="/" />}
-						nativeButton={false}
 						variant="soft"
-						className="mb-2"
+						mb="2"
+						asChild
 					>
-						Zurück
+						<Link href="/">
+							Zurück
+						</Link>
 					</Button>
 
 					<Heading as="h1" size="8">
