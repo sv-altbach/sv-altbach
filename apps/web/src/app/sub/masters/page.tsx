@@ -23,16 +23,16 @@ export default function Home() {
 					</header>
 				</Flex>
 
-				<article className="mx-10 my-20 space-y-10">
-					<About />
+				<article className="mx-10 my-20">
+					<Tournaments />
 				</article>
 
 				<article className="mx-10 my-20">
 					<AddToCalendar />
 				</article>
 
-				<article className="mx-10 my-20">
-					<Tournaments />
+				<article className="mx-10 my-20 space-y-10">
+					<About />
 				</article>
 
 				<article className="mx-10 my-20">

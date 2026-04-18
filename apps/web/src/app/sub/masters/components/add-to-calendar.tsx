@@ -5,7 +5,7 @@ import Link from "next/link";
 export function AddToCalendar() {
 	return (
 		<>
-			<Heading as="h3">Kalender abonnieren</Heading>
+			<Heading as="h2" size="8" mb="2">Kalender abonnieren</Heading>
 
 			<Text as="p">
 				Verpasse keine Termine mehr und füge den SVA Masters Kalender zu deinem
