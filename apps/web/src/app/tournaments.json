@@ -65,7 +65,7 @@
 		"mode": "Siehe Ausschreibung",
 		"value": "tournament_final",
 		"evaluation": "Elo",
-		"announcementPath": "/announcements/Ausschreibung_Turnier-Finale_SVA-Masters.pdf",
+		"announcementPath": "/masters/Ausschreibung_Turnier-Finale_SVA-Masters.pdf",
 		"withMusic": false
 	}
 ]
