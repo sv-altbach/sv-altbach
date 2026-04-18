@@ -66,7 +66,42 @@ export function About() {
                             Ehemalige Sieger
                         </Heading>
 
-                        <Box className="h-fit rounded-md bg-red-50 p-5">
+                        <Box my="2" className="h-fit rounded-md bg-red-50 p-5">
+                            <Grid
+                                asChild
+                                columns="repeat(2, 100px)"
+                                rows="3"
+                                gap="2"
+                                width="min-content"
+                            >
+                                <dl>
+                                    <dt className="font-bold text-red-700">Name</dt>
+                                    <dd>Tobias Kölle</dd>
+
+                                    <dt className="font-bold text-red-700">Jahr</dt>
+                                    <dd>2024</dd>
+
+                                    <dt className="font-bold text-red-700">Saison</dt>
+                                    <dd>1. Saison</dd>
+                                </dl>
+                            </Grid>
+
+                            <Button
+                                mt="2"
+                                aria-label="Ergebnisse 1. Saison in neuem Tab öffnen"
+                                asChild
+                            >
+                                <Link
+                                    href="/finals/2024"
+                                    target="_blank"
+                                    rel="noreferrer noopener"
+                                >
+                                    Ergebnisse 1. Saison
+                                </Link>
+                            </Button>
+                        </Box>
+
+                        <Box my="2" className="h-fit rounded-md bg-red-50 p-5">
                             <Grid
                                 asChild
                                 columns="repeat(2, 100px)"
@@ -79,21 +114,24 @@ export function About() {
                                     <dd>Tobias Kölle</dd>
 
                                     <dt className="font-bold text-red-700">Jahr</dt>
-                                    <dd>2024</dd>
+                                    <dd>2026</dd>
+
+                                    <dt className="font-bold text-red-700">Saison</dt>
+                                    <dd>2. Saison</dd>
                                 </dl>
                             </Grid>
 
                             <Button
                                 mt="2"
-                                aria-label="Ergebnisse in neuem Tab öffnen"
+                                aria-label="Ergebnisse 2. Saison in neuem Tab öffnen"
                                 asChild
                             >
                                 <Link
-                                    href="/finals/2024"
+                                    href="/finals/2026"
                                     target="_blank"
                                     rel="noreferrer noopener"
                                 >
-                                    Ergebnisse
+                                    Ergebnisse 2. Saison
                                 </Link>
                             </Button>
                         </Box>
