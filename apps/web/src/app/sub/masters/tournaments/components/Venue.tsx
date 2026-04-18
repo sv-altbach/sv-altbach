@@ -16,20 +16,13 @@ export function Venue({ value }: Props) {
 }
 
 function VenueContent({ value }: { value?: string }) {
-	if (value === "tournament_3") {
+	if (value === "tournament_1" || value === "tournament_2") {
 		return (
-			<>
-				<Text as="p">Haus der Jugend, Dürerstraße 21, 73033 Göppingen</Text>
-				<Text as="p">
-					<small>
-						Der Eingang ist mit dem SVA-Masters Layout gekennzeichnet.
-					</small>
-				</Text>
-			</>
+			<Text as="p">Ev. Waldheim am Oberholz, Bartenhöhe 43, 73035 Göppingen</Text>
 		);
 	}
 
-	if (value === "tournament_5") {
+	if (value === "tournament_4") {
 		return (
 			<>
 				<Text as="p">

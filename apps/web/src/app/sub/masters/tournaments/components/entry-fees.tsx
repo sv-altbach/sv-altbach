@@ -27,14 +27,14 @@ function EntryFeeMarkup({
 		return <Text as="p">Einladungsturnier. Startgeld entfällt.</Text>;
 	}
 
-	if (value === "tournament_3") {
+	if (value === "tournament_2") {
 		return (
 			<>
 				<Text as="p">
-					Voranmeldung: <strong>20 &euro;</strong>
+					Voranmeldung: <strong>25 &euro;</strong>
 				</Text>
 				<Text as="p">
-					Anmeldungen am Turniertag vor Ort: <strong>25 &euro;</strong>
+					Anmeldungen am Turniertag vor Ort: <strong>30 &euro;</strong>
 				</Text>
 			</>
 		);

@@ -1,6 +1,5 @@
-import { Table, Tabs } from "@radix-ui/themes";
+import {Table, Tabs} from "@radix-ui/themes";
 import { AnnouncementPDF } from "@/app/sub/masters/tournaments/components/announcement-pdf";
-import { AwardOfPoints } from "@/app/sub/masters/tournaments/components/award-of-points";
 import { BasicInformation } from "@/app/sub/masters/tournaments/components/basic-information";
 import { EntryFees } from "@/app/sub/masters/tournaments/components/entry-fees";
 import { ListOfAttendeesLink } from "@/app/sub/masters/tournaments/components/list-of-attendees-link";
@@ -32,16 +31,12 @@ export function TournamentContent({
 	evaluation,
 	announcementPath,
 	listOfAttendeesUrl,
-	withMusic,
 }: Props) {
 	const isFinalTournament = value === "tournament_final";
 	const isRegisterButtonDisabled = false;
 	const isRegisterButtonHidden =
-		value === "tournament_1" ||
-		value === "tournament_2" ||
 		value === "tournament_3" ||
-		value === "tournament_4" ||
-		value === "tournament_5";
+		value === "tournament_4";
 
 	return (
 		<Tabs.Content value={value}>
@@ -88,9 +83,7 @@ export function TournamentContent({
 
 					<Venue value={value} />
 
-					<Prizes isFinalTournament={isFinalTournament} value={value} />
-
-					<AwardOfPoints isFinalTournament={isFinalTournament} />
+					<Prizes />
 
 					<AnnouncementPDF
 						announcementPath={announcementPath}
@@ -99,7 +92,7 @@ export function TournamentContent({
 
 					<ListOfAttendeesLink url={listOfAttendeesUrl} />
 
-					<BasicInformation withMusic={withMusic} value={value} />
+					<BasicInformation value={value} />
 				</Table.Body>
 			</Table.Root>
 
