@@ -1,8 +1,7 @@
-import {Box, Flex, Grid, Heading, Text} from "@radix-ui/themes";
+import {Box, Flex, Grid, Heading, Text, Button} from "@radix-ui/themes";
 import {Link as RadixLink} from "@radix-ui/themes";
 import Link from "next/link";
 import {News} from "@/app/sub/masters/components/news";
-import {Button} from "@/components/ui/button";
 
 export function About() {
     return (
@@ -85,18 +84,17 @@ export function About() {
                             </Grid>
 
                             <Button
-                                render={
-                                    <Link
-                                        href="/finals/2024"
-                                        target="_blank"
-                                        rel="noreferrer noopener"
-                                    />
-                                }
-                                nativeButton={false}
-                                variant="default"
+                                mt="2"
                                 aria-label="Ergebnisse in neuem Tab öffnen"
+                                asChild
                             >
-                                Ergebnisse
+                                <Link
+                                    href="/finals/2024"
+                                    target="_blank"
+                                    rel="noreferrer noopener"
+                                >
+                                    Ergebnisse
+                                </Link>
                             </Button>
                         </Box>
                     </Box>
