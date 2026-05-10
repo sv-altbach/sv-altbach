@@ -17,34 +17,6 @@ export function Sponsoring() {
 			<section className="mt-5">
 				<Grid columns={{ initial: "1", sm: "3" }} align="center" gap="8">
 					<a
-						href="https://www.cit.de/"
-						target="_blank"
-						rel="noreferrer noopener"
-					>
-						<Image
-							loader={imageLoader}
-							src="masters/logo_cit.png"
-							alt="cit GmbH Logo"
-							width={500}
-							height={500}
-						/>
-					</a>
-
-					<a
-						href="https://vertretung.allianz.de/keck.angela/"
-						target="_blank"
-						rel="noreferrer noopener"
-					>
-						<Image
-							loader={imageLoader}
-							src="masters/logo_allianz.png"
-							alt="Allianz Logo"
-							width={500}
-							height={500}
-						/>
-					</a>
-
-					<a
 						href="https://taplo.de/"
 						target="_blank"
 						rel="noreferrer noopener"
