@@ -53,8 +53,7 @@ export function About() {
                             <News title="Kooperationen mit anderen Vereinen">
                                 <Text as="p">
                                     Auch in Zukunft werden einige Turniere der SVA Masters von anderen Vereinen
-                                    ausgetragen. Weitere Informationen findest du weiter unten im Abschnitt "Partner &
-                                    Sponsoren".
+                                    ausgetragen.
                                 </Text>
                             </News>
                         </Box>
