@@ -35,7 +35,8 @@ export function TournamentContent({
 	const isFinalTournament = value === "tournament_final";
 	const isRegisterButtonDisabled = false;
 	const isRegisterButtonHidden =
-		value === "tournament_3" ||
+		value === "tournament_1" ||
+		value === "tournament_2" ||
 		value === "tournament_4";
 
 	return (
