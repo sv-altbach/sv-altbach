@@ -3,7 +3,7 @@ import {Box, Heading, Text} from "@radix-ui/themes";
 export default function NewScoringSystemPage() {
   return (
       <main className="m-20 rounded-lg shadow-xl">
-        <Box px="9" py="4" className="text-red-700 bg-red-100 rounded-t-lg">
+        <Box px="9" pb="4" pt="6" className="text-red-700 bg-red-100 rounded-t-lg">
           <Heading as="h1" size="9" mb="2">Neues Punktesystem</Heading>
           <Text as="p">Die SVA Masters bestehen aus mehreren eigenständigen Schachturnieren, die zu
             einer gemeinsamen Gesamtwertung zusammengefasst werden. Ziel ist es, sowohl
