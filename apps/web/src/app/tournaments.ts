@@ -49,7 +49,7 @@ export const tournamentData = [
 		"value": "tournament_3",
 		"date": "Freitag, 10. Juli 2026",
 		"startTime": "20:15 Uhr - Meldeschluss bis spätestens 20:00 Uhr",
-		"endTime": "ca. 00:00 Uhr",
+		"endTime": "ca. 23:45 Uhr",
 		"type": "blitz",
 		"mode": "13 Runden Schweizer System - Bedenkzeit: 3 Minuten + 2 Sekunden pro Zug je Spieler und Partie",
     "pointRule": "3-point",
@@ -62,7 +62,7 @@ export const tournamentData = [
     "prices": "Siehe Ausschreibung",
     "announcementPath": null,
     "listOfAttendeesUrl": null,
-    "generalInformation": null
+    "generalInformation": "Wir bieten Pizza und Getränke an."
 	},
   {
     "name": "26. Plochinger Marquardt-Schnellschachturnier 2026",
@@ -98,7 +98,7 @@ export const tournamentData = [
     "prices": null,
     "announcementPath": null,
     "listOfAttendeesUrl": null,
-    "generalInformation": null
+    "generalInformation": "Wir bieten Pizza und Getränke an."
 	},
 	{
     "name": "SVA Masters Finale",
