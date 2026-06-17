@@ -53,7 +53,6 @@ export interface TournamentDataTypes {
 		normalRegistration: string;
 	} | null;
 	venue: string | null;
-	prices: string | null;
 	announcementPath: string | null;
 	listOfAttendeesUrl: string | null;
 	generalInformation: string | null;

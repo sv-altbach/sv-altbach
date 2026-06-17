@@ -17,7 +17,6 @@ export const tournamentData = [
       "normalRegistration": "20"
     },
     "venue": "Ev. Waldheim am Oberholz, Bartenhöhe 43, 73035 Göppingen",
-    "prices": "Siehe Ausschreibung",
 		"announcementPath": "/masters/Ausschreibung_Turnier-1_SVA-Masters.pdf",
 		"listOfAttendeesUrl": null,
     "generalInformation": "Dieses Turnier wird vom Schachverein Göppingen ausgetragen und ist Teil der SVA Masters Serie."
@@ -38,7 +37,6 @@ export const tournamentData = [
       "normalRegistration": "30"
     },
     "venue": "Ev. Waldheim am Oberholz, Bartenhöhe 43, 73035 Göppingen",
-    "prices": "Siehe Ausschreibung",
 		"announcementPath": "/masters/Ausschreibung_Turnier-2_SVA-Masters.pdf",
 		"listOfAttendeesUrl": null,
     "generalInformation": "Dieses Turnier wird vom Schachverein Göppingen ausgetragen und ist Teil der SVA Masters Serie."
@@ -59,7 +57,6 @@ export const tournamentData = [
       "normalRegistration": "20"
     },
     "venue": "Foyer der Sporthalle, Esslinger Straße 90, 73776 Altbach",
-    "prices": "Siehe Ausschreibung",
     "announcementPath": null,
     "listOfAttendeesUrl": null,
     "generalInformation": "Wir bieten Pizza und Getränke an."
@@ -77,7 +74,6 @@ export const tournamentData = [
     "evaluation": "FIDE Blitz Elo",
     "entryFee": null,
     "venue": null,
-    "prices": null,
     "announcementPath": null,
     "listOfAttendeesUrl": null,
     "generalInformation": "Dieses Turnier wird vom Schachverein Plochingen ausgetragen und ist Teil der SVA Masters Serie."
@@ -95,7 +91,6 @@ export const tournamentData = [
     "evaluation": "FIDE Blitz Elo",
     "entryFee": null,
     "venue": null,
-    "prices": null,
     "announcementPath": null,
     "listOfAttendeesUrl": null,
     "generalInformation": "Wir bieten Pizza und Getränke an."
@@ -113,7 +108,6 @@ export const tournamentData = [
     "evaluation": null,
     "entryFee": null,
     "venue": null,
-    "prices": null,
     "announcementPath": null,
     "listOfAttendeesUrl": null,
     "generalInformation": null
