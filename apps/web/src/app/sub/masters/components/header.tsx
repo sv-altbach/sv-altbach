@@ -1,30 +1,25 @@
-import {Flex, Heading, Text, Button} from "@radix-ui/themes";
-import {IconChessKnightFilled} from "@tabler/icons-react";
+import { Button, Flex, Heading, Text } from "@radix-ui/themes";
+import { IconChessKnightFilled } from "@tabler/icons-react";
 import Link from "next/link";
 
 export function Header() {
-    return (
-        <>
-            <IconChessKnightFilled className="mb-5 text-5xl text-white"/>
+	return (
+		<>
+			<IconChessKnightFilled className="mb-5 text-5xl text-white" />
 
-            <Heading as="h1" className="text-white" size="9">
-                SVA <Text className="text-red-600">Masters</Text>
-            </Heading>
+			<Heading as="h1" className="text-white" size="9">
+				SVA <Text className="text-red-600">Masters</Text>
+			</Heading>
 
-            <Text as="p" size="5" className="text-white">
-                10. Juli 2026, 73776 Altbach
-            </Text>
+			<Text as="p" size="5" className="text-white">
+				10. Juli 2026, 73776 Altbach
+			</Text>
 
-            <Flex gap="4" mt="5">
-                <Button
-                    asChild
-                    size="4"
-                >
-                    <Link href="/scoreboard">
-                        Zur Rangliste
-                    </Link>
-                </Button>
-            </Flex>
-        </>
-    );
+			<Flex gap="4" mt="5">
+				<Button asChild size="4">
+					<Link href="/scoreboard">Zur Rangliste</Link>
+				</Button>
+			</Flex>
+		</>
+	);
 }

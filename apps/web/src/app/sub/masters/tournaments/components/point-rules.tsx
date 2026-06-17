@@ -1,5 +1,5 @@
 import { Table } from "@radix-ui/themes";
-import type {TournamentDataTypes} from "@/types";
+import type { TournamentDataTypes } from "@/types";
 
 export function PointRules({ tournament }: Props) {
 	return (
@@ -8,10 +8,16 @@ export function PointRules({ tournament }: Props) {
 			<Table.Cell>
 				<ul>
 					<li>
-						Sieg: <strong>{tournament.pointRule === "1-point" ? "1 Punkt" : "3 Punkte"}</strong>
+						Sieg:{" "}
+						<strong>
+							{tournament.pointRule === "1-point" ? "1 Punkt" : "3 Punkte"}
+						</strong>
 					</li>
 					<li>
-						Remis: <strong>{tournament.pointRule === "1-point" ? "0,5 Punkte" : "1 Punkt"}</strong>
+						Remis:{" "}
+						<strong>
+							{tournament.pointRule === "1-point" ? "0,5 Punkte" : "1 Punkt"}
+						</strong>
 					</li>
 					<li>
 						Niederlage: <strong>0 Punkte</strong>
@@ -23,5 +29,5 @@ export function PointRules({ tournament }: Props) {
 }
 
 interface Props {
-  tournament: TournamentDataTypes;
+	tournament: TournamentDataTypes;
 }
