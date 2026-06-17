@@ -100,14 +100,14 @@ export default function NewScoringSystemPage() {
 					<li>
 						Es finden{" "}
 						<span className="font-bold text-neutral-700">
-							5 Qualifikationsturniere
+							fünf bis sechs Qualifikationsturniere
 						</span>{" "}
 						statt
 					</li>
 					<li>
 						Für die Gesamtwertung zählen die{" "}
 						<span className="font-bold text-neutral-700">
-							besten 4 Ergebnisse
+							besten vier bis fünf Ergebnisse
 						</span>
 					</li>
 					<li>Das schwächste Ergebnis wird gestrichen</li>
@@ -138,7 +138,7 @@ export default function NewScoringSystemPage() {
 					<li>
 						Teilnahme an{" "}
 						<span className="font-bold text-neutral-700">
-							mindestens 3 Turnieren
+							mindestens drei Turnieren
 						</span>
 					</li>
 					<li>Qualifikation über die Masters-Gesamtwertung</li>
