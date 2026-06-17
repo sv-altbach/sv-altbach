@@ -7,7 +7,7 @@ export default function NewScoringSystemPage() {
 				px="9"
 				pb="4"
 				pt="6"
-				className="text-red-700 bg-red-100 rounded-t-lg"
+				className="rounded-t-lg bg-red-100 text-red-700"
 			>
 				<Heading as="h1" size="9" mb="2">
 					Neues Punktesystem
@@ -33,7 +33,7 @@ export default function NewScoringSystemPage() {
 					Formel
 				</Heading>
 				<Text as="p">
-					<span className="text-red-700 font-bold bg-red-100 rounded-lg px-2 py-1">
+					<span className="rounded-lg bg-red-100 px-2 py-1 font-bold text-red-700">
 						Masters-Punkte
 					</span>{" "}
 					= 100 × (erzielte Punkte / Rundenzahl) × Turnierfaktor
@@ -44,17 +44,17 @@ export default function NewScoringSystemPage() {
 				</Heading>
 				<ul className="list-disc pl-5">
 					<li>
-						<span className="text-neutral-700 font-bold">
+						<span className="font-bold text-neutral-700">
 							Erzielte Punkte / Rundenzahl
 						</span>{" "}
 						= Punktequote im Turnier
 					</li>
 					<li>
-						<span className="text-neutral-700 font-bold">100</span> = sorgt für
+						<span className="font-bold text-neutral-700">100</span> = sorgt für
 						eine gut lesbare Punkteskala
 					</li>
 					<li>
-						<span className="text-neutral-700 font-bold">Turnierfaktor</span> =
+						<span className="font-bold text-neutral-700">Turnierfaktor</span> =
 						berücksichtigt Größe und Stärke des Turniers
 					</li>
 				</ul>
@@ -68,19 +68,19 @@ export default function NewScoringSystemPage() {
 				<ul className="list-disc pl-5">
 					<li>
 						Turnierfaktor für ein Turnier bis 40 Teilnehmer ={" "}
-						<span className="text-neutral-700 font-bold">1,00</span>
+						<span className="font-bold text-neutral-700">1,00</span>
 					</li>
 					<li>
 						Turnierfaktor für ein Turnier mit 41 bis 70 Teilnehmern ={" "}
-						<span className="text-neutral-700 font-bold">1,05</span>
+						<span className="font-bold text-neutral-700">1,05</span>
 					</li>
 					<li>
 						Turnierfaktor für ein Turnier mit 71 bis 100 Teilnehmern ={" "}
-						<span className="text-neutral-700 font-bold">1,10</span>
+						<span className="font-bold text-neutral-700">1,10</span>
 					</li>
 					<li>
 						Turnierfaktor für ein Turnier ab 101 Teilnehmern ={" "}
-						<span className="text-neutral-700 font-bold">1,15</span>
+						<span className="font-bold text-neutral-700">1,15</span>
 					</li>
 				</ul>
 			</Box>
@@ -99,14 +99,14 @@ export default function NewScoringSystemPage() {
 				<ul className="list-disc pl-5">
 					<li>
 						Es finden{" "}
-						<span className="text-neutral-700 font-bold">
+						<span className="font-bold text-neutral-700">
 							5 Qualifikationsturniere
 						</span>{" "}
 						statt
 					</li>
 					<li>
 						Für die Gesamtwertung zählen die{" "}
-						<span className="text-neutral-700 font-bold">
+						<span className="font-bold text-neutral-700">
 							besten 4 Ergebnisse
 						</span>
 					</li>
@@ -137,7 +137,7 @@ export default function NewScoringSystemPage() {
 				<ul className="list-disc pl-5">
 					<li>
 						Teilnahme an{" "}
-						<span className="text-neutral-700 font-bold">
+						<span className="font-bold text-neutral-700">
 							mindestens 3 Turnieren
 						</span>
 					</li>

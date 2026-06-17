@@ -1,10 +1,10 @@
 import {
+	Button,
 	Container,
 	Heading,
 	Table as RadixTable,
 	Table,
 	Text,
-	Button
 } from "@radix-ui/themes";
 import Link from "next/link";
 import { Fragment } from "react";
@@ -19,14 +19,8 @@ const Final2024 = () => {
 		<section className="mx-5 my-20">
 			<Container>
 				<header>
-					<Button
-						variant="soft"
-						mb="2"
-						asChild
-					>
-						<Link href="/">
-							Zurück
-						</Link>
+					<Button variant="soft" mb="2" asChild>
+						<Link href="/">Zurück</Link>
 					</Button>
 
 					<Heading as="h1" size="8">
