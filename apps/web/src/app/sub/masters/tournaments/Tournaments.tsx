@@ -25,6 +25,9 @@ export function Tournaments() {
 					<Tabs.Trigger value="tournament_4" className="cursor-pointer!">
 						Turnier 4
 					</Tabs.Trigger>
+          <Tabs.Trigger value="tournament_5" className="cursor-pointer!">
+            Turnier 5
+          </Tabs.Trigger>
 					<Tabs.Trigger value="tournament_final" className="cursor-pointer!">
 						Finale
 					</Tabs.Trigger>

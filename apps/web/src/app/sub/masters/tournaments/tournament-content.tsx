@@ -37,7 +37,8 @@ export function TournamentContent({
 	const isRegisterButtonHidden =
 		value === "tournament_1" ||
 		value === "tournament_2" ||
-		value === "tournament_4";
+		value === "tournament_4" ||
+		value === "tournament_5";
 
 	return (
 		<Tabs.Content value={value}>
