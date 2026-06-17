@@ -38,6 +38,7 @@ export interface TournamentResult {
 }
 
 export interface TournamentDataTypes {
+  name: string;
   status: "completed" | "upcoming";
 	value: string;
 	date: string | null;

@@ -2,6 +2,7 @@ import type {TournamentDataTypes} from "@/types";
 
 export const tournamentData = [
 	{
+    "name": "1. Blitz Open Göppingen 2026",
     "status": "completed",
 		"value": "tournament_1",
 		"date": "Freitag, 29. Mai 2026",
@@ -19,9 +20,10 @@ export const tournamentData = [
     "prices": "Siehe Ausschreibung",
 		"announcementPath": "/masters/Ausschreibung_Turnier-1_SVA-Masters.pdf",
 		"listOfAttendeesUrl": null,
-    "generalInformation": null
+    "generalInformation": "Dieses Turnier wird vom Schachverein Göppingen ausgetragen und ist Teil der SVA Masters Serie."
 	},
 	{
+    "name": "3. Rapid Chess Championship Göppingen 2026",
     "status": "completed",
 		"value": "tournament_2",
 		"date": "Samstag, 30. Mai 2026",
@@ -39,9 +41,10 @@ export const tournamentData = [
     "prices": "Siehe Ausschreibung",
 		"announcementPath": "/masters/Ausschreibung_Turnier-2_SVA-Masters.pdf",
 		"listOfAttendeesUrl": null,
-    "generalInformation": null
+    "generalInformation": "Dieses Turnier wird vom Schachverein Göppingen ausgetragen und ist Teil der SVA Masters Serie."
 	},
 	{
+    "name": "SVA Masters Turnier 3",
     "status": "upcoming",
 		"value": "tournament_3",
 		"date": "Freitag, 10. Juli 2026",
@@ -62,6 +65,7 @@ export const tournamentData = [
     "generalInformation": null
 	},
   {
+    "name": "26. Plochinger Marquardt-Schnellschachturnier 2026",
     "status": "upcoming",
     "value": "tournament_4",
     "date": "Samstag, 19.09.2026",
@@ -76,9 +80,10 @@ export const tournamentData = [
     "prices": null,
     "announcementPath": null,
     "listOfAttendeesUrl": null,
-    "generalInformation": null
+    "generalInformation": "Dieses Turnier wird vom Schachverein Plochingen ausgetragen und ist Teil der SVA Masters Serie."
   },
 	{
+    "name": "SVA Masters Turnier 5",
     "status": "upcoming",
 		"value": "tournament_5",
 		"date": "Oktober/November",
@@ -96,6 +101,7 @@ export const tournamentData = [
     "generalInformation": null
 	},
 	{
+    "name": "SVA Masters Finale",
     "status": "upcoming",
 		"value": "tournament_final",
     "date": null,

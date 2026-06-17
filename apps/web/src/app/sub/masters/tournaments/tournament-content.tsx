@@ -1,4 +1,4 @@
-import {Table, Tabs} from "@radix-ui/themes";
+import {Heading, Table, Tabs} from "@radix-ui/themes";
 import {AnnouncementPDF} from "@/app/sub/masters/tournaments/components/announcement-pdf";
 import {BasicInformation} from "@/app/sub/masters/tournaments/components/basic-information";
 import {EntryFees} from "@/app/sub/masters/tournaments/components/entry-fees";
@@ -12,6 +12,8 @@ import type {TournamentDataTypes} from "@/types";
 export function TournamentContent({tournament}: Props) {
   return (
       <Tabs.Content value={tournament.value}>
+        <Heading as="h3" ml="2" mb="3">{tournament.name}</Heading>
+
         <Table.Root>
           <Table.Body>
             <Table.Row>
