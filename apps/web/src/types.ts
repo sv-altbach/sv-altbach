@@ -37,6 +37,27 @@ export interface TournamentResult {
 	eloPerformance: number;
 }
 
+export interface TournamentDataTypes {
+  status: "completed" | "upcoming";
+	value: string;
+	date: string | null;
+	startTime: string | null;
+	endTime: string | null;
+	type: "blitz" | "rapid" | "960" | "final";
+	mode: string | null;
+	pointRule: "1-point" | "3-point" | null;
+	evaluation: string | null;
+	entryFee: {
+		preRegistration: string;
+		normalRegistration: string;
+	} | null;
+	venue: string | null;
+	prices: string | null;
+	announcementPath: string | null;
+	listOfAttendeesUrl: string | null;
+	generalInformation: string | null;
+}
+
 type AlphabetLetter =
 	| "A"
 	| "B"

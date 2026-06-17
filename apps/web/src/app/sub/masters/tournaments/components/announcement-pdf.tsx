@@ -1,35 +1,25 @@
-import { Link, Table } from "@radix-ui/themes";
-import { cn } from "@/utils/ui";
+import {Link, Table} from "@radix-ui/themes";
+import type {TournamentDataTypes} from "@/types";
 
-interface Props {
-	announcementPath?: string | null;
-	isRegisterButtonDisabled?: boolean;
+export function AnnouncementPDF({tournament}: Props) {
+  return (
+      <Table.Row>
+        <Table.RowHeaderCell>Ausschreibung</Table.RowHeaderCell>
+        <Table.Cell>
+          {tournament.announcementPath !== null ? (
+              <Link
+                  href={tournament.announcementPath}
+                  download
+                  underline="always"
+              >
+                Ausschreibung herunterladen
+              </Link>
+          ) : "Ausschreibung wird bald veröffentlicht."}
+        </Table.Cell>
+      </Table.Row>
+  );
 }
 
-export function AnnouncementPDF({
-	announcementPath,
-	isRegisterButtonDisabled,
-}: Props) {
-	if (!announcementPath) {
-		return null;
-	}
-
-	return (
-		<Table.Row>
-			<Table.RowHeaderCell>Ausschreibung</Table.RowHeaderCell>
-			<Table.Cell>
-				<Link
-					href={announcementPath}
-					download
-					underline="always"
-					className={cn([
-						!isRegisterButtonDisabled && "cursor-pointer!",
-						isRegisterButtonDisabled && "cursor-not-allowed!",
-					])}
-				>
-					Ausschreibung herunterladen
-				</Link>
-			</Table.Cell>
-		</Table.Row>
-	);
+interface Props {
+  tournament: TournamentDataTypes;
 }

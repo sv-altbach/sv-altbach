@@ -1,33 +1,27 @@
 import { Table } from "@radix-ui/themes";
+import type {TournamentDataTypes} from "@/types";
 
-interface Props {
-	isFinalTournament: boolean;
-}
-
-export function PointRules({ isFinalTournament }: Props) {
+export function PointRules({ tournament }: Props) {
 	return (
 		<Table.Row>
 			<Table.RowHeaderCell>Punkteregel (Turnier)</Table.RowHeaderCell>
 			<Table.Cell>
 				<ul>
 					<li>
-						Sieg: <strong>3 Punkte</strong>
+						Sieg: <strong>{tournament.pointRule === "1-point" ? "1 Punkt" : "3 Punkte"}</strong>
 					</li>
 					<li>
-						Remis: <strong>1 Punkt</strong>
+						Remis: <strong>{tournament.pointRule === "1-point" ? "0,5 Punkte" : "1 Punkt"}</strong>
 					</li>
 					<li>
 						Niederlage: <strong>0 Punkte</strong>
 					</li>
 				</ul>
-
-				{isFinalTournament ? (
-					<p className="mt-5">
-						Die Zweitwertung ist der direkte Vergleich, die Drittwertung ist
-						Buchholz.
-					</p>
-				) : null}
 			</Table.Cell>
 		</Table.Row>
 	);
+}
+
+interface Props {
+  tournament: TournamentDataTypes;
 }

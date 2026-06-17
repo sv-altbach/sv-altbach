@@ -1,30 +1,11 @@
 import {Button} from "@radix-ui/themes";
+import type {TournamentDataTypes} from "@/types";
 
-interface Props {
-	isFinalTournament: boolean;
-	isRegisterButtonDisabled?: boolean;
-	date: string;
-}
+export function RegisterButton({tournament}: Props) {
+  const isHidden = tournament.status === "completed" || tournament.announcementPath === null || tournament.type === "final";
 
-export function RegisterButton({
-	isFinalTournament,
-	isRegisterButtonDisabled,
-	date,
-}: Props) {
-	if (isFinalTournament) {
+	if (isHidden) {
 		return null;
-	}
-
-	if (isRegisterButtonDisabled) {
-		return (
-			<Button
-				variant="soft"
-				disabled
-				className="mt-5 cursor-not-allowed!"
-			>
-				Jetzt Anmelden
-			</Button>
-		);
 	}
 
 	return (
@@ -35,11 +16,15 @@ export function RegisterButton({
 			asChild
 		>
 			<a
-				href={`mailto:coellen.f@gmx.de?subject=Anmeldung Turnier am ${date}`}
-				aria-label={`Jetzt Anmelden für das Turnier am ${date}`}
+				href={`mailto:masters@svaltbach.de?subject=Anmeldung Turnier am ${tournament.date}`}
+				aria-label={`Jetzt Anmelden für das Turnier am ${tournament.date}`}
 			>
 				Jetzt Anmelden
 			</a>
 		</Button>
 	);
+}
+
+interface Props {
+  tournament: TournamentDataTypes;
 }

@@ -1,7 +1,7 @@
 "use client";
 
 import {Box, Heading, Tabs} from "@radix-ui/themes";
-import tournamentData from "@/app/tournaments.json";
+import {tournamentData} from "@/app/tournaments";
 import { TournamentContent } from "./tournament-content";
 
 export function Tournaments() {
@@ -37,17 +37,7 @@ export function Tournaments() {
 					{tournamentData.map((tournament) => (
 						<TournamentContent
 							key={tournament.value}
-							value={tournament.value}
-							date={tournament.date}
-							startTime={tournament.startTime}
-							endTime={tournament.endTime}
-							mode={tournament.mode}
-							evaluation={tournament.evaluation}
-							announcementPath={tournament.announcementPath}
-							listOfAttendeesUrl={tournament.listOfAttendeesUrl}
-							type={
-								tournament.type as "blitz" | "rapid" | "960" | "final" | undefined
-							}
+							tournament={tournament}
 						/>
 					))}
 				</Box>

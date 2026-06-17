@@ -1,5 +1,8 @@
-[
+import type {TournamentDataTypes} from "@/types";
+
+export const tournamentData = [
 	{
+    "status": "completed",
 		"value": "tournament_1",
 		"date": "Freitag, 29. Mai 2026",
 		"startTime": "19:00 Uhr - Meldeschluss bis spätestens 18:30 Uhr",
@@ -9,8 +12,8 @@
     "pointRule": "3-point",
 		"evaluation": "FIDE Blitz Elo",
     "entryFee": {
-      "preRegistration": "15 €",
-      "normalRegistration": "20 €"
+      "preRegistration": "15",
+      "normalRegistration": "20"
     },
     "venue": "Ev. Waldheim am Oberholz, Bartenhöhe 43, 73035 Göppingen",
     "prices": "Siehe Ausschreibung",
@@ -19,6 +22,7 @@
     "generalInformation": null
 	},
 	{
+    "status": "completed",
 		"value": "tournament_2",
 		"date": "Samstag, 30. Mai 2026",
 		"startTime": "10:00 Uhr - Meldeschluss bis spätestens 09:30 Uhr",
@@ -28,8 +32,8 @@
     "pointRule": "3-point",
 		"evaluation": "FIDE Rapid Elo",
     "entryFee": {
-      "preRegistration": "25 €",
-      "normalRegistration": "30 €"
+      "preRegistration": "25",
+      "normalRegistration": "30"
     },
     "venue": "Ev. Waldheim am Oberholz, Bartenhöhe 43, 73035 Göppingen",
     "prices": "Siehe Ausschreibung",
@@ -38,6 +42,7 @@
     "generalInformation": null
 	},
 	{
+    "status": "upcoming",
 		"value": "tournament_3",
 		"date": "Freitag, 10. Juli 2026",
 		"startTime": "20:15 Uhr - Meldeschluss bis spätestens 20:00 Uhr",
@@ -47,8 +52,8 @@
     "pointRule": "3-point",
 		"evaluation": "FIDE Blitz Elo",
     "entryFee": {
-      "preRegistration": "15 €",
-      "normalRegistration": "20 €"
+      "preRegistration": "15",
+      "normalRegistration": "20"
     },
     "venue": "Foyer der Sporthalle, Esslinger Straße 90, 73776 Altbach",
     "prices": "Siehe Ausschreibung",
@@ -57,6 +62,7 @@
     "generalInformation": null
 	},
   {
+    "status": "upcoming",
     "value": "tournament_4",
     "date": "Samstag, 19.09.2026",
     "startTime": null,
@@ -73,6 +79,7 @@
     "generalInformation": null
   },
 	{
+    "status": "upcoming",
 		"value": "tournament_5",
 		"date": "Oktober/November",
 		"startTime": null,
@@ -89,6 +96,7 @@
     "generalInformation": null
 	},
 	{
+    "status": "upcoming",
 		"value": "tournament_final",
     "date": null,
     "startTime": null,
@@ -104,4 +112,4 @@
     "listOfAttendeesUrl": null,
     "generalInformation": null
 	}
-]
+] satisfies TournamentDataTypes[];

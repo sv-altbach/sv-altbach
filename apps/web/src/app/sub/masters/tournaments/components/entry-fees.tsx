@@ -1,53 +1,39 @@
-import { Table, Text } from "@radix-ui/themes";
+import {Table, Text} from "@radix-ui/themes";
+import type {TournamentDataTypes} from "@/types";
+
+export function EntryFees({tournament}: Props) {
+  return (
+      <Table.Row>
+        <Table.RowHeaderCell>Startgeld</Table.RowHeaderCell>
+        <Table.Cell>
+          <EntryFeeMarkup tournament={tournament}/>
+        </Table.Cell>
+      </Table.Row>
+  );
+}
+
+function EntryFeeMarkup({tournament}: Props) {
+  if (!tournament.entryFee) {
+    return "Höhe des Startgelds wird bald bekanntgegeben.";
+  }
+
+  if (tournament.type === "final") {
+    return "Einladungsturnier. Startgeld entfällt.";
+  }
+
+  return (
+      <>
+        <Text as="p">
+          Voranmeldung: <strong>{tournament.entryFee?.preRegistration} &euro;</strong>
+        </Text>
+        <Text as="p">
+          Anmeldungen am Turniertag vor
+          Ort: <strong>{tournament.entryFee?.normalRegistration} &euro;</strong>
+        </Text>
+      </>
+  );
+}
 
 interface Props {
-	isFinalTournament: boolean;
-	value: string;
-}
-
-export function EntryFees({ isFinalTournament, value }: Props) {
-	return (
-		<Table.Row>
-			<Table.RowHeaderCell>Startgeld</Table.RowHeaderCell>
-			<Table.Cell>
-				<EntryFeeMarkup isFinalTournament={isFinalTournament} value={value} />
-			</Table.Cell>
-		</Table.Row>
-	);
-}
-
-function EntryFeeMarkup({
-	isFinalTournament,
-	value,
-}: {
-	isFinalTournament: boolean;
-	value: string;
-}) {
-	if (isFinalTournament) {
-		return <Text as="p">Einladungsturnier. Startgeld entfällt.</Text>;
-	}
-
-	if (value === "tournament_2") {
-		return (
-			<>
-				<Text as="p">
-					Voranmeldung: <strong>25 &euro;</strong>
-				</Text>
-				<Text as="p">
-					Anmeldungen am Turniertag vor Ort: <strong>30 &euro;</strong>
-				</Text>
-			</>
-		);
-	}
-
-	return (
-		<>
-			<Text as="p">
-				Voranmeldung: <strong>15 &euro;</strong>
-			</Text>
-			<Text as="p">
-				Anmeldungen am Turniertag vor Ort: <strong>20 &euro;</strong>
-			</Text>
-		</>
-	);
+  tournament: TournamentDataTypes;
 }
