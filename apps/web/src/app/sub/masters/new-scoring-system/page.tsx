@@ -2,7 +2,7 @@ import { Box, Heading, Text } from "@radix-ui/themes";
 
 export default function NewScoringSystemPage() {
 	return (
-		<main className="m-20 rounded-lg shadow-xl pb-6">
+		<main className="lg:m-20 rounded-lg shadow-xl pb-6">
 			<Box
 				px="9"
 				pb="4"
