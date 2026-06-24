@@ -36,7 +36,7 @@ export default function NewScoringSystemPage() {
 					<span className="rounded-lg bg-red-100 px-2 py-1 font-bold text-red-700">
 						Masters-Punkte
 					</span>{" "}
-					= 100 × 100 × (erzielte Punkte / maximal erreichbare Punkte) × Turnierfaktor
+					= 100 × (erzielte Punkte / maximal erreichbare Punkte) × Turnierfaktor
 				</Text>
 
 				<Heading as="h3" size={{ initial: "3", md: "4", lg: "5" }} mt="3" mb="2">
