@@ -4,12 +4,12 @@ export default function NewScoringSystemPage() {
 	return (
 		<main className="lg:m-20 rounded-lg shadow-xl pb-6">
 			<Box
-				px="9"
+				px={{initial: "5", lg: "9"}}
 				pb="4"
 				pt="6"
 				className="rounded-t-lg bg-red-100 text-red-700"
 			>
-				<Heading as="h1" size="9" mb="2">
+				<Heading as="h1" size={{ initial: "7", md: "8", lg: "9" }} mb="2">
 					Neues Punktesystem
 				</Heading>
 				<Text as="p">
@@ -20,8 +20,8 @@ export default function NewScoringSystemPage() {
 				</Text>
 			</Box>
 
-			<Box px="9" py="4">
-				<Heading as="h2" size="8">
+			<Box px={{initial: "5", lg: "9"}} py="4">
+				<Heading as="h2" size={{ initial: "5", md: "6", lg: "8" }}>
 					Punktevergabe pro Turnier
 				</Heading>
 				<Text as="p">
@@ -29,7 +29,7 @@ export default function NewScoringSystemPage() {
 					jeweiligen Turnier.
 				</Text>
 
-				<Heading as="h3" mt="3" mb="2">
+				<Heading as="h3" size={{ initial: "3", md: "4", lg: "5" }} mt="3" mb="2">
 					Formel
 				</Heading>
 				<Text as="p">
@@ -39,7 +39,7 @@ export default function NewScoringSystemPage() {
 					= 100 × (erzielte Punkte / Rundenzahl) × Turnierfaktor
 				</Text>
 
-				<Heading as="h3" mt="3" mb="2">
+				<Heading as="h3" size={{ initial: "3", md: "4", lg: "5" }} mt="3" mb="2">
 					Erklärung
 				</Heading>
 				<ul className="list-disc pl-5">
@@ -59,7 +59,7 @@ export default function NewScoringSystemPage() {
 					</li>
 				</ul>
 
-				<Heading as="h3" mt="3">
+				<Heading as="h3" size={{ initial: "3", md: "4", lg: "5" }} mt="3">
 					Turnierfaktor
 				</Heading>
 				<Text as="p" mb="2">
@@ -85,15 +85,15 @@ export default function NewScoringSystemPage() {
 				</ul>
 			</Box>
 
-			<Box px="9" py="4">
-				<Heading as="h2" size="8">
+			<Box px={{initial: "5", lg: "9"}} py="4">
+				<Heading as="h2" size={{ initial: "5", md: "6", lg: "8" }}>
 					Gesamtwertung (Streichergebnisse)
 				</Heading>
 				<Text as="p">
 					Für die Masters-Gesamtwertung werden nicht alle Turniere gewertet.
 				</Text>
 
-				<Heading as="h3" mt="3" mb="2">
+				<Heading as="h3" size={{ initial: "3", md: "4", lg: "5" }} mt="3" mb="2">
 					Regel
 				</Heading>
 				<ul className="list-disc pl-5">
@@ -113,7 +113,7 @@ export default function NewScoringSystemPage() {
 					<li>Das schwächste Ergebnis wird gestrichen</li>
 				</ul>
 
-				<Heading as="h3" mt="3" mb="2">
+				<Heading as="h3" size={{ initial: "3", md: "4", lg: "5" }} mt="3" mb="2">
 					Ziel
 				</Heading>
 				<ul className="list-disc pl-5">
@@ -125,13 +125,13 @@ export default function NewScoringSystemPage() {
 				</ul>
 			</Box>
 
-			<Box px="9" py="4">
-				<Heading as="h2" size="8">
+			<Box px={{initial: "5", lg: "9"}} py="4">
+				<Heading as="h2" size={{ initial: "5", md: "6", lg: "8" }}>
 					Finalqualifikation
 				</Heading>
 				<Text as="p">Am Ende der Serie findet ein Finale statt.</Text>
 
-				<Heading as="h3" mt="3">
+				<Heading as="h3" size={{ initial: "3", md: "4", lg: "5" }} mt="3">
 					Voraussetzungen
 				</Heading>
 				<ul className="list-disc pl-5">
@@ -144,7 +144,7 @@ export default function NewScoringSystemPage() {
 					<li>Qualifikation über die Masters-Gesamtwertung</li>
 				</ul>
 
-				<Heading as="h3" mt="3">
+				<Heading as="h3" size={{ initial: "3", md: "4", lg: "5" }} mt="3">
 					Finale
 				</Heading>
 				<ul className="list-disc pl-5">
