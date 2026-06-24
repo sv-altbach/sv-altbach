@@ -59,7 +59,7 @@ export const tournamentData = [
 			normalRegistration: "20",
 		},
 		venue: "Foyer der Sporthalle, Esslinger Straße 90, 73776 Altbach",
-		announcementPath: null,
+		announcementPath: "/masters/Ausschreibung_Turnier-3_SVA-Masters.pdf",
 		listOfAttendeesUrl: null,
 		generalInformation: "Wir bieten Pizza und Getränke an.",
 	},
