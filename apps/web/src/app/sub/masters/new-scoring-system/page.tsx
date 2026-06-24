@@ -36,7 +36,7 @@ export default function NewScoringSystemPage() {
 					<span className="rounded-lg bg-red-100 px-2 py-1 font-bold text-red-700">
 						Masters-Punkte
 					</span>{" "}
-					= 100 × (erzielte Punkte / Rundenzahl) × Turnierfaktor
+					= 100 × 100 × (erzielte Punkte / maximal erreichbare Punkte) × Turnierfaktor
 				</Text>
 
 				<Heading as="h3" size={{ initial: "3", md: "4", lg: "5" }} mt="3" mb="2">
@@ -45,10 +45,15 @@ export default function NewScoringSystemPage() {
 				<ul className="list-disc pl-5">
 					<li>
 						<span className="font-bold text-neutral-700">
-							Erzielte Punkte / Rundenzahl
+							Erzielte Punkte
 						</span>{" "}
-						= Punktequote im Turnier
+						= die im Turnier erreichten Punkte
 					</li>
+          <li>
+
+            <span className="font-bold text-neutral-700">Maximal erreichbare Punkte</span>
+            = Anzahl der Runden × Punkte im jeweiligen Wertungssystem
+          </li>
 					<li>
 						<span className="font-bold text-neutral-700">100</span> = sorgt für
 						eine gut lesbare Punkteskala
