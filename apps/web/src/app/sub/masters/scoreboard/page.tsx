@@ -1,4 +1,4 @@
-import { Box, Container, Heading, Tabs, Text } from "@radix-ui/themes";
+import { Container, Heading, Text } from "@radix-ui/themes";
 import { IconArrowBadgeUp } from "@tabler/icons-react";
 import Link from "next/link";
 import { Table } from "@/app/sub/masters/scoreboard/components/Table";
@@ -77,22 +77,7 @@ const ScoreboardPage = () => {
 							</Button>
 						</section>
 
-						<Tabs.Root defaultValue="player">
-							<Tabs.List>
-								<Tabs.Trigger value="player">Spieler</Tabs.Trigger>
-								<Tabs.Trigger value="teams">Teams</Tabs.Trigger>
-							</Tabs.List>
-
-							<Box pt="3">
-								<Tabs.Content value="player">
-									<Table mode="player" />
-								</Tabs.Content>
-
-								<Tabs.Content value="teams">
-									<Table mode="team" />
-								</Tabs.Content>
-							</Box>
-						</Tabs.Root>
+            <Table />
 					</main>
 				</Container>
 			</section>

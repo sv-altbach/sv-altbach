@@ -5,7 +5,6 @@ interface TournamentData {
 
 export interface Player {
 	name: string;
-	team: AlphabetLetter | "no-team";
 	club?: string;
 	tournamentData: {
 		tournament1: TournamentData | null;
@@ -15,19 +14,10 @@ export interface Player {
 		tournament5: TournamentData | null;
 	};
 	tournamentPoints?: number;
-	teamPoints: number;
 	averagePosition?: number;
 	bestPosition?: number;
 	eloPerformance?: number;
 	hasPlayedAllTournaments?: boolean;
-}
-
-export interface Team {
-	id: AlphabetLetter;
-	players: string[];
-	registrationEntry?: 3;
-	tournamentPoints?: number;
-	eloPerformance?: number;
 }
 
 export interface TournamentResult {
@@ -57,31 +47,3 @@ export interface TournamentDataTypes {
 	listOfAttendeesUrl: string | null;
 	generalInformation: string | null;
 }
-
-type AlphabetLetter =
-	| "A"
-	| "B"
-	| "C"
-	| "D"
-	| "E"
-	| "F"
-	| "G"
-	| "H"
-	| "I"
-	| "J"
-	| "K"
-	| "L"
-	| "M"
-	| "N"
-	| "O"
-	| "P"
-	| "Q"
-	| "R"
-	| "S"
-	| "T"
-	| "U"
-	| "V"
-	| "W"
-	| "X"
-	| "Y"
-	| "Z";

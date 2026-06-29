@@ -1,84 +1,62 @@
 import { Table, Tooltip } from "@radix-ui/themes";
 import { IconArrowBadgeUp } from "@tabler/icons-react";
 import { pointMapping } from "@/app/sub/masters/scoreboard/utils/pointMapping";
-import type { Player, Team } from "@/types";
+import type { Player } from "@/types";
 import { cn } from "@/utils/ui";
 import { getPlayerName } from "@/utils/utils";
 
 interface Props {
 	player?: Player;
-	team?: Team;
 	index: number;
 }
 
-export function TableRow({ player, team, index }: Props) {
-	if (!player && team) {
-		return (
-			<Table.Row
-				className={cn([
-					index === 0 && "bg-[#FFD700]",
-					index === 1 && "bg-[#C0C0C0]",
-					index === 2 && "bg-[#CD7F32]",
-				])}
-			>
-				<Table.RowHeaderCell>{index + 1}</Table.RowHeaderCell>
-				<Table.Cell>{getTeamName(team)}</Table.Cell>
-				<Table.Cell justify="center">
-					{Intl.NumberFormat("de-DE")
-						.format(team.eloPerformance ?? 0)
-						.replace(".", "")}
-				</Table.Cell>
-				<Table.Cell justify="center">{team.tournamentPoints}</Table.Cell>
-			</Table.Row>
-		);
-	}
+export function TableRow({ player, index }: Props) {
+  if(!player) {
+    return null;
+  }
 
-	if (!team && player) {
-		return (
-			<Table.Row
-				className={cn([
-					index === 0 && "bg-[#FFD700]",
-					index === 1 && "bg-[#C0C0C0]",
-					index === 2 && "bg-[#CD7F32]",
-				])}
-			>
-				<Table.RowHeaderCell>{index + 1}</Table.RowHeaderCell>
-				<Table.Cell className="flex items-center">
-					{getPlayerName(player.name)}{" "}
-					{renderHasPlayedAllTournamentsIndicator(player, index)}
-				</Table.Cell>
-				<Table.Cell justify="center">
-					{pointMapping.get(player.tournamentData.tournament1?.position) ?? 0}
-				</Table.Cell>
-				<Table.Cell justify="center">
-					{pointMapping.get(player.tournamentData.tournament2?.position) ?? 0}
-				</Table.Cell>
-				<Table.Cell justify="center">
-					{pointMapping.get(player.tournamentData.tournament3?.position) ?? 0}
-				</Table.Cell>
-				<Table.Cell justify="center">
-					{pointMapping.get(player.tournamentData.tournament4?.position) ?? 0}
-				</Table.Cell>
-				<Table.Cell justify="center">
-					{pointMapping.get(player.tournamentData.tournament5?.position) ?? 0}
-				</Table.Cell>
-				<Table.Cell justify="center">
-					{Intl.NumberFormat("de-DE")
-						.format(player.averagePosition ?? 0)
-						.replace(".", "")}
-				</Table.Cell>
-				<Table.Cell justify="center">{player.bestPosition}</Table.Cell>
-				<Table.Cell justify="center">
-					{Intl.NumberFormat("de-DE")
-						.format(player.eloPerformance ?? 0)
-						.replace(".", "")}
-				</Table.Cell>
-				<Table.Cell justify="center">{player.tournamentPoints}</Table.Cell>
-			</Table.Row>
-		);
-	}
-
-	return null;
+	return (
+      <Table.Row
+          className={cn([
+            index === 0 && "bg-[#FFD700]",
+            index === 1 && "bg-[#C0C0C0]",
+            index === 2 && "bg-[#CD7F32]",
+          ])}
+      >
+        <Table.RowHeaderCell>{index + 1}</Table.RowHeaderCell>
+        <Table.Cell className="flex items-center">
+          {getPlayerName(player.name)}{" "}
+          {renderHasPlayedAllTournamentsIndicator(player, index)}
+        </Table.Cell>
+        <Table.Cell justify="center">
+          {pointMapping.get(player.tournamentData.tournament1?.position) ?? 0}
+        </Table.Cell>
+        <Table.Cell justify="center">
+          {pointMapping.get(player.tournamentData.tournament2?.position) ?? 0}
+        </Table.Cell>
+        <Table.Cell justify="center">
+          {pointMapping.get(player.tournamentData.tournament3?.position) ?? 0}
+        </Table.Cell>
+        <Table.Cell justify="center">
+          {pointMapping.get(player.tournamentData.tournament4?.position) ?? 0}
+        </Table.Cell>
+        <Table.Cell justify="center">
+          {pointMapping.get(player.tournamentData.tournament5?.position) ?? 0}
+        </Table.Cell>
+        <Table.Cell justify="center">
+          {Intl.NumberFormat("de-DE")
+          .format(player.averagePosition ?? 0)
+          .replace(".", "")}
+        </Table.Cell>
+        <Table.Cell justify="center">{player.bestPosition}</Table.Cell>
+        <Table.Cell justify="center">
+          {Intl.NumberFormat("de-DE")
+          .format(player.eloPerformance ?? 0)
+          .replace(".", "")}
+        </Table.Cell>
+        <Table.Cell justify="center">{player.tournamentPoints}</Table.Cell>
+      </Table.Row>
+  )
 }
 
 function renderHasPlayedAllTournamentsIndicator(player: Player, index: number) {
@@ -106,12 +84,4 @@ function renderHasPlayedAllTournamentsIndicator(player: Player, index: number) {
 	}
 
 	return null;
-}
-
-function getTeamName(team: Team) {
-	const playerNames = team.players.map((player) => {
-		return player.split(",").reverse().join(" ");
-	});
-
-	return playerNames.join(", ");
 }

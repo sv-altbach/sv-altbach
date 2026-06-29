@@ -1,7 +1,6 @@
-import fs from "node:fs";
 import { hasPlayedAllTournaments } from "@/app/sub/masters/scoreboard/utils/playerUtils";
 import { pointMapping } from "@/app/sub/masters/scoreboard/utils/pointMapping";
-import type { Player, Team, TournamentResult } from "@/types";
+import type { Player, TournamentResult } from "@/types";
 
 export const fillPlayerDatabase = (
 	tournamentResult: TournamentResult,
@@ -55,7 +54,6 @@ export const fillPlayerDatabase = (
 
 	playerDatabase.push({
 		name: tournamentResult.name,
-		team: getTeamId(tournamentResult),
 		tournamentData: tournamentData,
 		tournamentPoints: getTournamentPoints(
 			tournament1,
@@ -63,14 +61,6 @@ export const fillPlayerDatabase = (
 			tournament3,
 			tournament4,
 			tournament5,
-		),
-		teamPoints: getTournamentPoints(
-			tournament1,
-			tournament2,
-			tournament3,
-			tournament4,
-			tournament5,
-			getTeam(tournamentResult),
 		),
 		averagePosition: getAveragePosition(
 			getTournamentPositionsSum(tournamentResults),
@@ -84,62 +74,6 @@ export const fillPlayerDatabase = (
 		hasPlayedAllTournaments: hasPlayedAllTournaments(tournamentResults.length),
 	});
 };
-
-function getTeam(tournamentResult: TournamentResult) {
-	const databaseFiles = fs.readdirSync(
-		"src/app/sub/masters/scoreboard/database",
-		{
-			encoding: "utf-8",
-		},
-	);
-
-	const teams: Team[] = databaseFiles
-		.flatMap((databaseFile) => {
-			if (!databaseFile.startsWith("teams")) {
-				return null;
-			}
-
-			const teamsFileContent = fs.readFileSync(
-				`src/app/sub/masters/scoreboard/database/${databaseFile}`,
-				{ encoding: "utf-8" },
-			);
-			return JSON.parse(teamsFileContent);
-		})
-		.filter(Boolean);
-
-	return teams.find((team) =>
-		team.players.find((player) => player === tournamentResult.name),
-	)?.registrationEntry;
-}
-
-function getTeamId(tournamentResult: TournamentResult) {
-	const databaseFiles = fs.readdirSync(
-		"src/app/sub/masters/scoreboard/database",
-		{
-			encoding: "utf-8",
-		},
-	);
-
-	const teams: Team[] = databaseFiles
-		.flatMap((databaseFile) => {
-			if (!databaseFile.startsWith("teams")) {
-				return null;
-			}
-
-			const teamsFileContent = fs.readFileSync(
-				`src/app/sub/masters/scoreboard/database/${databaseFile}`,
-				{ encoding: "utf-8" },
-			);
-			return JSON.parse(teamsFileContent);
-		})
-		.filter(Boolean);
-
-	const team = teams.find((team) =>
-		team.players.find((player) => player === tournamentResult.name),
-	)?.id;
-
-	return team ?? "no-team";
-}
 
 function getTournamentEloPerformanceSum(
 	tournamentDatas: (TournamentResult | null)[],
