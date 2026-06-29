@@ -1,0 +1,1514 @@
+{
+  "format": "openpairing-tournament-json",
+  "version": 1,
+  "generatedAt": "2026-06-24T06:59:39.678Z",
+  "tournament": {
+    "id": "cmpigtwv900061npcffwp6e8u",
+    "slug": "gp-blitz-open-2026",
+    "name": "1. Göppinger Blitz Open 2026",
+    "type": "SWISS",
+    "status": "COMPLETED"
+  },
+  "section": "standings",
+  "data": {
+    "variant": "individual",
+    "tournamentName": "1. Göppinger Blitz Open 2026",
+    "tournamentType": "SWISS",
+    "ratedFide": true,
+    "fideRatingType": "FIDE_BLITZ",
+    "round": 13,
+    "totalRounds": 13,
+    "rows": [
+      {
+        "rank": 1,
+        "playerId": "cmpmyh8sg000k1nnw3gd0whpj",
+        "name": "Gheng,Josef",
+        "rating": 2174,
+        "score": 32,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 32
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 306
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 3814
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 2,
+        "playerId": "cmpk6oyyk001a1op7xe3uglgk",
+        "name": "Portnov,Dmitry",
+        "rating": 2026,
+        "score": 29,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 29
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 313
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 3798
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 3,
+        "playerId": "cmpn1uihv000t1nt83z1uvacp",
+        "name": "Beaumont-Darrodes,Maxime",
+        "rating": 1720,
+        "score": 27,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 27
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 291
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 3735
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 4,
+        "playerId": "cmpk6ps8s001g1op707gi1dr8",
+        "name": "Mohonea,Alexandru",
+        "rating": 1953,
+        "score": 26,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 26
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 283
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 3538
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 5,
+        "playerId": "cmpmyfgik00061nnw4vvsshhn",
+        "name": "Notz,Lukas",
+        "rating": 1970,
+        "score": 25,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 25
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 312
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 3704
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 6,
+        "playerId": "cmpk6n9lr00121op7n7p14fde",
+        "name": "Cilo,Selimhan",
+        "rating": 2085,
+        "score": 25,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 25
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 304
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 3556
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 7,
+        "playerId": "cmpk6p821001c1op7s3b72dxb",
+        "name": "Wadiei,Soroush",
+        "rating": 1985,
+        "score": 25,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 25
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 303
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 3666
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 8,
+        "playerId": "cmpmygvib000g1nnw2gwlvzcp",
+        "name": "Bodriyenko,Markiyan",
+        "rating": 1987,
+        "score": 25,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 25
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 299
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 3769
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 9,
+        "playerId": "cmpk6rii6001s1op7vgycdcf3",
+        "name": "Rodriguez,Antoine",
+        "rating": 1895,
+        "score": 25,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 25
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 296
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 3743
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 10,
+        "playerId": "cmpo3fvf4001b1nnmacxhqnsu",
+        "name": "Masur,Bernhard",
+        "rating": 1883,
+        "score": 25,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 25
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 256
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 3497
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 11,
+        "playerId": "cmpk6twrk002a1op74pn9nuzf",
+        "name": "Radu,Victor Mihai",
+        "rating": 1701,
+        "score": 25,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 25
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 247
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 3285
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 12,
+        "playerId": "cmpk6o3w000181op70myvmeqt",
+        "name": "Minde,Timothe",
+        "rating": 2044,
+        "score": 24,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 24
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 314
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 3731
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 13,
+        "playerId": "cmppyhulw00031mqeob3zcoxe",
+        "name": "Lehnart,Paul",
+        "rating": 1920,
+        "score": 24,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 24
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 279
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 3502
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 14,
+        "playerId": "cmpk6nuou00161op7mhdnw96i",
+        "name": "Alcantara,Eliyakim",
+        "rating": 2045,
+        "score": 24,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 24
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 275
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 3482
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 15,
+        "playerId": "cmpk6s9uz001w1op7t0ijegq4",
+        "name": "Cöllen,Björn",
+        "rating": 1859,
+        "score": 24,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 24
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 259
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 3370
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 16,
+        "playerId": "cmpk6r4mm001q1op79b9aef1d",
+        "name": "Jugaru,Lucian",
+        "rating": 1909,
+        "score": 24,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 24
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 251
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 3344
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 17,
+        "playerId": "cmpk6pgfs001e1op7dj33ywdn",
+        "name": "Gibicar,Marc",
+        "rating": 1982,
+        "score": 22,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 22
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 310
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 3631
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 18,
+        "playerId": "cmpk6qfwq001k1op71rptlm5u",
+        "name": "Dilthey,Lennart",
+        "rating": 1928,
+        "score": 22,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 22
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 288
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 3532
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 19,
+        "playerId": "cmpk6rxus001u1op7pzkyvfdr",
+        "name": "Simon,Pierre-Marie",
+        "rating": 1895,
+        "score": 22,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 22
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 265
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 3407
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 20,
+        "playerId": "cmpmyg27500081nnw4wa0425h",
+        "name": "Kermer,Jan",
+        "rating": 1849,
+        "score": 22,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 22
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 260
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 3430
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 21,
+        "playerId": "cmpk6t1rl00221op770yckqbg",
+        "name": "Cilo,Seyyid",
+        "rating": 1829,
+        "score": 22,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 22
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 250
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 3315
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 22,
+        "playerId": "cmpk6ta5q00241op7sd8aau56",
+        "name": "Garandeau,Clement",
+        "rating": 1772,
+        "score": 22,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 22
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 243
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 3201
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 23,
+        "playerId": "cmpmyhnjt000m1nnwa5y3xd5p",
+        "name": "Haas,Wilhelm",
+        "rating": 2090,
+        "score": 21,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 21
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 301
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 3727
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 24,
+        "playerId": "cmpk6q3k7001i1op7ndspzxs6",
+        "name": "Gündogdu,Abdulhamit",
+        "rating": 1935,
+        "score": 21,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 21
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 297
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 3619
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 25,
+        "playerId": "cmppyi63q00051mqe4uuhhpsn",
+        "name": "Burg,Samuel",
+        "rating": 1897,
+        "score": 21,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 21
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 284
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 3472
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 26,
+        "playerId": "cmpnr2fd500011nnmukcbevyi",
+        "name": "Reusch,Elisa",
+        "rating": 1928,
+        "score": 21,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 21
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 276
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 3370
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 27,
+        "playerId": "cmpk6spzs00201op7m0i5iwxv",
+        "name": "Kittel,Lennart",
+        "rating": 1836,
+        "score": 21,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 21
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 255
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 3361
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 28,
+        "playerId": "cmpmyi1lc000o1nnw0h2x37fq",
+        "name": "Gutsche,Jan-Frederic",
+        "rating": 1757,
+        "score": 21,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 21
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 231
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 3095
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 29,
+        "playerId": "cmpk6qw4g001o1op7l4r551vz",
+        "name": "Cernencu,George-Ciprian",
+        "rating": 1909,
+        "score": 19,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 19
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 286
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 3449
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 30,
+        "playerId": "cmpr5dh5i000u24ps72ao36at",
+        "name": "Pelezki,Eugen",
+        "rating": 1969,
+        "score": 19,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 19
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 272
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 3353
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 31,
+        "playerId": "cmpk6shnz001y1op7fx4l0dtj",
+        "name": "Fabry,Laurin",
+        "rating": 1853,
+        "score": 19,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 19
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 264
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 3507
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 32,
+        "playerId": "cmpnthrnr00191nnmngbqae0s",
+        "name": "Wiedmann,Thomas",
+        "rating": 1796,
+        "score": 19,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 19
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 258
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 3374
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 33,
+        "playerId": "cmpmyh2hy000i1nnwpgybweoi",
+        "name": "Jajcinovic,Luka",
+        "rating": 1733,
+        "score": 19,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 19
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 257
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 3357
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 34,
+        "playerId": "cmpk6unu9002g1op7n1l5yhfg",
+        "name": "Paun,David",
+        "rating": 1619,
+        "score": 19,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 19
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 254
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 3236
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 35,
+        "playerId": "cmpk6vpk9002m1op7hikwrsde",
+        "name": "Mohonea,Maria",
+        "rating": 1514,
+        "score": 19,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 19
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 252
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 3207
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 36,
+        "playerId": "cmpk6qndn001m1op7o7ep92m6",
+        "name": "Ruprich,Udo",
+        "rating": 1911,
+        "score": 19,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 19
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 243
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 3276
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 37,
+        "playerId": "cmpk6xig7002y1op7438tojty",
+        "name": "Fürst,Kaven",
+        "rating": 1622,
+        "score": 19,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 19
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 242
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 3211
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 38,
+        "playerId": "cmpoef0jt004s1nnmmaa5s2vg",
+        "name": "Voxbrunner,Zacharias",
+        "rating": 1622,
+        "score": 18,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 18
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 269
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 3367
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 39,
+        "playerId": "cmpk6thvy00261op7bi72xbor",
+        "name": "Wonisch,Ferdinand",
+        "rating": 1752,
+        "score": 18,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 18
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 264
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 3334
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 40,
+        "playerId": "cmpn1dgus00011nt8tlq1wep8",
+        "name": "Blache,Sebastian",
+        "rating": 1666,
+        "score": 18,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 18
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 256
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 3201
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 41,
+        "playerId": "cmpnr35ov00051nnmioe6mfrn",
+        "name": "Arora,Advik",
+        "rating": 1628,
+        "score": 18,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 18
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 247
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 3025
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 42,
+        "playerId": "cmpnr2w1m00031nnmxkc00ptq",
+        "name": "Marquardt,Corvin",
+        "rating": 1570,
+        "score": 18,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 18
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 238
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 3019
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 43,
+        "playerId": "cmpnreih100111nnmzmczcksv",
+        "name": "Gerbe,Armand",
+        "rating": 1200,
+        "score": 18,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 18
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 221
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 2947
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 44,
+        "playerId": "cmpk6xb6f002w1op7itrctyc0",
+        "name": "Jugaru,Victor",
+        "rating": 1407,
+        "score": 18,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 18
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 211
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 3084
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 45,
+        "playerId": "cmpn1er3600071nt8mqfik2uk",
+        "name": "Botgros,Antonio-Darius",
+        "rating": 1438,
+        "score": 18,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 18
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 211
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 2996
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 46,
+        "playerId": "cmpk6w80a002q1op7n89eqi12",
+        "name": "Berbecel,Eric",
+        "rating": 1507,
+        "score": 16,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 16
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 251
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 3146
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 47,
+        "playerId": "cmpk6x20x002u1op7qoplnkry",
+        "name": "Ion,Andrei",
+        "rating": 1429,
+        "score": 16,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 16
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 247
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 3087
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 48,
+        "playerId": "cmpr43ipy000o24psm196y6jb",
+        "name": "Nowak,Niklas",
+        "rating": 1408,
+        "score": 16,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 16
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 189
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 2652
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 49,
+        "playerId": "cmpnrfsrs00171nnmdlx3j3fw",
+        "name": "Zsolt,Gyerko",
+        "rating": 1200,
+        "score": 16,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 16
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 175
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 2614
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 50,
+        "playerId": "cmpn1dv0000031nt8k3tk48rx",
+        "name": "Blache,Manuel",
+        "rating": 1614,
+        "score": 15,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 15
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 242
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 3112
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 51,
+        "playerId": "cmpk6uw41002i1op749cta6qw",
+        "name": "Pillath,Marcus",
+        "rating": 1601,
+        "score": 15,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 15
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 235
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 2986
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 52,
+        "playerId": "cmpk6tois00281op7ommy58h4",
+        "name": "Rapp,Günter",
+        "rating": 1744,
+        "score": 15,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 15
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 234
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 3074
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 53,
+        "playerId": "cmpk6wst5002s1op7ia9tq7zp",
+        "name": "Riboulleau Bordes,Mae",
+        "rating": 1448,
+        "score": 15,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 15
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 233
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 2981
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 54,
+        "playerId": "cmpn1f5st00091nt8ksgymhnj",
+        "name": "De Boysson,Gabriel",
+        "rating": 1596,
+        "score": 15,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 15
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 216
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 2826
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 55,
+        "playerId": "cmpn1fxoe000b1nt819lno5pr",
+        "name": "Chastanet,Mael",
+        "rating": 1412,
+        "score": 15,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 15
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 191
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 2678
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 56,
+        "playerId": "cmpk6u79v002c1op7yycbr6hz",
+        "name": "Albert,Hugo",
+        "rating": 1634,
+        "score": 15,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 15
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 184
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 2637
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 57,
+        "playerId": "cmpr3ldv3000m24ps41e2hlpu",
+        "name": "Frankline,Eleena",
+        "rating": 1200,
+        "score": 15,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 15
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 182
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 2668
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 58,
+        "playerId": "cmpk6uh1c002e1op7hdnwch08",
+        "name": "Zekovic,Alen",
+        "rating": 1625,
+        "score": 14,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 14
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 215
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 2942
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 59,
+        "playerId": "cmpk6vzmb002o1op7vvjn1qe9",
+        "name": "Grigore,Eduard-Petru",
+        "rating": 1509,
+        "score": 13,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 13
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 223
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 2970
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 60,
+        "playerId": "cmpnrfa7g00151nnmqhizw5rl",
+        "name": "Berthelot,Louis",
+        "rating": 1200,
+        "score": 12,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 12
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 201
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 2703
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 61,
+        "playerId": "cmpn1e8lm00051nt80at0l934",
+        "name": "Vidovici,Denis-Mihai",
+        "rating": 1461,
+        "score": 12,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 12
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 175
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 2577
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 62,
+        "playerId": "cmpnrdzox000z1nnml388jil1",
+        "name": "Cernencu,Alexandra-Iris",
+        "rating": 1200,
+        "score": 12,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 12
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 172
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 2590
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 63,
+        "playerId": "cmpqsks54000i24psrf1rnkw8",
+        "name": "Modin,Marie",
+        "rating": 1200,
+        "score": 9,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 9
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 171
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 2499
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 64,
+        "playerId": "cmpnrev2c00131nnm7qvcm568",
+        "name": "Raynal,Paul",
+        "rating": 1200,
+        "score": 9,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 9
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 168
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 2466
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 65,
+        "playerId": "cmppym14t00071mqertynw0zf",
+        "name": "Combes,Thibaut",
+        "rating": 1200,
+        "score": 9,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 9
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 157
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 2449
+          }
+        ],
+        "withdrawn": false
+      },
+      {
+        "rank": 66,
+        "playerId": "cmppyhho000011mqez6r6esx5",
+        "name": "Breintner,Maximilian",
+        "rating": 1803,
+        "score": 3,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 3
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 68
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 440
+          }
+        ],
+        "withdrawn": true
+      },
+      {
+        "rank": 67,
+        "playerId": "cmpr7yy9f004824psk094s4sc",
+        "name": "Cernencu,Maria-Violeta",
+        "rating": 1200,
+        "score": 0,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 0
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 145
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 1999
+          }
+        ],
+        "withdrawn": false
+      }
+    ],
+    "tiebreakColumns": [
+      {
+        "type": "POINTS",
+        "abbreviation": "Pts"
+      },
+      {
+        "type": "BUCHHOLZ",
+        "abbreviation": "Buc"
+      },
+      {
+        "type": "SUM_BUCHHOLZ_VARIABLE",
+        "abbreviation": "BucS"
+      }
+    ],
+    "tiebreaksDroppedUnrated": false,
+    "updatedAt": "2026-06-24T06:59:39.678Z"
+  }
+}
