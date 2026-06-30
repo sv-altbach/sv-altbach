@@ -1,5 +1,5 @@
 import { Container, Heading, Text } from "@radix-ui/themes";
-import { IconArrowBadgeUp } from "@tabler/icons-react";
+import {IconArrowBadgeUp, IconX} from "@tabler/icons-react";
 import Link from "next/link";
 import { Table } from "@/app/sub/masters/scoreboard/components/Table";
 import { Button } from "@/components/ui/button";
@@ -29,8 +29,8 @@ const ScoreboardPage = () => {
 						</Text>
 
 						<Text as="p" aria-hidden="true">
-							Nach fünf Turnieren, werden die besten 16 Spieler, sowie Spieler,
-							die an jedem Turnier mitgewirkt haben, für das Finale nominiert.
+							Nach allen Qualifikations-Turnieren, werden die besten 16 Spieler, sowie Spieler,
+							die an mindestens drei Turnieren teilgenommen haben, für das Finale nominiert.
 						</Text>
 
 						<Text as="p" aria-hidden="true">
@@ -42,41 +42,18 @@ const ScoreboardPage = () => {
 							/>
 							, sind ebenfalls für das Finale qualifiziert.
 						</Text>
+
+            <Text as="p" aria-hidden="true">
+              Spieler, die neben ihrem Namen ein
+              <IconX
+                  className="inline text-lg text-red-600"
+                  aria-hidden="true"
+              />
+              haben, sind nicht für das Finale qualifiziert.
+            </Text>
 					</header>
 
 					<main className="my-10">
-						<section className="my-10">
-							<Heading as="h3" size="6" mb="2">
-								Live Spiele
-							</Heading>
-
-							<p className="mb-4">
-								In Turnier 5 (Chess960) wurden digitale Bretter verwendet. Du
-								kannst dir jetzt alle Spiele, die mit diesen Brettern gespielt
-								wurden, auf lichess.org nochmals ansehen.
-							</p>
-
-							<p className="my-4">
-								Alle Spiele, die dort hochgeladen wurden, sind nicht auf
-								lichess.org nicht gelistet und können nur über den unten
-								stehenden Link aufgerufen werden.
-							</p>
-
-							<Button
-								render={
-									<Link
-										href="https://lichess.org/study/jyWjPTXd/J3FiRZpa#0"
-										target="_blank"
-										rel="noreferrer noopener"
-									/>
-								}
-								nativeButton={false}
-								aria-label="Live-Spiele von Turnier 5 auf lichess.org ansehen"
-							>
-								Live-Spiele Turnier 5 auf lichess.org ansehen
-							</Button>
-						</section>
-
             <Table />
 					</main>
 				</Container>
