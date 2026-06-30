@@ -10,20 +10,7 @@
         "name": "Gheng,Josef",
         "rating": 2174,
         "score": 32,
-        "tiebreaks": [
-          {
-            "type": "POINTS",
-            "value": 32
-          },
-          {
-            "type": "BUCHHOLZ",
-            "value": 306
-          },
-          {
-            "type": "SUM_BUCHHOLZ_VARIABLE",
-            "value": 3814
-          }
-        ]
+        "buchholz": 306
       }
     ]
   }

@@ -1,218 +1,545 @@
-[
-	{
-		"position": 1,
-		"name": "Kölle,Tobias",
-		"eloPerformance": 2693,
-		"tournament": 1
-	},
-	{
-		"position": 2,
-		"name": "Bodriyenko,Markiyan",
-		"eloPerformance": 2273,
-		"tournament": 1
-	},
-	{
-		"position": 3,
-		"name": "Wadiei,Soroush",
-		"eloPerformance": 2053,
-		"tournament": 1
-	},
-	{
-		"position": 4,
-		"name": "Cilo,Selimhan",
-		"eloPerformance": 2006,
-		"tournament": 1
-	},
-	{
-		"position": 5,
-		"name": "Gheng,Simona",
-		"eloPerformance": 1948,
-		"tournament": 1
-	},
-	{
-		"position": 6,
-		"name": "Goldinov,Daniel",
-		"eloPerformance": 1908,
-		"tournament": 1
-	},
-	{
-		"position": 7,
-		"name": "Nunez Grégoire,Daniel",
-		"eloPerformance": 2024,
-		"tournament": 1
-	},
-	{
-		"position": 8,
-		"name": "Ruff,Marc",
-		"eloPerformance": 1809,
-		"tournament": 1
-	},
-	{
-		"position": 9,
-		"name": "Fabry,Laurin",
-		"eloPerformance": 1931,
-		"tournament": 1
-	},
-	{
-		"position": 10,
-		"name": "Ogloblin,Ilia",
-		"eloPerformance": 1935,
-		"tournament": 1
-	},
-	{
-		"position": 11,
-		"name": "Lehmann,Stefan",
-		"eloPerformance": 1904,
-		"tournament": 1
-	},
-	{
-		"position": 12,
-		"name": "Heilig,Tim Markus",
-		"eloPerformance": 1872,
-		"tournament": 1
-	},
-	{
-		"position": 13,
-		"name": "Cöllen,Florian",
-		"eloPerformance": 1874,
-		"tournament": 1
-	},
-	{
-		"position": 14,
-		"name": "Buchele,Andreas",
-		"eloPerformance": 1757,
-		"tournament": 1
-	},
-	{
-		"position": 15,
-		"name": "Principe,Nico",
-		"eloPerformance": 1719,
-		"tournament": 1
-	},
-	{
-		"position": 16,
-		"name": "Mattes,Sam",
-		"eloPerformance": 1536,
-		"tournament": 1
-	},
-	{
-		"position": 17,
-		"name": "Uhl,Lars",
-		"eloPerformance": 1748,
-		"tournament": 1
-	},
-	{
-		"position": 18,
-		"name": "Gutsche,Jan-Frederic",
-		"eloPerformance": 1677,
-		"tournament": 1
-	},
-	{
-		"position": 19,
-		"name": "Wonisch,Ferdinand",
-		"eloPerformance": 1633,
-		"tournament": 1
-	},
-	{
-		"position": 20,
-		"name": "Jajcinovic,Luka",
-		"eloPerformance": 1589,
-		"tournament": 1
-	},
-	{
-		"position": 21,
-		"name": "Spierling,Ralf",
-		"eloPerformance": 1612,
-		"tournament": 1
-	},
-	{
-		"position": 22,
-		"name": "Bacher,David",
-		"eloPerformance": 1581,
-		"tournament": 1
-	},
-	{
-		"position": 23,
-		"name": "Friesz,Norbert",
-		"eloPerformance": 1553,
-		"tournament": 1
-	},
-	{
-		"position": 24,
-		"name": "Agrawal,Aarav",
-		"eloPerformance": 1538,
-		"tournament": 1
-	},
-	{
-		"position": 25,
-		"name": "Traub,Leon",
-		"eloPerformance": 1617,
-		"tournament": 1
-	},
-	{
-		"position": 26,
-		"name": "Hader,Sören,Dr.",
-		"eloPerformance": 1541,
-		"tournament": 1
-	},
-	{
-		"position": 27,
-		"name": "Kaykan,Harun",
-		"eloPerformance": 1590,
-		"tournament": 1
-	},
-	{
-		"position": 28,
-		"name": "Alkov,David",
-		"eloPerformance": 1688,
-		"tournament": 1
-	},
-	{
-		"position": 29,
-		"name": "Karabetyan,Levon",
-		"eloPerformance": 1474,
-		"tournament": 1
-	},
-	{
-		"position": 30,
-		"name": "Gheng,Lucas",
-		"eloPerformance": 1650,
-		"tournament": 1
-	},
-	{
-		"position": 31,
-		"name": "Martirosyan,Arman",
-		"eloPerformance": 1459,
-		"tournament": 1
-	},
-	{
-		"position": 32,
-		"name": "Sandros Izzi,Diego",
-		"eloPerformance": 1470,
-		"tournament": 1
-	},
-	{
-		"position": 33,
-		"name": "Charalambakis,Michail",
-		"eloPerformance": 1375,
-		"tournament": 1
-	},
-	{
-		"position": 34,
-		"name": "Weber,Frank",
-		"eloPerformance": 1277,
-		"tournament": 1
-	},
-	{
-		"position": 35,
-		"name": "Weber,Selim",
-		"eloPerformance": 1210,
-		"tournament": 1
-	},
-	{
-		"position": 36,
-		"name": "Sandrou Izzi,Milena",
-		"eloPerformance": 1110,
-		"tournament": 1
-	}
-]
+{
+  "data": {
+    "tournamentName": "1. Göppinger Blitz Open 2026",
+    "totalRounds": 13,
+    "pointRule": "3-point",
+    "rows": [
+      {
+        "rank": 1,
+        "playerId": "r9H-Kh-ctP",
+        "name": "Gheng,Josef",
+        "rating": 2174,
+        "score": 32,
+        "buchholz": 306
+      },
+      {
+        "rank": 2,
+        "playerId": "C3U-2M-l2Y",
+        "name": "Portnov,Dmitry",
+        "rating": 2026,
+        "score": 29,
+        "buchholz": 313
+      },
+      {
+        "rank": 3,
+        "playerId": "1M6-Mx-8Vn",
+        "name": "Beaumont-Darrodes,Maxime",
+        "rating": 1720,
+        "score": 27,
+        "buchholz": 291
+      },
+      {
+        "rank": 4,
+        "playerId": "EGa-Ok-ncY",
+        "name": "Mohonea,Alexandru",
+        "rating": 1953,
+        "score": 26,
+        "buchholz": 283
+      },
+      {
+        "rank": 5,
+        "playerId": "ofY-mB-VBA",
+        "name": "Notz,Lukas",
+        "rating": 1970,
+        "score": 25,
+        "buchholz": 312
+      },
+      {
+        "rank": 6,
+        "playerId": "8qN-iz-s2J",
+        "name": "Cilo,Selimhan",
+        "rating": 2085,
+        "score": 25,
+        "buchholz": 304
+      },
+      {
+        "rank": 7,
+        "playerId": "TWE-Ef-QKG",
+        "name": "Wadiei,Soroush",
+        "rating": 1985,
+        "score": 25,
+        "buchholz": 303
+      },
+      {
+        "rank": 8,
+        "playerId": "Nwe-Rv-WGn",
+        "name": "Bodriyenko,Markiyan",
+        "rating": 1987,
+        "score": 25,
+        "buchholz": 299
+      },
+      {
+        "rank": 9,
+        "playerId": "Wsl-gA-Dwr",
+        "name": "Rodriguez,Antoine",
+        "rating": 1895,
+        "score": 25,
+        "buchholz": 296
+      },
+      {
+        "rank": 10,
+        "playerId": "Vqn-OT-a6m",
+        "name": "Masur,Bernhard",
+        "rating": 1883,
+        "score": 25,
+        "buchholz": 256
+      },
+      {
+        "rank": 11,
+        "playerId": "JZF-vX-gKX",
+        "name": "Radu,Victor Mihai",
+        "rating": 1701,
+        "score": 25,
+        "buchholz": 247
+      },
+      {
+        "rank": 12,
+        "playerId": "Aag-Cr-dm7",
+        "name": "Minde,Timothe",
+        "rating": 2044,
+        "score": 24,
+        "buchholz": 314
+      },
+      {
+        "rank": 13,
+        "playerId": "2gz-YB-XrL",
+        "name": "Lehnart,Paul",
+        "rating": 1920,
+        "score": 24,
+        "buchholz": 279
+      },
+      {
+        "rank": 14,
+        "playerId": "QBb-aJ-PpR",
+        "name": "Alcantara,Eliyakim",
+        "rating": 2045,
+        "score": 24,
+        "buchholz": 275
+      },
+      {
+        "rank": 15,
+        "playerId": "Ykc-6l-ir2",
+        "name": "Cöllen,Björn",
+        "rating": 1859,
+        "score": 24,
+        "buchholz": 259
+      },
+      {
+        "rank": 16,
+        "playerId": "2dA-AP-fD3",
+        "name": "Jugaru,Lucian",
+        "rating": 1909,
+        "score": 24,
+        "buchholz": 251
+      },
+      {
+        "rank": 17,
+        "playerId": "9rx-Dw-8v9",
+        "name": "Gibicar,Marc",
+        "rating": 1982,
+        "score": 22,
+        "buchholz": 310
+      },
+      {
+        "rank": 18,
+        "playerId": "9Cy-Np-N60",
+        "name": "Dilthey,Lennart",
+        "rating": 1928,
+        "score": 22,
+        "buchholz": 288
+      },
+      {
+        "rank": 19,
+        "playerId": "oAx-WL-noW",
+        "name": "Simon,Pierre-Marie",
+        "rating": 1895,
+        "score": 22,
+        "buchholz": 265
+      },
+      {
+        "rank": 20,
+        "playerId": "joc-5H-mfF",
+        "name": "Kermer,Jan",
+        "rating": 1849,
+        "score": 22,
+        "buchholz": 260
+      },
+      {
+        "rank": 21,
+        "playerId": "zf3-o6-JwE",
+        "name": "Cilo,Seyyid",
+        "rating": 1829,
+        "score": 22,
+        "buchholz": 250
+      },
+      {
+        "rank": 22,
+        "playerId": "B6A-TT-D7N",
+        "name": "Garandeau,Clement",
+        "rating": 1772,
+        "score": 22,
+        "buchholz": 243
+      },
+      {
+        "rank": 23,
+        "playerId": "XUH-Br-OiK",
+        "name": "Haas,Wilhelm",
+        "rating": 2090,
+        "score": 21,
+        "buchholz": 301
+      },
+      {
+        "rank": 24,
+        "playerId": "dBa-jf-i7q",
+        "name": "Gündogdu,Abdulhamit",
+        "rating": 1935,
+        "score": 21,
+        "buchholz": 297
+      },
+      {
+        "rank": 25,
+        "playerId": "HzQ-oO-TQ0",
+        "name": "Burg,Samuel",
+        "rating": 1897,
+        "score": 21,
+        "buchholz": 284
+      },
+      {
+        "rank": 26,
+        "playerId": "JBi-Rk-F3A",
+        "name": "Reusch,Elisa",
+        "rating": 1928,
+        "score": 21,
+        "buchholz": 276
+      },
+      {
+        "rank": 27,
+        "playerId": "5Cd-4b-Id4",
+        "name": "Kittel,Lennart",
+        "rating": 1836,
+        "score": 21,
+        "buchholz": 255
+      },
+      {
+        "rank": 28,
+        "playerId": "IyK-Hj-vlC",
+        "name": "Gutsche,Jan-Frederic",
+        "rating": 1757,
+        "score": 21,
+        "buchholz": 231
+      },
+      {
+        "rank": 29,
+        "playerId": "Hza-Fn-91y",
+        "name": "Cernencu,George-Ciprian",
+        "rating": 1909,
+        "score": 19,
+        "buchholz": 286
+      },
+      {
+        "rank": 30,
+        "playerId": "3Z4-jA-oWI",
+        "name": "Pelezki,Eugen",
+        "rating": 1969,
+        "score": 19,
+        "buchholz": 272
+      },
+      {
+        "rank": 31,
+        "playerId": "xMg-xW-uaF",
+        "name": "Fabry,Laurin",
+        "rating": 1853,
+        "score": 19,
+        "buchholz": 264
+      },
+      {
+        "rank": 32,
+        "playerId": "wAS-zG-A08",
+        "name": "Wiedmann,Thomas",
+        "rating": 1796,
+        "score": 19,
+        "buchholz": 258
+      },
+      {
+        "rank": 33,
+        "playerId": "pg4-7Y-1o8",
+        "name": "Jajcinovic,Luka",
+        "rating": 1733,
+        "score": 19,
+        "buchholz": 257
+      },
+      {
+        "rank": 34,
+        "playerId": "wkH-xD-Kdn",
+        "name": "Paun,David",
+        "rating": 1619,
+        "score": 19,
+        "buchholz": 254
+      },
+      {
+        "rank": 35,
+        "playerId": "XDe-Yq-DCa",
+        "name": "Mohonea,Maria",
+        "rating": 1514,
+        "score": 19,
+        "buchholz": 252
+      },
+      {
+        "rank": 36,
+        "playerId": "NCI-2t-s6j",
+        "name": "Ruprich,Udo",
+        "rating": 1911,
+        "score": 19,
+        "buchholz": 243
+      },
+      {
+        "rank": 37,
+        "playerId": "8OK-aB-1jt",
+        "name": "Fürst,Kaven",
+        "rating": 1622,
+        "score": 19,
+        "buchholz": 242
+      },
+      {
+        "rank": 38,
+        "playerId": "N8l-aG-5Fw",
+        "name": "Voxbrunner,Zacharias",
+        "rating": 1622,
+        "score": 18,
+        "buchholz": 269
+      },
+      {
+        "rank": 39,
+        "playerId": "DiN-Qt-LK1",
+        "name": "Wonisch,Ferdinand",
+        "rating": 1752,
+        "score": 18,
+        "buchholz": 264
+      },
+      {
+        "rank": 40,
+        "playerId": "CyE-Mv-Ecr",
+        "name": "Blache,Sebastian",
+        "rating": 1666,
+        "score": 18,
+        "buchholz": 256
+      },
+      {
+        "rank": 41,
+        "playerId": "uHY-Ag-jBT",
+        "name": "Arora,Advik",
+        "rating": 1628,
+        "score": 18,
+        "buchholz": 247
+      },
+      {
+        "rank": 42,
+        "playerId": "YWk-mi-0wt",
+        "name": "Marquardt,Corvin",
+        "rating": 1570,
+        "score": 18,
+        "buchholz": 238
+      },
+      {
+        "rank": 43,
+        "playerId": "GwZ-bH-CC7",
+        "name": "Gerbe,Armand",
+        "rating": 1200,
+        "score": 18,
+        "buchholz": 221
+      },
+      {
+        "rank": 44,
+        "playerId": "Zb1-Lj-8KU",
+        "name": "Jugaru,Victor",
+        "rating": 1407,
+        "score": 18,
+        "buchholz": 211
+      },
+      {
+        "rank": 45,
+        "playerId": "Sso-AD-8dT",
+        "name": "Botgros,Antonio-Darius",
+        "rating": 1438,
+        "score": 18,
+        "buchholz": 211
+      },
+      {
+        "rank": 46,
+        "playerId": "EZX-fj-XSQ",
+        "name": "Berbecel,Eric",
+        "rating": 1507,
+        "score": 16,
+        "buchholz": 251
+      },
+      {
+        "rank": 47,
+        "playerId": "Yir-jU-UQn",
+        "name": "Ion,Andrei",
+        "rating": 1429,
+        "score": 16,
+        "buchholz": 247
+      },
+      {
+        "rank": 48,
+        "playerId": "SX9-hA-5bu",
+        "name": "Nowak,Niklas",
+        "rating": 1408,
+        "score": 16,
+        "buchholz": 189
+      },
+      {
+        "rank": 49,
+        "playerId": "9Oy-F5-yJs",
+        "name": "Zsolt,Gyerko",
+        "rating": 1200,
+        "score": 16,
+        "buchholz": 175
+      },
+      {
+        "rank": 50,
+        "playerId": "PAE-gc-VDm",
+        "name": "Blache,Manuel",
+        "rating": 1614,
+        "score": 15,
+        "buchholz": 242
+      },
+      {
+        "rank": 51,
+        "playerId": "zgG-RB-8xC",
+        "name": "Pillath,Marcus",
+        "rating": 1601,
+        "score": 15,
+        "buchholz": 235
+      },
+      {
+        "rank": 52,
+        "playerId": "zic-gH-AOu",
+        "name": "Rapp,Günter",
+        "rating": 1744,
+        "score": 15,
+        "buchholz": 234
+      },
+      {
+        "rank": 53,
+        "playerId": "5Oq-UH-4BN",
+        "name": "Riboulleau Bordes,Mae",
+        "rating": 1448,
+        "score": 15,
+        "buchholz": 233
+      },
+      {
+        "rank": 54,
+        "playerId": "Ri4-RC-89u",
+        "name": "De Boysson,Gabriel",
+        "rating": 1596,
+        "score": 15,
+        "buchholz": 216
+      },
+      {
+        "rank": 55,
+        "playerId": "DIl-wf-odF",
+        "name": "Chastanet,Mael",
+        "rating": 1412,
+        "score": 15,
+        "buchholz": 191
+      },
+      {
+        "rank": 56,
+        "playerId": "fIr-fU-Oec",
+        "name": "Albert,Hugo",
+        "rating": 1634,
+        "score": 15,
+        "buchholz": 184
+      },
+      {
+        "rank": 57,
+        "playerId": "I8F-ZE-eDA",
+        "name": "Frankline,Eleena",
+        "rating": 1200,
+        "score": 15,
+        "buchholz": 182
+      },
+      {
+        "rank": 58,
+        "playerId": "N4q-FM-FGZ",
+        "name": "Zekovic,Alen",
+        "rating": 1625,
+        "score": 14,
+        "buchholz": 215
+      },
+      {
+        "rank": 59,
+        "playerId": "Xra-ha-fnL",
+        "name": "Grigore,Eduard-Petru",
+        "rating": 1509,
+        "score": 13,
+        "buchholz": 223
+      },
+      {
+        "rank": 60,
+        "playerId": "21B-0r-XoP",
+        "name": "Berthelot,Louis",
+        "rating": 1200,
+        "score": 12,
+        "buchholz": 201
+      },
+      {
+        "rank": 61,
+        "playerId": "buV-PV-sUN",
+        "name": "Vidovici,Denis-Mihai",
+        "rating": 1461,
+        "score": 12,
+        "buchholz": 175
+      },
+      {
+        "rank": 62,
+        "playerId": "BIj-bu-v1B",
+        "name": "Cernencu,Alexandra-Iris",
+        "rating": 1200,
+        "score": 12,
+        "buchholz": 172
+      },
+      {
+        "rank": 63,
+        "playerId": "pni-LF-Vcs",
+        "name": "Modin,Marie",
+        "rating": 1200,
+        "score": 9,
+        "buchholz": 171
+      },
+      {
+        "rank": 64,
+        "playerId": "DRn-BC-TZ6",
+        "name": "Raynal,Paul",
+        "rating": 1200,
+        "score": 9,
+        "buchholz": 168
+      },
+      {
+        "rank": 65,
+        "playerId": "zBn-Aq-wIi",
+        "name": "Combes,Thibaut",
+        "rating": 1200,
+        "score": 9,
+        "buchholz": 157
+      },
+      {
+        "rank": 66,
+        "playerId": "tbD-0W-zDD",
+        "name": "Breintner,Maximilian",
+        "rating": 1803,
+        "score": 3,
+        "buchholz": 68
+      },
+      {
+        "rank": 67,
+        "playerId": "CWl-dG-pF0",
+        "name": "Cernencu,Maria-Violeta",
+        "rating": 1200,
+        "score": 0,
+        "buchholz": 145
+      }
+    ]
+  }
+}

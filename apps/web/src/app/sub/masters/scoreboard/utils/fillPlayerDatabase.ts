@@ -1,157 +1,56 @@
-import { hasPlayedAllTournaments } from "@/app/sub/masters/scoreboard/utils/playerUtils";
-import { pointMapping } from "@/app/sub/masters/scoreboard/utils/pointMapping";
-import type { Player, TournamentResult } from "@/types";
+import type {Player, TournamentResult, TournamentResultPlayer} from "@/types";
 
 export const fillPlayerDatabase = (
 	tournamentResult: TournamentResult,
-	originalTournamentResults: TournamentResult[],
 	playerDatabase: Player[],
 ) => {
-	const playerExists = playerDatabase.find(
-		(player) => player.name === tournamentResult.name,
-	);
+  tournamentResult.data.rows.forEach(player => {
+    const playerExists = playerDatabase.find(
+        (p) => p.id === player.playerId,
+    );
 
-	if (playerExists) {
-		return;
-	}
+    if (playerExists) {
+      playerDatabase.forEach(p => {
+        if(p.id === playerExists.id) {
+          p.tournamentPoints += getMastersPoints(player, tournamentResult);
+          p.buchholz += player.buchholz;
+        }
+      })
+      return;
+    }
 
-	const tournament1 = findTournament(
-		originalTournamentResults,
-		tournamentResult,
-		1,
-	);
-	const tournament2 = findTournament(
-		originalTournamentResults,
-		tournamentResult,
-		2,
-	);
-	const tournament3 = findTournament(
-		originalTournamentResults,
-		tournamentResult,
-		3,
-	);
-	const tournament4 = findTournament(
-		originalTournamentResults,
-		tournamentResult,
-		4,
-	);
-	const tournament5 = findTournament(
-		originalTournamentResults,
-		tournamentResult,
-		5,
-	);
-
-	const tournamentData = {
-		tournament1,
-		tournament2,
-		tournament3,
-		tournament4,
-		tournament5,
-	};
-	const tournamentResults = Object.values(tournamentData).filter(
-		(result): result is TournamentResult => result !== null,
-	);
-
-	playerDatabase.push({
-		name: tournamentResult.name,
-		tournamentData: tournamentData,
-		tournamentPoints: getTournamentPoints(
-			tournament1,
-			tournament2,
-			tournament3,
-			tournament4,
-			tournament5,
-		),
-		averagePosition: getAveragePosition(
-			getTournamentPositionsSum(tournamentResults),
-			tournamentResults,
-		),
-		bestPosition: getBestPosition(tournamentResults),
-		eloPerformance: getEloPerformance(
-			getTournamentEloPerformanceSum(tournamentResults),
-			tournamentResults,
-		),
-		hasPlayedAllTournaments: hasPlayedAllTournaments(tournamentResults.length),
-	});
+    playerDatabase.push({
+      id: player.playerId,
+      name: player.name,
+      tournamentPoints: getMastersPoints(player, tournamentResult),
+      buchholz: player.buchholz,
+    });
+  })
 };
 
-function getTournamentEloPerformanceSum(
-	tournamentDatas: (TournamentResult | null)[],
-) {
-	return tournamentDatas
-		.map((tournament) => (tournament === null ? 0 : tournament.eloPerformance))
-		.reduce((accumulator, currentValue) => accumulator + currentValue);
+function getMastersPoints(player: TournamentResultPlayer, tournamentResult: TournamentResult) {
+  const BY_100 = 100;
+  const POINT_RULE = tournamentResult.data.pointRule === "1-point" ? 1 : 3;
+  const TOURNAMENT_FACTOR = getTournamentFactor(tournamentResult.data.rows.length);
+  return (BY_100 * (player.score / (tournamentResult.data.totalRounds * POINT_RULE)) * TOURNAMENT_FACTOR);
 }
 
-function getTournamentPositionsSum(
-	tournamentDatas: (TournamentResult | null)[],
-) {
-	return tournamentDatas
-		.map((tournament) => (tournament === null ? 0 : tournament.position))
-		.reduce((accumulator, currentValue) => accumulator + currentValue);
-}
+function getTournamentFactor(tournamentLength: number) {
+  if(tournamentLength <= 40) {
+    return 1.00;
+  }
 
-function getAveragePosition(
-	tournamentPositionsSum: number,
-	tournamentResults: TournamentResult[],
-) {
-	return parseFloat(
-		(tournamentPositionsSum / tournamentResults.length).toFixed(1),
-	);
-}
+  if(tournamentLength <= 70) {
+    return 1.05;
+  }
 
-function getBestPosition(tournamentResults: TournamentResult[]) {
-	return Math.min(
-		...tournamentResults.map((tournament) => tournament.position),
-	);
-}
+  if(tournamentLength <= 100) {
+    return 1.10;
+  }
 
-function getEloPerformance(
-	tournamentEloPerformanceSum: number,
-	tournamentResults: TournamentResult[],
-) {
-	return parseFloat(
-		(tournamentEloPerformanceSum / tournamentResults.length).toFixed(1),
-	);
-}
+  if(tournamentLength > 100) {
+    return 1.15;
+  }
 
-function findTournament(
-	originalTournamentResults: TournamentResult[],
-	tournamentResult: TournamentResult,
-	tournamentNumber: number,
-) {
-	return (
-		originalTournamentResults.find(
-			(originalTournamentResult) =>
-				originalTournamentResult.tournament === tournamentNumber &&
-				originalTournamentResult.name === tournamentResult.name,
-		) ?? null
-	);
-}
-
-function getTournamentPoints(
-	tournament1: TournamentResult | null,
-	tournament2: TournamentResult | null,
-	tournament3: TournamentResult | null,
-	tournament4: TournamentResult | null,
-	tournament5: TournamentResult | null,
-	startAt?: number,
-) {
-	const pointsTournament1 = pointMapping.get(tournament1?.position) ?? 0;
-	const pointsTournament2 = pointMapping.get(tournament2?.position) ?? 0;
-	const pointsTournament3 = pointMapping.get(tournament3?.position) ?? 0;
-	const pointsTournament4 = pointMapping.get(tournament4?.position) ?? 0;
-	const pointsTournament5 = pointMapping.get(tournament5?.position) ?? 0;
-
-	if (startAt && startAt === 3) {
-		return pointsTournament3 + pointsTournament4 + pointsTournament5;
-	}
-
-	return (
-		pointsTournament1 +
-		pointsTournament2 +
-		pointsTournament3 +
-		pointsTournament4 +
-		pointsTournament5
-	);
+  return 1.00;
 }

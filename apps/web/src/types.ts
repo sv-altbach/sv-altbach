@@ -1,30 +1,27 @@
-interface TournamentData {
-	position: number;
-	eloPerformance: number;
+export interface Player {
+  id: string;
+	name: string;
+	tournamentPoints: number;
+	buchholz: number;
+	// hasPlayedThreeOrMoreTournaments?: boolean;
 }
 
-export interface Player {
-	name: string;
-	club?: string;
-	tournamentData: {
-		tournament1: TournamentData | null;
-		tournament2: TournamentData | null;
-		tournament3: TournamentData | null;
-		tournament4: TournamentData | null;
-		tournament5: TournamentData | null;
-	};
-	tournamentPoints?: number;
-	averagePosition?: number;
-	bestPosition?: number;
-	eloPerformance?: number;
-	hasPlayedAllTournaments?: boolean;
+export interface TournamentResultPlayer {
+  "rank": number;
+  "playerId": string;
+  "name": string;
+  "rating": number;
+  "score": number;
+  "buchholz": number;
 }
 
 export interface TournamentResult {
-	tournament: number;
-	name: string;
-	position: number;
-	eloPerformance: number;
+  "data": {
+    "tournamentName": string;
+    "totalRounds": number;
+    "pointRule": "1-point" | "3-point";
+    "rows": TournamentResultPlayer[];
+  }
 }
 
 export interface TournamentDataTypes {

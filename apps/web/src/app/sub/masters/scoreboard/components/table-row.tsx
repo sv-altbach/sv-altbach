@@ -26,62 +26,52 @@ export function TableRow({ player, index }: Props) {
         <Table.RowHeaderCell>{index + 1}</Table.RowHeaderCell>
         <Table.Cell className="flex items-center">
           {getPlayerName(player.name)}{" "}
-          {renderHasPlayedAllTournamentsIndicator(player, index)}
+          {/*{renderHasPlayedAllTournamentsIndicator(player, index)}*/}
         </Table.Cell>
-        <Table.Cell justify="center">
-          {pointMapping.get(player.tournamentData.tournament1?.position) ?? 0}
-        </Table.Cell>
-        <Table.Cell justify="center">
-          {pointMapping.get(player.tournamentData.tournament2?.position) ?? 0}
-        </Table.Cell>
-        <Table.Cell justify="center">
-          {pointMapping.get(player.tournamentData.tournament3?.position) ?? 0}
-        </Table.Cell>
-        <Table.Cell justify="center">
-          {pointMapping.get(player.tournamentData.tournament4?.position) ?? 0}
-        </Table.Cell>
-        <Table.Cell justify="center">
-          {pointMapping.get(player.tournamentData.tournament5?.position) ?? 0}
-        </Table.Cell>
-        <Table.Cell justify="center">
-          {Intl.NumberFormat("de-DE")
-          .format(player.averagePosition ?? 0)
-          .replace(".", "")}
-        </Table.Cell>
-        <Table.Cell justify="center">{player.bestPosition}</Table.Cell>
-        <Table.Cell justify="center">
-          {Intl.NumberFormat("de-DE")
-          .format(player.eloPerformance ?? 0)
-          .replace(".", "")}
-        </Table.Cell>
+        {/*<Table.Cell justify="center">*/}
+        {/*  {pointMapping.get(player.tournamentData.tournament1?.position) ?? 0}*/}
+        {/*</Table.Cell>*/}
+        {/*<Table.Cell justify="center">*/}
+        {/*  {pointMapping.get(player.tournamentData.tournament2?.position) ?? 0}*/}
+        {/*</Table.Cell>*/}
+        {/*<Table.Cell justify="center">*/}
+        {/*  {pointMapping.get(player.tournamentData.tournament3?.position) ?? 0}*/}
+        {/*</Table.Cell>*/}
+        {/*<Table.Cell justify="center">*/}
+        {/*  {pointMapping.get(player.tournamentData.tournament4?.position) ?? 0}*/}
+        {/*</Table.Cell>*/}
+        {/*<Table.Cell justify="center">*/}
+        {/*  {pointMapping.get(player.tournamentData.tournament5?.position) ?? 0}*/}
+        {/*</Table.Cell>*/}
+        <Table.Cell justify="center">{player.buchholz}</Table.Cell>
         <Table.Cell justify="center">{player.tournamentPoints}</Table.Cell>
       </Table.Row>
   )
 }
 
-function renderHasPlayedAllTournamentsIndicator(player: Player, index: number) {
-	if (index < 16) {
-		return null;
-	}
-
-	if (player.hasPlayedAllTournaments || player.name === "Uhl,Lars") {
-		return (
-			<p>
-				<Tooltip
-					width="180px"
-					content="Für das Finale qualifiziert. Bei allen Turnieren dabei gewesen."
-				>
-					<IconArrowBadgeUp
-						className="text-3xl text-red-600"
-						aria-hidden="true"
-					/>
-				</Tooltip>
-				<span className="sr-only">
-					Für das Finale qualifiziert. Bei allen Turnieren dabei gewesen.
-				</span>
-			</p>
-		);
-	}
-
-	return null;
-}
+// function renderHasPlayedAllTournamentsIndicator(player: Player, index: number) {
+// 	if (index < 16) {
+// 		return null;
+// 	}
+//
+// 	if (player.hasPlayedAllTournaments || player.name === "Uhl,Lars") {
+// 		return (
+// 			<p>
+// 				<Tooltip
+// 					width="180px"
+// 					content="Für das Finale qualifiziert. Bei allen Turnieren dabei gewesen."
+// 				>
+// 					<IconArrowBadgeUp
+// 						className="text-3xl text-red-600"
+// 						aria-hidden="true"
+// 					/>
+// 				</Tooltip>
+// 				<span className="sr-only">
+// 					Für das Finale qualifiziert. Bei allen Turnieren dabei gewesen.
+// 				</span>
+// 			</p>
+// 		);
+// 	}
+//
+// 	return null;
+// }

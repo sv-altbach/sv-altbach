@@ -11,7 +11,7 @@ export function TableBody() {
 	return (
       <Table.Body>
         {playersInFinal.map((player, index) => (
-            <TableRow key={player.name} player={player} index={index} />
+            <TableRow key={player.id} player={player} index={index} />
         ))}
 
         <Table.Row>
