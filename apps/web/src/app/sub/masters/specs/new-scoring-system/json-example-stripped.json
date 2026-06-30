@@ -1,0 +1,30 @@
+{
+  "data": {
+    "tournamentName": "1. Göppinger Blitz Open 2026",
+    "totalRounds": 13,
+    "pointRule": "3-point",
+    "rows": [
+      {
+        "rank": 1,
+        "playerId": "cmpmyh8sg000k1nnw3gd0whpj",
+        "name": "Gheng,Josef",
+        "rating": 2174,
+        "score": 32,
+        "tiebreaks": [
+          {
+            "type": "POINTS",
+            "value": 32
+          },
+          {
+            "type": "BUCHHOLZ",
+            "value": 306
+          },
+          {
+            "type": "SUM_BUCHHOLZ_VARIABLE",
+            "value": 3814
+          }
+        ]
+      }
+    ]
+  }
+}
