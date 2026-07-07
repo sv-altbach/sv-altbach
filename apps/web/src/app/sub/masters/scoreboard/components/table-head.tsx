@@ -23,17 +23,10 @@ export function TableHead() {
           <span className="sr-only">Punkte</span> Turnier 5
         </Table.ColumnHeaderCell>
 
-        <Table.ColumnHeaderCell justify="center">
-          &#8960; Platzierung
-        </Table.ColumnHeaderCell>
-
-        <Table.ColumnHeaderCell justify="center">
-          Beste Platzierung
-        </Table.ColumnHeaderCell>
-
 				<Table.ColumnHeaderCell justify="center">
-					Elo-Leistung
+          Durchschnittsplatzierung
 				</Table.ColumnHeaderCell>
+
 				<Table.ColumnHeaderCell justify="center">Gesamt</Table.ColumnHeaderCell>
 			</Table.Row>
 		</Table.Header>
