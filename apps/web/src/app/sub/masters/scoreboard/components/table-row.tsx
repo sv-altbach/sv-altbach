@@ -1,18 +1,24 @@
 import {Table, Tooltip} from "@radix-ui/themes";
-import type {Player} from "@/types";
+import type {Player, PlayerMarker} from "@/types";
 import {cn} from "@/utils/ui";
 import {getPlayerName} from "@/utils/utils";
-import {IconX} from "@tabler/icons-react";
+import {IconArrowBadgeUp, IconX} from "@tabler/icons-react";
 
 interface Props {
-  player?: Player;
-  index: number;
+  playerRowData: {
+    player: Player;
+    index: number;
+    marker: PlayerMarker;
+  };
 }
 
-export function TableRow({player, index}: Props) {
+export function TableRow({playerRowData}: Props) {
+  const {player, index, marker} = playerRowData;
+
   if (!player) {
     return null;
   }
+
 
   return (
       <Table.Row
@@ -25,7 +31,7 @@ export function TableRow({player, index}: Props) {
         <Table.RowHeaderCell>{index + 1}</Table.RowHeaderCell>
         <Table.Cell className="flex items-center">
           {getPlayerName(player.name)}{" "}
-          {displayNotQualifiedMarker(player, index)}
+          {displayNotQualifiedMarker(marker)}
         </Table.Cell>
         <Table.Cell justify="center">
           {prettyNumbers(player.tournament1)}
@@ -56,30 +62,42 @@ function prettyNumbers(number: number | undefined) {
   return number.toFixed(2).toString()
 }
 
-function displayNotQualifiedMarker(player: Player, index: number) {
-  if (index < 16 && player.playedTournaments < 3) {
-    return (
-        <p>
-          <Tooltip
-              width="180px"
-              content={
-                <div>
-                  <p>Nicht für das Finale qualifiziert.</p>
-                  <p>Mindestvoraussetzung sind drei gewertete Turniere.</p>
-                </div>
-              }
-          >
-            <IconX
-                className="text-3xl text-red-600"
-                aria-hidden="true"
-            />
-          </Tooltip>
-
-          <span className="sr-only">
-					   Nicht für das Finale qualifiziert. Mindestvoraussetzung sind drei gewertete Turniere.
-				  </span>
-        </p>
-    );
+function displayNotQualifiedMarker(marker: PlayerMarker) {
+  if (marker === "none") {
+    return null;
   }
-  return null;
+
+  return (
+      <>
+        <Tooltip
+            width="180px"
+            content={
+              marker === "successor" ? "Aktuell als Nachrücker für das Finale qualifiziert." : "Nicht für das Finale qualifiziert. Mindestvoraussetzung sind drei gewertete Turniere."
+            }
+        >
+          {marker === "successor" ? (
+              <IconArrowBadgeUp
+                  className="text-3xl text-red-600"
+                  aria-hidden="true"
+              />
+          ) : (
+              <IconX
+                  className="text-3xl text-red-600"
+                  aria-hidden="true"
+              />
+          )}
+        </Tooltip>
+
+        <div className="sr-only">
+          {marker === "successor" && (
+              <p>Aktuell als Nachrücker für das Finale qualifiziert.</p>
+          )}
+
+          {marker === "not-qualified" && (
+              <p>Nicht für das Finale qualifiziert. Mindestvoraussetzung sind drei gewertete
+                Turniere.</p>
+          )}
+        </div>
+      </>
+  );
 }

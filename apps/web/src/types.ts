@@ -1,3 +1,11 @@
+export type PlayerMarker = "none" | "successor" | "not-qualified";
+
+export interface PlayerRowData {
+  player: Player;
+  index: number;
+  marker: PlayerMarker;
+}
+
 export interface Player {
   id: string;
 	name: string;
