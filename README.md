@@ -1,6 +1,6 @@
 # SV Altbach
 
-SV Altbach is a Bun-powered Next.js monorepo for the club website. The main app lives in `apps/web` and serves both the root website and the `masters` subdomain pages.
+SV Altbach is a Bun-powered monorepo for the club website and the SVA Masters tournament site.
 
 ## Tech stack
 
@@ -19,12 +19,16 @@ SV Altbach is a Bun-powered Next.js monorepo for the club website. The main app 
 
 ## Project structure
 
-- `apps/web` – main web app
+- `apps/web` – club website app (port 3000)
   - `src/app/(root)` – public/root website routes
-  - `src/app/sub/masters` – `masters` subdomain pages
   - `src/components` – shared UI primitives
-  - `src/utils` – general utilities shared across the app
+  - `src/utils` – club website utilities
   - `emails/` – React Email templates (preview via `email-preview`; imported for Resend)
+- `apps/masters` – standalone SVA Masters Next.js app (port 3001)
+  - `/` – tournament home page
+  - `/scoreboard` – current rankings
+  - `/finals/*` – finals pages and results
+  - `src/components/ui` – app-local UI primitives
 - `packages/typescript-config` – shared TypeScript configuration
 
 ## Getting started
@@ -48,6 +52,13 @@ cd apps/web
 bun run dev
 ```
 
+Run the Masters app directly on port 3001:
+
+```bash
+cd apps/masters
+bun run dev
+```
+
 ## Useful scripts
 
 From the repository root:
@@ -67,6 +78,16 @@ bun run start       # start the production server
 bun run typegen     # generate Next.js route/cache types
 bun run check:types # TypeScript type check
 bun run email-preview   # React Email preview UI (port 3002; run alongside `bun run dev` if needed)
+```
+
+From `apps/masters`:
+
+```bash
+bun run dev         # start the Masters app on port 3001
+bun run build       # build the Masters app
+bun run start       # serve the production build on port 3001
+bun run typegen     # generate Next.js route/cache types
+bun run check:types # TypeScript type check
 ```
 
 ## Transactional email (React Email + Resend)

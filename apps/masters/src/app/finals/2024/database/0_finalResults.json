@@ -1,0 +1,146 @@
+[
+	{
+		"position": 1,
+		"name": "Kölle, Tobias",
+		"wins": 12,
+		"remis": 2,
+		"lost": 0,
+		"points": 38.0,
+		"buchholz": 160.0
+	},
+	{
+		"position": 2,
+		"name": "Gheng, Josef",
+		"wins": 10,
+		"remis": 3,
+		"lost": 1,
+		"points": 33.0,
+		"buchholz": 157.0
+	},
+	{
+		"position": 3,
+		"name": "Portnov, Dmytro",
+		"wins": 8,
+		"remis": 2,
+		"lost": 4,
+		"points": 26.0,
+		"buchholz": 165.0
+	},
+	{
+		"position": 4,
+		"name": "Junesch, Gerhard",
+		"wins": 8,
+		"remis": 1,
+		"lost": 5,
+		"points": 25.0,
+		"buchholz": 160.0
+	},
+	{
+		"position": 5,
+		"name": "Haas, Wilhelm",
+		"wins": 7,
+		"remis": 1,
+		"lost": 6,
+		"points": 22.0,
+		"buchholz": 162.0
+	},
+	{
+		"position": 6,
+		"name": "Gustain, Marc",
+		"wins": 6,
+		"remis": 4,
+		"lost": 4,
+		"points": 22.0,
+		"buchholz": 147.0
+	},
+	{
+		"position": 7,
+		"name": "Wurmbauer, Nils",
+		"wins": 6,
+		"remis": 3,
+		"lost": 5,
+		"points": 21.0,
+		"buchholz": 148.0
+	},
+	{
+		"position": 8,
+		"name": "Schallner, Marc",
+		"wins": 6,
+		"remis": 2,
+		"lost": 6,
+		"points": 20.0,
+		"buchholz": 161.0
+	},
+	{
+		"position": 9,
+		"name": "Principe, Nico",
+		"wins": 6,
+		"remis": 1,
+		"lost": 7,
+		"points": 19.0,
+		"buchholz": 153.0
+	},
+	{
+		"position": 10,
+		"name": "Staub, Gerhard",
+		"wins": 5,
+		"remis": 3,
+		"lost": 6,
+		"points": 18.0,
+		"buchholz": 115.0
+	},
+	{
+		"position": 11,
+		"name": "Cilo, Selimhan",
+		"wins": 5,
+		"remis": 0,
+		"lost": 9,
+		"points": 15.0,
+		"buchholz": 118.0
+	},
+	{
+		"position": 12,
+		"name": "Gheng, Simona",
+		"wins": 4,
+		"remis": 2,
+		"lost": 8,
+		"points": 14.0,
+		"buchholz": 126.0
+	},
+	{
+		"position": 13,
+		"name": "Lehmann, Stefan",
+		"wins": 4,
+		"remis": 1,
+		"lost": 9,
+		"points": 13.0,
+		"buchholz": 129.0
+	},
+	{
+		"position": 14,
+		"name": "Lederer, Leia",
+		"wins": 4,
+		"remis": 1,
+		"lost": 9,
+		"points": 13.0,
+		"buchholz": 111.0
+	},
+	{
+		"position": 15,
+		"name": "Wonisch, Ferdinand",
+		"wins": 4,
+		"remis": 0,
+		"lost": 10,
+		"points": 12.0,
+		"buchholz": 120.0
+	},
+	{
+		"position": 16,
+		"name": "Dekan, Hans",
+		"wins": 3,
+		"remis": 2,
+		"lost": 9,
+		"points": 11.0,
+		"buchholz": 122.0
+	}
+]

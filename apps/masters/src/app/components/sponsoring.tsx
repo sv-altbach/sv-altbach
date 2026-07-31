@@ -1,0 +1,37 @@
+"use client";
+
+import { Grid, Heading, Text } from "@radix-ui/themes";
+import Image from "next/image";
+import { imageLoader } from "@/utils/utils";
+
+export function Sponsoring() {
+	return (
+		<>
+			<section>
+				<Heading size="8" mb="2" as="h2">
+					Sponsoren & Partner
+				</Heading>
+				<Text as="p">Wir danken allen unseren Sponsoren und Partnern.</Text>
+			</section>
+
+			<section className="mt-5">
+				<Grid columns={{ initial: "1", sm: "3" }} align="center" gap="8">
+					<a
+						href="https://taplo.de/"
+						target="_blank"
+						rel="noreferrer noopener"
+						className="ml-5"
+					>
+						<Image
+							loader={imageLoader}
+							src="masters/logo_taplo.png"
+							alt="Tanschule Plochingen Logo"
+							width={500}
+							height={500}
+						/>
+					</a>
+				</Grid>
+			</section>
+		</>
+	);
+}
