@@ -11,7 +11,6 @@
 		from 180deg at 50% 50%,
 		var(--tw-gradient-stops)
 	);
-	--background-image-header: url("../../public/masters/header.jpg");
 
 	/* shadcn theme variables */
 	--color-background: var(--background);

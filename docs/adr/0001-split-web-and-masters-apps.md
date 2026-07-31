@@ -2,11 +2,11 @@
 
 ## Status
 
-Accepted (grilling; implementation not started)
+Accepted (implemented for local dual-app topology; production Masters deploy is a follow-up)
 
 ## Context
 
-`apps/web` currently serves both the Club website and Masters via Next host rewrites (`masters.<domain>` → `/sub/masters/...`). That couples two products in one build/runtime. Masters should stay on Next unchanged; the Club website will later move to TanStack Start.
+`apps/web` previously served both the Club website and Masters via Next host rewrites (`masters.<domain>` → `/sub/masters/...`). That coupled two products in one build/runtime. Masters should stay on Next unchanged; the Club website will later move to TanStack Start.
 
 ## Decision
 

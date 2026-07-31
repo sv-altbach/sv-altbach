@@ -39,20 +39,35 @@ Install dependencies from the repository root:
 bun install
 ```
 
-Start the development server:
+Copy env examples (optional for most local work; required for Club → Masters links and contact mail):
+
+```bash
+cp apps/web/.env.example apps/web/.env
+cp apps/masters/.env.example apps/masters/.env
+```
+
+Local ports (no clashes under `turbo dev`):
+
+| App | Port | URL |
+| --- | --- | --- |
+| Club website (`apps/web`) | 3000 | `http://localhost:3000` |
+| SVA Masters (`apps/masters`) | 3001 | `http://localhost:3001` |
+| Club email preview | 3002 | `http://localhost:3002` |
+
+Club → Masters links use `NEXT_PUBLIC_MASTERS_URL` in `apps/web` (default `http://localhost:3001`).
+
+Start both apps (and Club email preview) via Turborepo:
 
 ```bash
 bun run dev
 ```
 
-This runs the Turborepo workspace dev command. If you only want to work on the website app directly:
+Or run each app directly:
 
 ```bash
 cd apps/web
 bun run dev
 ```
-
-Run the Masters app directly on port 3001:
 
 ```bash
 cd apps/masters
