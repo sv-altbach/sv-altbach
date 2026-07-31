@@ -1,4 +1,6 @@
 import fs from "node:fs";
+import path from "node:path";
+import { finals2024DatabaseDir } from "@/app/sub/masters/paths";
 
 export interface TournamentResult {
 	position: number;
@@ -16,14 +18,13 @@ export interface TournamentData {
 }
 
 export function getTournamentResults(): TournamentData[] {
-	const tournamentFiles = fs.readdirSync(
-		"src/app/sub/masters/finals/2024/database",
-		{ encoding: "utf-8" },
-	);
+	const tournamentFiles = fs.readdirSync(finals2024DatabaseDir, {
+		encoding: "utf-8",
+	});
 
 	return tournamentFiles.map((tournamentFileName) => {
 		const tournamentFileContent = fs.readFileSync(
-			`src/app/sub/masters/finals/2024/database/${tournamentFileName}`,
+			path.join(finals2024DatabaseDir, tournamentFileName),
 			{ encoding: "utf-8" },
 		);
 
