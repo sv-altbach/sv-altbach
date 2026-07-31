@@ -1,658 +1,658 @@
 {
-  "data": {
-    "tournamentNumber": 2,
-    "tournamentName": "3. Göppinger Rapid Chess",
-    "totalRounds": 9,
-    "pointRule": "3-point",
-    "rows": [
-      {
-        "rank": 1,
-        "playerId": "Nwe-Rv-WGn",
-        "name": "Bodriyenko,Markiyan",
-        "rating": 2091,
-        "score": 25,
-        "buchholz": 157
-      },
-      {
-        "rank": 2,
-        "playerId": "Cv7-nt-ua9",
-        "name": "Foksha,Mischa",
-        "rating": 2001,
-        "score": 22,
-        "buchholz": 156
-      },
-      {
-        "rank": 3,
-        "playerId": "r9H-Kh-ctP",
-        "name": "Gheng,Josef",
-        "rating": 2339,
-        "score": 21,
-        "buchholz": 144
-      },
-      {
-        "rank": 4,
-        "playerId": "Aag-Cr-dm7",
-        "name": "Minde,Timothe",
-        "rating": 1981,
-        "score": 20,
-        "buchholz": 144
-      },
-      {
-        "rank": 5,
-        "playerId": "EGa-Ok-ncY",
-        "name": "Mohonea,Alexandru",
-        "rating": 2044,
-        "score": 19,
-        "buchholz": 153
-      },
-      {
-        "rank": 6,
-        "playerId": "0AM-i6-AkU",
-        "name": "Goldinov,Daniel",
-        "rating": 2078,
-        "score": 19,
-        "buchholz": 146
-      },
-      {
-        "rank": 7,
-        "playerId": "h2E-3v-zTh",
-        "name": "Schwilk,Michael",
-        "rating": 1973,
-        "score": 19,
-        "buchholz": 139
-      },
-      {
-        "rank": 8,
-        "playerId": "HzQ-oO-TQ0",
-        "name": "Burg,Samuel",
-        "rating": 1949,
-        "score": 18,
-        "buchholz": 141
-      },
-      {
-        "rank": 9,
-        "playerId": "9Cy-Np-N60",
-        "name": "Dilthey,Lennart",
-        "rating": 1826,
-        "score": 18,
-        "buchholz": 136
-      },
-      {
-        "rank": 10,
-        "playerId": "Hza-Fn-91y",
-        "name": "Cernencu,George-Ciprian",
-        "rating": 1871,
-        "score": 18,
-        "buchholz": 124
-      },
-      {
-        "rank": 11,
-        "playerId": "gVo-zA-8FV",
-        "name": "Natterer,Philipp",
-        "rating": 1864,
-        "score": 18,
-        "buchholz": 123
-      },
-      {
-        "rank": 12,
-        "playerId": "k8n-fA-NGN",
-        "name": "Langer,Niklas",
-        "rating": 1829,
-        "score": 18,
-        "buchholz": 119
-      },
-      {
-        "rank": 13,
-        "playerId": "YWk-mi-0wt",
-        "name": "Marquardt,Corvin",
-        "rating": 1673,
-        "score": 18,
-        "buchholz": 118
-      },
-      {
-        "rank": 14,
-        "playerId": "pg4-7Y-1o8",
-        "name": "Jajcinovic,Luka",
-        "rating": 1702,
-        "score": 18,
-        "buchholz": 115
-      },
-      {
-        "rank": 15,
-        "playerId": "FRF-CA-XWZ",
-        "name": "Witke,Thomas",
-        "rating": 2166,
-        "score": 17,
-        "buchholz": 165
-      },
-      {
-        "rank": 16,
-        "playerId": "8qN-iz-s2J",
-        "name": "Cilo,Selimhan",
-        "rating": 1997,
-        "score": 17,
-        "buchholz": 148
-      },
-      {
-        "rank": 17,
-        "playerId": "QBb-aJ-PpR",
-        "name": "Alcantara,Eliyakim",
-        "rating": 1950,
-        "score": 16,
-        "buchholz": 144
-      },
-      {
-        "rank": 18,
-        "playerId": "Lpx-5G-bLX",
-        "name": "Sommer,Konstantin",
-        "rating": 1969,
-        "score": 16,
-        "buchholz": 144
-      },
-      {
-        "rank": 19,
-        "playerId": "LbW-Jo-pOL",
-        "name": "Baur,Frank",
-        "rating": 2088,
-        "score": 16,
-        "buchholz": 139
-      },
-      {
-        "rank": 20,
-        "playerId": "xMg-xW-uaF",
-        "name": "Fabry,Laurin",
-        "rating": 1915,
-        "score": 16,
-        "buchholz": 139
-      },
-      {
-        "rank": 21,
-        "playerId": "2dA-AP-fD3",
-        "name": "Jugaru,Lucian",
-        "rating": 1908,
-        "score": 16,
-        "buchholz": 132
-      },
-      {
-        "rank": 22,
-        "playerId": "Zf4-n3-KHV",
-        "name": "Wezel,Sebastian",
-        "rating": 1977,
-        "score": 16,
-        "buchholz": 123
-      },
-      {
-        "rank": 23,
-        "playerId": "DLt-zk-C3o",
-        "name": "Kleih,Julian",
-        "rating": 2004,
-        "score": 16,
-        "buchholz": 119
-      },
-      {
-        "rank": 24,
-        "playerId": "XUH-Br-OiK",
-        "name": "Haas,Wilhelm",
-        "rating": 2069,
-        "score": 16,
-        "buchholz": 118
-      },
-      {
-        "rank": 25,
-        "playerId": "zic-gH-AOu",
-        "name": "Rapp,Günter",
-        "rating": 1764,
-        "score": 16,
-        "buchholz": 115
-      },
-      {
-        "rank": 26,
-        "playerId": "gro-5a-eoN",
-        "name": "Kothe,Henry",
-        "rating": 1738,
-        "score": 15,
-        "buchholz": 150
-      },
-      {
-        "rank": 27,
-        "playerId": "oAx-WL-noW",
-        "name": "Simon,Pierre-Marie",
-        "rating": 1767,
-        "score": 15,
-        "buchholz": 145
-      },
-      {
-        "rank": 28,
-        "playerId": "TWE-Ef-QKG",
-        "name": "Wadiei,Soroush",
-        "rating": 2070,
-        "score": 15,
-        "buchholz": 134
-      },
-      {
-        "rank": 29,
-        "playerId": "2gz-YB-XrL",
-        "name": "Lehnart,Paul",
-        "rating": 1920,
-        "score": 15,
-        "buchholz": 128
-      },
-      {
-        "rank": 30,
-        "playerId": "gyO-FR-kxB",
-        "name": "Eitel,Lukas",
-        "rating": 1797,
-        "score": 15,
-        "buchholz": 128
-      },
-      {
-        "rank": 31,
-        "playerId": "Wsl-gA-Dwr",
-        "name": "Rodriguez,Antoine",
-        "rating": 1823,
-        "score": 15,
-        "buchholz": 117
-      },
-      {
-        "rank": 32,
-        "playerId": "1M6-Mx-8Vn",
-        "name": "Beaumont-Darrodes,Maxime",
-        "rating": 1686,
-        "score": 15,
-        "buchholz": 116
-      },
-      {
-        "rank": 33,
-        "playerId": "JZF-vX-gKX",
-        "name": "Radu,Victor Mihai",
-        "rating": 1676,
-        "score": 15,
-        "buchholz": 116
-      },
-      {
-        "rank": 34,
-        "playerId": "EZX-fj-XSQ",
-        "name": "Berbecel,Eric",
-        "rating": 1494,
-        "score": 15,
-        "buchholz": 104
-      },
-      {
-        "rank": 35,
-        "playerId": "ofY-mB-VBA",
-        "name": "Notz,Lukas",
-        "rating": 2017,
-        "score": 14,
-        "buchholz": 150
-      },
-      {
-        "rank": 36,
-        "playerId": "NCI-2t-s6j",
-        "name": "Ruprich,Udo",
-        "rating": 1877,
-        "score": 14,
-        "buchholz": 140
-      },
-      {
-        "rank": 37,
-        "playerId": "B6A-TT-D7N",
-        "name": "Garandeau,Clement",
-        "rating": 1866,
-        "score": 14,
-        "buchholz": 126
-      },
-      {
-        "rank": 38,
-        "playerId": "joc-5H-mfF",
-        "name": "Kermer,Jan",
-        "rating": 1783,
-        "score": 14,
-        "buchholz": 126
-      },
-      {
-        "rank": 39,
-        "playerId": "L8Z-rH-AIS",
-        "name": "Wolz,Tim",
-        "rating": 1200,
-        "score": 14,
-        "buchholz": 109
-      },
-      {
-        "rank": 40,
-        "playerId": "zf3-o6-JwE",
-        "name": "Cilo,Seyyid",
-        "rating": 1623,
-        "score": 13,
-        "buchholz": 140
-      },
-      {
-        "rank": 41,
-        "playerId": "TmG-A5-rka",
-        "name": "Benz,Alfred",
-        "rating": 1685,
-        "score": 13,
-        "buchholz": 122
-      },
-      {
-        "rank": 42,
-        "playerId": "uHY-Ag-jBT",
-        "name": "Arora,Advik",
-        "rating": 1860,
-        "score": 13,
-        "buchholz": 122
-      },
-      {
-        "rank": 43,
-        "playerId": "5Cd-4b-Id4",
-        "name": "Kittel,Lennart",
-        "rating": 1836,
-        "score": 13,
-        "buchholz": 119
-      },
-      {
-        "rank": 44,
-        "playerId": "XBc-pB-W1P",
-        "name": "Mück,Heinz-Peter",
-        "rating": 1837,
-        "score": 13,
-        "buchholz": 118
-      },
-      {
-        "rank": 45,
-        "playerId": "tbD-0W-zDD",
-        "name": "Breintner,Maximilian",
-        "rating": 1736,
-        "score": 13,
-        "buchholz": 116
-      },
-      {
-        "rank": 46,
-        "playerId": "EUj-Cn-4Ar",
-        "name": "Ogloblin,Ilia",
-        "rating": 1801,
-        "score": 12,
-        "buchholz": 136
-      },
-      {
-        "rank": 47,
-        "playerId": "N4q-FM-FGZ",
-        "name": "Zekovic,Alen",
-        "rating": 1707,
-        "score": 12,
-        "buchholz": 134
-      },
-      {
-        "rank": 48,
-        "playerId": "aJB-6h-sBn",
-        "name": "Schedel,Loris",
-        "rating": 1847,
-        "score": 12,
-        "buchholz": 127
-      },
-      {
-        "rank": 49,
-        "playerId": "wkH-xD-Kdn",
-        "name": "Paun,David",
-        "rating": 1564,
-        "score": 12,
-        "buchholz": 118
-      },
-      {
-        "rank": 50,
-        "playerId": "DiN-Qt-LK1",
-        "name": "Wonisch,Ferdinand",
-        "rating": 1789,
-        "score": 12,
-        "buchholz": 111
-      },
-      {
-        "rank": 51,
-        "playerId": "KtD-pP-w3u",
-        "name": "Baur,Helmut",
-        "rating": 1697,
-        "score": 12,
-        "buchholz": 110
-      },
-      {
-        "rank": 52,
-        "playerId": "XDe-Yq-DCa",
-        "name": "Mohonea,Maria",
-        "rating": 1563,
-        "score": 12,
-        "buchholz": 106
-      },
-      {
-        "rank": 53,
-        "playerId": "PAE-gc-VDm",
-        "name": "Blache,Manuel",
-        "rating": 1614,
-        "score": 12,
-        "buchholz": 97
-      },
-      {
-        "rank": 54,
-        "playerId": "GwZ-bH-CC7",
-        "name": "Gerbe,Armand",
-        "rating": 1200,
-        "score": 12,
-        "buchholz": 95
-      },
-      {
-        "rank": 55,
-        "playerId": "5zu-gs-kH3",
-        "name": "Suryanarayanan,Ashwin",
-        "rating": 1686,
-        "score": 11,
-        "buchholz": 127
-      },
-      {
-        "rank": 56,
-        "playerId": "CT6-jc-ABq",
-        "name": "Lechler,Walter",
-        "rating": 1639,
-        "score": 11,
-        "buchholz": 114
-      },
-      {
-        "rank": 57,
-        "playerId": "4ki-dV-ujK",
-        "name": "Mirica,Laurentiu",
-        "rating": 1622,
-        "score": 11,
-        "buchholz": 98
-      },
-      {
-        "rank": 58,
-        "playerId": "m2a-ZH-kIH",
-        "name": "Krieg,Karl",
-        "rating": 1802,
-        "score": 10,
-        "buchholz": 123
-      },
-      {
-        "rank": 59,
-        "playerId": "ysk-UI-iCQ",
-        "name": "Mück,Fabian",
-        "rating": 1850,
-        "score": 10,
-        "buchholz": 122
-      },
-      {
-        "rank": 60,
-        "playerId": "CyE-Mv-Ecr",
-        "name": "Blache,Sebastian",
-        "rating": 1666,
-        "score": 10,
-        "buchholz": 116
-      },
-      {
-        "rank": 61,
-        "playerId": "Sso-AD-8dT",
-        "name": "Botgros,Antonio-Darius",
-        "rating": 1438,
-        "score": 10,
-        "buchholz": 106
-      },
-      {
-        "rank": 62,
-        "playerId": "fPA-ff-rYC",
-        "name": "Sahin,Ihsanhalid Tuerker",
-        "rating": 1610,
-        "score": 10,
-        "buchholz": 106
-      },
-      {
-        "rank": 63,
-        "playerId": "Yir-jU-UQn",
-        "name": "Ion,Andrei",
-        "rating": 1412,
-        "score": 10,
-        "buchholz": 102
-      },
-      {
-        "rank": 64,
-        "playerId": "DIl-wf-odF",
-        "name": "Chastanet,Mael",
-        "rating": 1412,
-        "score": 10,
-        "buchholz": 100
-      },
-      {
-        "rank": 65,
-        "playerId": "5Oq-UH-4BN",
-        "name": "Riboulleau Bordes,Mae",
-        "rating": 1415,
-        "score": 9,
-        "buchholz": 114
-      },
-      {
-        "rank": 66,
-        "playerId": "Zb1-Lj-8KU",
-        "name": "Jugaru,Victor",
-        "rating": 1524,
-        "score": 9,
-        "buchholz": 111
-      },
-      {
-        "rank": 67,
-        "playerId": "Xra-ha-fnL",
-        "name": "Grigore,Eduard-Petru",
-        "rating": 1443,
-        "score": 9,
-        "buchholz": 109
-      },
-      {
-        "rank": 68,
-        "playerId": "7Xh-jr-Fz5",
-        "name": "Wahl,Elias",
-        "rating": 1200,
-        "score": 9,
-        "buchholz": 105
-      },
-      {
-        "rank": 69,
-        "playerId": "Ri4-RC-89u",
-        "name": "De Boysson,Gabriel",
-        "rating": 1421,
-        "score": 9,
-        "buchholz": 103
-      },
-      {
-        "rank": 70,
-        "playerId": "zgG-RB-8xC",
-        "name": "Pillath,Marcus",
-        "rating": 1664,
-        "score": 9,
-        "buchholz": 102
-      },
-      {
-        "rank": 71,
-        "playerId": "21B-0r-XoP",
-        "name": "Berthelot,Louis",
-        "rating": 1200,
-        "score": 9,
-        "buchholz": 100
-      },
-      {
-        "rank": 72,
-        "playerId": "buV-PV-sUN",
-        "name": "Vidovici,Denis-Mihai",
-        "rating": 1403,
-        "score": 9,
-        "buchholz": 99
-      },
-      {
-        "rank": 73,
-        "playerId": "SX9-hA-5bu",
-        "name": "Nowak,Niklas",
-        "rating": 1408,
-        "score": 9,
-        "buchholz": 97
-      },
-      {
-        "rank": 74,
-        "playerId": "fIr-fU-Oec",
-        "name": "Albert,Hugo",
-        "rating": 1649,
-        "score": 9,
-        "buchholz": 91
-      },
-      {
-        "rank": 75,
-        "playerId": "BIj-bu-v1B",
-        "name": "Cernencu,Alexandra-Iris",
-        "rating": 1200,
-        "score": 9,
-        "buchholz": 88
-      },
-      {
-        "rank": 76,
-        "playerId": "9Oy-F5-yJs",
-        "name": "Zsolt,Gyerko",
-        "rating": 1200,
-        "score": 7,
-        "buchholz": 96
-      },
-      {
-        "rank": 77,
-        "playerId": "zBn-Aq-wIi",
-        "name": "Combes,Thibaut",
-        "rating": 1200,
-        "score": 6,
-        "buchholz": 80
-      },
-      {
-        "rank": 78,
-        "playerId": "DRn-BC-TZ6",
-        "name": "Raynal,Paul",
-        "rating": 1200,
-        "score": 6,
-        "buchholz": 80
-      },
-      {
-        "rank": 79,
-        "playerId": "OkJ-CW-bul",
-        "name": "Mirica,Sebastian",
-        "rating": 1200,
-        "score": 6,
-        "buchholz": 79
-      },
-      {
-        "rank": 80,
-        "playerId": "pni-LF-Vcs",
-        "name": "Modin,Marie",
-        "rating": 1200,
-        "score": 6,
-        "buchholz": 77
-      },
-      {
-        "rank": 81,
-        "playerId": "CWl-dG-pF0",
-        "name": "Cernencu,Maria-Violeta",
-        "rating": 1200,
-        "score": 3,
-        "buchholz": 78
-      }
-    ]
-  }
+	"data": {
+		"tournamentNumber": 2,
+		"tournamentName": "3. Göppinger Rapid Chess",
+		"totalRounds": 9,
+		"pointRule": "3-point",
+		"rows": [
+			{
+				"rank": 1,
+				"playerId": "Nwe-Rv-WGn",
+				"name": "Bodriyenko,Markiyan",
+				"rating": 2091,
+				"score": 25,
+				"buchholz": 157
+			},
+			{
+				"rank": 2,
+				"playerId": "Cv7-nt-ua9",
+				"name": "Foksha,Mischa",
+				"rating": 2001,
+				"score": 22,
+				"buchholz": 156
+			},
+			{
+				"rank": 3,
+				"playerId": "r9H-Kh-ctP",
+				"name": "Gheng,Josef",
+				"rating": 2339,
+				"score": 21,
+				"buchholz": 144
+			},
+			{
+				"rank": 4,
+				"playerId": "Aag-Cr-dm7",
+				"name": "Minde,Timothe",
+				"rating": 1981,
+				"score": 20,
+				"buchholz": 144
+			},
+			{
+				"rank": 5,
+				"playerId": "EGa-Ok-ncY",
+				"name": "Mohonea,Alexandru",
+				"rating": 2044,
+				"score": 19,
+				"buchholz": 153
+			},
+			{
+				"rank": 6,
+				"playerId": "0AM-i6-AkU",
+				"name": "Goldinov,Daniel",
+				"rating": 2078,
+				"score": 19,
+				"buchholz": 146
+			},
+			{
+				"rank": 7,
+				"playerId": "h2E-3v-zTh",
+				"name": "Schwilk,Michael",
+				"rating": 1973,
+				"score": 19,
+				"buchholz": 139
+			},
+			{
+				"rank": 8,
+				"playerId": "HzQ-oO-TQ0",
+				"name": "Burg,Samuel",
+				"rating": 1949,
+				"score": 18,
+				"buchholz": 141
+			},
+			{
+				"rank": 9,
+				"playerId": "9Cy-Np-N60",
+				"name": "Dilthey,Lennart",
+				"rating": 1826,
+				"score": 18,
+				"buchholz": 136
+			},
+			{
+				"rank": 10,
+				"playerId": "Hza-Fn-91y",
+				"name": "Cernencu,George-Ciprian",
+				"rating": 1871,
+				"score": 18,
+				"buchholz": 124
+			},
+			{
+				"rank": 11,
+				"playerId": "gVo-zA-8FV",
+				"name": "Natterer,Philipp",
+				"rating": 1864,
+				"score": 18,
+				"buchholz": 123
+			},
+			{
+				"rank": 12,
+				"playerId": "k8n-fA-NGN",
+				"name": "Langer,Niklas",
+				"rating": 1829,
+				"score": 18,
+				"buchholz": 119
+			},
+			{
+				"rank": 13,
+				"playerId": "YWk-mi-0wt",
+				"name": "Marquardt,Corvin",
+				"rating": 1673,
+				"score": 18,
+				"buchholz": 118
+			},
+			{
+				"rank": 14,
+				"playerId": "pg4-7Y-1o8",
+				"name": "Jajcinovic,Luka",
+				"rating": 1702,
+				"score": 18,
+				"buchholz": 115
+			},
+			{
+				"rank": 15,
+				"playerId": "FRF-CA-XWZ",
+				"name": "Witke,Thomas",
+				"rating": 2166,
+				"score": 17,
+				"buchholz": 165
+			},
+			{
+				"rank": 16,
+				"playerId": "8qN-iz-s2J",
+				"name": "Cilo,Selimhan",
+				"rating": 1997,
+				"score": 17,
+				"buchholz": 148
+			},
+			{
+				"rank": 17,
+				"playerId": "QBb-aJ-PpR",
+				"name": "Alcantara,Eliyakim",
+				"rating": 1950,
+				"score": 16,
+				"buchholz": 144
+			},
+			{
+				"rank": 18,
+				"playerId": "Lpx-5G-bLX",
+				"name": "Sommer,Konstantin",
+				"rating": 1969,
+				"score": 16,
+				"buchholz": 144
+			},
+			{
+				"rank": 19,
+				"playerId": "LbW-Jo-pOL",
+				"name": "Baur,Frank",
+				"rating": 2088,
+				"score": 16,
+				"buchholz": 139
+			},
+			{
+				"rank": 20,
+				"playerId": "xMg-xW-uaF",
+				"name": "Fabry,Laurin",
+				"rating": 1915,
+				"score": 16,
+				"buchholz": 139
+			},
+			{
+				"rank": 21,
+				"playerId": "2dA-AP-fD3",
+				"name": "Jugaru,Lucian",
+				"rating": 1908,
+				"score": 16,
+				"buchholz": 132
+			},
+			{
+				"rank": 22,
+				"playerId": "Zf4-n3-KHV",
+				"name": "Wezel,Sebastian",
+				"rating": 1977,
+				"score": 16,
+				"buchholz": 123
+			},
+			{
+				"rank": 23,
+				"playerId": "DLt-zk-C3o",
+				"name": "Kleih,Julian",
+				"rating": 2004,
+				"score": 16,
+				"buchholz": 119
+			},
+			{
+				"rank": 24,
+				"playerId": "XUH-Br-OiK",
+				"name": "Haas,Wilhelm",
+				"rating": 2069,
+				"score": 16,
+				"buchholz": 118
+			},
+			{
+				"rank": 25,
+				"playerId": "zic-gH-AOu",
+				"name": "Rapp,Günter",
+				"rating": 1764,
+				"score": 16,
+				"buchholz": 115
+			},
+			{
+				"rank": 26,
+				"playerId": "gro-5a-eoN",
+				"name": "Kothe,Henry",
+				"rating": 1738,
+				"score": 15,
+				"buchholz": 150
+			},
+			{
+				"rank": 27,
+				"playerId": "oAx-WL-noW",
+				"name": "Simon,Pierre-Marie",
+				"rating": 1767,
+				"score": 15,
+				"buchholz": 145
+			},
+			{
+				"rank": 28,
+				"playerId": "TWE-Ef-QKG",
+				"name": "Wadiei,Soroush",
+				"rating": 2070,
+				"score": 15,
+				"buchholz": 134
+			},
+			{
+				"rank": 29,
+				"playerId": "2gz-YB-XrL",
+				"name": "Lehnart,Paul",
+				"rating": 1920,
+				"score": 15,
+				"buchholz": 128
+			},
+			{
+				"rank": 30,
+				"playerId": "gyO-FR-kxB",
+				"name": "Eitel,Lukas",
+				"rating": 1797,
+				"score": 15,
+				"buchholz": 128
+			},
+			{
+				"rank": 31,
+				"playerId": "Wsl-gA-Dwr",
+				"name": "Rodriguez,Antoine",
+				"rating": 1823,
+				"score": 15,
+				"buchholz": 117
+			},
+			{
+				"rank": 32,
+				"playerId": "1M6-Mx-8Vn",
+				"name": "Beaumont-Darrodes,Maxime",
+				"rating": 1686,
+				"score": 15,
+				"buchholz": 116
+			},
+			{
+				"rank": 33,
+				"playerId": "JZF-vX-gKX",
+				"name": "Radu,Victor Mihai",
+				"rating": 1676,
+				"score": 15,
+				"buchholz": 116
+			},
+			{
+				"rank": 34,
+				"playerId": "EZX-fj-XSQ",
+				"name": "Berbecel,Eric",
+				"rating": 1494,
+				"score": 15,
+				"buchholz": 104
+			},
+			{
+				"rank": 35,
+				"playerId": "ofY-mB-VBA",
+				"name": "Notz,Lukas",
+				"rating": 2017,
+				"score": 14,
+				"buchholz": 150
+			},
+			{
+				"rank": 36,
+				"playerId": "NCI-2t-s6j",
+				"name": "Ruprich,Udo",
+				"rating": 1877,
+				"score": 14,
+				"buchholz": 140
+			},
+			{
+				"rank": 37,
+				"playerId": "B6A-TT-D7N",
+				"name": "Garandeau,Clement",
+				"rating": 1866,
+				"score": 14,
+				"buchholz": 126
+			},
+			{
+				"rank": 38,
+				"playerId": "joc-5H-mfF",
+				"name": "Kermer,Jan",
+				"rating": 1783,
+				"score": 14,
+				"buchholz": 126
+			},
+			{
+				"rank": 39,
+				"playerId": "L8Z-rH-AIS",
+				"name": "Wolz,Tim",
+				"rating": 1200,
+				"score": 14,
+				"buchholz": 109
+			},
+			{
+				"rank": 40,
+				"playerId": "zf3-o6-JwE",
+				"name": "Cilo,Seyyid",
+				"rating": 1623,
+				"score": 13,
+				"buchholz": 140
+			},
+			{
+				"rank": 41,
+				"playerId": "TmG-A5-rka",
+				"name": "Benz,Alfred",
+				"rating": 1685,
+				"score": 13,
+				"buchholz": 122
+			},
+			{
+				"rank": 42,
+				"playerId": "uHY-Ag-jBT",
+				"name": "Arora,Advik",
+				"rating": 1860,
+				"score": 13,
+				"buchholz": 122
+			},
+			{
+				"rank": 43,
+				"playerId": "5Cd-4b-Id4",
+				"name": "Kittel,Lennart",
+				"rating": 1836,
+				"score": 13,
+				"buchholz": 119
+			},
+			{
+				"rank": 44,
+				"playerId": "XBc-pB-W1P",
+				"name": "Mück,Heinz-Peter",
+				"rating": 1837,
+				"score": 13,
+				"buchholz": 118
+			},
+			{
+				"rank": 45,
+				"playerId": "tbD-0W-zDD",
+				"name": "Breintner,Maximilian",
+				"rating": 1736,
+				"score": 13,
+				"buchholz": 116
+			},
+			{
+				"rank": 46,
+				"playerId": "EUj-Cn-4Ar",
+				"name": "Ogloblin,Ilia",
+				"rating": 1801,
+				"score": 12,
+				"buchholz": 136
+			},
+			{
+				"rank": 47,
+				"playerId": "N4q-FM-FGZ",
+				"name": "Zekovic,Alen",
+				"rating": 1707,
+				"score": 12,
+				"buchholz": 134
+			},
+			{
+				"rank": 48,
+				"playerId": "aJB-6h-sBn",
+				"name": "Schedel,Loris",
+				"rating": 1847,
+				"score": 12,
+				"buchholz": 127
+			},
+			{
+				"rank": 49,
+				"playerId": "wkH-xD-Kdn",
+				"name": "Paun,David",
+				"rating": 1564,
+				"score": 12,
+				"buchholz": 118
+			},
+			{
+				"rank": 50,
+				"playerId": "DiN-Qt-LK1",
+				"name": "Wonisch,Ferdinand",
+				"rating": 1789,
+				"score": 12,
+				"buchholz": 111
+			},
+			{
+				"rank": 51,
+				"playerId": "KtD-pP-w3u",
+				"name": "Baur,Helmut",
+				"rating": 1697,
+				"score": 12,
+				"buchholz": 110
+			},
+			{
+				"rank": 52,
+				"playerId": "XDe-Yq-DCa",
+				"name": "Mohonea,Maria",
+				"rating": 1563,
+				"score": 12,
+				"buchholz": 106
+			},
+			{
+				"rank": 53,
+				"playerId": "PAE-gc-VDm",
+				"name": "Blache,Manuel",
+				"rating": 1614,
+				"score": 12,
+				"buchholz": 97
+			},
+			{
+				"rank": 54,
+				"playerId": "GwZ-bH-CC7",
+				"name": "Gerbe,Armand",
+				"rating": 1200,
+				"score": 12,
+				"buchholz": 95
+			},
+			{
+				"rank": 55,
+				"playerId": "5zu-gs-kH3",
+				"name": "Suryanarayanan,Ashwin",
+				"rating": 1686,
+				"score": 11,
+				"buchholz": 127
+			},
+			{
+				"rank": 56,
+				"playerId": "CT6-jc-ABq",
+				"name": "Lechler,Walter",
+				"rating": 1639,
+				"score": 11,
+				"buchholz": 114
+			},
+			{
+				"rank": 57,
+				"playerId": "4ki-dV-ujK",
+				"name": "Mirica,Laurentiu",
+				"rating": 1622,
+				"score": 11,
+				"buchholz": 98
+			},
+			{
+				"rank": 58,
+				"playerId": "m2a-ZH-kIH",
+				"name": "Krieg,Karl",
+				"rating": 1802,
+				"score": 10,
+				"buchholz": 123
+			},
+			{
+				"rank": 59,
+				"playerId": "ysk-UI-iCQ",
+				"name": "Mück,Fabian",
+				"rating": 1850,
+				"score": 10,
+				"buchholz": 122
+			},
+			{
+				"rank": 60,
+				"playerId": "CyE-Mv-Ecr",
+				"name": "Blache,Sebastian",
+				"rating": 1666,
+				"score": 10,
+				"buchholz": 116
+			},
+			{
+				"rank": 61,
+				"playerId": "Sso-AD-8dT",
+				"name": "Botgros,Antonio-Darius",
+				"rating": 1438,
+				"score": 10,
+				"buchholz": 106
+			},
+			{
+				"rank": 62,
+				"playerId": "fPA-ff-rYC",
+				"name": "Sahin,Ihsanhalid Tuerker",
+				"rating": 1610,
+				"score": 10,
+				"buchholz": 106
+			},
+			{
+				"rank": 63,
+				"playerId": "Yir-jU-UQn",
+				"name": "Ion,Andrei",
+				"rating": 1412,
+				"score": 10,
+				"buchholz": 102
+			},
+			{
+				"rank": 64,
+				"playerId": "DIl-wf-odF",
+				"name": "Chastanet,Mael",
+				"rating": 1412,
+				"score": 10,
+				"buchholz": 100
+			},
+			{
+				"rank": 65,
+				"playerId": "5Oq-UH-4BN",
+				"name": "Riboulleau Bordes,Mae",
+				"rating": 1415,
+				"score": 9,
+				"buchholz": 114
+			},
+			{
+				"rank": 66,
+				"playerId": "Zb1-Lj-8KU",
+				"name": "Jugaru,Victor",
+				"rating": 1524,
+				"score": 9,
+				"buchholz": 111
+			},
+			{
+				"rank": 67,
+				"playerId": "Xra-ha-fnL",
+				"name": "Grigore,Eduard-Petru",
+				"rating": 1443,
+				"score": 9,
+				"buchholz": 109
+			},
+			{
+				"rank": 68,
+				"playerId": "7Xh-jr-Fz5",
+				"name": "Wahl,Elias",
+				"rating": 1200,
+				"score": 9,
+				"buchholz": 105
+			},
+			{
+				"rank": 69,
+				"playerId": "Ri4-RC-89u",
+				"name": "De Boysson,Gabriel",
+				"rating": 1421,
+				"score": 9,
+				"buchholz": 103
+			},
+			{
+				"rank": 70,
+				"playerId": "zgG-RB-8xC",
+				"name": "Pillath,Marcus",
+				"rating": 1664,
+				"score": 9,
+				"buchholz": 102
+			},
+			{
+				"rank": 71,
+				"playerId": "21B-0r-XoP",
+				"name": "Berthelot,Louis",
+				"rating": 1200,
+				"score": 9,
+				"buchholz": 100
+			},
+			{
+				"rank": 72,
+				"playerId": "buV-PV-sUN",
+				"name": "Vidovici,Denis-Mihai",
+				"rating": 1403,
+				"score": 9,
+				"buchholz": 99
+			},
+			{
+				"rank": 73,
+				"playerId": "SX9-hA-5bu",
+				"name": "Nowak,Niklas",
+				"rating": 1408,
+				"score": 9,
+				"buchholz": 97
+			},
+			{
+				"rank": 74,
+				"playerId": "fIr-fU-Oec",
+				"name": "Albert,Hugo",
+				"rating": 1649,
+				"score": 9,
+				"buchholz": 91
+			},
+			{
+				"rank": 75,
+				"playerId": "BIj-bu-v1B",
+				"name": "Cernencu,Alexandra-Iris",
+				"rating": 1200,
+				"score": 9,
+				"buchholz": 88
+			},
+			{
+				"rank": 76,
+				"playerId": "9Oy-F5-yJs",
+				"name": "Zsolt,Gyerko",
+				"rating": 1200,
+				"score": 7,
+				"buchholz": 96
+			},
+			{
+				"rank": 77,
+				"playerId": "zBn-Aq-wIi",
+				"name": "Combes,Thibaut",
+				"rating": 1200,
+				"score": 6,
+				"buchholz": 80
+			},
+			{
+				"rank": 78,
+				"playerId": "DRn-BC-TZ6",
+				"name": "Raynal,Paul",
+				"rating": 1200,
+				"score": 6,
+				"buchholz": 80
+			},
+			{
+				"rank": 79,
+				"playerId": "OkJ-CW-bul",
+				"name": "Mirica,Sebastian",
+				"rating": 1200,
+				"score": 6,
+				"buchholz": 79
+			},
+			{
+				"rank": 80,
+				"playerId": "pni-LF-Vcs",
+				"name": "Modin,Marie",
+				"rating": 1200,
+				"score": 6,
+				"buchholz": 77
+			},
+			{
+				"rank": 81,
+				"playerId": "CWl-dG-pF0",
+				"name": "Cernencu,Maria-Violeta",
+				"rating": 1200,
+				"score": 3,
+				"buchholz": 78
+			}
+		]
+	}
 }

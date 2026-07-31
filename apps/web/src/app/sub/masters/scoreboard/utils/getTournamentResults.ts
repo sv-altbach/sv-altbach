@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
-import type { TournamentResult } from "@/app/sub/masters/types";
 import { scoreboardDatabaseDir } from "@/app/sub/masters/paths";
+import type { TournamentResult } from "@/app/sub/masters/types";
 
 export function getTournamentResults(): TournamentResult[] {
 	const tournamentFiles = fs.readdirSync(scoreboardDatabaseDir, {
