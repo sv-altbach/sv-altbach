@@ -1,0 +1,146 @@
+{
+	"data": {
+		"tournamentNumber": 3,
+		"tournamentName": "SVA-Masters (3), Blitz, Altbach, 10.07.2026",
+		"totalRounds": 13,
+		"pointRule": "3-point",
+		"rows": [
+			{
+				"rank": 1,
+				"playerId": "r9H-Kh-ctP",
+				"name": "Gheng,Josef",
+				"rating": 2196,
+				"score": 30,
+				"buchholz": 278
+			},
+			{
+				"rank": 2,
+				"playerId": "Nwe-Rv-WGn",
+				"name": "Bodriyenko,Markiyan",
+				"rating": 2244,
+				"score": 30,
+				"buchholz": 274
+			},
+			{
+				"rank": 3,
+				"playerId": "0AM-i6-AkU",
+				"name": "Goldinov,Daniel",
+				"rating": 2134,
+				"score": 27,
+				"buchholz": 277
+			},
+			{
+				"rank": 4,
+				"playerId": "U7x-Nk-4pQ",
+				"name": "Retzlaff,Nick",
+				"rating": 2003,
+				"score": 25,
+				"buchholz": 288
+			},
+			{
+				"rank": 5,
+				"playerId": "m4T-Ki-8sR",
+				"name": "Retzlaff,Kian",
+				"rating": 2032,
+				"score": 25,
+				"buchholz": 269
+			},
+			{
+				"rank": 6,
+				"playerId": "zf3-o6-JwE",
+				"name": "Cilo,Seyyid",
+				"rating": 1857,
+				"score": 24,
+				"buchholz": 277
+			},
+			{
+				"rank": 7,
+				"playerId": "P9v-DA-2wL",
+				"name": "Popovic,Dan-Arwed",
+				"rating": 1787,
+				"score": 24,
+				"buchholz": 274
+			},
+			{
+				"rank": 8,
+				"playerId": "xMg-xW-uaF",
+				"name": "Fabry,Laurin",
+				"rating": 1906,
+				"score": 22,
+				"buchholz": 291
+			},
+			{
+				"rank": 9,
+				"playerId": "XUH-Br-OiK",
+				"name": "Haas,Wilhelm",
+				"rating": 2068,
+				"score": 21,
+				"buchholz": 275
+			},
+			{
+				"rank": 10,
+				"playerId": "8qN-iz-s2J",
+				"name": "Cilo,Selimhan",
+				"rating": 2072,
+				"score": 21,
+				"buchholz": 258
+			},
+			{
+				"rank": 11,
+				"playerId": "H6g-TM-3nV",
+				"name": "Heilig,Tim Markus",
+				"rating": 1940,
+				"score": 17,
+				"buchholz": 246
+			},
+			{
+				"rank": 12,
+				"playerId": "S8r-Ha-5qM",
+				"name": "Hader,Sören",
+				"rating": 1764,
+				"score": 15,
+				"buchholz": 254
+			},
+			{
+				"rank": 13,
+				"playerId": "5Cd-4b-Id4",
+				"name": "Kittel,Lennart",
+				"rating": 1803,
+				"score": 15,
+				"buchholz": 243
+			},
+			{
+				"rank": 14,
+				"playerId": "NCI-2t-s6j",
+				"name": "Ruprich,Udo",
+				"rating": 1943,
+				"score": 13,
+				"buchholz": 242
+			},
+			{
+				"rank": 15,
+				"playerId": "YWk-mi-0wt",
+				"name": "Marquardt,Corvin",
+				"rating": 1591,
+				"score": 12,
+				"buchholz": 239
+			},
+			{
+				"rank": 16,
+				"playerId": "IyK-Hj-vlC",
+				"name": "Gutsche,Jan-Frederic",
+				"rating": 1703,
+				"score": 12,
+				"buchholz": 236
+			},
+			{
+				"rank": 17,
+				"playerId": "zgG-RB-8xC",
+				"name": "Pillath,Marcus",
+				"rating": 1637,
+				"score": 10,
+				"buchholz": 238
+			}
+		]
+	}
+}
