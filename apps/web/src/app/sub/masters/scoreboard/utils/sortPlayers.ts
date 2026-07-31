@@ -5,7 +5,7 @@ export function sortPlayers(a: Player, b: Player) {
 		a.tournamentPoints === undefined ||
 		b.tournamentPoints === undefined ||
 		a.averageRank === undefined ||
-    b.averageRank === undefined
+		b.averageRank === undefined
 	) {
 		return 0;
 	}

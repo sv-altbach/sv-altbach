@@ -1,40 +1,40 @@
 export type PlayerMarker = "none" | "successor" | "not-qualified";
 
 export interface PlayerRowData {
-  player: Player;
-  index: number;
-  marker: PlayerMarker;
+	player: Player;
+	index: number;
+	marker: PlayerMarker;
 }
 
 export interface Player {
-  id: string;
+	id: string;
 	name: string;
 	tournamentPoints: number;
 	buchholz: number;
-  rankSum: number;
-  averageRank: number;
-  playedTournaments: number;
-  [key: `tournament${number}`]: number | undefined;
+	rankSum: number;
+	averageRank: number;
+	playedTournaments: number;
+	[key: `tournament${number}`]: number | undefined;
 	// hasPlayedThreeOrMoreTournaments?: boolean;
 }
 
 export interface TournamentResultPlayer {
-  "rank": number;
-  "playerId": string;
-  "name": string;
-  "rating": number;
-  "score": number;
-  "buchholz": number;
+	rank: number;
+	playerId: string;
+	name: string;
+	rating: number;
+	score: number;
+	buchholz: number;
 }
 
 export interface TournamentResult {
-  "data": {
-    "tournamentNumber": number;
-    "tournamentName": string;
-    "totalRounds": number;
-    "pointRule": "1-point" | "3-point";
-    "rows": TournamentResultPlayer[];
-  }
+	data: {
+		tournamentNumber: number;
+		tournamentName: string;
+		totalRounds: number;
+		pointRule: "1-point" | "3-point";
+		rows: TournamentResultPlayer[];
+	};
 }
 
 export interface TournamentDataTypes {
