@@ -1,0 +1,254 @@
+[
+	{
+		"position": 1,
+		"name": "Gheng,Josef",
+		"eloPerformance": 2294,
+		"tournament": 4
+	},
+	{
+		"position": 2,
+		"name": "Cofmann,Veaceslav",
+		"eloPerformance": 2190,
+		"tournament": 4
+	},
+	{
+		"position": 3,
+		"name": "Bodriyenko,Markiyan",
+		"eloPerformance": 2121,
+		"tournament": 4
+	},
+	{
+		"position": 4,
+		"name": "Zacke,Tim",
+		"eloPerformance": 2145,
+		"tournament": 4
+	},
+	{
+		"position": 5,
+		"name": "Retzlaff,Kian",
+		"eloPerformance": 2091,
+		"tournament": 4
+	},
+	{
+		"position": 6,
+		"name": "Roy,Amritesh",
+		"eloPerformance": 2047,
+		"tournament": 4
+	},
+	{
+		"position": 7,
+		"name": "Retzlaff,Nick",
+		"eloPerformance": 2140,
+		"tournament": 4
+	},
+	{
+		"position": 8,
+		"name": "Beck,Jonas",
+		"eloPerformance": 1995,
+		"tournament": 4
+	},
+	{
+		"position": 9,
+		"name": "Cilo,Seyyid",
+		"eloPerformance": 2059,
+		"tournament": 4
+	},
+	{
+		"position": 10,
+		"name": "Gustain,Marc",
+		"eloPerformance": 1976,
+		"tournament": 4
+	},
+	{
+		"position": 11,
+		"name": "Zink,Raphael Mathis",
+		"eloPerformance": 1992,
+		"tournament": 4
+	},
+	{
+		"position": 12,
+		"name": "Goldinov,Daniel",
+		"eloPerformance": 1967,
+		"tournament": 4
+	},
+	{
+		"position": 13,
+		"name": "Root,Martin",
+		"eloPerformance": 1976,
+		"tournament": 4
+	},
+	{
+		"position": 14,
+		"name": "Fabry,Laurin",
+		"eloPerformance": 1963,
+		"tournament": 4
+	},
+	{
+		"position": 15,
+		"name": "Weiß,Martin",
+		"eloPerformance": 1965,
+		"tournament": 4
+	},
+	{
+		"position": 16,
+		"name": "Reck,Moritz",
+		"eloPerformance": 1831,
+		"tournament": 4
+	},
+	{
+		"position": 17,
+		"name": "Heilig,Tim Markus",
+		"eloPerformance": 1843,
+		"tournament": 4
+	},
+	{
+		"position": 18,
+		"name": "Burg,Samuel",
+		"eloPerformance": 1845,
+		"tournament": 4
+	},
+	{
+		"position": 19,
+		"name": "Ternovoy,Gleb",
+		"eloPerformance": 1886,
+		"tournament": 4
+	},
+	{
+		"position": 20,
+		"name": "Cilo,Selimhan",
+		"eloPerformance": 1806,
+		"tournament": 4
+	},
+	{
+		"position": 21,
+		"name": "Thombre,Vihaan",
+		"eloPerformance": 1803,
+		"tournament": 4
+	},
+	{
+		"position": 22,
+		"name": "Uhl,Lars",
+		"eloPerformance": 1701,
+		"tournament": 4
+	},
+	{
+		"position": 23,
+		"name": "Ruprich,Udo",
+		"eloPerformance": 1715,
+		"tournament": 4
+	},
+	{
+		"position": 24,
+		"name": "Häußler,Frank",
+		"eloPerformance": 1815,
+		"tournament": 4
+	},
+	{
+		"position": 25,
+		"name": "Ogloblin,Ilia",
+		"eloPerformance": 1843,
+		"tournament": 4
+	},
+	{
+		"position": 26,
+		"name": "Bodriyenko,Daniel",
+		"eloPerformance": 1730,
+		"tournament": 4
+	},
+	{
+		"position": 27,
+		"name": "Benz,Alfred",
+		"eloPerformance": 1741,
+		"tournament": 4
+	},
+	{
+		"position": 28,
+		"name": "Hasanovic,Arian",
+		"eloPerformance": 1705,
+		"tournament": 4
+	},
+	{
+		"position": 29,
+		"name": "Hader,Sören,Dr.",
+		"eloPerformance": 1750,
+		"tournament": 4
+	},
+	{
+		"position": 30,
+		"name": "Wang,Enya Marie",
+		"eloPerformance": 1670,
+		"tournament": 4
+	},
+	{
+		"position": 31,
+		"name": "Leibbrand,Vanessa",
+		"eloPerformance": 1656,
+		"tournament": 4
+	},
+	{
+		"position": 32,
+		"name": "Lechler,Walter",
+		"eloPerformance": 1589,
+		"tournament": 4
+	},
+	{
+		"position": 33,
+		"name": "Zekovic,Alen",
+		"eloPerformance": 1660,
+		"tournament": 4
+	},
+	{
+		"position": 34,
+		"name": "Pillath,Marcus",
+		"eloPerformance": 1576,
+		"tournament": 4
+	},
+	{
+		"position": 35,
+		"name": "Küfner,Matthias",
+		"eloPerformance": 1658,
+		"tournament": 4
+	},
+	{
+		"position": 35,
+		"name": "Martirosyan,Arman",
+		"eloPerformance": 1658,
+		"tournament": 4
+	},
+	{
+		"position": 37,
+		"name": "Jäckle,Marc Daniel",
+		"eloPerformance": 1566,
+		"tournament": 4
+	},
+	{
+		"position": 38,
+		"name": "Zhang,Kai",
+		"eloPerformance": 1504,
+		"tournament": 4
+	},
+	{
+		"position": 39,
+		"name": "Jajcinovic,Luka",
+		"eloPerformance": 1642,
+		"tournament": 4
+	},
+	{
+		"position": 40,
+		"name": "Blache,Sebastian",
+		"eloPerformance": 1503,
+		"tournament": 4
+	},
+	{
+		"position": 41,
+		"name": "Traub,Leon",
+		"eloPerformance": 1365,
+		"tournament": 4
+	},
+	{
+		"position": 42,
+		"name": "Brückner,Thomas",
+		"eloPerformance": 857,
+		"tournament": 4
+	}
+]
