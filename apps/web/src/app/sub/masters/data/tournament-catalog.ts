@@ -1,4 +1,4 @@
-import type { TournamentDataTypes } from "@/types";
+import type { TournamentDataTypes } from "@/app/sub/masters/types";
 
 export const tournamentData = [
 	{

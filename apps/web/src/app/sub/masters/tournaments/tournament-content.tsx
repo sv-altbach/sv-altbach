@@ -7,7 +7,7 @@ import { PointRules } from "@/app/sub/masters/tournaments/components/point-rules
 import { Prizes } from "@/app/sub/masters/tournaments/components/prizes";
 import { RegisterButton } from "@/app/sub/masters/tournaments/components/register-button";
 import { Venue } from "@/app/sub/masters/tournaments/components/Venue";
-import type { TournamentDataTypes } from "@/types";
+import type { TournamentDataTypes } from "@/app/sub/masters/types";
 
 export function TournamentContent({ tournament }: Props) {
 	return (

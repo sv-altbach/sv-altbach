@@ -2,7 +2,7 @@ import { Flex, Table, Text } from "@radix-ui/themes";
 import { IconArrowBadgeUp } from "@tabler/icons-react";
 import { TableRow } from "@/app/sub/masters/scoreboard/components/table-row";
 import { getPlayers } from "@/app/sub/masters/scoreboard/getPlayers";
-import type { PlayerRowData } from "@/types";
+import type { PlayerRowData } from "@/app/sub/masters/types";
 
 export function TableBody() {
 	const players = getPlayers();
