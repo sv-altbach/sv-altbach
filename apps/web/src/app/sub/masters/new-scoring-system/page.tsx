@@ -2,9 +2,9 @@ import { Box, Heading, Text } from "@radix-ui/themes";
 
 export default function NewScoringSystemPage() {
 	return (
-		<main className="lg:m-20 rounded-lg shadow-xl pb-6">
+		<main className="rounded-lg pb-6 shadow-xl lg:m-20">
 			<Box
-				px={{initial: "5", lg: "9"}}
+				px={{ initial: "5", lg: "9" }}
 				pb="4"
 				pt="6"
 				className="rounded-t-lg bg-red-100 text-red-700"
@@ -20,7 +20,7 @@ export default function NewScoringSystemPage() {
 				</Text>
 			</Box>
 
-			<Box px={{initial: "5", lg: "9"}} py="4">
+			<Box px={{ initial: "5", lg: "9" }} py="4">
 				<Heading as="h2" size={{ initial: "5", md: "6", lg: "8" }}>
 					Punktevergabe pro Turnier
 				</Heading>
@@ -29,7 +29,12 @@ export default function NewScoringSystemPage() {
 					jeweiligen Turnier.
 				</Text>
 
-				<Heading as="h3" size={{ initial: "3", md: "4", lg: "5" }} mt="3" mb="2">
+				<Heading
+					as="h3"
+					size={{ initial: "3", md: "4", lg: "5" }}
+					mt="3"
+					mb="2"
+				>
 					Formel
 				</Heading>
 				<Text as="p">
@@ -39,21 +44,25 @@ export default function NewScoringSystemPage() {
 					= 100 × (erzielte Punkte / maximal erreichbare Punkte) × Turnierfaktor
 				</Text>
 
-				<Heading as="h3" size={{ initial: "3", md: "4", lg: "5" }} mt="3" mb="2">
+				<Heading
+					as="h3"
+					size={{ initial: "3", md: "4", lg: "5" }}
+					mt="3"
+					mb="2"
+				>
 					Erklärung
 				</Heading>
 				<ul className="list-disc pl-5">
 					<li>
-						<span className="font-bold text-neutral-700">
-							Erzielte Punkte
-						</span>{" "}
+						<span className="font-bold text-neutral-700">Erzielte Punkte</span>{" "}
 						= die im Turnier erreichten Punkte
 					</li>
-          <li>
-
-            <span className="font-bold text-neutral-700">Maximal erreichbare Punkte</span>
-            = Anzahl der Runden × Punkte im jeweiligen Wertungssystem
-          </li>
+					<li>
+						<span className="font-bold text-neutral-700">
+							Maximal erreichbare Punkte
+						</span>
+						= Anzahl der Runden × Punkte im jeweiligen Wertungssystem
+					</li>
 					<li>
 						<span className="font-bold text-neutral-700">100</span> = sorgt für
 						eine gut lesbare Punkteskala
@@ -90,7 +99,7 @@ export default function NewScoringSystemPage() {
 				</ul>
 			</Box>
 
-			<Box px={{initial: "5", lg: "9"}} py="4">
+			<Box px={{ initial: "5", lg: "9" }} py="4">
 				<Heading as="h2" size={{ initial: "5", md: "6", lg: "8" }}>
 					Gesamtwertung (Streichergebnisse)
 				</Heading>
@@ -98,7 +107,12 @@ export default function NewScoringSystemPage() {
 					Für die Masters-Gesamtwertung werden nicht alle Turniere gewertet.
 				</Text>
 
-				<Heading as="h3" size={{ initial: "3", md: "4", lg: "5" }} mt="3" mb="2">
+				<Heading
+					as="h3"
+					size={{ initial: "3", md: "4", lg: "5" }}
+					mt="3"
+					mb="2"
+				>
 					Regel
 				</Heading>
 				<ul className="list-disc pl-5">
@@ -118,7 +132,12 @@ export default function NewScoringSystemPage() {
 					<li>Das schwächste Ergebnis wird gestrichen</li>
 				</ul>
 
-				<Heading as="h3" size={{ initial: "3", md: "4", lg: "5" }} mt="3" mb="2">
+				<Heading
+					as="h3"
+					size={{ initial: "3", md: "4", lg: "5" }}
+					mt="3"
+					mb="2"
+				>
 					Ziel
 				</Heading>
 				<ul className="list-disc pl-5">
@@ -130,7 +149,7 @@ export default function NewScoringSystemPage() {
 				</ul>
 			</Box>
 
-			<Box px={{initial: "5", lg: "9"}} py="4">
+			<Box px={{ initial: "5", lg: "9" }} py="4">
 				<Heading as="h2" size={{ initial: "5", md: "6", lg: "8" }}>
 					Finalqualifikation
 				</Heading>

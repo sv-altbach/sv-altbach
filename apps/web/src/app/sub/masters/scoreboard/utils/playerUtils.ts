@@ -1,8 +1,9 @@
 import fs from "node:fs";
+import { scoreboardDatabaseDir } from "@/app/sub/masters/paths";
 
 export function hasPlayedAllTournaments(numberOfPlayedTournaments: number) {
 	const numberOfTournaments = fs
-		.readdirSync("src/app/sub/masters/scoreboard/database", {
+		.readdirSync(scoreboardDatabaseDir, {
 			encoding: "utf-8",
 		})
 		.map((tournamentFileName) => {
