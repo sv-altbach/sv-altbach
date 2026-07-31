@@ -1,4 +1,4 @@
-import type { Player } from "@/types";
+import type { Player } from "@/app/sub/masters/types";
 
 export function sortPlayers(a: Player, b: Player) {
 	if (

@@ -1,5 +1,5 @@
 import {Table, Tooltip} from "@radix-ui/themes";
-import type {Player, PlayerMarker} from "@/types";
+import type {Player, PlayerMarker} from "@/app/sub/masters/types";
 import {cn} from "@/utils/ui";
 import {getPlayerName} from "@/utils/utils";
 import {IconArrowBadgeUp, IconX} from "@tabler/icons-react";

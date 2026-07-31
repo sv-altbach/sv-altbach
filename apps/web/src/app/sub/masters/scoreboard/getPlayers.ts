@@ -1,7 +1,7 @@
 import {fillPlayerDatabase} from "@/app/sub/masters/scoreboard/utils/fillPlayerDatabase";
 import {getTournamentResults} from "@/app/sub/masters/scoreboard/utils/getTournamentResults";
 import {sortPlayers} from "@/app/sub/masters/scoreboard/utils/sortPlayers";
-import type {Player} from "@/types";
+import type {Player} from "@/app/sub/masters/types";
 
 const playerDatabase: Player[] = [];
 

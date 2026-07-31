@@ -1,5 +1,5 @@
 import { Table } from "@radix-ui/themes";
-import type { TournamentDataTypes } from "@/types";
+import type { TournamentDataTypes } from "@/app/sub/masters/types";
 
 export function Venue({ tournament }: Props) {
 	return (

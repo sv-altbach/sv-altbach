@@ -1,5 +1,5 @@
 import { Button } from "@radix-ui/themes";
-import type { TournamentDataTypes } from "@/types";
+import type { TournamentDataTypes } from "@/app/sub/masters/types";
 
 export function RegisterButton({ tournament }: Props) {
 	const isHidden =

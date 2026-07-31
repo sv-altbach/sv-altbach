@@ -1,4 +1,4 @@
-import type {Player, TournamentResult, TournamentResultPlayer} from "@/types";
+import type {Player, TournamentResult, TournamentResultPlayer} from "@/app/sub/masters/types";
 
 export const fillPlayerDatabase = (
 	tournamentResult: TournamentResult,
