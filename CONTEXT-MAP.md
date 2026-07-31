@@ -16,6 +16,6 @@
 - **Club → Masters links:** absolute URLs from env (e.g. `NEXT_PUBLIC_MASTERS_URL`). Remove `SubdomainLink` / subdomain routing helpers.
 - **Masters routes:** flatten to app root (`/`, `/scoreboard`, …) — no `/sub/masters` prefix.
 - **Scope of this change:** app split only. Club TanStack Start migration and shadcn monorepo design system are separate follow-ups.
-- **Local ports:** Club website `3000`, Masters `3001` (wired via env, e.g. `NEXT_PUBLIC_MASTERS_URL`).
+- **Local ports:** Club website `3000`, Masters `3001` (wired via env, e.g. `NEXT_PUBLIC_MASTERS_URL`), Club email preview `3002`.
 
 See [`docs/adr/`](docs/adr/) when ADRs exist.

@@ -15,3 +15,4 @@ Public website for SV Altbach (the club), served from the `web` workspace packag
 - This is the code that gets **extracted** from today’s combined Next app; Masters is not the extraction target.
 - Planned later: migrate this app to TanStack Start; Masters is out of that migration.
 - Local default port: `3000`. Links to Masters via `NEXT_PUBLIC_MASTERS_URL` (local: `http://localhost:3001`).
+- Email preview (`bun run email-preview`): port `3002` (started alongside `dev` via turbo `with`).

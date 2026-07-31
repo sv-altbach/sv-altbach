@@ -6,7 +6,7 @@
 		"dev": "bun --bun next dev",
 		"build": "bun --bun next build",
 		"start": "next start",
-		"email-preview": "email dev --dir ./emails -p 3001",
+		"email-preview": "email dev --dir ./emails -p 3002",
 		"typegen": "next typegen",
 		"check:types": "tsc --noEmit",
 		"ui": "bunx --bun shadcn"
