@@ -14,10 +14,6 @@
 		// Do not set rootDir here: with "extends", "." would resolve to this
 		// package directory. TypeScript 6 defaults rootDir to each app's
 		// own tsconfig.json directory, which is correct for noEmit projects.
-		"types": ["node"],
-
-		// Match TypeScript 7's deterministic type ordering while still on 6.x.
-		// Removed after the TypeScript 7 upgrade (ordering is always stable there).
-		"stableTypeOrdering": true
+		"types": ["node"]
 	}
 }
