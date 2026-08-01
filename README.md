@@ -119,7 +119,7 @@ The website homepage includes a Tumblr-powered blog section that fetches and dis
 ### Environment variables
 
 - `BLOG_REVALIDATE_API_KEY` (required for manual revalidation)
-- `TUMBLR_BLOG_API_URL` (optional override for local testing; defaults to the public Tumblr read API)
+- `TUMBLR_BLOG_FEED_URL` (optional override for local testing; defaults to the public Tumblr RSS feed)
 
 ### Manual revalidation
 

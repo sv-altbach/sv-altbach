@@ -1,16 +1,17 @@
 import { cacheLife } from "next/cache";
 
-const DEFAULT_TUMBLR_BLOG_API_URL =
-	"https://svaltbach-blog.tumblr.com/api/read/json?num=5&start=0";
+const DEFAULT_TUMBLR_BLOG_FEED_URL = "https://svaltbach-blog.tumblr.com/rss";
 const FALLBACK_BLOG_POST_TITLE = "Tumblr-Beitrag";
 const MAX_POSTS = 5;
 
 export const TUMBLR_BLOG_URL = "https://www.tumblr.com/svaltbach-blog";
 
-type TumblrReadApiPost = Record<string, unknown>;
-
-type TumblrReadApiResponse = {
-	posts?: TumblrReadApiPost[];
+type TumblrRssItem = {
+	title: string;
+	description: string;
+	link: string;
+	guid: string;
+	pubDate: string;
 };
 
 export type BlogPost = {
@@ -21,8 +22,8 @@ export type BlogPost = {
 	publishedAt: string;
 };
 
-function getTumblrBlogApiUrl() {
-	return process.env.TUMBLR_BLOG_API_URL ?? DEFAULT_TUMBLR_BLOG_API_URL;
+function getTumblrBlogFeedUrl() {
+	return process.env.TUMBLR_BLOG_FEED_URL ?? DEFAULT_TUMBLR_BLOG_FEED_URL;
 }
 
 function normalizeWhitespace(value: string) {
@@ -81,18 +82,6 @@ function stripHtml(value: string) {
 	);
 }
 
-function getFirstString(post: TumblrReadApiPost, keys: string[]) {
-	for (const key of keys) {
-		const value = post[key];
-		if (typeof value === "string") {
-			const normalizedValue = normalizeWhitespace(value);
-			if (normalizedValue) {
-				return normalizedValue;
-			}
-		}
-	}
-}
-
 function truncate(value: string, maxLength = 180) {
 	if (value.length <= maxLength) {
 		return value;
@@ -101,103 +90,62 @@ function truncate(value: string, maxLength = 180) {
 	return `${value.slice(0, maxLength).trimEnd()}…`;
 }
 
-function formatSlug(slug: string) {
-	return slug
-		.split("-")
-		.filter(Boolean)
-		.map(
-			(segment) =>
-				segment.charAt(0).toLocaleUpperCase("de-DE") + segment.slice(1),
-		)
-		.join(" ");
+function extractRssTagValue(block: string, tag: string) {
+	const match = block.match(
+		new RegExp(`<${tag}(?:\\s[^>]*)?>([\\s\\S]*?)<\\/${tag}>`, "i"),
+	);
+
+	return match?.[1]?.trim();
 }
 
-function resolveTitle(post: TumblrReadApiPost) {
-	const title = getFirstString(post, [
-		"regular-title",
-		"link-text",
-		"question",
-		"quote-source",
-	]);
+function parseTumblrRssFeed(payload: string): TumblrRssItem[] {
+	const items: TumblrRssItem[] = [];
 
-	if (title) {
-		return stripHtml(title);
-	}
+	for (const match of payload.matchAll(/<item>([\s\S]*?)<\/item>/gi)) {
+		const block = match[1] ?? "";
+		const title = extractRssTagValue(block, "title");
+		const link = extractRssTagValue(block, "link");
+		const guid = extractRssTagValue(block, "guid");
+		const pubDate = extractRssTagValue(block, "pubDate");
+		const description = extractRssTagValue(block, "description");
 
-	const slug = getFirstString(post, ["slug"]);
-	if (slug) {
-		return formatSlug(slug);
-	}
-
-	return FALLBACK_BLOG_POST_TITLE;
-}
-
-function resolveExcerpt(post: TumblrReadApiPost, title: string) {
-	const excerptSource = getFirstString(post, [
-		"regular-body",
-		"photo-caption",
-		"link-description",
-		"video-caption",
-		"audio-caption",
-		"answer",
-		"quote-text",
-		"conversation-text",
-		"link-text",
-	]);
-
-	return truncate(stripHtml(excerptSource ?? title));
-}
-
-function resolvePublishedAt(post: TumblrReadApiPost) {
-	const dateGmt = getFirstString(post, ["date-gmt", "date"]);
-	if (dateGmt) {
-		const publishedAt = new Date(dateGmt);
-		if (!Number.isNaN(publishedAt.valueOf())) {
-			return publishedAt.toISOString();
+		if (!title || !link || !pubDate) {
+			continue;
 		}
+
+		items.push({
+			title,
+			description: description ?? title,
+			link,
+			guid: guid ?? link,
+			pubDate,
+		});
 	}
 
-	const unixTimestamp = post["unix-timestamp"];
-	if (typeof unixTimestamp === "number") {
-		return new Date(unixTimestamp * 1_000).toISOString();
-	}
+	return items;
+}
 
-	if (typeof unixTimestamp === "string") {
-		const parsedUnixTimestamp = Number.parseInt(unixTimestamp, 10);
-		if (!Number.isNaN(parsedUnixTimestamp)) {
-			return new Date(parsedUnixTimestamp * 1_000).toISOString();
-		}
+function resolvePublishedAt(pubDate: string) {
+	const publishedAt = new Date(pubDate);
+	if (!Number.isNaN(publishedAt.valueOf())) {
+		return publishedAt.toISOString();
 	}
 
 	return new Date(0).toISOString();
 }
 
-function resolveUrl(post: TumblrReadApiPost) {
-	const url = getFirstString(post, ["url-with-slug", "url"]);
-	return url ?? TUMBLR_BLOG_URL;
-}
-
-function parseTumblrReadApiResponse(payload: string): TumblrReadApiResponse {
-	const normalizedPayload = payload
-		.trim()
-		.replace(/^var tumblr_api_read =\s*/, "")
-		.replace(/;$/, "");
-
-	return JSON.parse(normalizedPayload) as TumblrReadApiResponse;
-}
-
-function mapTumblrPosts(payload: TumblrReadApiResponse) {
-	return (payload.posts ?? [])
-		.map((post) => {
-			const title = resolveTitle(post);
-			const url = resolveUrl(post);
+function mapTumblrRssItems(items: TumblrRssItem[]) {
+	return items
+		.map((item) => {
+			const title = stripHtml(item.title) || FALLBACK_BLOG_POST_TITLE;
+			const url = item.link || TUMBLR_BLOG_URL;
 
 			return {
-				id: String(post.id ?? url),
+				id: item.guid || url,
 				title,
-				excerpt: resolveExcerpt(post, title),
+				excerpt: truncate(stripHtml(item.description || title)),
 				url,
-				publishedAt: resolvePublishedAt(post),
+				publishedAt: resolvePublishedAt(item.pubDate),
 			} satisfies BlogPost;
 		})
 		.filter((post) => Boolean(post.url))
@@ -206,13 +154,12 @@ function mapTumblrPosts(payload: TumblrReadApiResponse) {
 
 export async function getLatestBlogPosts() {
 	"use cache";
-
 	cacheLife("weeks");
 
 	try {
-		const response = await fetch(getTumblrBlogApiUrl(), {
+		const response = await fetch(getTumblrBlogFeedUrl(), {
 			headers: {
-				accept: "application/json, text/javascript, */*;q=0.8",
+				accept: "application/rss+xml, application/xml, text/xml, */*;q=0.8",
 			},
 		});
 
@@ -223,7 +170,7 @@ export async function getLatestBlogPosts() {
 		}
 
 		const payload = await response.text();
-		return mapTumblrPosts(parseTumblrReadApiResponse(payload));
+		return mapTumblrRssItems(parseTumblrRssFeed(payload));
 	} catch (error) {
 		console.error("Failed to fetch Tumblr blog posts", error);
 		return [];
