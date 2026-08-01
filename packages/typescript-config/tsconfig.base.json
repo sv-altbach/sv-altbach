@@ -1,17 +1,23 @@
 {
 	"compilerOptions": {
 		// Environment setup & latest features
-		"lib": ["ESNext", "DOM", "DOM.Iterable"],
+		// DOM.Iterable is included in DOM as of TypeScript 6.
+		"lib": ["ESNext", "DOM"],
 		"target": "ESNext",
 		"module": "Preserve",
 		"moduleDetection": "force",
 
-		// Best practices
+		// Best practices (aligned with TypeScript 6 defaults where relevant)
 		"strict": true,
 		"skipLibCheck": true,
 		"noFallthroughCasesInSwitch": true,
 		"noUncheckedIndexedAccess": true,
 		"noImplicitOverride": true,
+		"noUncheckedSideEffectImports": true,
+
+		// Avoid auto-including every @types/* package (TypeScript 6 default is []).
+		// Apps that need Node globals should set "types": ["node"] explicitly.
+		"types": [],
 
 		// Library mode
 		"moduleResolution": "NodeNext",
