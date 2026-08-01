@@ -9,11 +9,6 @@
 		"allowJs": true,
 		"jsx": "preserve",
 		"noEmit": true,
-
-		// Next apps use Node + Bun globals (process, Bun, etc.).
-		// Do not set rootDir here: with "extends", "." would resolve to this
-		// package directory. TypeScript 6 defaults rootDir to each app's
-		// own tsconfig.json directory, which is correct for noEmit projects.
 		"types": ["node", "bun"]
 	}
 }

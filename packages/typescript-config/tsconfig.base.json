@@ -1,22 +1,18 @@
 {
 	"compilerOptions": {
 		// Environment setup & latest features
-		// DOM.Iterable is included in DOM as of TypeScript 6.
 		"lib": ["ESNext", "DOM"],
 		"target": "ESNext",
 		"module": "Preserve",
 		"moduleDetection": "force",
 
-		// Best practices (aligned with TypeScript 6 defaults where relevant)
+		// Best practices
 		"strict": true,
 		"skipLibCheck": true,
 		"noFallthroughCasesInSwitch": true,
 		"noUncheckedIndexedAccess": true,
 		"noImplicitOverride": true,
 		"noUncheckedSideEffectImports": true,
-
-		// Avoid auto-including every @types/* package (TypeScript 6 default is []).
-		// Next apps override this with ["node", "bun"] in tsconfig.nextjs.json.
 		"types": [],
 
 		// Library mode
