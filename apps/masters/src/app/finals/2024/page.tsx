@@ -6,9 +6,9 @@ import {
 	Table,
 	Text,
 } from "@radix-ui/themes";
+import { cn } from "@sv-altbach/ui/lib/utils";
 import Link from "next/link";
 import { Fragment } from "react";
-import { cn } from "@sv-altbach/ui/lib/utils";
 import { getPlayerName } from "@/utils/utils";
 import { getTournamentResults } from "./utils/getTournamentResults";
 

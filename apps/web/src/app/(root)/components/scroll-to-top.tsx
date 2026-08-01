@@ -1,10 +1,9 @@
 "use client";
 
-import { IconArrowUp } from "@tabler/icons-react";
-import { useEffect, useEffectEvent, useState } from "react";
-
 import { Button } from "@sv-altbach/ui/components/button";
 import { cn } from "@sv-altbach/ui/lib/utils";
+import { IconArrowUp } from "@tabler/icons-react";
+import { useEffect, useEffectEvent, useState } from "react";
 
 export function ScrollToTopButton({
 	className,

@@ -1,7 +1,7 @@
 import { Table, Tooltip } from "@radix-ui/themes";
+import { cn } from "@sv-altbach/ui/lib/utils";
 import { IconArrowBadgeUp, IconX } from "@tabler/icons-react";
 import type { Player, PlayerMarker } from "@/app/types";
-import { cn } from "@sv-altbach/ui/lib/utils";
 import { getPlayerName } from "@/utils/utils";
 
 interface Props {

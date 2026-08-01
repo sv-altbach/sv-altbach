@@ -1,11 +1,5 @@
 "use client";
 
-import {
-	IconHourglass,
-	IconId,
-	IconMapPin,
-	IconQuestionMark,
-} from "@tabler/icons-react";
 import { Button } from "@sv-altbach/ui/components/button";
 import {
 	Card,
@@ -14,6 +8,12 @@ import {
 	CardHeader,
 	CardTitle,
 } from "@sv-altbach/ui/components/card";
+import {
+	IconHourglass,
+	IconId,
+	IconMapPin,
+	IconQuestionMark,
+} from "@tabler/icons-react";
 
 const infoItems = [
 	{
