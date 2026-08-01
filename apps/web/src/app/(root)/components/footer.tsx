@@ -1,19 +1,16 @@
-import { SubdomainLink } from "@/components/subdomain-link";
-import type { Subdomain } from "@/utils/routing";
+import Link from "next/link";
 import { FunktionaereDialog } from "./funktionaere-dialog";
 
 type FooterLink = {
 	href: string;
 	label: string;
 	external?: boolean;
-	subdomain?: Subdomain;
 };
 
 const footerLinks: {
 	links: FooterLink[];
 	kategorien: FooterLink[];
 	social: FooterLink[];
-	rechtliches: FooterLink[];
 } = {
 	links: [
 		{ href: "https://schachmatt.net/schach-lernen/", label: "Schach lernen!" },
@@ -41,13 +38,11 @@ const footerLinks: {
 		},
 		{
 			href: "/mannschaften",
-			subdomain: "root",
 			label: "Mannschaften",
 			external: false,
 		},
 		{
 			href: "/sieger",
-			subdomain: "root",
 			label: "Einzel",
 			external: false,
 		},
@@ -80,20 +75,6 @@ const footerLinks: {
 	social: [
 		{ href: "https://www.instagram.com/svaltbach/", label: "Instagram" },
 		{ href: "https://www.tumblr.com/svaltbach-blog", label: "Tumblr" },
-	],
-	rechtliches: [
-		{
-			href: "/impressum",
-			label: "Impressum",
-			external: false,
-			subdomain: "root",
-		},
-		{
-			href: "/datenschutz",
-			label: "Datenschutz",
-			external: false,
-			subdomain: "root",
-		},
 	],
 };
 
@@ -133,21 +114,19 @@ export function RootFooter() {
 										return (
 											<li key={link.href} className="text-sm">
 												Historisch:{" "}
-												<SubdomainLink
-													href={link.href}
-													subdomain={link.subdomain}
+												<Link
+													href="/mannschaften"
 													className="text-muted-foreground transition-colors hover:text-primary"
 												>
 													Mannschaften
-												</SubdomainLink>{" "}
+												</Link>{" "}
 												/{" "}
-												<SubdomainLink
-													href={footerLinks.kategorien[2]?.href ?? "/sieger"}
-													subdomain={footerLinks.kategorien[2]?.subdomain}
+												<Link
+													href="/sieger"
 													className="text-muted-foreground transition-colors hover:text-primary"
 												>
 													Einzel
-												</SubdomainLink>
+												</Link>
 											</li>
 										);
 									}
@@ -170,24 +149,14 @@ export function RootFooter() {
 									}
 									return (
 										<li key={link.href}>
-											{link.external ? (
-												<a
-													href={link.href}
-													target="_blank"
-													rel="noopener noreferrer"
-													className="text-muted-foreground text-sm transition-colors hover:text-primary"
-												>
-													{link.label}
-												</a>
-											) : (
-												<SubdomainLink
-													href={link.href}
-													subdomain={link.subdomain}
-													className="text-muted-foreground text-sm transition-colors hover:text-primary"
-												>
-													{link.label}
-												</SubdomainLink>
-											)}
+											<a
+												href={link.href}
+												target="_blank"
+												rel="noopener noreferrer"
+												className="text-muted-foreground text-sm transition-colors hover:text-primary"
+											>
+												{link.label}
+											</a>
 										</li>
 									);
 								})}
@@ -217,17 +186,22 @@ export function RootFooter() {
 						<div>
 							<h3 className="mb-2 font-bold uppercase">Rechtliches</h3>
 							<ul className="space-y-2">
-								{footerLinks.rechtliches.map((link) => (
-									<li key={link.href}>
-										<SubdomainLink
-											href={link.href}
-											subdomain={link.subdomain}
-											className="text-muted-foreground text-sm transition-colors hover:text-primary"
-										>
-											{link.label}
-										</SubdomainLink>
-									</li>
-								))}
+								<li>
+									<Link
+										href="/impressum"
+										className="text-muted-foreground text-sm transition-colors hover:text-primary"
+									>
+										Impressum
+									</Link>
+								</li>
+								<li>
+									<Link
+										href="/datenschutz"
+										className="text-muted-foreground text-sm transition-colors hover:text-primary"
+									>
+										Datenschutz
+									</Link>
+								</li>
 							</ul>
 						</div>
 					</div>

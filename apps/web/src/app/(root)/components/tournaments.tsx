@@ -1,5 +1,5 @@
+import type { Route } from "next";
 import Link from "next/link";
-import { SubdomainLink } from "@/components/subdomain-link";
 import {
 	Accordion,
 	AccordionContent,
@@ -15,6 +15,9 @@ import {
 	TableHeader,
 	TableRow,
 } from "@/components/ui/table";
+
+const mastersUrl = (process.env.NEXT_PUBLIC_MASTERS_URL ??
+	"http://localhost:3001") as Route;
 
 const tournaments = [
 	{
@@ -53,9 +56,8 @@ const tournaments = [
 
 						<Button
 							render={
-								<SubdomainLink
-									href="/"
-									subdomain="masters"
+								<Link
+									href={mastersUrl}
 									target="_blank"
 									rel="noopener noreferrer"
 								/>
@@ -117,7 +119,9 @@ const tournaments = [
 					<Button
 						render={
 							<Link
-								href="/root/docs/Ausschreibung_KO-WAM-Altbach_2026.pdf"
+								href={
+									"/root/docs/Ausschreibung_KO-WAM-Altbach_2026.pdf" as Route
+								}
 								target="_blank"
 								rel="noopener noreferrer"
 							/>
@@ -163,7 +167,9 @@ const tournaments = [
 					<Button
 						render={
 							<Link
-								href="/root/docs/AUS-Altbacher Turniere_Schachzeitung_2026.pdf"
+								href={
+									"/root/docs/AUS-Altbacher Turniere_Schachzeitung_2026.pdf" as Route
+								}
 								target="_blank"
 								rel="noopener noreferrer"
 							/>
