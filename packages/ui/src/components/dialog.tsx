@@ -1,10 +1,10 @@
 "use client";
 
 import { Dialog as DialogPrimitive } from "@base-ui/react/dialog";
+import { Button } from "@sv-altbach/ui/components/button";
+import { cn } from "@sv-altbach/ui/lib/utils";
 import { IconX } from "@tabler/icons-react";
 import type * as React from "react";
-import { Button } from "@/components/ui/button";
-import { cn } from "@/utils/ui";
 
 function Dialog({ ...props }: DialogPrimitive.Root.Props) {
 	return <DialogPrimitive.Root data-slot="dialog" {...props} />;

@@ -4,6 +4,7 @@ export default {
 	typedRoutes: true,
 	reactCompiler: true,
 	cacheComponents: true,
+	transpilePackages: ["@sv-altbach/ui"],
 	experimental: {
 		useTypeScriptCli: true,
 	},

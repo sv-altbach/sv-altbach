@@ -1,4 +1,3 @@
-import Link from "next/link";
 import {
 	Table,
 	TableBody,
@@ -6,7 +5,8 @@ import {
 	TableHead,
 	TableHeader,
 	TableRow,
-} from "@/components/ui/table";
+} from "@sv-altbach/ui/components/table";
+import Link from "next/link";
 
 // Simplified data structure with recent winners
 const winners = [

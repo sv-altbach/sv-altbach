@@ -15,16 +15,12 @@
       "name": "masters",
       "version": "0.1.0",
       "dependencies": {
-        "@base-ui/react": "^1.6.0",
         "@radix-ui/themes": "^3.3.0",
+        "@sv-altbach/ui": "workspace:*",
         "@tabler/icons-react": "^3.46.0",
-        "class-variance-authority": "^0.7.1",
-        "clsx": "^2.1.1",
         "next": "16.2.12",
         "react": "^19.2.8",
         "react-dom": "^19.2.8",
-        "tailwind-merge": "^3.6.0",
-        "tw-animate-css": "^1.4.0",
       },
       "devDependencies": {
         "@sv-altbach/typescript-config": "workspace:*",
@@ -42,22 +38,18 @@
       "name": "web",
       "version": "0.1.0",
       "dependencies": {
-        "@base-ui/react": "^1.6.0",
         "@radix-ui/react-icons": "^1.3.2",
         "@radix-ui/themes": "^3.3.0",
         "@react-email/render": "2.1.0",
+        "@sv-altbach/ui": "workspace:*",
         "@tabler/icons-react": "^3.46.0",
         "@tanstack/react-form-nextjs": "^1.33.3",
-        "class-variance-authority": "^0.7.1",
-        "clsx": "^2.1.1",
         "next": "16.2.12",
         "next-themes": "^0.4.6",
         "react": "^19.2.8",
         "react-dom": "^19.2.8",
         "resend": "^6.18.1",
         "sonner": "^2.0.7",
-        "tailwind-merge": "^3.6.0",
-        "tw-animate-css": "^1.4.0",
         "valibot": "^1.4.2",
       },
       "devDependencies": {
@@ -79,6 +71,32 @@
     "packages/typescript-config": {
       "name": "@sv-altbach/typescript-config",
       "version": "0.0.0",
+    },
+    "packages/ui": {
+      "name": "@sv-altbach/ui",
+      "version": "0.0.0",
+      "dependencies": {
+        "@base-ui/react": "^1.6.0",
+        "@tabler/icons-react": "^3.46.0",
+        "class-variance-authority": "^0.7.1",
+        "clsx": "^2.1.1",
+        "shadcn": "^4.16.1",
+        "tailwind-merge": "^3.6.0",
+        "tw-animate-css": "^1.4.0",
+      },
+      "devDependencies": {
+        "@sv-altbach/typescript-config": "workspace:*",
+        "@types/react": "^19.2.18",
+        "@types/react-dom": "^19.2.4",
+        "react": "^19.2.8",
+        "react-dom": "^19.2.8",
+        "tailwindcss": "^4.3.3",
+        "typescript": "7.0.2",
+      },
+      "peerDependencies": {
+        "react": "^19.2.8",
+        "react-dom": "^19.2.8",
+      },
     },
   },
   "packages": {
@@ -477,6 +495,8 @@
     "@stablelib/base64": ["@stablelib/base64@1.0.1", "", {}, "sha512-1bnPQqSxSuc3Ii6MhBysoWCg58j97aUjuCSZrGSmDxNqtytIi0k8utUenAwTZN4V5mXXYGsVUI9zeBqy+jBOSQ=="],
 
     "@sv-altbach/typescript-config": ["@sv-altbach/typescript-config@workspace:packages/typescript-config"],
+
+    "@sv-altbach/ui": ["@sv-altbach/ui@workspace:packages/ui"],
 
     "@swc/helpers": ["@swc/helpers@0.5.15", "", { "dependencies": { "tslib": "^2.8.0" } }, "sha512-JQ5TuMi45Owi4/BIMAJBoSQoOJu12oOk/gADqlcUL9JEdHB8vyjUSsxqeNXnmXHjYKMi2WcYtezGEEhqUI/E2g=="],
 

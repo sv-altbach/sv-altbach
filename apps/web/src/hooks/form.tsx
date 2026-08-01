@@ -1,17 +1,17 @@
 import {
-	createFormHook,
-	createFormHookContexts,
-} from "@tanstack/react-form-nextjs";
-import {
 	Field,
 	FieldContent,
 	FieldDescription,
 	FieldError,
 	FieldGroup,
 	FieldLabel,
-} from "@/components/ui/field";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+} from "@sv-altbach/ui/components/field";
+import { Input } from "@sv-altbach/ui/components/input";
+import { Textarea } from "@sv-altbach/ui/components/textarea";
+import {
+	createFormHook,
+	createFormHookContexts,
+} from "@tanstack/react-form-nextjs";
 
 export const { fieldContext, formContext, useFieldContext, useFormContext } =
 	createFormHookContexts();

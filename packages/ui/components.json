@@ -5,18 +5,18 @@
 	"tsx": true,
 	"tailwind": {
 		"config": "",
-		"css": "src/app/globals.css",
+		"css": "src/styles/globals.css",
 		"baseColor": "zinc",
 		"cssVariables": true,
 		"prefix": ""
 	},
 	"iconLibrary": "tabler",
 	"aliases": {
-		"components": "@/components",
+		"components": "@sv-altbach/ui/components",
 		"utils": "@sv-altbach/ui/lib/utils",
-		"ui": "@sv-altbach/ui/components",
-		"lib": "@/lib",
-		"hooks": "@/hooks"
+		"hooks": "@sv-altbach/ui/hooks",
+		"lib": "@sv-altbach/ui/lib",
+		"ui": "@sv-altbach/ui/components"
 	},
 	"menuColor": "default",
 	"menuAccent": "subtle",

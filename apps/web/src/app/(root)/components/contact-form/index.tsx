@@ -1,11 +1,11 @@
 "use client";
 
+import { Button } from "@sv-altbach/ui/components/button";
+import { FieldGroup } from "@sv-altbach/ui/components/field";
+import { Spinner } from "@sv-altbach/ui/components/spinner";
 import Link from "next/link";
 import { useActionState, useEffect } from "react";
 import { toast } from "sonner";
-import { Button } from "@/components/ui/button";
-import { FieldGroup } from "@/components/ui/field";
-import { Spinner } from "@/components/ui/spinner";
 import { useAppForm } from "@/hooks/form";
 import { contactFormAction } from "./action";
 import {

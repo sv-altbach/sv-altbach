@@ -1,12 +1,10 @@
-import type { Route } from "next";
-import Link from "next/link";
 import {
 	Accordion,
 	AccordionContent,
 	AccordionItem,
 	AccordionTrigger,
-} from "@/components/ui/accordion";
-import { Button } from "@/components/ui/button";
+} from "@sv-altbach/ui/components/accordion";
+import { Button } from "@sv-altbach/ui/components/button";
 import {
 	Table,
 	TableBody,
@@ -14,7 +12,9 @@ import {
 	TableHead,
 	TableHeader,
 	TableRow,
-} from "@/components/ui/table";
+} from "@sv-altbach/ui/components/table";
+import type { Route } from "next";
+import Link from "next/link";
 
 const mastersUrl = (process.env.NEXT_PUBLIC_MASTERS_URL ??
 	"http://localhost:3001") as Route;

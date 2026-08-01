@@ -1,9 +1,8 @@
 /** biome-ignore-all lint/a11y/noLabelWithoutControl: Added by consumer */
 "use client";
 
+import { cn } from "@sv-altbach/ui/lib/utils";
 import type * as React from "react";
-
-import { cn } from "@/utils/ui";
 
 function Label({ className, ...props }: React.ComponentProps<"label">) {
 	return (

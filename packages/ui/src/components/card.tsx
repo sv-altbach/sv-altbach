@@ -1,6 +1,5 @@
+import { cn } from "@sv-altbach/ui/lib/utils";
 import type * as React from "react";
-
-import { cn } from "@/utils/ui";
 
 function Card({
 	className,

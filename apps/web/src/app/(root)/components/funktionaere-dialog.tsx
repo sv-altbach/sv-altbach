@@ -7,7 +7,7 @@ import {
 	DialogHeader,
 	DialogTitle,
 	DialogTrigger,
-} from "@/components/ui/dialog";
+} from "@sv-altbach/ui/components/dialog";
 import {
 	Table,
 	TableBody,
@@ -15,7 +15,7 @@ import {
 	TableHead,
 	TableHeader,
 	TableRow,
-} from "@/components/ui/table";
+} from "@sv-altbach/ui/components/table";
 import { funktionaere } from "../data/funktionaere";
 
 export function FunktionaereDialog() {

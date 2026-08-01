@@ -12,6 +12,7 @@ SVA Masters tournament site (scoreboard, tournaments, finals, etc.). Workspace p
 ## Relations
 
 - Separate deployable app from the **Club website** (`apps/web`).
+- Consumes shared UI primitives from the **Design system** (`@sv-altbach/ui`); Masters theme tokens (including Masters-only visuals such as the header image) stay in this app’s `globals.css`.
 - **Unchanged** means both a **product freeze** (same URLs, UI, scoreboard behavior) and a **stack freeze** (stays on Next.js; not part of the TanStack Start migration).
 - Split approach: **extract the Club website out**; do not carve/refactor Masters beyond what the split mechanically requires.
 - Local default port: `3001`. Routes live at the app root (no `/sub/masters` prefix).

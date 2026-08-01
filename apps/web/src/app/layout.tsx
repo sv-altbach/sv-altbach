@@ -1,6 +1,6 @@
 import dynamic from "next/dynamic";
 import { Inter } from "next/font/google";
-import { Toaster } from "@/components/ui/sonner";
+import { Toaster } from "@/components/sonner";
 
 import "./globals.css";
 
