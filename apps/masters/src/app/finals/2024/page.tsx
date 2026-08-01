@@ -8,7 +8,7 @@ import {
 } from "@radix-ui/themes";
 import Link from "next/link";
 import { Fragment } from "react";
-import { cn } from "@/utils/ui";
+import { cn } from "@sv-altbach/ui/lib/utils";
 import { getPlayerName } from "@/utils/utils";
 import { getTournamentResults } from "./utils/getTournamentResults";
 

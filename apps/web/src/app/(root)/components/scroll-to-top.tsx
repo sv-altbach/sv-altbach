@@ -3,8 +3,8 @@
 import { IconArrowUp } from "@tabler/icons-react";
 import { useEffect, useEffectEvent, useState } from "react";
 
-import { Button } from "@/components/ui/button";
-import { cn } from "@/utils/ui";
+import { Button } from "@sv-altbach/ui/components/button";
+import { cn } from "@sv-altbach/ui/lib/utils";
 
 export function ScrollToTopButton({
 	className,

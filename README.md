@@ -21,15 +21,16 @@ SV Altbach is a Bun-powered monorepo for the club website and the SVA Masters to
 
 - `apps/web` – club website app (port 3000)
   - `src/app/(root)` – public/root website routes
-  - `src/components` – shared UI primitives
-  - `src/utils` – club website utilities
+  - `src/components` – Club-only components (theme provider, Sonner toaster, …)
   - `emails/` – React Email templates (preview via `email-preview`; imported for Resend)
 - `apps/masters` – standalone SVA Masters Next.js app (port 3001)
   - `/` – tournament home page
   - `/scoreboard` – current rankings
   - `/finals/*` – finals pages and results
-  - `src/components/ui` – app-local UI primitives
+- `packages/ui` – shared Design system (`@sv-altbach/ui`): shadcn primitives, `cn`/utils, base stylesheet
 - `packages/typescript-config` – shared TypeScript configuration
+
+Both apps import UI primitives from `@sv-altbach/ui` and keep their own theme tokens in `src/app/globals.css`.
 
 ## Getting started
 

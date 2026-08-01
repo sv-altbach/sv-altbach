@@ -5,8 +5,8 @@ import {
 	TableHead,
 	TableHeader,
 	TableRow,
-} from "@/components/ui/table";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+} from "@sv-altbach/ui/components/table";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@sv-altbach/ui/components/tabs";
 import { trainingTypes } from "../data/training";
 
 export function TrainingSection() {

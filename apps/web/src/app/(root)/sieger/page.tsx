@@ -6,7 +6,7 @@ import {
 	TableHead,
 	TableHeader,
 	TableRow,
-} from "@/components/ui/table";
+} from "@sv-altbach/ui/components/table";
 
 // Simplified data structure with recent winners
 const winners = [

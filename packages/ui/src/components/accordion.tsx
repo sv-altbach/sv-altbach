@@ -2,7 +2,7 @@
 
 import { Accordion as AccordionPrimitive } from "@base-ui/react/accordion";
 import { IconChevronDown, IconChevronUp } from "@tabler/icons-react";
-import { cn } from "@/utils/ui";
+import { cn } from "@sv-altbach/ui/lib/utils";
 
 function Accordion({ className, ...props }: AccordionPrimitive.Root.Props) {
 	return (

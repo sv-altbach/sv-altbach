@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import type { ReactNode } from "react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@sv-altbach/ui/components/button";
 
 export function HeroSection({ children }: { children?: ReactNode }) {
 	const handleScroll = () => {

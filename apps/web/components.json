@@ -5,7 +5,7 @@
 	"tsx": true,
 	"tailwind": {
 		"config": "",
-		"css": "app/globals.css",
+		"css": "src/app/globals.css",
 		"baseColor": "zinc",
 		"cssVariables": true,
 		"prefix": ""
@@ -13,8 +13,8 @@
 	"iconLibrary": "tabler",
 	"aliases": {
 		"components": "@/components",
-		"utils": "@/utils/ui",
-		"ui": "@/components/ui",
+		"utils": "@sv-altbach/ui/lib/utils",
+		"ui": "@sv-altbach/ui/components",
 		"lib": "@/lib",
 		"hooks": "@/hooks"
 	},

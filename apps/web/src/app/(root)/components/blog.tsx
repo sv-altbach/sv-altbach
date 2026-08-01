@@ -4,7 +4,7 @@ import {
 	CardFooter,
 	CardHeader,
 	CardTitle,
-} from "@/components/ui/card";
+} from "@sv-altbach/ui/components/card";
 import { getLatestBlogPosts, TUMBLR_BLOG_URL } from "./blog.data";
 
 const publishedAtFormatter = new Intl.DateTimeFormat("de-DE", {

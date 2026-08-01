@@ -2,7 +2,7 @@ import { Container, Heading, Text } from "@radix-ui/themes";
 import { IconArrowBadgeUp, IconX } from "@tabler/icons-react";
 import Link from "next/link";
 import { Table } from "@/app/scoreboard/components/Table";
-import { Button } from "@/components/ui/button";
+import { Button } from "@sv-altbach/ui/components/button";
 import { Footer } from "../components/footer";
 
 const ScoreboardPage = () => {
