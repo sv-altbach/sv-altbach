@@ -16,7 +16,7 @@
 		"noUncheckedSideEffectImports": true,
 
 		// Avoid auto-including every @types/* package (TypeScript 6 default is []).
-		// Apps that need Node globals should set "types": ["node"] explicitly.
+		// Next apps override this with ["node", "bun"] in tsconfig.nextjs.json.
 		"types": [],
 
 		// Library mode
