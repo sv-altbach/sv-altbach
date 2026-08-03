@@ -1,4 +1,4 @@
-import { appendFileSync, existsSync, readdirSync, readFileSync } from "node:fs";
+import { appendFileSync, existsSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import babel from "@rolldown/plugin-babel";
 import tailwindcss from "@tailwindcss/vite";
@@ -41,37 +41,53 @@ function debugLog(
 		/* ignore */
 	}
 }
-
-function probeVercelFuncOutput() {
-	const funcRoot = join(
-		process.cwd(),
-		".vercel/output/functions/__server.func",
-	);
-	if (!existsSync(funcRoot)) {
-		debugLog("A", "vite.config.ts:probe", "no vercel func output", {
-			funcRoot,
-		});
-		return;
-	}
-	const ssrDir = join(funcRoot, "_ssr");
-	const routerFiles = existsSync(ssrDir)
-		? readdirSync(ssrDir).filter((f) => f.startsWith("router-"))
-		: [];
-	const requireReactHits: Array<{ file: string; count: number }> = [];
-	for (const file of routerFiles) {
-		const src = readFileSync(join(ssrDir, file), "utf8");
-		const count = (src.match(/__require\(["']react["']\)/g) ?? []).length;
-		requireReactHits.push({ file, count });
-	}
-	debugLog("A", "vite.config.ts:probe", "vercel SSR react resolution probe", {
-		routerFiles,
-		requireReactHits,
-		reactTraced: existsSync(join(funcRoot, "node_modules/react")),
-		reactDomTraced: existsSync(join(funcRoot, "node_modules/react-dom")),
-		funcEntries: readdirSync(funcRoot),
-	});
-}
 // #endregion
+
+/**
+ * Rolldown leaves CJS `use-sync-external-store/shim` as `__require("react")`
+ * (createRequire) in SSR chunks. On Vercel that fails because the function has
+ * no node_modules. When the same chunk already inlines React as `require_react`,
+ * rewrite the bare require to use it. Avoids Nitro `traceDeps`, which breaks
+ * Vercel Build Output API detection for this project.
+ */
+function patchBareReactRequires(serverRoot: string) {
+	const requireReactRe = /__require\(["']react["']\)/g;
+	const patched: Array<{ file: string; before: number; after: number }> = [];
+	const skipped: string[] = [];
+
+	function walk(dir: string) {
+		if (!existsSync(dir)) return;
+		for (const entry of readdirSync(dir, { withFileTypes: true })) {
+			const path = join(dir, entry.name);
+			if (entry.isDirectory()) {
+				if (entry.name === "node_modules") continue;
+				walk(path);
+				continue;
+			}
+			if (!entry.name.endsWith(".mjs") && !entry.name.endsWith(".js")) continue;
+			const src = readFileSync(path, "utf8");
+			const before = (src.match(requireReactRe) ?? []).length;
+			if (before === 0) continue;
+			if (!/\brequire_react\b/.test(src)) {
+				skipped.push(path.replace(serverRoot, "."));
+				continue;
+			}
+			const next = src
+				.replaceAll('__require("react")', "require_react()")
+				.replaceAll("__require('react')", "require_react()");
+			const after = (next.match(requireReactRe) ?? []).length;
+			writeFileSync(path, next);
+			patched.push({
+				file: path.replace(serverRoot, "."),
+				before,
+				after,
+			});
+		}
+	}
+
+	walk(serverRoot);
+	return { patched, skipped };
+}
 
 export default defineConfig({
 	server: {
@@ -86,17 +102,24 @@ export default defineConfig({
 		tailwindcss(),
 		tanstackStart(),
 		nitro({
-			// Base UI (via Dialog) pulls use-sync-external-store/shim, which emits
-			// createRequire("react") in the SSR chunk. Vercel functions have no
-			// node_modules unless Nitro traces these deps into the output.
-			traceDeps: ["react", "react-dom"],
-			// #region agent log
 			hooks: {
-				compiled() {
-					probeVercelFuncOutput();
+				compiled(nitro) {
+					const serverRoot = nitro.options.output.serverDir;
+					const result = patchBareReactRequires(serverRoot);
+					// #region agent log
+					debugLog(
+						"E",
+						"vite.config.ts:compiled",
+						"patched bare react requires in SSR output",
+						{
+							serverRoot,
+							...result,
+							reactTraced: existsSync(join(serverRoot, "node_modules/react")),
+						},
+					);
+					// #endregion
 				},
 			},
-			// #endregion
 		}),
 		viteReact(),
 		babel({
