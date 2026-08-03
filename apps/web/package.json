@@ -5,7 +5,7 @@
 	"type": "module",
 	"scripts": {
 		"dev": "vite dev --port 3000",
-		"build": "vite build",
+		"build": "vite build && node scripts/patch-react-require.mjs",
 		"start": "node .output/server/index.mjs",
 		"email-preview": "email dev --dir ./emails -p 3002",
 		"check:types": "tsc --noEmit",
