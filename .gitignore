@@ -17,6 +17,7 @@ next-env.d.ts
 
 # caches
 .turbo
+.tanstack
 
 # IntelliJ based IDEs
 .idea
