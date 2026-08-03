@@ -6,7 +6,7 @@
 		"useIgnoreFile": true
 	},
 	"files": {
-		"includes": ["**", "!!.agents"]
+		"includes": ["**", "!!.agents", "!**/routeTree.gen.ts"]
 	},
 	"linter": {
 		"domains": {

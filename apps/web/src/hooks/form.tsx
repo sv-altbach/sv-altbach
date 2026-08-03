@@ -8,10 +8,7 @@ import {
 } from "@sv-altbach/ui/components/field";
 import { Input } from "@sv-altbach/ui/components/input";
 import { Textarea } from "@sv-altbach/ui/components/textarea";
-import {
-	createFormHook,
-	createFormHookContexts,
-} from "@tanstack/react-form-nextjs";
+import { createFormHook, createFormHookContexts } from "@tanstack/react-form";
 
 export const { fieldContext, formContext, useFieldContext, useFormContext } =
 	createFormHookContexts();

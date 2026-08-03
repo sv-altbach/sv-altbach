@@ -5,7 +5,8 @@ SV Altbach is a Bun-powered monorepo for the club website and the SVA Masters to
 ## Tech stack
 
 - Bun workspaces
-- Next.js 16 App Router
+- TanStack Start (Club website) + Next.js 16 App Router (Masters)
+- Vite 8 + Nitro (Club)
 - React 19
 - TypeScript
 - Tailwind CSS 4
@@ -19,18 +20,19 @@ SV Altbach is a Bun-powered monorepo for the club website and the SVA Masters to
 
 ## Project structure
 
-- `apps/web` – club website app (port 3000)
-  - `src/app/(root)` – public/root website routes
-  - `src/components` – Club-only components (theme provider, Sonner toaster, …)
+- `apps/web` – Club website (TanStack Start, port 3000)
+  - `src/routes` – file-based routes (`__root`, `index`, legal/teams pages)
+  - `src/components` – Club page sections and chrome (theme, footer, contact, …)
+  - `src/data` – static Club tables/lists
   - `emails/` – React Email templates (preview via `email-preview`; imported for Resend)
 - `apps/masters` – standalone SVA Masters Next.js app (port 3001)
   - `/` – tournament home page
   - `/scoreboard` – current rankings
   - `/finals/*` – finals pages and results
 - `packages/ui` – shared Design system (`@sv-altbach/ui`): shadcn primitives, `cn`/utils, base stylesheet
-- `packages/typescript-config` – shared TypeScript configuration
+- `packages/typescript-config` – shared TypeScript configuration (`tsconfig.nextjs.json`, `tsconfig.vite.json`)
 
-Both apps import UI primitives from `@sv-altbach/ui` and keep their own theme tokens in `src/app/globals.css`.
+Both apps import UI primitives from `@sv-altbach/ui` and keep their own theme tokens (Club: `src/styles.css`; Masters: `src/app/globals.css`).
 
 ## Getting started
 
@@ -55,7 +57,7 @@ Local ports (no clashes under `turbo dev`):
 | SVA Masters (`apps/masters`) | 3001 | `http://localhost:3001` |
 | Club email preview | 3002 | `http://localhost:3002` |
 
-Club → Masters links use `NEXT_PUBLIC_MASTERS_URL` in `apps/web` (default `http://localhost:3001`).
+Club → Masters links use `VITE_MASTERS_URL` in `apps/web` (default `http://localhost:3001`).
 
 Start both apps (and Club email preview) via Turborepo:
 
@@ -88,10 +90,9 @@ bun run build       # production build for workspace packages
 From `apps/web`:
 
 ```bash
-bun run dev         # start the Next.js app in development
-bun run build       # build the Next.js app
-bun run start       # start the production server
-bun run typegen     # generate Next.js route/cache types
+bun run dev         # start TanStack Start (Vite) on port 3000
+bun run build       # Vite + Nitro production build
+bun run start       # preview the production build (`vite preview`)
 bun run check:types # TypeScript type check
 bun run email-preview   # React Email preview UI (port 3002; run alongside `bun run dev` if needed)
 ```
@@ -112,24 +113,14 @@ Contact mail is sent with [Resend](https://resend.com) using [React Email](https
 
 ## Blog section
 
-The website homepage includes a Tumblr-powered blog section that fetches and displays the latest 5 posts from `https://svaltbach-blog.tumblr.com/`.
+The Club homepage includes a Tumblr-powered blog section that fetches and displays the latest 5 posts from `https://svaltbach-blog.tumblr.com/`.
 
-- Blog data is cached with Next.js cache components and revalidated weekly.
-- The homepage blog data can be refreshed manually through `POST /api/revalidate`.
+- Blog data is loaded in the home route loader.
+- Client-side revisits reuse loader data within ~1 hour (`staleTime`).
+- Cold full page loads may refetch Tumblr (no Next-style ISR).
 
 ### Environment variables
 
-- `BLOG_REVALIDATE_API_KEY` (required for manual revalidation)
 - `TUMBLR_BLOG_FEED_URL` (optional override for local testing; defaults to the public Tumblr RSS feed)
-
-### Manual revalidation
-
-Send a `POST` request to `/api/revalidate` with the API key in the `x-api-key` header:
-
-```bash
-curl -X POST \
-  -H "x-api-key: $BLOG_REVALIDATE_API_KEY" \
-  https://your-domain.example/api/revalidate
-```
-
-If the key is missing or invalid, the endpoint returns `401 Unauthorized`.
+- `VITE_MASTERS_URL` (absolute Masters origin for Club → Masters links)
+- `RESEND_API_KEY` / `RESEND_DOMAIN` / `INTERNAL_CONTACT_EMAIL` (contact form)
