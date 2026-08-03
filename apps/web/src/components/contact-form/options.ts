@@ -18,13 +18,3 @@ export const contactFormOptions = formOptions({
 		message: "",
 	} satisfies ContactFormFields,
 });
-
-export type ContactFormActionState =
-	| { status: "IDLE"; message: null }
-	| { status: "SUCCESS"; message: string }
-	| { status: "ERROR"; message: string };
-
-export const initialActionState: ContactFormActionState = {
-	status: "IDLE",
-	message: null,
-};

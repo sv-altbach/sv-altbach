@@ -2,11 +2,11 @@ import ContactInternalEmail from "@emails/contact-internal";
 import ContactUserConfirmationEmail from "@emails/contact-user";
 import { createServerFn } from "@tanstack/react-start";
 import { EMAIL_ADDRESSES, resend } from "@/integrations/email";
-import { type ContactFormActionState, ContactFormFields } from "./options";
+import { ContactFormFields } from "./options";
 
 export const submitContactForm = createServerFn({ method: "POST" })
 	.validator(ContactFormFields)
-	.handler(async ({ data }): Promise<ContactFormActionState> => {
+	.handler(async ({ data }) => {
 		const { error } = await resend.batch.send([
 			{
 				from: `${EMAIL_ADDRESSES.inquiries.name} <${EMAIL_ADDRESSES.inquiries.address}>`,
