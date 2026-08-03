@@ -13,6 +13,14 @@ export default defineConfig({
 	resolve: {
 		tsconfigPaths: true,
 	},
+	// TODO: remove this once the issue is fixed
+	optimizeDeps: {
+		include: [
+			"@base-ui/react > use-sync-external-store/shim/with-selector",
+			"@tanstack/react-hotkeys > use-sync-external-store/shim/with-selector",
+			"@tanstack/react-router > @tanstack/react-store > use-sync-external-store/shim/with-selector",
+		],
+	},
 	plugins: [
 		devtools(),
 		tailwindcss(),
