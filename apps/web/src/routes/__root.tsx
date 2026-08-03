@@ -53,7 +53,7 @@ function RootComponent() {
 
 function RootDocument({ children }: React.PropsWithChildren) {
 	return (
-		<html lang="en" suppressHydrationWarning>
+		<html lang="de" suppressHydrationWarning>
 			<head>
 				<HeadContent />
 			</head>
