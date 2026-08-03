@@ -12,8 +12,6 @@
 		"ui": "bunx --bun shadcn"
 	},
 	"dependencies": {
-		"@radix-ui/react-icons": "^1.3.2",
-		"@radix-ui/themes": "^3.3.0",
 		"@react-email/render": "2.1.0",
 		"@sv-altbach/ui": "workspace:*",
 		"@tabler/icons-react": "^3.46.0",
