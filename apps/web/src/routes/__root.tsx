@@ -1,15 +1,17 @@
+/** biome-ignore-all lint/style/noHeadElement: Not a NextJS app */
+
+import { TanStackDevtools } from "@tanstack/react-devtools";
+import { formDevtoolsPlugin } from "@tanstack/react-form-devtools";
 import {
 	createRootRoute,
 	HeadContent,
 	Outlet,
 	Scripts,
 } from "@tanstack/react-router";
-import type { ReactNode } from "react";
-import { Devtools } from "@/components/devtools";
 import { RootFooter } from "@/components/footer";
 import { Toaster } from "@/components/sonner";
 import { ThemeProvider } from "@/components/theme-provider";
-import appCss from "@/styles.css?url";
+import styles from "@/styles.css?url";
 
 export const Route = createRootRoute({
 	head: () => ({
@@ -24,31 +26,32 @@ export const Route = createRootRoute({
 			},
 		],
 		links: [
-			{ rel: "stylesheet", href: appCss },
+			{ rel: "stylesheet", href: styles },
 			{ rel: "icon", href: "/favicon.ico" },
 		],
 	}),
+	shellComponent: RootDocument,
 	component: RootComponent,
 });
 
 function RootComponent() {
 	return (
-		<RootDocument>
-			<ThemeProvider>
-				<div className="flex min-h-screen flex-col">
-					<main className="min-h-screen">
-						<Outlet />
-					</main>
-					<RootFooter />
-				</div>
-				<Toaster position="bottom-center" closeButton richColors />
-				{import.meta.env.DEV ? <Devtools /> : null}
-			</ThemeProvider>
-		</RootDocument>
+		<ThemeProvider>
+			<div className="flex min-h-screen flex-col">
+				<main className="min-h-screen">
+					<Outlet />
+				</main>
+				<RootFooter />
+			</div>
+
+			<Toaster position="bottom-center" closeButton richColors />
+
+			<TanStackDevtools plugins={[formDevtoolsPlugin()]} />
+		</ThemeProvider>
 	);
 }
 
-function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
+function RootDocument({ children }: React.PropsWithChildren) {
 	return (
 		<html lang="en" suppressHydrationWarning>
 			<head>
