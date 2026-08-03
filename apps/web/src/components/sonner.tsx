@@ -5,9 +5,9 @@ import {
 	IconInfoCircle,
 	IconLoader,
 } from "@tabler/icons-react";
-import { useTheme } from "next-themes";
 import type React from "react";
 import { Toaster as Sonner, type ToasterProps } from "sonner";
+import { useTheme } from "@/components/theme-provider";
 
 const Toaster = ({ ...props }: ToasterProps) => {
 	const { theme = "system" } = useTheme();
