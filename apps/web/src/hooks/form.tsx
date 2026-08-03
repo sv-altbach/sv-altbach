@@ -11,7 +11,7 @@ import { Textarea } from "@sv-altbach/ui/components/textarea";
 import {
 	createFormHook,
 	createFormHookContexts,
-} from "@tanstack/react-form-nextjs";
+} from "@tanstack/react-form";
 
 export const { fieldContext, formContext, useFieldContext, useFormContext } =
 	createFormHookContexts();

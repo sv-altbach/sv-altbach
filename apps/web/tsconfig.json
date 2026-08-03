@@ -1,11 +1,6 @@
 {
-	"extends": "@sv-altbach/typescript-config/tsconfig.nextjs.json",
+	"extends": "@sv-altbach/typescript-config/tsconfig.vite.json",
 	"compilerOptions": {
-		"plugins": [
-			{
-				"name": "next"
-			}
-		],
 		"paths": {
 			"@/*": ["./src/*"],
 			"@emails/*": ["./emails/*"]
@@ -14,9 +9,8 @@
 	"include": [
 		"**/*.ts",
 		"**/*.tsx",
-		"next-env.d.ts",
-		"next.config.ts",
-		".next/types/**/*.ts"
+		"vite.config.ts",
+		"src/routeTree.gen.ts"
 	],
-	"exclude": ["node_modules"]
+	"exclude": ["node_modules", ".output", "dist"]
 }

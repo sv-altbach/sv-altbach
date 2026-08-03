@@ -9,7 +9,7 @@ Shared shadcn UI package for the Club website and Masters. Workspace package: `@
 | Design system | The shared `@sv-altbach/ui` package: shadcn primitives, CLI-managed utils/hooks, and base stylesheet wiring. | “theme package”, “shared styles” when you mean the full primitive surface |
 | UI primitive | A shadcn/registry component living under `packages/ui/src/components` (Button, Dialog, Table, …). | App composites such as heroes, nav, scoreboard chrome |
 | Base stylesheet | `packages/ui/src/styles/globals.css` — Tailwind / shadcn / structural CSS shared by both apps. Does **not** own Club or Masters brand tokens. | Treating app `:root` tokens as part of the Design system |
-| App theme tokens | Per-app CSS variables (`:root` / `.dark` and app-only extras) defined in each app’s `globals.css` after importing the base stylesheet. | Unifying Club and Masters into one token set “for consistency” |
+| App theme tokens | Per-app CSS variables (`:root` / `.dark` and app-only extras) defined in each app’s stylesheet (`apps/web/src/styles.css`, Masters `globals.css`) after importing the base stylesheet. | Unifying Club and Masters into one token set “for consistency” |
 
 ## Relations
 

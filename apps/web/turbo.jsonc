@@ -11,18 +11,17 @@
 			"cache": false,
 			"persistent": true
 		},
-		"typegen": {
-			"inputs": ["src/**/*.ts", "src/**/*.tsx", "next.config.ts"],
-			"outputs": [".next/types/**/*.ts"]
+		"build": {
+			"outputs": [".output/**"]
 		},
 		"check:types": {
 			"inputs": [
 				"src/**/*.ts",
 				"src/**/*.tsx",
 				"emails/**/*.tsx",
+				"vite.config.ts",
 				"tsconfig.json"
-			],
-			"dependsOn": ["typegen"]
+			]
 		}
 	}
 }
