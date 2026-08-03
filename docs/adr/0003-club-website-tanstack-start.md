@@ -17,7 +17,7 @@ ADR-0001 split Club (`apps/web`) and Masters (`apps/masters`) and foreshadowed m
 - Public Masters origin env is `VITE_MASTERS_URL` (replacing `NEXT_PUBLIC_MASTERS_URL`).
 - Images stay as plain `<img>` / CSS (no Unpic / image CDN).
 - Masters remains Next and is out of scope for this change.
-- Hosting stays two Vercel projects; Club builds with Vite + Nitro for Vercel.
+- Hosting stays two Vercel projects; Club builds with Vite + Nitro (`preset: "vercel"`).
 
 ## Consequences
 

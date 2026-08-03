@@ -12,7 +12,7 @@
 			"persistent": true
 		},
 		"build": {
-			"outputs": [".output/**"]
+			"outputs": [".vercel/output/**"]
 		},
 		"check:types": {
 			"inputs": [

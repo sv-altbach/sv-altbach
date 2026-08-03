@@ -19,6 +19,6 @@ export default defineConfig({
 		babel({
 			presets: [reactCompilerPreset()],
 		}),
-		nitro(),
+		nitro({ preset: "vercel" }),
 	],
 });

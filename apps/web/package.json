@@ -6,7 +6,7 @@
 	"scripts": {
 		"dev": "vite dev --port 3000",
 		"build": "vite build",
-		"start": "node .output/server/index.mjs",
+		"start": "vite preview --port 3000",
 		"email-preview": "email dev --dir ./emails -p 3002",
 		"check:types": "tsc --noEmit",
 		"ui": "bunx --bun shadcn"

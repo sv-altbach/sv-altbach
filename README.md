@@ -92,7 +92,7 @@ From `apps/web`:
 ```bash
 bun run dev         # start TanStack Start (Vite) on port 3000
 bun run build       # Vite + Nitro production build
-bun run start       # serve Nitro output (`.output/server`)
+bun run start       # preview the production build (`vite preview`)
 bun run check:types # TypeScript type check
 bun run email-preview   # React Email preview UI (port 3002; run alongside `bun run dev` if needed)
 ```
