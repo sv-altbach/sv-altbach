@@ -1,14 +1,14 @@
-import type { ReactNode } from "react";
 import {
-	Outlet,
 	createRootRoute,
 	HeadContent,
+	Outlet,
 	Scripts,
 } from "@tanstack/react-router";
-import { ThemeProvider } from "@/components/theme-provider";
+import type { ReactNode } from "react";
+import { Devtools } from "@/components/devtools";
 import { RootFooter } from "@/components/footer";
 import { Toaster } from "@/components/sonner";
-import { Devtools } from "@/components/devtools";
+import { ThemeProvider } from "@/components/theme-provider";
 import appCss from "@/styles.css?url";
 
 export const Route = createRootRoute({

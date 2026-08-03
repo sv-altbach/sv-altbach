@@ -6,7 +6,7 @@ import {
 	CardTitle,
 } from "@sv-altbach/ui/components/card";
 import { getRouteApi } from "@tanstack/react-router";
-import { TUMBLR_BLOG_URL, type BlogPost } from "./blog.data";
+import { type BlogPost, TUMBLR_BLOG_URL } from "./blog.data";
 
 const publishedAtFormatter = new Intl.DateTimeFormat("de-DE", {
 	day: "2-digit",

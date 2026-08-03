@@ -14,8 +14,7 @@ import {
 	TableRow,
 } from "@sv-altbach/ui/components/table";
 
-const mastersUrl =
-	import.meta.env.VITE_MASTERS_URL ?? "http://localhost:3001";
+const mastersUrl = import.meta.env.VITE_MASTERS_URL ?? "http://localhost:3001";
 
 const tournaments = [
 	{

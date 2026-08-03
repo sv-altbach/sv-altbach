@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { AboutUsTimeline } from "@/components/about-us-timeline";
 import { BasicInfoSection } from "@/components/basic-info";
 import { BlogSection } from "@/components/blog";
+import { getLatestBlogPosts } from "@/components/blog.data";
 import { ContactForm } from "@/components/contact-form";
 import { CrowdfundingBanner } from "@/components/crowdfunding-banner";
 import { HeroSection } from "@/components/hero";
@@ -9,7 +10,6 @@ import { MembershipSection } from "@/components/membership";
 import { ScrollToTopButton } from "@/components/scroll-to-top";
 import { TournamentsSection } from "@/components/tournaments";
 import { TrainingSection } from "@/components/training";
-import { getLatestBlogPosts } from "@/components/blog.data";
 
 const ONE_HOUR_MS = 1000 * 60 * 60;
 

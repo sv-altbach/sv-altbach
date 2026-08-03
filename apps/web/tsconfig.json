@@ -6,11 +6,6 @@
 			"@emails/*": ["./emails/*"]
 		}
 	},
-	"include": [
-		"**/*.ts",
-		"**/*.tsx",
-		"vite.config.ts",
-		"src/routeTree.gen.ts"
-	],
+	"include": ["**/*.ts", "**/*.tsx", "vite.config.ts", "src/routeTree.gen.ts"],
 	"exclude": ["node_modules", ".output", "dist"]
 }
