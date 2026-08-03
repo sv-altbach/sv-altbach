@@ -12,7 +12,17 @@
 			"persistent": true
 		},
 		"build": {
-			"outputs": [".vercel/output/**"]
+			"outputs": [".vercel/output/**"],
+			// Framework inference detects Nitro (not Vite), so VITE_* is not
+			// auto-included under strict env mode. Without this, Vercel env is
+			// stripped during `turbo build` and import.meta.env falls back.
+			"env": ["VITE_*"],
+			"passThroughEnv": [
+				"RESEND_API_KEY",
+				"RESEND_DOMAIN",
+				"INTERNAL_CONTACT_EMAIL",
+				"TUMBLR_BLOG_FEED_URL"
+			]
 		},
 		"check:types": {
 			"inputs": [
