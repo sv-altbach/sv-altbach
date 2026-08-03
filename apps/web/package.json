@@ -6,7 +6,7 @@
 	"scripts": {
 		"dev": "vite dev --port 3000",
 		"build": "vite build",
-		"start": "vite preview --port 3000",
+		"start": "node .output/server/index.mjs",
 		"email-preview": "email dev --dir ./emails -p 3002",
 		"check:types": "tsc --noEmit",
 		"ui": "bunx --bun shadcn"
@@ -35,6 +35,7 @@
 		"@rolldown/plugin-babel": "^0.2.3",
 		"@sv-altbach/typescript-config": "workspace:*",
 		"@tailwindcss/vite": "^4.3.3",
+		"@tanstack/devtools-vite": "^0.8.3",
 		"@tanstack/react-devtools": "^0.10.9",
 		"@tanstack/react-form-devtools": "^0.2.32",
 		"@types/node": "^24.13.3",
