@@ -1,0 +1,22 @@
+# Optional local Postgres for the CMS app.
+# Usage:
+#   1. apps/cms/.env already defaults POSTGRES_URL to this compose instance
+#   2. docker compose -f apps/cms/docker-compose.yml up -d
+#   3. Set PAYLOAD_SECRET in apps/cms/.env.local
+#   4. bun run dev (from apps/cms)
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    ports:
+      - "54320:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_DB: cms
+      POSTGRES_HOST_AUTH_METHOD: trust
+    volumes:
+      - cms_pgdata:/var/lib/postgresql/data
+
+volumes:
+  cms_pgdata:

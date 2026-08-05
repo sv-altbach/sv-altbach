@@ -1,0 +1,39 @@
+{
+	"name": "cms",
+	"version": "0.1.0",
+	"private": true,
+	"type": "module",
+	"description": "SV Altbach headless CMS (Payload admin + API)",
+	"scripts": {
+		"dev": "next dev -p 3003",
+		"build": "next build",
+		"ci": "bunx payload migrate && bun run build",
+		"start": "next start -p 3003",
+		"payload": "bunx payload",
+		"generate:importmap": "bunx payload generate:importmap",
+		"generate:types": "bunx payload generate:types",
+		"typegen": "next typegen",
+		"check:types": "tsc --noEmit"
+	},
+	"dependencies": {
+		"@payloadcms/db-vercel-postgres": "3.87.0",
+		"@payloadcms/next": "3.87.0",
+		"@payloadcms/richtext-lexical": "3.87.0",
+		"@payloadcms/storage-vercel-blob": "3.87.0",
+		"@payloadcms/ui": "3.87.0",
+		"graphql": "^16.12.0",
+		"next": "16.2.12",
+		"payload": "3.87.0",
+		"react": "^19.2.8",
+		"react-dom": "^19.2.8",
+		"sharp": "0.34.5"
+	},
+	"devDependencies": {
+		"@sv-altbach/typescript-config": "workspace:*",
+		"@types/node": "^24.13.3",
+		"@types/react": "^19.2.18",
+		"@types/react-dom": "^19.2.4",
+		"sass": "^1.102.0",
+		"typescript": "7.0.2"
+	}
+}

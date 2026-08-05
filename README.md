@@ -1,11 +1,12 @@
 # SV Altbach
 
-SV Altbach is a Bun-powered monorepo for the club website and the SVA Masters tournament site.
+SV Altbach is a Bun-powered monorepo for the club website, the SVA Masters tournament site, and a headless CMS.
 
 ## Tech stack
 
 - Bun workspaces
-- TanStack Start (Club website) + Next.js 16 App Router (Masters)
+- TanStack Start (Club website) + Next.js 16 App Router (Masters + CMS)
+- Payload CMS v3 (CMS)
 - Vite 8 + Nitro (Club)
 - React 19
 - TypeScript
@@ -29,10 +30,14 @@ SV Altbach is a Bun-powered monorepo for the club website and the SVA Masters to
   - `/` – tournament home page
   - `/scoreboard` – current rankings
   - `/finals/*` – finals pages and results
+- `apps/cms` – headless Payload CMS (Next.js, port 3003)
+  - `/` – Payload admin (email/password editors)
+  - REST API under `/api/*`, GraphQL at `/graphql`
+  - Own Vercel project + Vercel Postgres + Vercel Blob (see below)
 - `packages/ui` – shared Design system (`@sv-altbach/ui`): shadcn primitives, `cn`/utils, base stylesheet
 - `packages/typescript-config` – shared TypeScript configuration (`tsconfig.nextjs.json`, `tsconfig.vite.json`)
 
-Both apps import UI primitives from `@sv-altbach/ui` and keep their own theme tokens (Club: `src/styles.css`; Masters: `src/app/globals.css`).
+Club and Masters import UI primitives from `@sv-altbach/ui` and keep their own theme tokens (Club: `src/styles.css`; Masters: `src/app/globals.css`). CMS uses Payload admin chrome and is not a Design system consumer in v1.
 
 ## Getting started
 
@@ -42,12 +47,7 @@ Install dependencies from the repository root:
 bun install
 ```
 
-Copy env examples (optional for most local work; required for Club → Masters links and contact mail):
-
-```bash
-cp apps/web/.env.example apps/web/.env
-cp apps/masters/.env.example apps/masters/.env
-```
+Env files: committed `.env` holds public/local defaults (empty keys document secrets); put secrets in `.env.local` (gitignored). Club → Masters links and contact mail need values in `apps/web/.env` / `.env.local`.
 
 Local ports (no clashes under `turbo dev`):
 
@@ -56,10 +56,17 @@ Local ports (no clashes under `turbo dev`):
 | Club website (`apps/web`) | 3000 | `http://localhost:3000` |
 | SVA Masters (`apps/masters`) | 3001 | `http://localhost:3001` |
 | Club email preview | 3002 | `http://localhost:3002` |
+| CMS (`apps/cms`) | 3003 | `http://localhost:3003` |
 
 Club → Masters links use `VITE_MASTERS_URL` in `apps/web` (default `http://localhost:3001`).
 
-Start both apps (and Club email preview) via Turborepo:
+CMS: set `PAYLOAD_SECRET` (and override `POSTGRES_URL` if needed) in `apps/cms/.env.local`. Optional Docker Postgres:
+
+```bash
+docker compose -f apps/cms/docker-compose.yml up -d
+```
+
+Start the workspace apps (and Club email preview) via Turborepo:
 
 ```bash
 bun run dev
@@ -74,6 +81,11 @@ bun run dev
 
 ```bash
 cd apps/masters
+bun run dev
+```
+
+```bash
+cd apps/cms
 bun run dev
 ```
 
@@ -106,6 +118,33 @@ bun run start       # serve the production build on port 3001
 bun run typegen     # generate Next.js route/cache types
 bun run check:types # TypeScript type check
 ```
+
+From `apps/cms`:
+
+```bash
+bun run dev         # start Payload/Next on port 3003
+bun run build       # production build
+bun run ci          # run Postgres migrations then build (Vercel build command)
+bun run start       # serve the production build on port 3003
+bun run payload     # Payload CLI (migrate, generate:types, …)
+bun run typegen     # generate Next.js route/cache types
+bun run check:types # TypeScript type check
+```
+
+## CMS hosting (third Vercel project)
+
+Deploy `apps/cms` as its **own** Vercel project/origin (separate from Club and Masters):
+
+| Setting | Value |
+| --- | --- |
+| Root Directory | `apps/cms` |
+| Install Command | `cd ../.. && bun install` (or your monorepo install equivalent) |
+| Build Command | `bun run ci` (migrate + `next build`) |
+| Framework | Next.js |
+
+Connect **Vercel Postgres** and **Vercel Blob** to that CMS project only. Env secrets (`POSTGRES_URL`, `PAYLOAD_SECRET`, `BLOB_READ_WRITE_TOKEN`) stay on the CMS project — Club remains DB-less. See `apps/cms/.env` and ADR-0004.
+
+On first deploy, open the CMS origin and create the first editor (email/password).
 
 ## Transactional email (React Email + Resend)
 
