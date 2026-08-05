@@ -5,7 +5,4 @@ export default {
 	reactCompiler: true,
 	cacheComponents: true,
 	transpilePackages: ["@sv-altbach/ui"],
-	experimental: {
-		useTypeScriptCli: true,
-	},
 } satisfies NextConfig;

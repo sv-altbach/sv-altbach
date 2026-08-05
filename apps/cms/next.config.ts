@@ -8,10 +8,6 @@ const dirname = path.dirname(fileURLToPath(import.meta.url));
 const nextConfig = {
 	typedRoutes: true,
 	allowedDevOrigins: ["127.0.0.1", "localhost"],
-	experimental: {
-		// Repo uses TypeScript 7; Next still expects the TS 6 compiler API otherwise.
-		useTypeScriptCli: true,
-	},
 	images: {
 		localPatterns: [
 			{
