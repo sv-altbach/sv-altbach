@@ -1,15 +1,53 @@
 {
 	"version": 1,
 	"skills": {
+		"agent-email-inbox": {
+			"source": "resend/resend-skills",
+			"sourceType": "github",
+			"skillPath": "skills/agent-email-inbox/SKILL.md",
+			"computedHash": "6280018b559b3a932bf0f610146978ca3416e2b2bf21f62c45dbad4d3ccd1282"
+		},
+		"email-best-practices": {
+			"source": "resend/resend-skills",
+			"sourceType": "github",
+			"skillPath": "skills/email-best-practices/SKILL.md",
+			"computedHash": "cf53e0d7ad72c440818c64a104ab220f527f26f10c7d8163fa99e066bf747eed"
+		},
+		"migrate-radix-to-base": {
+			"source": "shadcn/ui",
+			"sourceType": "github",
+			"skillPath": "skills/migrate-radix-to-base/SKILL.md",
+			"computedHash": "4fdc31bf287f674ba6bf91a648120f7b34cd7ef370f998f2cc116fed067789c5"
+		},
+		"payload": {
+			"source": "payloadcms/payload",
+			"sourceType": "github",
+			"skillPath": "tools/claude-plugin/skills/payload/SKILL.md",
+			"computedHash": "ecc3e51b13a323f7a390e5b7d82fa96b12e5221ba561c9e3925ce6aeb05f4190"
+		},
+		"react-email": {
+			"source": "resend/resend-skills",
+			"sourceType": "github",
+			"skillPath": "skills/react-email/SKILL.md",
+			"computedHash": "1d2afbc631670c6bc23e90d0d4776d25f08eabed4bac72485bf06aea1f91ae89"
+		},
 		"resend": {
 			"source": "resend/resend-skills",
 			"sourceType": "github",
-			"computedHash": "1fb1c75f577ad8aa8a9ec13b2273baa5612a1e5a539eaeacb6416ca68ebd64cd"
+			"skillPath": "skills/resend/SKILL.md",
+			"computedHash": "c3cdd88cbb852c9f56f103ae624e7f0d53d00292335322442338936fc6258b7f"
+		},
+		"resend-cli": {
+			"source": "resend/resend-skills",
+			"sourceType": "github",
+			"skillPath": "skills/resend-cli/SKILL.md",
+			"computedHash": "c1f678a6dd142227101919a41b98421eb54b6d3113a808b9968950ec40a2a768"
 		},
 		"shadcn": {
 			"source": "shadcn/ui",
 			"sourceType": "github",
-			"computedHash": "b1cc1defe03f0e8f78652b7d20e4d4e6421babc2b45835d4f361afe684dc47a2"
+			"skillPath": "skills/shadcn/SKILL.md",
+			"computedHash": "f99ef49d9909d380ca683ceb8dc8c25775c20ee38140112c394e037d8c11ee18"
 		}
 	}
 }
