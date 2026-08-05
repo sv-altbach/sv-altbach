@@ -47,13 +47,7 @@ Install dependencies from the repository root:
 bun install
 ```
 
-Copy env examples (optional for most local work; required for Club → Masters links and contact mail):
-
-```bash
-cp apps/web/.env.example apps/web/.env
-cp apps/masters/.env.example apps/masters/.env
-cp apps/cms/.env.example apps/cms/.env
-```
+Env files: committed `.env` holds public/local defaults (empty keys document secrets); put secrets in `.env.local` (gitignored). Club → Masters links and contact mail need values in `apps/web/.env` / `.env.local`.
 
 Local ports (no clashes under `turbo dev`):
 
@@ -66,7 +60,7 @@ Local ports (no clashes under `turbo dev`):
 
 Club → Masters links use `VITE_MASTERS_URL` in `apps/web` (default `http://localhost:3001`).
 
-CMS needs Postgres locally (`POSTGRES_URL` + `PAYLOAD_SECRET` in `apps/cms/.env`). Optional Docker Postgres:
+CMS: set `PAYLOAD_SECRET` (and override `POSTGRES_URL` if needed) in `apps/cms/.env.local`. Optional Docker Postgres:
 
 ```bash
 docker compose -f apps/cms/docker-compose.yml up -d
@@ -148,7 +142,7 @@ Deploy `apps/cms` as its **own** Vercel project/origin (separate from Club and M
 | Build Command | `bun run ci` (migrate + `next build`) |
 | Framework | Next.js |
 
-Connect **Vercel Postgres** and **Vercel Blob** to that CMS project only. Env secrets (`POSTGRES_URL`, `PAYLOAD_SECRET`, `BLOB_READ_WRITE_TOKEN`) stay on the CMS project — Club remains DB-less. See `apps/cms/.env.example` and ADR-0004.
+Connect **Vercel Postgres** and **Vercel Blob** to that CMS project only. Env secrets (`POSTGRES_URL`, `PAYLOAD_SECRET`, `BLOB_READ_WRITE_TOKEN`) stay on the CMS project — Club remains DB-less. See `apps/cms/.env` and ADR-0004.
 
 On first deploy, open `/admin` and create the first editor (email/password).
 

@@ -24,9 +24,9 @@ Headless content layer for SV Altbach editorial content. Workspace package: `app
 ## Local development
 
 ```bash
-cp apps/cms/.env.example apps/cms/.env
 # Optional: docker compose -f apps/cms/docker-compose.yml up -d
+# Put secrets in apps/cms/.env.local (PAYLOAD_SECRET required)
 cd apps/cms && bun run dev
 ```
 
-Required local secrets: `POSTGRES_URL`, `PAYLOAD_SECRET`. `BLOB_READ_WRITE_TOKEN` is optional locally (falls back to disk). Bun/Next/Payload load `.env` — no `dotenv` / `cross-env`. Next runs under Node (`next dev` / `next build`, Turbopack) because Bun-as-runtime breaks Payload SSR externals. Payload CLI: `bunx payload`.
+Committed `.env` = public/local defaults (empty secret keys as documentation). `.env.local` = secrets (`PAYLOAD_SECRET`; override `POSTGRES_URL` / `BLOB_READ_WRITE_TOKEN` as needed). Blob token optional locally (falls back to disk). Next runs under Node (`next dev` / `next build`, Turbopack) because Bun-as-runtime breaks Payload SSR externals. Payload CLI: `bunx payload`.

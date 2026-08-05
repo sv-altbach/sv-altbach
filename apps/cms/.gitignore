@@ -1,7 +1,3 @@
-# Local env (copy from .env.example)
-.env
-.env*.local
-
 # Local media uploads when Blob token is unset
 media
 public/media
