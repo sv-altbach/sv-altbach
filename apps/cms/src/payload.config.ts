@@ -1,6 +1,7 @@
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { vercelPostgresAdapter } from "@payloadcms/db-vercel-postgres";
+import { mcpPlugin } from "@payloadcms/plugin-mcp";
 import { lexicalEditor } from "@payloadcms/richtext-lexical";
 import { vercelBlobStorage } from "@payloadcms/storage-vercel-blob";
 import { buildConfig } from "payload";
@@ -35,6 +36,23 @@ export default buildConfig({
 		prodMigrations: migrations,
 	}),
 	plugins: [
+		mcpPlugin({
+			collections: {
+				media: {
+					description:
+						"Uploaded images and files used across SV Altbach sites.",
+					enabled: true,
+				},
+			},
+			mcp: {
+				serverOptions: {
+					serverInfo: {
+						name: "SV Altbach CMS",
+						version: "1.0.0",
+					},
+				},
+			},
+		}),
 		vercelBlobStorage({
 			collections: {
 				media: true,

@@ -19,6 +19,7 @@ Headless content layer for SV Altbach editorial content. Workspace package: `app
 - Local default port: `3003` (`http://localhost:3003/admin`). Club will read via server env such as `CMS_URL` (e.g. `http://localhost:3003`) once cut over.
 - Editor auth: Payload built-in **Users** collection (email/password). First admin user is created on first visit to `/admin`.
 - Scaffold collections: **Users** (auth) and **Media** (uploads → Blob when token is set). **Posts** land in a follow-up ticket.
+- **MCP plugin** (`@payloadcms/plugin-mcp`): exposes CMS collections to Cursor via Model Context Protocol. Create an API key in **MCP → API Keys** in the admin, then set `MCP_API_KEY` in `.cursor/mcp.json` (local) or your Cursor MCP settings.
 - Content bootstrap: one-shot import from Tumblr JSON API into Posts; then CMS is source of truth for the live Club feed.
 
 ## Local development
