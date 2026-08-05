@@ -2,6 +2,16 @@
 	"$schema": "https://v2-9-18.turborepo.dev/schema.json",
 	"extends": ["//"],
 	"tasks": {
+		"build": {
+			"env": [
+				"PAYLOAD_SECRET",
+				"BLOB_*",
+				"DATABASE_*",
+				"NEON_*",
+				"PG*",
+				"POSTGRES_*"
+			]
+		},
 		"typegen": {
 			"inputs": ["src/**/*.ts", "src/**/*.tsx", "next.config.ts"],
 			"outputs": [".next/types/**/*.ts"]
