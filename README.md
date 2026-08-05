@@ -31,8 +31,8 @@ SV Altbach is a Bun-powered monorepo for the club website, the SVA Masters tourn
   - `/scoreboard` – current rankings
   - `/finals/*` – finals pages and results
 - `apps/cms` – headless Payload CMS (Next.js, port 3003)
-  - `/admin` – Payload admin (email/password editors)
-  - REST/GraphQL API under `/api/*`
+  - `/` – Payload admin (email/password editors)
+  - REST API under `/api/*`, GraphQL at `/graphql`
   - Own Vercel project + Vercel Postgres + Vercel Blob (see below)
 - `packages/ui` – shared Design system (`@sv-altbach/ui`): shadcn primitives, `cn`/utils, base stylesheet
 - `packages/typescript-config` – shared TypeScript configuration (`tsconfig.nextjs.json`, `tsconfig.vite.json`)
@@ -56,7 +56,7 @@ Local ports (no clashes under `turbo dev`):
 | Club website (`apps/web`) | 3000 | `http://localhost:3000` |
 | SVA Masters (`apps/masters`) | 3001 | `http://localhost:3001` |
 | Club email preview | 3002 | `http://localhost:3002` |
-| CMS (`apps/cms`) | 3003 | `http://localhost:3003` (admin: `/admin`) |
+| CMS (`apps/cms`) | 3003 | `http://localhost:3003` |
 
 Club → Masters links use `VITE_MASTERS_URL` in `apps/web` (default `http://localhost:3001`).
 
@@ -144,7 +144,7 @@ Deploy `apps/cms` as its **own** Vercel project/origin (separate from Club and M
 
 Connect **Vercel Postgres** and **Vercel Blob** to that CMS project only. Env secrets (`POSTGRES_URL`, `PAYLOAD_SECRET`, `BLOB_READ_WRITE_TOKEN`) stay on the CMS project — Club remains DB-less. See `apps/cms/.env` and ADR-0004.
 
-On first deploy, open `/admin` and create the first editor (email/password).
+On first deploy, open the CMS origin and create the first editor (email/password).
 
 ## Transactional email (React Email + Resend)
 

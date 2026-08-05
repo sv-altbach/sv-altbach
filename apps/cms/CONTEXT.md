@@ -16,8 +16,8 @@ Headless content layer for SV Altbach editorial content. Workspace package: `app
 - **Masters** does not consume the CMS in v1.
 - Does not share a non-UI runtime package with Club or Masters — coupling is env URLs + HTTP only.
 - Persistence: **Vercel Postgres** (`POSTGRES_URL`) + **Vercel Blob** (`BLOB_READ_WRITE_TOKEN` for media). Hosted as its **own Vercel project/origin** (Root Directory `apps/cms`), separate from Club and Masters. See ADR-0004.
-- Local default port: `3003` (`http://localhost:3003/admin`). Club will read via server env such as `CMS_URL` (e.g. `http://localhost:3003`) once cut over.
-- Editor auth: Payload built-in **Users** collection (email/password). First admin user is created on first visit to `/admin`.
+- Local default port: `3003` (`http://localhost:3003`). Admin is mounted at `/` (Payload-only Next shell; no separate frontend). Club will read via server env such as `CMS_URL` once cut over.
+- Editor auth: Payload built-in **Users** collection (email/password). First admin user is created on first visit to `/`.
 - Scaffold collections: **Users** (auth) and **Media** (uploads → Blob when token is set). **Posts** land in a follow-up ticket.
 - Content bootstrap: one-shot import from Tumblr JSON API into Posts; then CMS is source of truth for the live Club feed.
 

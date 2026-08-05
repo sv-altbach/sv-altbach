@@ -18,7 +18,12 @@ export default buildConfig({
 		user: Users.slug,
 		importMap: {
 			baseDir: path.resolve(dirname),
+			importMapFile: path.resolve(dirname, "app/importMap.js"),
 		},
+	},
+	// Payload-only app: mount admin at `/` (see Payload Admin Panel docs).
+	routes: {
+		admin: "/",
 	},
 	collections: [Users, Media],
 	editor: lexicalEditor(),
