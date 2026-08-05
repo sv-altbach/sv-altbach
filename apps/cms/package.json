@@ -26,11 +26,11 @@
 		"payload": "3.87.0",
 		"react": "^19.2.8",
 		"react-dom": "^19.2.8",
-		"sharp": "0.34.5"
+		"sharp": "0.35.3"
 	},
 	"devDependencies": {
 		"@sv-altbach/typescript-config": "workspace:*",
-		"@types/node": "^24.13.3",
+		"@types/node": "catalog:",
 		"@types/react": "^19.2.18",
 		"@types/react-dom": "^19.2.4",
 		"sass": "^1.102.0",
