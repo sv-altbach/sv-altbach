@@ -6,7 +6,12 @@
 		"useIgnoreFile": true
 	},
 	"files": {
-		"includes": ["**", "!!.agents", "!**/routeTree.gen.ts"]
+		"includes": [
+			"**",
+			"!!.agents",
+			"!**/routeTree.gen.ts",
+			"!apps/cms/src/payload-types.ts"
+		]
 	},
 	"linter": {
 		"domains": {

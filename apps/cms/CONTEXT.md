@@ -1,6 +1,6 @@
 # CMS
 
-Headless content layer for SV Altbach editorial content. Workspace package planned at `apps/cms` (Payload CMS v3 on Next.js). Not a public website — admin UI + HTTP API only.
+Headless content layer for SV Altbach editorial content. Workspace package: `apps/cms` (Payload CMS v3 on Next.js). Not a public website — admin UI + HTTP API only.
 
 ## Glossary
 
@@ -15,6 +15,18 @@ Headless content layer for SV Altbach editorial content. Workspace package plann
 - Consumed by the **Club website** over HTTPS (v1 only). Club owns presentation; CMS does not render the public site.
 - **Masters** does not consume the CMS in v1.
 - Does not share a non-UI runtime package with Club or Masters — coupling is env URLs + HTTP only.
-- Persistence: **Vercel Postgres** + **Vercel Blob** (media). Hosted as its own Vercel project/origin. See ADR-0004.
-- Local default port (when scaffolded): `3003`. Club reads via server env such as `CMS_URL` (e.g. `http://localhost:3003`).
+- Persistence: **Vercel Postgres** (`POSTGRES_URL`) + **Vercel Blob** (`BLOB_READ_WRITE_TOKEN` for media). Hosted as its **own Vercel project/origin** (Root Directory `apps/cms`), separate from Club and Masters. See ADR-0004.
+- Local default port: `3003` (`http://localhost:3003/admin`). Club will read via server env such as `CMS_URL` (e.g. `http://localhost:3003`) once cut over.
+- Editor auth: Payload built-in **Users** collection (email/password). First admin user is created on first visit to `/admin`.
+- Scaffold collections: **Users** (auth) and **Media** (uploads → Blob when token is set). **Posts** land in a follow-up ticket.
 - Content bootstrap: one-shot import from Tumblr JSON API into Posts; then CMS is source of truth for the live Club feed.
+
+## Local development
+
+```bash
+cp apps/cms/.env.example apps/cms/.env
+# Optional: docker compose -f apps/cms/docker-compose.yml up -d
+cd apps/cms && bun run dev
+```
+
+Required local secrets: `POSTGRES_URL`, `PAYLOAD_SECRET`. `BLOB_READ_WRITE_TOKEN` is optional locally (falls back to disk).

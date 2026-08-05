@@ -18,7 +18,7 @@
 - **Club → Masters links:** absolute URLs from env (`VITE_MASTERS_URL` on Club). Remove `SubdomainLink` / subdomain routing helpers.
 - **Club → CMS:** Club fetches published content over HTTPS from the CMS origin (`CMS_URL` or equivalent server env). No Payload imports in Club. See ADR-0004.
 - **Masters routes:** flatten to app root (`/`, `/scoreboard`, …) — no `/sub/masters` prefix.
-- **Local ports:** Club website `3000`, Masters `3001`, Club email preview `3002`, CMS `3003` (when scaffolded).
+- **Local ports:** Club website `3000`, Masters `3001`, Club email preview `3002`, CMS `3003`.
 - **Club stack:** TanStack Start (Vite 8 + Nitro). Masters remains on Next. CMS is Next + Payload. Club does **not** revert to Next for CMS. See ADR-0003 and ADR-0004.
 
 See [`docs/adr/`](docs/adr/) when ADRs exist.
