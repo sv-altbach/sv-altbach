@@ -72,7 +72,7 @@ CMS needs Postgres locally (`POSTGRES_URL` + `PAYLOAD_SECRET` in `apps/cms/.env`
 docker compose -f apps/cms/docker-compose.yml up -d
 ```
 
-Start both apps (and Club email preview) via Turborepo:
+Start the workspace apps (and Club email preview) via Turborepo:
 
 ```bash
 bun run dev

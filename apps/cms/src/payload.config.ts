@@ -23,6 +23,7 @@ export default buildConfig({
 	collections: [Users, Media],
 	editor: lexicalEditor(),
 	secret: process.env.PAYLOAD_SECRET || "",
+	serverURL: process.env.NEXT_PUBLIC_SERVER_URL || "",
 	sharp,
 	typescript: {
 		outputFile: path.resolve(dirname, "payload-types.ts"),
