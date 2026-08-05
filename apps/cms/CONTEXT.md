@@ -29,4 +29,4 @@ cp apps/cms/.env.example apps/cms/.env
 cd apps/cms && bun run dev
 ```
 
-Required local secrets: `POSTGRES_URL`, `PAYLOAD_SECRET`. `BLOB_READ_WRITE_TOKEN` is optional locally (falls back to disk). Bun/Next/Payload load `.env` — no `dotenv` / `cross-env`. Dev: `bun --bun next dev --webpack` (webpack avoids Bun+Turbopack SSR-external bugs). Payload CLI: `bunx payload`.
+Required local secrets: `POSTGRES_URL`, `PAYLOAD_SECRET`. `BLOB_READ_WRITE_TOKEN` is optional locally (falls back to disk). Bun/Next/Payload load `.env` — no `dotenv` / `cross-env`. Next runs under Node (`next dev` / `next build`, Turbopack) because Bun-as-runtime breaks Payload SSR externals. Payload CLI: `bunx payload`.

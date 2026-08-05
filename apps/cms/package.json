@@ -5,8 +5,8 @@
 	"type": "module",
 	"description": "SV Altbach headless CMS (Payload admin + API)",
 	"scripts": {
-		"dev": "bun --bun next dev --webpack -p 3003",
-		"build": "bun --bun next build",
+		"dev": "next dev -p 3003",
+		"build": "next build",
 		"ci": "bunx payload migrate && bun run build",
 		"start": "next start -p 3003",
 		"payload": "bunx payload",
@@ -33,7 +33,6 @@
 		"@types/node": "^24.13.3",
 		"@types/react": "^19.2.18",
 		"@types/react-dom": "^19.2.4",
-		"drizzle-kit": "^0.31.10",
 		"sass": "^1.102.0",
 		"typescript": "7.0.2"
 	}
