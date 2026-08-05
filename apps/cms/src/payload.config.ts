@@ -39,8 +39,8 @@ export default buildConfig({
 			collections: {
 				media: true,
 			},
-			// Client uploads avoid Vercel serverless body-size limits.
-			clientUploads: true,
+			// Client uploads avoid Vercel body-size limits; only when Blob is on.
+			clientUploads: Boolean(process.env.BLOB_READ_WRITE_TOKEN),
 			// When unset, the plugin disables itself and media uses local disk.
 			token: process.env.BLOB_READ_WRITE_TOKEN,
 		}),
