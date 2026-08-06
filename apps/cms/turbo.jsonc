@@ -3,6 +3,7 @@
 	"extends": ["//"],
 	"tasks": {
 		"payload:migrate": {
+			"env": ["PAYLOAD_SECRET", "DATABASE_*", "NEON_*", "PG*", "POSTGRES_*"],
 			"cache": false,
 			"persistent": false
 		},
