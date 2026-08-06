@@ -1,9 +1,11 @@
 {
 	"$schema": "https://v2-9-18.turborepo.dev/schema.json",
-	"extends": [
-		"//"
-	],
+	"extends": ["//"],
 	"tasks": {
+		"payload:migrate": {
+			"cache": false,
+			"persistent": false
+		},
 		"build": {
 			"env": [
 				"NEXT_PUBLIC_SERVER_URL",
@@ -13,27 +15,16 @@
 				"NEON_*",
 				"PG*",
 				"POSTGRES_*"
-			]
+			],
+			"dependsOn": ["payload:migrate"]
 		},
 		"typegen": {
-			"inputs": [
-				"src/**/*.ts",
-				"src/**/*.tsx",
-				"next.config.ts"
-			],
-			"outputs": [
-				".next/types/**/*.ts"
-			]
+			"inputs": ["src/**/*.ts", "src/**/*.tsx", "next.config.ts"],
+			"outputs": [".next/types/**/*.ts"]
 		},
 		"check:types": {
-			"inputs": [
-				"src/**/*.ts",
-				"src/**/*.tsx",
-				"tsconfig.json"
-			],
-			"dependsOn": [
-				"typegen"
-			]
+			"inputs": ["src/**/*.ts", "src/**/*.tsx", "tsconfig.json"],
+			"dependsOn": ["typegen"]
 		}
 	}
 }
