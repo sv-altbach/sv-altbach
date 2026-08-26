@@ -4,10 +4,10 @@ SVA Masters tournament site (scoreboard, tournaments, finals, etc.). Workspace p
 
 ## Glossary
 
-| Term | Definition | Avoid |
-| --- | --- | --- |
-| Masters | The SVA Masters product/site and its workspace app (`apps/masters`). | “subdomain app”, “masters package” when you mean the deployable app |
-| Scoreboard | Masters ranking / results UI backed by tournament JSON data. | |
+| Term       | Definition                                                           | Avoid                                                               |
+| ---------- | -------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| Masters    | The SVA Masters product/site and its workspace app (`apps/masters`). | “subdomain app”, “masters package” when you mean the deployable app |
+| Scoreboard | Masters ranking / results UI backed by tournament JSON data.         |                                                                     |
 
 ## Relations
 

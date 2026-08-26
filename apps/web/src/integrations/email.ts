@@ -11,14 +11,8 @@ const EmailEntry = v.object({
 });
 
 const EmailAddresses = v.object({
-	inquiries: v.pipe(
-		EmailEntry,
-		v.description("Email to send inquiry info from"),
-	),
-	internalContact: v.pipe(
-		EmailEntry,
-		v.description("Email to send inquiries to"),
-	),
+	inquiries: v.pipe(EmailEntry, v.description("Email to send inquiry info from")),
+	internalContact: v.pipe(EmailEntry, v.description("Email to send inquiries to")),
 });
 
 export const EMAIL_ADDRESSES = v.parse(EmailAddresses, {

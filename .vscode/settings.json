@@ -1,5 +1,4 @@
 {
-	"typescript.tsdk": "node_modules\\typescript\\lib",
 	"conventionalCommits.scopes": [
 		"sva-masters",
 		"npm",
@@ -9,5 +8,12 @@
 		"seo",
 		"agents",
 		"npm/web"
-	]
+	],
+	"editor.codeActionsOnSave": {
+		"source.fixAll.oxc": "always"
+	},
+	"editor.defaultFormatter": "oxc.oxc-vscode",
+	"editor.formatOnSave": true,
+	"editor.formatOnSaveMode": "file",
+	"js/ts.tsdk.path": "node_modules\\typescript\\lib"
 }

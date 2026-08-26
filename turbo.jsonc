@@ -4,12 +4,14 @@
 		"build": {
 			"dependsOn": ["^build"],
 			"inputs": ["$TURBO_DEFAULT$", ".env*"],
-			"outputs": [".next/**", "!.next/cache/**", ".vercel/output/**"]
+			"outputs": [".next/**", "!.next/cache/**", ".vercel/output/**"],
 		},
-		"//#check:biome": { "cache": false },
+		"//#check:lint": { "cache": false },
+		"//#check:format": { "cache": false },
+		"//#check:types": { "cache": false },
 		"dev": {
 			"cache": false,
-			"persistent": true
-		}
-	}
+			"persistent": true,
+		},
+	},
 }

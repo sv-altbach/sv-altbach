@@ -4,11 +4,11 @@ Public website for SV Altbach (the club), served from the `web` workspace packag
 
 ## Glossary
 
-| Term | Definition | Avoid |
-| --- | --- | --- |
-| Club website | The regular club-facing site (teams, training, contact, etc.). Lives in `apps/web`. | “root app”, “main site” when writing tickets — prefer **Club website** |
-| Web | The npm/workspace package name for the Club website (`apps/web`). | Using “web” to mean Masters |
-| BlogPost | Club-owned teaser type for home-page news (mapped from Tumblr today; from **CMS** Posts after cutover). | Treating Tumblr or Payload types as Club’s public model |
+| Term         | Definition                                                                                              | Avoid                                                                  |
+| ------------ | ------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| Club website | The regular club-facing site (teams, training, contact, etc.). Lives in `apps/web`.                     | “root app”, “main site” when writing tickets — prefer **Club website** |
+| Web          | The npm/workspace package name for the Club website (`apps/web`).                                       | Using “web” to mean Masters                                            |
+| BlogPost     | Club-owned teaser type for home-page news (mapped from Tumblr today; from **CMS** Posts after cutover). | Treating Tumblr or Payload types as Club’s public model                |
 
 ## Relations
 

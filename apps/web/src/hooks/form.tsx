@@ -35,20 +35,12 @@ function Description(props: React.ComponentProps<typeof FieldDescription>) {
 	return <FieldDescription {...props} />;
 }
 
-function ErrorMessage({
-	className,
-	errors,
-	...props
-}: React.ComponentProps<typeof FieldError>) {
+function ErrorMessage({ className, ...props }: React.ComponentProps<typeof FieldError>) {
 	const field = useFieldContext<unknown>();
 	const isValid = field.state.meta.isValid;
 	const fieldErrors = field.state.meta.errors ?? [];
 
-	return (
-		!isValid && (
-			<FieldError {...props} className={className} errors={fieldErrors} />
-		)
-	);
+	return !isValid && <FieldError {...props} className={className} errors={fieldErrors} />;
 }
 
 function FieldInput({ ...props }: React.ComponentProps<typeof Input>) {
@@ -81,19 +73,18 @@ function FieldTextarea(props: React.ComponentProps<typeof Textarea>) {
 	);
 }
 
-export const { useAppForm, useTypedAppFormContext, withFieldGroup, withForm } =
-	createFormHook({
-		fieldContext,
-		fieldComponents: {
-			Root,
-			Group,
-			Label,
-			Content,
-			Description,
-			Error: ErrorMessage,
-			Input: FieldInput,
-			Textarea: FieldTextarea,
-		},
-		formContext,
-		formComponents: {},
-	});
+export const { useAppForm, useTypedAppFormContext, withFieldGroup, withForm } = createFormHook({
+	fieldContext,
+	fieldComponents: {
+		Root,
+		Group,
+		Label,
+		Content,
+		Description,
+		Error: ErrorMessage,
+		Input: FieldInput,
+		Textarea: FieldTextarea,
+	},
+	formContext,
+	formComponents: {},
+});

@@ -15,9 +15,7 @@ export default function Final2026() {
 					</Heading>
 				</header>
 
-				<main className="my-10">
-					Ergebnisse werden in Kürze veröffentlicht.
-				</main>
+				<main className="my-10">Ergebnisse werden in Kürze veröffentlicht.</main>
 			</Container>
 		</section>
 	);

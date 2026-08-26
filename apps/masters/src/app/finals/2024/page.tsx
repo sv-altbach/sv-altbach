@@ -1,11 +1,4 @@
-import {
-	Button,
-	Container,
-	Heading,
-	Table as RadixTable,
-	Table,
-	Text,
-} from "@radix-ui/themes";
+import { Button, Container, Heading, Table as RadixTable, Table, Text } from "@radix-ui/themes";
 import { cn } from "@sv-altbach/ui/lib/utils";
 import Link from "next/link";
 import { Fragment } from "react";
@@ -113,7 +106,9 @@ const Final2024 = () => {
 											<Table.Cell justify="center">{player.wins}</Table.Cell>
 											<Table.Cell justify="center">{player.remis}</Table.Cell>
 											<Table.Cell justify="center">{player.lost}</Table.Cell>
-											<Table.Cell justify="center">{player.points}</Table.Cell>
+											<Table.Cell justify="center">
+												{player.points}
+											</Table.Cell>
 											<Table.Cell justify="center">
 												{player.buchholz}
 											</Table.Cell>

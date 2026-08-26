@@ -1,6 +1,6 @@
 {
 	"recommendations": [
-		"biomejs.biome",
+		"oxc.oxc-vscode",
 		"oven.bun-vscode",
 		"usernamehw.errorlens",
 		"github.vscode-github-actions",

@@ -1,3 +1,4 @@
+/* oxlint-disable jsx-a11y/prefer-tag-over-role -- SVG spinner; role=status is the live region, not <output> */
 import { cn } from "@sv-altbach/ui/lib/utils";
 import { IconLoader } from "@tabler/icons-react";
 

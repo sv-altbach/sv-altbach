@@ -1,11 +1,11 @@
 # Context map
 
-| Context | Path | Notes |
-| --- | --- | --- |
-| Club website | [`apps/web/CONTEXT.md`](apps/web/CONTEXT.md) | Public SV Altbach club site. TanStack Start (Vite 8 + Nitro) in `apps/web`. |
-| Masters | [`apps/masters/CONTEXT.md`](apps/masters/CONTEXT.md) | SVA Masters tournament site. Extracted to `apps/masters`; keep stack and product behavior stable. |
-| CMS | [`apps/cms/CONTEXT.md`](apps/cms/CONTEXT.md) | Headless Payload CMS (Next) in `apps/cms`. Admin + API only; Club consumes posts over HTTP. See ADR-0004. |
-| Design system | [`packages/ui/CONTEXT.md`](packages/ui/CONTEXT.md) | Shared `@sv-altbach/ui` shadcn package. Primitives + base CSS; per-app theme tokens stay in each app. |
+| Context       | Path                                                 | Notes                                                                                                     |
+| ------------- | ---------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| Club website  | [`apps/web/CONTEXT.md`](apps/web/CONTEXT.md)         | Public SV Altbach club site. TanStack Start (Vite 8 + Nitro) in `apps/web`.                               |
+| Masters       | [`apps/masters/CONTEXT.md`](apps/masters/CONTEXT.md) | SVA Masters tournament site. Extracted to `apps/masters`; keep stack and product behavior stable.         |
+| CMS           | [`apps/cms/CONTEXT.md`](apps/cms/CONTEXT.md)         | Headless Payload CMS (Next) in `apps/cms`. Admin + API only; Club consumes posts over HTTP. See ADR-0004. |
+| Design system | [`packages/ui/CONTEXT.md`](packages/ui/CONTEXT.md)   | Shared `@sv-altbach/ui` shadcn package. Primitives + base CSS; per-app theme tokens stay in each app.     |
 
 ## System-wide decisions
 

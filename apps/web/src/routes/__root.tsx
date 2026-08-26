@@ -1,13 +1,8 @@
-/** biome-ignore-all lint/style/noHeadElement: Not a NextJS app */
+/* oxlint-disable nextjs/no-head-element -- Not a Next.js app */
 
 import { TanStackDevtools } from "@tanstack/react-devtools";
 import { formDevtoolsPlugin } from "@tanstack/react-form-devtools";
-import {
-	createRootRoute,
-	HeadContent,
-	Outlet,
-	Scripts,
-} from "@tanstack/react-router";
+import { createRootRoute, HeadContent, Outlet, Scripts } from "@tanstack/react-router";
 import { RootFooter } from "@/components/footer";
 import { Toaster } from "@/components/sonner";
 import { ThemeProvider } from "@/components/theme-provider";

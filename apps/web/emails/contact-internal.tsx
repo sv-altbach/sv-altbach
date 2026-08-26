@@ -20,12 +20,7 @@ export type ContactInternalEmailProps = {
 };
 
 /** Staff notification for a new contact form submission (German copy). */
-function ContactInternalEmail({
-	name,
-	email,
-	subject,
-	message,
-}: ContactInternalEmailProps) {
+function ContactInternalEmail({ name, email, subject, message }: ContactInternalEmailProps) {
 	return (
 		<Html lang="de">
 			<Tailwind
@@ -44,7 +39,7 @@ function ContactInternalEmail({
 				<Preview>Neue Kontaktanfrage: {subject}</Preview>
 				<Body className="m-0 bg-slate-100 py-8 font-sans text-slate-800">
 					<Container className="mx-auto max-w-xl rounded-lg bg-white px-6 py-8 shadow-sm">
-						<Heading className="m-0 font-semibold text-slate-900 text-xl">
+						<Heading className="m-0 text-xl font-semibold text-slate-900">
 							Neue Kontaktanfrage
 						</Heading>
 						<Text className="mt-4 text-base text-slate-700">
@@ -52,18 +47,16 @@ function ContactInternalEmail({
 						</Text>
 						<Hr className="my-6 border-slate-200" />
 						<Section>
-							<Text className="m-0 font-medium text-slate-500 text-sm">
-								Name
-							</Text>
+							<Text className="m-0 text-sm font-medium text-slate-500">Name</Text>
 							<Text className="mt-1 text-base text-slate-800">{name}</Text>
-							<Text className="m-0 mt-4 font-medium text-slate-500 text-sm">
+							<Text className="m-0 mt-4 text-sm font-medium text-slate-500">
 								E-Mail
 							</Text>
 							<Text className="mt-1 text-base text-slate-800">{email}</Text>
-							<Text className="m-0 mt-4 font-medium text-slate-500 text-sm">
+							<Text className="m-0 mt-4 text-sm font-medium text-slate-500">
 								Nachricht
 							</Text>
-							<Text className="mt-1 whitespace-pre-wrap text-base text-slate-800">
+							<Text className="mt-1 text-base whitespace-pre-wrap text-slate-800">
 								{message}
 							</Text>
 						</Section>

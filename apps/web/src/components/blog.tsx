@@ -24,7 +24,7 @@ export function BlogSection() {
 			{posts.map((post) => (
 				<Card key={post.id} className="h-full">
 					<CardHeader>
-						<p className="text-muted-foreground text-sm">
+						<p className="text-sm text-muted-foreground">
 							<time dateTime={post.publishedAt}>
 								{publishedAtFormatter.format(new Date(post.publishedAt))}
 							</time>
@@ -39,7 +39,7 @@ export function BlogSection() {
 							href={post.url}
 							target="_blank"
 							rel="noopener noreferrer"
-							className="font-medium text-primary text-sm hover:underline"
+							className="text-sm font-medium text-primary hover:underline"
 						>
 							Zum Beitrag
 						</a>
@@ -48,7 +48,7 @@ export function BlogSection() {
 			))}
 		</div>
 	) : (
-		<div className="text-balance rounded-xl border border-dashed p-6 text-center text-muted-foreground">
+		<div className="rounded-xl border border-dashed p-6 text-center text-balance text-muted-foreground">
 			<p className="mb-2">Der Blog ist aktuell nicht erreichbar.</p>
 			<a
 				href={TUMBLR_BLOG_URL}

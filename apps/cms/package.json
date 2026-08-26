@@ -2,8 +2,8 @@
 	"name": "cms",
 	"version": "0.1.0",
 	"private": true,
-	"type": "module",
 	"description": "SV Altbach headless CMS (Payload admin + API)",
+	"type": "module",
 	"scripts": {
 		"dev": "next dev -p 3003",
 		"build": "next build",

@@ -6,27 +6,20 @@ import {
 	CardHeader,
 	CardTitle,
 } from "@sv-altbach/ui/components/card";
-import {
-	IconHourglass,
-	IconId,
-	IconMapPin,
-	IconQuestionMark,
-} from "@tabler/icons-react";
+import { IconHourglass, IconId, IconMapPin, IconQuestionMark } from "@tabler/icons-react";
 
 const infoItems = [
 	{
 		icon: IconId,
 		title: "Wer",
-		description:
-			"Der Verein hat ca. 50 Mitglieder und zwei aktive Mannschaften.",
+		description: "Der Verein hat ca. 50 Mitglieder und zwei aktive Mannschaften.",
 	},
 	{
 		icon: IconMapPin,
 		title: "Wo",
 		description: (
 			<>
-				Im Vereinszimmer der Sporthalle Esslinger Straße 90 neben dem
-				Jugendhaus.{" "}
+				Im Vereinszimmer der Sporthalle Esslinger Straße 90 neben dem Jugendhaus.{" "}
 				<a
 					href="https://goo.gl/maps/q8oHoAwkTJVwCZf49"
 					target="_blank"
@@ -63,18 +56,18 @@ export function BasicInfoSection() {
 
 	return (
 		<div>
-			<p className="my-5 text-balance text-center text-muted-foreground italic">
-				Seit 1969 agiert der Schachverein Altbach als selbstständiger Verein.
-				Davor wurde schon 15 Jahre als Schachabteilung des VdK gespielt, seit
-				2008 sind wir ein eingetragener Verein. Neben der Nachwuchsförderung
-				haben sich auch unsere Turnier-Veranstaltungen etabliert.
+			<p className="my-5 text-center text-balance text-muted-foreground italic">
+				Seit 1969 agiert der Schachverein Altbach als selbstständiger Verein. Davor wurde
+				schon 15 Jahre als Schachabteilung des VdK gespielt, seit 2008 sind wir ein
+				eingetragener Verein. Neben der Nachwuchsförderung haben sich auch unsere
+				Turnier-Veranstaltungen etabliert.
 			</p>
 
 			<div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4">
 				{infoItems.map((item) => {
 					const Icon = item.icon;
 					return (
-						<Card key={item.title} className="text-balance text-center">
+						<Card key={item.title} className="text-center text-balance">
 							<CardHeader>
 								<div className="mb-3 flex justify-center">
 									<Icon className="h-8 w-8 text-primary" />
@@ -91,7 +84,7 @@ export function BasicInfoSection() {
 				})}
 			</div>
 
-			<div className="mt-8 text-balance text-center">
+			<div className="mt-8 text-center text-balance">
 				<Button className="uppercase" onClick={handleScroll}>
 					Schreib uns
 				</Button>

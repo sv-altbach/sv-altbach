@@ -24,8 +24,7 @@ function EntryFeeMarkup({ tournament }: Props) {
 	return (
 		<>
 			<Text as="p">
-				Voranmeldung:{" "}
-				<strong>{tournament.entryFee?.preRegistration} &euro;</strong>
+				Voranmeldung: <strong>{tournament.entryFee?.preRegistration} &euro;</strong>
 			</Text>
 			<Text as="p">
 				Anmeldungen am Turniertag vor Ort:{" "}

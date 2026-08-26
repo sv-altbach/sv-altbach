@@ -76,8 +76,10 @@ export const tournamentData = [
 		evaluation: "FIDE Rapid Elo",
 		entryFee: null,
 		venue: "Stadthalle Plochingen, Hermannstraße 25, 73207 Plochingen",
-		announcementPath: "https://schachfreunde-plochingen.de/veranstaltungshinweise/26-plochinger-marquardt-schnellschachturnier-2026/",
-		listOfAttendeesUrl: "https://openpairing.org/public/tournaments/26-plochinger-marquardt-schnellschachturnier-4-sva-masters-2026-27/players",
+		announcementPath:
+			"https://schachfreunde-plochingen.de/veranstaltungshinweise/26-plochinger-marquardt-schnellschachturnier-2026/",
+		listOfAttendeesUrl:
+			"https://openpairing.org/public/tournaments/26-plochinger-marquardt-schnellschachturnier-4-sva-masters-2026-27/players",
 		generalInformation:
 			"Dieses Turnier wird vom Schachverein Plochingen ausgetragen und ist Teil der SVA Masters Serie.",
 	},
@@ -93,13 +95,14 @@ export const tournamentData = [
 		pointRule: "3-point",
 		evaluation: "Keine Elo-Auswertung",
 		entryFee: {
-      preRegistration: "15",
-      normalRegistration: "20",
-    },
+			preRegistration: "15",
+			normalRegistration: "20",
+		},
 		venue: "TaPlo (Tanzschule Plochingen, 2. OG), Esslingerstr. 14, 73207 Plochingen",
 		announcementPath: null,
 		listOfAttendeesUrl: null,
-		generalInformation: "Wir bieten Pizza und Getränke an. Während des gesamten Turniers läuft Hintergrundmusik. Auch während den Partien!",
+		generalInformation:
+			"Wir bieten Pizza und Getränke an. Während des gesamten Turniers läuft Hintergrundmusik. Auch während den Partien!",
 	},
 	{
 		name: "SVA Masters Finale",

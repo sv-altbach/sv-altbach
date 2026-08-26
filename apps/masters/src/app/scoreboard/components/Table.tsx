@@ -7,8 +7,8 @@ export function Table() {
 		<RadixTable.Root variant="surface">
 			<caption className="sr-only">
 				Aktuelle Spieler-Ranglisten-Tabelle der SVA Masters. Nach allen
-				Qualifikations-Turnieren, werden die besten 16 Spieler, die an
-				mindestens drei Turnier mitgewirkt haben, für das Finale nominiert.
+				Qualifikations-Turnieren, werden die besten 16 Spieler, die an mindestens drei
+				Turnier mitgewirkt haben, für das Finale nominiert.
 			</caption>
 
 			<TableHead />

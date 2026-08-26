@@ -3,7 +3,7 @@ export function ImpressumPage() {
 		<section className="py-20">
 			<div className="container mx-auto px-4">
 				<div className="mx-auto max-w-4xl">
-					<h1 className="mb-8 font-bold text-3xl md:text-4xl">Impressum:</h1>
+					<h1 className="mb-8 text-3xl font-bold md:text-4xl">Impressum:</h1>
 
 					<address className="mb-4 not-italic">
 						Schachverein Altbach e.V.
@@ -14,12 +14,11 @@ export function ImpressumPage() {
 					</address>
 
 					<p className="mb-1">
-						<span className="font-semibold text-primary">Telefon:</span> +49 (0)
-						1520 9186437
+						<span className="font-semibold text-primary">Telefon:</span> +49 (0) 1520
+						9186437
 					</p>
 					<p className="mb-6">
-						<span className="font-semibold text-primary">E-Mail:</span>{" "}
-						am2702@aol.com
+						<span className="font-semibold text-primary">E-Mail:</span> am2702@aol.com
 					</p>
 
 					<p className="mb-2 font-bold">Vertreten durch:</p>
@@ -33,8 +32,8 @@ export function ImpressumPage() {
 							0176-63893890, deniz.gazitepe (ät) gmail.com
 						</li>
 						<li>
-							Finanzverwalter: Peter Wolf, Hofstraße 45, 73776 Altbach,
-							0177-8806113, peter.wolf (ät) onlinehome.de
+							Finanzverwalter: Peter Wolf, Hofstraße 45, 73776 Altbach, 0177-8806113,
+							peter.wolf (ät) onlinehome.de
 						</li>
 					</ul>
 

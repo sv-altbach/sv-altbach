@@ -29,44 +29,35 @@ function normalizeWhitespace(value: string) {
 }
 
 function decodeHtmlEntities(value: string) {
-	return value.replace(
-		/&(?:amp;|lt;|gt;|quot;|#39;|#\d+;|#x[\da-f]+;)/gi,
-		(entity) => {
-			const normalizedEntity = entity.toLowerCase();
+	return value.replace(/&(?:amp;|lt;|gt;|quot;|#39;|#\d+;|#x[\da-f]+;)/gi, (entity) => {
+		const normalizedEntity = entity.toLowerCase();
 
-			switch (normalizedEntity) {
-				case "&amp;":
-					return "&";
-				case "&lt;":
-					return "<";
-				case "&gt;":
-					return ">";
-				case "&quot;":
-					return '"';
-				case "&#39;":
-					return "'";
-				default: {
-					if (normalizedEntity.startsWith("&#x")) {
-						const parsedCodePoint = Number.parseInt(
-							normalizedEntity.slice(3, -1),
-							16,
-						);
-						return Number.isNaN(parsedCodePoint)
-							? entity
-							: String.fromCodePoint(parsedCodePoint);
-					}
-
-					const parsedCodePoint = Number.parseInt(
-						normalizedEntity.slice(2, -1),
-						10,
-					);
+		switch (normalizedEntity) {
+			case "&amp;":
+				return "&";
+			case "&lt;":
+				return "<";
+			case "&gt;":
+				return ">";
+			case "&quot;":
+				return '"';
+			case "&#39;":
+				return "'";
+			default: {
+				if (normalizedEntity.startsWith("&#x")) {
+					const parsedCodePoint = Number.parseInt(normalizedEntity.slice(3, -1), 16);
 					return Number.isNaN(parsedCodePoint)
 						? entity
 						: String.fromCodePoint(parsedCodePoint);
 				}
+
+				const parsedCodePoint = Number.parseInt(normalizedEntity.slice(2, -1), 10);
+				return Number.isNaN(parsedCodePoint)
+					? entity
+					: String.fromCodePoint(parsedCodePoint);
 			}
-		},
-	);
+		}
+	});
 }
 
 function stripHtml(value: string) {
@@ -89,9 +80,7 @@ function truncate(value: string, maxLength = 180) {
 }
 
 function extractRssTagValue(block: string, tag: string) {
-	const match = block.match(
-		new RegExp(`<${tag}(?:\\s[^>]*)?>([\\s\\S]*?)<\\/${tag}>`, "i"),
-	);
+	const match = block.match(new RegExp(`<${tag}(?:\\s[^>]*)?>([\\s\\S]*?)<\\/${tag}>`, "i"));
 
 	return match?.[1]?.trim();
 }
@@ -159,9 +148,7 @@ export async function getLatestBlogPosts() {
 		});
 
 		if (!response.ok) {
-			throw new Error(
-				`Tumblr feed request failed with status ${response.status}`,
-			);
+			throw new Error(`Tumblr feed request failed with status ${response.status}`);
 		}
 
 		const payload = await response.text();

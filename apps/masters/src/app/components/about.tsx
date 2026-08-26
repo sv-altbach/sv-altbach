@@ -1,23 +1,10 @@
-import {
-	Box,
-	Button,
-	Flex,
-	Grid,
-	Heading,
-	Link as RadixLink,
-	Text,
-} from "@radix-ui/themes";
+import { Box, Button, Flex, Grid, Heading, Link as RadixLink, Text } from "@radix-ui/themes";
 import Link from "next/link";
 import { News } from "@/app/components/news";
 
 export function About() {
 	return (
-		<Flex
-			asChild
-			direction={{ initial: "column", md: "row" }}
-			gap="8"
-			justify="between"
-		>
+		<Flex asChild direction={{ initial: "column", md: "row" }} gap="8" justify="between">
 			<section>
 				<Box>
 					<Heading as="h2" size="8" mb="2">
@@ -35,9 +22,9 @@ export function About() {
 					<Box my="5">
 						<News title="Neues Punktesystem">
 							<Text as="p">
-								Um Turniere fairer zu gestalten, führen wir ein neues
-								Punktesystem für die dritte Saison ein. Alle weiteren
-								informationen findest du im Bereich{" "}
+								Um Turniere fairer zu gestalten, führen wir ein neues Punktesystem
+								für die dritte Saison ein. Alle weiteren informationen findest du im
+								Bereich{" "}
 								<RadixLink href="/new-scoring-system" underline="always">
 									Neues Punktesystem
 								</RadixLink>
@@ -59,8 +46,8 @@ export function About() {
 					<Box my="5">
 						<News title="Kooperationen mit anderen Vereinen">
 							<Text as="p">
-								Auch in Zukunft werden einige Turniere der SVA Masters von
-								anderen Vereinen ausgetragen.
+								Auch in Zukunft werden einige Turniere der SVA Masters von anderen
+								Vereinen ausgetragen.
 							</Text>
 						</News>
 					</Box>
@@ -96,11 +83,7 @@ export function About() {
 							aria-label="Ergebnisse 1. Saison in neuem Tab öffnen"
 							asChild
 						>
-							<Link
-								href="/finals/2024"
-								target="_blank"
-								rel="noreferrer noopener"
-							>
+							<Link href="/finals/2024" target="_blank" rel="noreferrer noopener">
 								Ergebnisse 1. Saison
 							</Link>
 						</Button>
@@ -131,11 +114,7 @@ export function About() {
 							aria-label="Ergebnisse 2. Saison in neuem Tab öffnen"
 							asChild
 						>
-							<Link
-								href="/finals/2026"
-								target="_blank"
-								rel="noreferrer noopener"
-							>
+							<Link href="/finals/2026" target="_blank" rel="noreferrer noopener">
 								Ergebnisse 2. Saison
 							</Link>
 						</Button>

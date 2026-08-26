@@ -12,13 +12,11 @@ const ScoreboardPage = () => {
 				<Container>
 					<header>
 						<Button
-							render={<Link href="/" />}
+							render={<Link href="/">Zurück</Link>}
 							nativeButton={false}
 							variant="soft"
 							className="mb-2"
-						>
-							Zurück
-						</Button>
+						/>
 
 						<Heading as="h1" size="8" mb="4">
 							Scoreboard SVA Masters
@@ -29,14 +27,13 @@ const ScoreboardPage = () => {
 						</Text>
 
 						<Text as="p" aria-hidden="true">
-							Nach allen Qualifikations-Turnieren, werden die besten 16 Spieler,
-							die an mindestens drei Turnieren teilgenommen haben, für das
-							Finale nominiert.
+							Nach allen Qualifikations-Turnieren, werden die besten 16 Spieler, die
+							an mindestens drei Turnieren teilgenommen haben, für das Finale
+							nominiert.
 						</Text>
 
 						<Text as="p" aria-hidden="true">
-							Spieler, die neben ihrem Namen einen doppelten Pfeil nach oben
-							haben
+							Spieler, die neben ihrem Namen einen doppelten Pfeil nach oben haben
 							<IconArrowBadgeUp
 								className="inline text-lg text-red-600"
 								aria-hidden="true"
@@ -46,10 +43,7 @@ const ScoreboardPage = () => {
 
 						<Text as="p" aria-hidden="true">
 							Spieler, die neben ihrem Namen ein
-							<IconX
-								className="inline text-lg text-red-600"
-								aria-hidden="true"
-							/>
+							<IconX className="inline text-lg text-red-600" aria-hidden="true" />
 							haben, sind nicht für das Finale qualifiziert.
 						</Text>
 					</header>

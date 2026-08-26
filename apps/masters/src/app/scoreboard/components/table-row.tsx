@@ -31,27 +31,13 @@ export function TableRow({ playerRowData }: Props) {
 			<Table.Cell minWidth="250px" className="flex items-center">
 				{getPlayerName(player.name)} {displayNotQualifiedMarker(marker)}
 			</Table.Cell>
-			<Table.Cell justify="center">
-				{prettyNumbers(player.tournament1)}
-			</Table.Cell>
-			<Table.Cell justify="center">
-				{prettyNumbers(player.tournament2)}
-			</Table.Cell>
-			<Table.Cell justify="center">
-				{prettyNumbers(player.tournament3)}
-			</Table.Cell>
-			<Table.Cell justify="center">
-				{prettyNumbers(player.tournament4)}
-			</Table.Cell>
-			<Table.Cell justify="center">
-				{prettyNumbers(player.tournament5)}
-			</Table.Cell>
-			<Table.Cell justify="center">
-				{prettyNumbers(player.averageRank)}
-			</Table.Cell>
-			<Table.Cell justify="center">
-				{prettyNumbers(player.tournamentPoints)}
-			</Table.Cell>
+			<Table.Cell justify="center">{prettyNumbers(player.tournament1)}</Table.Cell>
+			<Table.Cell justify="center">{prettyNumbers(player.tournament2)}</Table.Cell>
+			<Table.Cell justify="center">{prettyNumbers(player.tournament3)}</Table.Cell>
+			<Table.Cell justify="center">{prettyNumbers(player.tournament4)}</Table.Cell>
+			<Table.Cell justify="center">{prettyNumbers(player.tournament5)}</Table.Cell>
+			<Table.Cell justify="center">{prettyNumbers(player.averageRank)}</Table.Cell>
+			<Table.Cell justify="center">{prettyNumbers(player.tournamentPoints)}</Table.Cell>
 		</Table.Row>
 	);
 }
@@ -80,10 +66,7 @@ function displayNotQualifiedMarker(marker: PlayerMarker) {
 				}
 			>
 				{marker === "successor" ? (
-					<IconArrowBadgeUp
-						className="text-3xl text-red-600"
-						aria-hidden="true"
-					/>
+					<IconArrowBadgeUp className="text-3xl text-red-600" aria-hidden="true" />
 				) : (
 					<IconX className="text-3xl text-red-600" aria-hidden="true" />
 				)}
@@ -96,8 +79,8 @@ function displayNotQualifiedMarker(marker: PlayerMarker) {
 
 				{marker === "not-qualified" && (
 					<p>
-						Nicht für das Finale qualifiziert. Mindestvoraussetzung sind drei
-						gewertete Turniere.
+						Nicht für das Finale qualifiziert. Mindestvoraussetzung sind drei gewertete
+						Turniere.
 					</p>
 				)}
 			</div>

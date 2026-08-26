@@ -13,10 +13,9 @@ export default function NewScoringSystemPage() {
 					Neues Punktesystem
 				</Heading>
 				<Text as="p">
-					Die SVA Masters bestehen aus mehreren eigenständigen Schachturnieren,
-					die zu einer gemeinsamen Gesamtwertung zusammengefasst werden. Ziel
-					ist es, sowohl Einzelleistungen als auch konstante Teilnahme über die
-					Serie hinweg zu belohnen.
+					Die SVA Masters bestehen aus mehreren eigenständigen Schachturnieren, die zu
+					einer gemeinsamen Gesamtwertung zusammengefasst werden. Ziel ist es, sowohl
+					Einzelleistungen als auch konstante Teilnahme über die Serie hinweg zu belohnen.
 				</Text>
 			</Box>
 
@@ -25,16 +24,11 @@ export default function NewScoringSystemPage() {
 					Punktevergabe pro Turnier
 				</Heading>
 				<Text as="p">
-					Die Masters-Punkte eines Spielers ergeben sich aus seiner Leistung im
-					jeweiligen Turnier.
+					Die Masters-Punkte eines Spielers ergeben sich aus seiner Leistung im jeweiligen
+					Turnier.
 				</Text>
 
-				<Heading
-					as="h3"
-					size={{ initial: "3", md: "4", lg: "5" }}
-					mt="3"
-					mb="2"
-				>
+				<Heading as="h3" size={{ initial: "3", md: "4", lg: "5" }} mt="3" mb="2">
 					Formel
 				</Heading>
 				<Text as="p">
@@ -44,18 +38,13 @@ export default function NewScoringSystemPage() {
 					= 100 × (erzielte Punkte / maximal erreichbare Punkte) × Turnierfaktor
 				</Text>
 
-				<Heading
-					as="h3"
-					size={{ initial: "3", md: "4", lg: "5" }}
-					mt="3"
-					mb="2"
-				>
+				<Heading as="h3" size={{ initial: "3", md: "4", lg: "5" }} mt="3" mb="2">
 					Erklärung
 				</Heading>
 				<ul className="list-disc pl-5">
 					<li>
-						<span className="font-bold text-neutral-700">Erzielte Punkte</span>{" "}
-						= die im Turnier erreichten Punkte
+						<span className="font-bold text-neutral-700">Erzielte Punkte</span> = die im
+						Turnier erreichten Punkte
 					</li>
 					<li>
 						<span className="font-bold text-neutral-700">
@@ -64,8 +53,8 @@ export default function NewScoringSystemPage() {
 						= Anzahl der Runden × Punkte im jeweiligen Wertungssystem
 					</li>
 					<li>
-						<span className="font-bold text-neutral-700">100</span> = sorgt für
-						eine gut lesbare Punkteskala
+						<span className="font-bold text-neutral-700">100</span> = sorgt für eine gut
+						lesbare Punkteskala
 					</li>
 					<li>
 						<span className="font-bold text-neutral-700">Turnierfaktor</span> =
@@ -107,12 +96,7 @@ export default function NewScoringSystemPage() {
 					Für die Masters-Gesamtwertung werden nicht alle Turniere gewertet.
 				</Text>
 
-				<Heading
-					as="h3"
-					size={{ initial: "3", md: "4", lg: "5" }}
-					mt="3"
-					mb="2"
-				>
+				<Heading as="h3" size={{ initial: "3", md: "4", lg: "5" }} mt="3" mb="2">
 					Regel
 				</Heading>
 				<ul className="list-disc pl-5">
@@ -132,18 +116,11 @@ export default function NewScoringSystemPage() {
 					<li>Das schwächste Ergebnis wird gestrichen</li>
 				</ul>
 
-				<Heading
-					as="h3"
-					size={{ initial: "3", md: "4", lg: "5" }}
-					mt="3"
-					mb="2"
-				>
+				<Heading as="h3" size={{ initial: "3", md: "4", lg: "5" }} mt="3" mb="2">
 					Ziel
 				</Heading>
 				<ul className="list-disc pl-5">
-					<li>
-						Ein einzelnes Top-Ergebnis entscheidet nicht die gesamte Serie
-					</li>
+					<li>Ein einzelnes Top-Ergebnis entscheidet nicht die gesamte Serie</li>
 					<li>Schwächere Turniere fallen weniger stark ins Gewicht</li>
 					<li>Mehrere Teilnahmen werden belohnt</li>
 				</ul>
@@ -172,9 +149,7 @@ export default function NewScoringSystemPage() {
 					Finale
 				</Heading>
 				<ul className="list-disc pl-5">
-					<li>
-						Die besten Spieler der Serie treten im Finale gegeneinander an
-					</li>
+					<li>Die besten Spieler der Serie treten im Finale gegeneinander an</li>
 					<li>Im Finale werden zusätzliche Preise vergeben</li>
 				</ul>
 			</Box>

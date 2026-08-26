@@ -5,9 +5,7 @@ export function BasicInformation({ tournament }: Props) {
 	return (
 		<Table.Row>
 			<Table.RowHeaderCell>Hinweise</Table.RowHeaderCell>
-			<Table.Cell>
-				{tournament.generalInformation ?? "Keine weiteren Hinweise."}
-			</Table.Cell>
+			<Table.Cell>{tournament.generalInformation ?? "Keine weiteren Hinweise."}</Table.Cell>
 		</Table.Row>
 	);
 }

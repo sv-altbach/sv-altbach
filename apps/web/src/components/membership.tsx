@@ -48,7 +48,7 @@ export function MembershipSection() {
 					</CardHeader>
 					<CardContent className="flex flex-1 flex-col text-center">
 						<div className="mb-6">
-							<span className="font-bold text-4xl">{plan.price} €</span>
+							<span className="text-4xl font-bold">{plan.price} €</span>
 							<span className="text-muted-foreground"> / Jahr</span>
 						</div>
 						<ul className="mb-6 space-y-2 text-left">

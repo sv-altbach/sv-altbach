@@ -96,7 +96,7 @@ export function RootFooter() {
 											href={link.href}
 											target="_blank"
 											rel="noopener noreferrer"
-											className="text-muted-foreground text-sm transition-colors hover:text-primary"
+											className="text-sm text-muted-foreground transition-colors hover:text-primary"
 										>
 											{link.label}
 										</a>
@@ -153,7 +153,7 @@ export function RootFooter() {
 												href={link.href}
 												target="_blank"
 												rel="noopener noreferrer"
-												className="text-muted-foreground text-sm transition-colors hover:text-primary"
+												className="text-sm text-muted-foreground transition-colors hover:text-primary"
 											>
 												{link.label}
 											</a>
@@ -173,7 +173,7 @@ export function RootFooter() {
 											href={link.href}
 											target="_blank"
 											rel="noopener noreferrer"
-											className="text-muted-foreground text-sm transition-colors hover:text-primary"
+											className="text-sm text-muted-foreground transition-colors hover:text-primary"
 										>
 											{link.label}
 										</a>
@@ -189,7 +189,7 @@ export function RootFooter() {
 								<li>
 									<Link
 										to="/impressum"
-										className="text-muted-foreground text-sm transition-colors hover:text-primary"
+										className="text-sm text-muted-foreground transition-colors hover:text-primary"
 									>
 										Impressum
 									</Link>
@@ -197,7 +197,7 @@ export function RootFooter() {
 								<li>
 									<Link
 										to="/datenschutz"
-										className="text-muted-foreground text-sm transition-colors hover:text-primary"
+										className="text-sm text-muted-foreground transition-colors hover:text-primary"
 									>
 										Datenschutz
 									</Link>
@@ -211,9 +211,7 @@ export function RootFooter() {
 			{/* Copyright */}
 			<section className="py-4 text-white">
 				<div className="container mx-auto px-4">
-					<p className="text-sm">
-						&copy; Copyright {CURRENT_YEAR} SV Altbach e.V.
-					</p>
+					<p className="text-sm">&copy; Copyright {CURRENT_YEAR} SV Altbach e.V.</p>
 				</div>
 			</section>
 		</>

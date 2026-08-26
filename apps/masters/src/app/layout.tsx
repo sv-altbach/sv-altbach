@@ -9,8 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
 	title: "SVA Masters",
-	description:
-		"Die offizielle Turnierseite der SVA Masters des Schachverein Altbach.",
+	description: "Die offizielle Turnierseite der SVA Masters des Schachverein Altbach.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

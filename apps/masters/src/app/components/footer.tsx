@@ -1,11 +1,4 @@
-import {
-	Container,
-	Flex,
-	Heading,
-	Link,
-	Separator,
-	Text,
-} from "@radix-ui/themes";
+import { Container, Flex, Heading, Link, Separator, Text } from "@radix-ui/themes";
 
 export function Footer() {
 	return (

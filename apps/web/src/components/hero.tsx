@@ -17,11 +17,11 @@ export function HeroSection({ children }: { children?: ReactNode }) {
 				className="absolute inset-0 size-full object-cover brightness-50"
 			/>
 
-			<div className="relative z-10 flex flex-col items-center text-balance pt-16 text-center">
+			<div className="relative z-10 flex flex-col items-center pt-16 text-center text-balance">
 				<p className="mb-2 text-lg text-white/90 italic md:text-xl">
 					Willkommen in unserem Verein
 				</p>
-				<h1 className="mb-6 font-bold text-4xl text-white md:text-6xl lg:text-7xl">
+				<h1 className="mb-6 text-4xl font-bold text-white md:text-6xl lg:text-7xl">
 					Schachverein Altbach e.V.
 				</h1>
 				<Button size="xl" className="uppercase" onClick={handleScroll}>

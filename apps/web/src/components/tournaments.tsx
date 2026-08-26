@@ -53,16 +53,12 @@ const tournaments = [
 
 						<Button
 							render={
-								<a
-									href={mastersUrl}
-									target="_blank"
-									rel="noopener noreferrer"
-								/>
+								<a href={mastersUrl} target="_blank" rel="noopener noreferrer">
+									Homepage SVA Masters
+								</a>
 							}
 							nativeButton={false}
-						>
-							Homepage SVA Masters
-						</Button>
+						/>
 					</>
 				),
 			},
@@ -88,8 +84,7 @@ const tournaments = [
 			},
 			{
 				label: "Wie?",
-				value:
-					"Pokale für alle Gruppensieger, Medaillen für Platz 2 und 3, kleine Preise, mit DWZ-Auswertung",
+				value: "Pokale für alle Gruppensieger, Medaillen für Platz 2 und 3, kleine Preise, mit DWZ-Auswertung",
 			},
 			{
 				label: "Startgebühr",
@@ -100,8 +95,7 @@ const tournaments = [
 						</span>
 						<br />
 						<span>
-							<strong>18,00 €</strong> mit Voranmeldung bis 17.04.2026, 21:00
-							Uhr
+							<strong>18,00 €</strong> mit Voranmeldung bis 17.04.2026, 21:00 Uhr
 						</span>
 						<br />
 						<span>
@@ -119,12 +113,12 @@ const tournaments = [
 								href="/root/docs/Ausschreibung_KO-WAM-Altbach_2026.pdf"
 								target="_blank"
 								rel="noopener noreferrer"
-							/>
+							>
+								Ausschreibung
+							</a>
 						}
 						nativeButton={false}
-					>
-						Ausschreibung
-					</Button>
+					/>
 				),
 			},
 		],
@@ -165,12 +159,12 @@ const tournaments = [
 								href="/root/docs/AUS-Altbacher Turniere_Schachzeitung_2026.pdf"
 								target="_blank"
 								rel="noopener noreferrer"
-							/>
+							>
+								Ausschreibung
+							</a>
 						}
 						nativeButton={false}
-					>
-						Ausschreibung
-					</Button>
+					/>
 				),
 			},
 		],
@@ -183,7 +177,7 @@ export function TournamentsSection() {
 			<Accordion defaultValue={["masters"]}>
 				{tournaments.map((tournament) => (
 					<AccordionItem key={tournament.id} value={tournament.id}>
-						<AccordionTrigger className="font-semibold text-lg">
+						<AccordionTrigger className="text-lg font-semibold">
 							{tournament.title}
 						</AccordionTrigger>
 						<AccordionContent>
@@ -200,7 +194,9 @@ export function TournamentsSection() {
 									<TableBody>
 										{tournament.details.map((detail) => (
 											<TableRow key={detail.label}>
-												<TableHead className="w-32">{detail.label}</TableHead>
+												<TableHead className="w-32">
+													{detail.label}
+												</TableHead>
 												<TableCell>{detail.value}</TableCell>
 											</TableRow>
 										))}

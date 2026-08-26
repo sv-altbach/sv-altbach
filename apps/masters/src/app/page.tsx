@@ -9,7 +9,7 @@ import { Tournaments } from "./tournaments/Tournaments";
 
 export default function Home() {
 	return (
-		<section className="h-screen bg-center bg-cover bg-header bg-no-repeat">
+		<section className="h-screen bg-header bg-cover bg-center bg-no-repeat">
 			<Container m="0">
 				<Flex
 					className="h-screen space-y-5 p-5 text-center"

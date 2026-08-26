@@ -17,17 +17,17 @@ export function AboutUsTimeline() {
 							alt={`${event.year} - ${event.title}`}
 							width={200}
 							height={200}
-							className="h-auto w-full rounded-full border-[#e1e1e1] border-[5px]"
+							className="h-auto w-full rounded-full border-[5px] border-[#e1e1e1]"
 						/>
 					</div>
-					<div className="order-1 col-span-12 mb-5 flex flex-col justify-center sm:order-2 sm:col-span-9 md:col-span-5 group-even/item:md:order-1 group-even/item:md:col-start-1 group-even/item:md:text-right group-odd/item:md:col-start-8">
-						<h5 className="mb-1 text-balance text-center font-bold text-lg sm:text-left group-even/item:md:text-right">
+					<div className="order-1 col-span-12 mb-5 flex flex-col justify-center sm:order-2 sm:col-span-9 md:col-span-5 group-odd/item:md:col-start-8 group-even/item:md:order-1 group-even/item:md:col-start-1 group-even/item:md:text-right">
+						<h5 className="mb-1 text-center text-lg font-bold text-balance sm:text-left group-even/item:md:text-right">
 							{event.year}
 						</h5>
-						<h6 className="mb-2 text-balance text-center text-base sm:text-left group-even/item:md:text-right">
+						<h6 className="mb-2 text-center text-base text-balance sm:text-left group-even/item:md:text-right">
 							{event.title}
 						</h6>
-						<p className="text-balance text-center text-muted-foreground text-sm leading-relaxed sm:text-left group-even/item:md:text-right">
+						<p className="text-center text-sm leading-relaxed text-balance text-muted-foreground sm:text-left group-even/item:md:text-right">
 							{event.description}
 						</p>
 					</div>

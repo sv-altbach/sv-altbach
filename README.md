@@ -22,18 +22,18 @@ SV Altbach is a Bun-powered monorepo for the club website, the SVA Masters tourn
 ## Project structure
 
 - `apps/web` – Club website (TanStack Start, port 3000)
-  - `src/routes` – file-based routes (`__root`, `index`, legal/teams pages)
-  - `src/components` – Club page sections and chrome (theme, footer, contact, …)
-  - `src/data` – static Club tables/lists
-  - `emails/` – React Email templates (preview via `email-preview`; imported for Resend)
+    - `src/routes` – file-based routes (`__root`, `index`, legal/teams pages)
+    - `src/components` – Club page sections and chrome (theme, footer, contact, …)
+    - `src/data` – static Club tables/lists
+    - `emails/` – React Email templates (preview via `email-preview`; imported for Resend)
 - `apps/masters` – standalone SVA Masters Next.js app (port 3001)
-  - `/` – tournament home page
-  - `/scoreboard` – current rankings
-  - `/finals/*` – finals pages and results
+    - `/` – tournament home page
+    - `/scoreboard` – current rankings
+    - `/finals/*` – finals pages and results
 - `apps/cms` – headless Payload CMS (Next.js, port 3003)
-  - `/` – Payload admin (email/password editors)
-  - REST API under `/api/*`, GraphQL at `/graphql`
-  - Own Vercel project + Vercel Postgres + Vercel Blob (see below)
+    - `/` – Payload admin (email/password editors)
+    - REST API under `/api/*`, GraphQL at `/graphql`
+    - Own Vercel project + Vercel Postgres + Vercel Blob (see below)
 - `packages/ui` – shared Design system (`@sv-altbach/ui`): shadcn primitives, `cn`/utils, base stylesheet
 - `packages/typescript-config` – shared TypeScript configuration (`tsconfig.nextjs.json`, `tsconfig.vite.json`)
 
@@ -51,12 +51,12 @@ Env files: committed `.env` holds public/local defaults (empty keys document sec
 
 Local ports (no clashes under `turbo dev`):
 
-| App | Port | URL |
-| --- | --- | --- |
-| Club website (`apps/web`) | 3000 | `http://localhost:3000` |
+| App                          | Port | URL                     |
+| ---------------------------- | ---- | ----------------------- |
+| Club website (`apps/web`)    | 3000 | `http://localhost:3000` |
 | SVA Masters (`apps/masters`) | 3001 | `http://localhost:3001` |
-| Club email preview | 3002 | `http://localhost:3002` |
-| CMS (`apps/cms`) | 3003 | `http://localhost:3003` |
+| Club email preview           | 3002 | `http://localhost:3002` |
+| CMS (`apps/cms`)             | 3003 | `http://localhost:3003` |
 
 Club → Masters links use `VITE_MASTERS_URL` in `apps/web` (default `http://localhost:3001`).
 
@@ -95,7 +95,7 @@ From the repository root:
 
 ```bash
 bun run dev         # start all workspace dev tasks via Turborepo
-bun run check       # biome + TypeScript checks across the workspace
+bun run check       # oxlint + oxfmt + TypeScript checks across the workspace
 bun run build       # production build for workspace packages
 ```
 
@@ -135,12 +135,12 @@ bun run check:types # TypeScript type check
 
 Deploy `apps/cms` as its **own** Vercel project/origin (separate from Club and Masters):
 
-| Setting | Value |
-| --- | --- |
-| Root Directory | `apps/cms` |
+| Setting         | Value                                                           |
+| --------------- | --------------------------------------------------------------- |
+| Root Directory  | `apps/cms`                                                      |
 | Install Command | `cd ../.. && bun install` (or your monorepo install equivalent) |
-| Build Command | `bun run ci` (migrate + `next build`) |
-| Framework | Next.js |
+| Build Command   | `bun run ci` (migrate + `next build`)                           |
+| Framework       | Next.js                                                         |
 
 Connect **Vercel Postgres** and **Vercel Blob** to that CMS project only. Env secrets (`POSTGRES_URL`, `PAYLOAD_SECRET`, `BLOB_READ_WRITE_TOKEN`) stay on the CMS project — Club remains DB-less. See `apps/cms/.env` and ADR-0004.
 

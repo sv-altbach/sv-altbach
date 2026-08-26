@@ -196,66 +196,62 @@ export function MannschaftenPage() {
 	return (
 		<section className="py-20">
 			<div className="container mx-auto px-4">
-				<h1 className="mb-10 text-balance text-center font-bold text-3xl md:text-4xl">
+				<h1 className="mb-10 text-center text-3xl font-bold text-balance md:text-4xl">
 					Mannschaften
 				</h1>
 				<div className="overflow-x-auto">
 					<Table>
 						<TableHeader>
 							<TableRow>
-								<TableHead className="text-balance text-center">
-									Saison
-								</TableHead>
-								<TableHead className="text-balance text-center">
+								<TableHead className="text-center text-balance">Saison</TableHead>
+								<TableHead className="text-center text-balance">
 									Landesliga
 								</TableHead>
-								<TableHead className="text-balance text-center">
+								<TableHead className="text-center text-balance">
 									Bezirksliga
 								</TableHead>
-								<TableHead className="text-balance text-center" colSpan={2}>
+								<TableHead className="text-center text-balance" colSpan={2}>
 									Kreisklasse
 								</TableHead>
-								<TableHead className="text-balance text-center" colSpan={2}>
+								<TableHead className="text-center text-balance" colSpan={2}>
 									A-Klasse
 								</TableHead>
-								<TableHead className="text-balance text-center" colSpan={2}>
+								<TableHead className="text-center text-balance" colSpan={2}>
 									B-Klasse
 								</TableHead>
-								<TableHead className="text-balance text-center" colSpan={3}>
+								<TableHead className="text-center text-balance" colSpan={3}>
 									C-Klasse
 								</TableHead>
-								<TableHead className="text-balance text-center">
-									D-Klasse
-								</TableHead>
+								<TableHead className="text-center text-balance">D-Klasse</TableHead>
 							</TableRow>
 						</TableHeader>
 						<TableBody>
 							{teamResults.map((result) => (
 								<TableRow key={result.saison}>
-									<TableCell className="text-balance text-center">
+									<TableCell className="text-center text-balance">
 										{result.saison}
 									</TableCell>
-									<TableCell className="text-balance text-center">-</TableCell>
-									<TableCell className="text-balance text-center">-</TableCell>
-									<TableCell className="text-balance text-center" colSpan={2}>
+									<TableCell className="text-center text-balance">-</TableCell>
+									<TableCell className="text-center text-balance">-</TableCell>
+									<TableCell className="text-center text-balance" colSpan={2}>
 										{result.kreisklasse || "-"}
 									</TableCell>
-									<TableCell className="text-balance text-center" colSpan={2}>
+									<TableCell className="text-center text-balance" colSpan={2}>
 										{result.aKlasse || "-"}
 									</TableCell>
-									<TableCell className="text-balance text-center" colSpan={2}>
+									<TableCell className="text-center text-balance" colSpan={2}>
 										{result.bKlasse || "-"}
 									</TableCell>
-									<TableCell className="text-balance text-center" colSpan={3}>
+									<TableCell className="text-center text-balance" colSpan={3}>
 										{result.cKlasse || "-"}
 									</TableCell>
-									<TableCell className="text-balance text-center">-</TableCell>
+									<TableCell className="text-center text-balance">-</TableCell>
 								</TableRow>
 							))}
 						</TableBody>
 					</Table>
 				</div>
-				<p className="mt-6 text-balance text-center text-muted-foreground text-sm">
+				<p className="mt-6 text-center text-sm text-balance text-muted-foreground">
 					Historische Mannschaftsergebnisse des Schachverein Altbach e.V.
 				</p>
 			</div>

@@ -79,14 +79,12 @@ export function ContactForm() {
 								<field.Description className="text-xs">
 									Sichere Verarbeitung Ihrer Daten durch E-Mail-Dienst Resend.
 									<Button
-										render={<Link to="/datenschutz" />}
+										render={<Link to="/datenschutz">Datenschutzerklärung</Link>}
 										nativeButton={false}
 										variant="link"
 										size="xs"
 										className="px-0 font-normal"
-									>
-										Datenschutzerklärung
-									</Button>
+									/>
 								</field.Description>
 							</field.Root>
 						)}
@@ -130,7 +128,7 @@ export function ContactForm() {
 				</FieldGroup>
 			</div>
 
-			<div className="mt-6 text-balance text-center">
+			<div className="mt-6 text-center text-balance">
 				<form.Subscribe selector={({ canSubmit }) => canSubmit}>
 					{(canSubmit) => (
 						<Button
@@ -144,9 +142,8 @@ export function ContactForm() {
 				</form.Subscribe>
 			</div>
 
-			<p className="mt-4 text-balance text-center text-muted-foreground text-sm">
-				Alle Felder, die mit einem Sternchen (*) markiert sind, sind
-				Pflichtfelder.
+			<p className="mt-4 text-center text-sm text-balance text-muted-foreground">
+				Alle Felder, die mit einem Sternchen (*) markiert sind, sind Pflichtfelder.
 			</p>
 		</form>
 	);

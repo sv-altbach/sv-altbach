@@ -15,9 +15,7 @@ export type ContactUserConfirmationEmailProps = {
 };
 
 /** Auto-reply to the person who submitted the contact form (German copy). */
-function ContactUserConfirmationEmail({
-	name,
-}: ContactUserConfirmationEmailProps) {
+function ContactUserConfirmationEmail({ name }: ContactUserConfirmationEmailProps) {
 	return (
 		<Html lang="de">
 			<Tailwind
@@ -36,13 +34,13 @@ function ContactUserConfirmationEmail({
 				<Preview>Vielen Dank für Ihre Kontaktanfrage</Preview>
 				<Body className="m-0 bg-slate-100 py-8 font-sans text-slate-800">
 					<Container className="mx-auto max-w-xl rounded-lg bg-white px-6 py-8 shadow-sm">
-						<Heading className="m-0 font-semibold text-slate-900 text-xl">
+						<Heading className="m-0 text-xl font-semibold text-slate-900">
 							Kontaktformular svaltbach.de
 						</Heading>
 						<Text className="mt-4 text-base text-slate-700">Hallo {name},</Text>
-						<Text className="mt-4 text-base text-slate-700 leading-6">
-							vielen Dank für Ihre Kontaktanfrage. Wir werden uns
-							schnellstmöglich um Ihre Anfrage bemühen.
+						<Text className="mt-4 text-base leading-6 text-slate-700">
+							vielen Dank für Ihre Kontaktanfrage. Wir werden uns schnellstmöglich um
+							Ihre Anfrage bemühen.
 						</Text>
 					</Container>
 				</Body>

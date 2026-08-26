@@ -4,11 +4,11 @@ Headless content layer for SV Altbach editorial content. Workspace package: `app
 
 ## Glossary
 
-| Term | Definition | Avoid |
-| --- | --- | --- |
-| CMS | The Payload app in `apps/cms`: editable content store and API for consuming apps. | Calling this “the Club website” or treating it as a page renderer |
-| Post | A news/blog entry owned by the CMS (v1 collection). Club maps API responses into its own blog teaser types. | “Tumblr post” once cutover is done — prefer **Post** for CMS-sourced content |
-| Payload admin | Payload’s built-in admin UI on the CMS origin for editors (email/password users in v1). | Embedding admin into Club or Masters |
+| Term          | Definition                                                                                                  | Avoid                                                                        |
+| ------------- | ----------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| CMS           | The Payload app in `apps/cms`: editable content store and API for consuming apps.                           | Calling this “the Club website” or treating it as a page renderer            |
+| Post          | A news/blog entry owned by the CMS (v1 collection). Club maps API responses into its own blog teaser types. | “Tumblr post” once cutover is done — prefer **Post** for CMS-sourced content |
+| Payload admin | Payload’s built-in admin UI on the CMS origin for editors (email/password users in v1).                     | Embedding admin into Club or Masters                                         |
 
 ## Relations
 

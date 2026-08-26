@@ -42,14 +42,10 @@ export function ThemeProvider({
 }: ThemeProviderProps) {
 	const hydrated = useHydrated();
 
-	const [storedTheme, setStoredTheme] = useLocalStorage<ThemeOption>(
-		storageKey,
-		defaultTheme,
-		{
-			serializer: (value) => value,
-			deserializer: parseThemeOption,
-		},
-	);
+	const [storedTheme, setStoredTheme] = useLocalStorage<ThemeOption>(storageKey, defaultTheme, {
+		serializer: (value) => value,
+		deserializer: parseThemeOption,
+	});
 
 	const prefersDark = useMediaQuery(PREFERS_DARK_MEDIA_QUERY, {
 		initializeWithValue: false,
@@ -91,13 +87,9 @@ function themeScript() {
 		const THEMES = ["light", "dark"];
 
 		const storedTheme =
-			THEME_OPTIONS.find(
-				(theme) => theme === localStorage.getItem("ui-theme"),
-			) ?? "system";
+			THEME_OPTIONS.find((theme) => theme === localStorage.getItem("ui-theme")) ?? "system";
 
-		const prefersDark = window.matchMedia(
-			"(prefers-color-scheme: dark)",
-		).matches;
+		const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 		const systemTheme = prefersDark ? "dark" : "light";
 		const themeClass = storedTheme === "system" ? systemTheme : storedTheme;
 

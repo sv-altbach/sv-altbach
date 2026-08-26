@@ -30,10 +30,7 @@ export function TableBody() {
 			})}
 
 			<Table.Row>
-				<Table.Cell
-					className="py-5 text-center font-bold uppercase"
-					colSpan={10}
-				>
+				<Table.Cell className="py-5 text-center font-bold uppercase" colSpan={10}>
 					<Flex justify="center" align="center">
 						<IconArrowBadgeUp className="text-3xl text-red-600" />
 						<Text>Für das Finale qualifiziert</Text>
@@ -46,9 +43,7 @@ export function TableBody() {
 				const playerRowData: PlayerRowData = {
 					player: player,
 					index: index + 16,
-					marker: successorPlayers.find((p) => p.id === player.id)
-						? "successor"
-						: "none",
+					marker: successorPlayers.find((p) => p.id === player.id) ? "successor" : "none",
 				};
 
 				return <TableRow key={player.id} playerRowData={playerRowData} />;

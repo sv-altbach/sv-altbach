@@ -1,8 +1,4 @@
-import type {
-	Player,
-	TournamentResult,
-	TournamentResultPlayer,
-} from "@/app/types";
+import type { Player, TournamentResult, TournamentResultPlayer } from "@/app/types";
 
 export const fillPlayerDatabase = (
 	tournamentResult: TournamentResult,
@@ -14,8 +10,10 @@ export const fillPlayerDatabase = (
 		if (playerExists) {
 			playerDatabase.forEach((p) => {
 				if (p.id === playerExists.id) {
-					p[`tournament${tournamentResult.data.tournamentNumber}`] =
-						getMastersPoints(player, tournamentResult);
+					p[`tournament${tournamentResult.data.tournamentNumber}`] = getMastersPoints(
+						player,
+						tournamentResult,
+					);
 					p.playedTournaments += 1;
 					p.tournamentPoints += getMastersPoints(player, tournamentResult);
 					p.buchholz += player.buchholz;
@@ -49,15 +47,10 @@ export const fillPlayerDatabase = (
 //
 // }
 
-function getMastersPoints(
-	player: TournamentResultPlayer,
-	tournamentResult: TournamentResult,
-) {
+function getMastersPoints(player: TournamentResultPlayer, tournamentResult: TournamentResult) {
 	const BY_100 = 100;
 	const POINT_RULE = tournamentResult.data.pointRule === "1-point" ? 1 : 3;
-	const TOURNAMENT_FACTOR = getTournamentFactor(
-		tournamentResult.data.rows.length,
-	);
+	const TOURNAMENT_FACTOR = getTournamentFactor(tournamentResult.data.rows.length);
 	return (
 		BY_100 *
 		(player.score / (tournamentResult.data.totalRounds * POINT_RULE)) *

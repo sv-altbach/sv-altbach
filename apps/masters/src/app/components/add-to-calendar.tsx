@@ -10,8 +10,8 @@ export function AddToCalendar() {
 			</Heading>
 
 			<Text as="p">
-				Verpasse keine Termine mehr und füge den SVA Masters Kalender zu deinem
-				Kalender hinzu.
+				Verpasse keine Termine mehr und füge den SVA Masters Kalender zu deinem Kalender
+				hinzu.
 			</Text>
 
 			<Box mt="2">

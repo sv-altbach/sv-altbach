@@ -21,14 +21,11 @@ export function FunktionaereDialog() {
 		<Dialog>
 			<DialogTrigger
 				render={
-					<button
-						type="button"
-						className="text-sm transition-colors hover:text-primary"
-					/>
+					<button type="button" className="text-sm transition-colors hover:text-primary">
+						Funktionäre
+					</button>
 				}
-			>
-				Funktionäre
-			</DialogTrigger>
+			/>
 			<DialogContent className="max-h-[80vh] max-w-4xl overflow-y-auto">
 				<DialogHeader>
 					<DialogTitle>Funktionäre</DialogTitle>

@@ -71,19 +71,13 @@ const SECTIONS = [
 	},
 ];
 
-function SectionHeader({
-	heading,
-	subtitle,
-}: {
-	heading: string;
-	subtitle: string;
-}) {
+function SectionHeader({ heading, subtitle }: { heading: string; subtitle: string }) {
 	return (
 		<header>
-			<h2 className="mb-2 text-balance text-center font-bold text-3xl uppercase md:text-4xl">
+			<h2 className="mb-2 text-center text-3xl font-bold text-balance uppercase md:text-4xl">
 				{heading}
 			</h2>
-			<p className="mb-10 text-balance text-center text-muted-foreground italic">
+			<p className="mb-10 text-center text-balance text-muted-foreground italic">
 				{subtitle}
 			</p>
 		</header>

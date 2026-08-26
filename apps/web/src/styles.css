@@ -1,5 +1,6 @@
 @import "@sv-altbach/ui/globals.css";
 @import "@fontsource-variable/inter";
+@plugin "@tailwindcss/typography";
 
 @theme inline {
 	--font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
