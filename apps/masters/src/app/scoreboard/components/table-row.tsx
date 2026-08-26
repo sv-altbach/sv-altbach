@@ -28,7 +28,7 @@ export function TableRow({ playerRowData }: Props) {
 			])}
 		>
 			<Table.RowHeaderCell>{index + 1}</Table.RowHeaderCell>
-			<Table.Cell className="flex items-center">
+			<Table.Cell minWidth="250px" className="flex items-center">
 				{getPlayerName(player.name)} {displayNotQualifiedMarker(marker)}
 			</Table.Cell>
 			<Table.Cell justify="center">
