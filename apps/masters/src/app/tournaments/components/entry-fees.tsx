@@ -14,7 +14,7 @@ export function EntryFees({ tournament }: Props) {
 
 function EntryFeeMarkup({ tournament }: Props) {
 	if (!tournament.entryFee) {
-		return "Höhe des Startgelds wird bald bekanntgegeben.";
+		return "Siehe Ausschreibung";
 	}
 
 	if (tournament.type === "final") {
