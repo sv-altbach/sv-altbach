@@ -4,7 +4,7 @@
 	"private": true,
 	"scripts": {
 		"dev": "bun --bun next dev -p 3001",
-		"build": "bun --bun next build",
+		"build": "next build",
 		"start": "next start -p 3001",
 		"typegen": "next typegen",
 		"check:types": "tsc --noEmit",
