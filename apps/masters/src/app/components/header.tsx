@@ -12,7 +12,7 @@ export function Header() {
 			</Heading>
 
 			<Text as="p" size="5" className="text-white">
-				10. Juli 2026, 73776 Altbach
+				19. September 2026, 73207 Plochingen
 			</Text>
 
 			<Flex gap="4" mt="5">
