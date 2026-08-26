@@ -16,7 +16,7 @@ SV Altbach is a Bun-powered monorepo for the club website, the SVA Masters tourn
 
 ## Requirements for local development
 
-- Bun `1.3.x`
+- Bun `1.4.x`
 - Node.js `24.x` (helpful for tooling parity, but Bun is the package manager/runtime used by the project)
 
 ## Project structure
