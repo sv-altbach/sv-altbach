@@ -18,9 +18,11 @@ export interface TournamentData {
 }
 
 export function getTournamentResults(): TournamentData[] {
-	const tournamentFiles = fs.readdirSync(finals2026DatabaseDir, {
-		encoding: "utf-8",
-	});
+	const tournamentFiles = fs
+		.readdirSync(finals2026DatabaseDir, {
+			encoding: "utf-8",
+		})
+		.sort();
 
 	return tournamentFiles.map((tournamentFileName) => {
 		const tournamentFileContent = fs.readFileSync(
