@@ -1,0 +1,74 @@
+[
+	{
+		"position": 1,
+		"name": "Kölle, Tobias",
+		"wins": 3,
+		"remis": 0,
+		"lost": 0,
+		"points": 12.0,
+		"buchholz": 16.0
+	},
+	{
+		"position": 2,
+		"name": "Cofmann, Veaceslav",
+		"wins": 2,
+		"remis": 0,
+		"lost": 1,
+		"points": 9.5,
+		"buchholz": 25.0
+	},
+	{
+		"position": 3,
+		"name": "Bodriyenko, Markiyan",
+		"wins": 2,
+		"remis": 0,
+		"lost": 1,
+		"points": 8.0,
+		"buchholz": 20.5
+	},
+	{
+		"position": 4,
+		"name": "Retzlaff, Kian",
+		"wins": 2,
+		"remis": 0,
+		"lost": 1,
+		"points": 6.5,
+		"buchholz": 17.5
+	},
+	{
+		"position": 5,
+		"name": "Cilo, Selimhan",
+		"wins": 1,
+		"remis": 0,
+		"lost": 2,
+		"points": 4.0,
+		"buchholz": 20.0
+	},
+	{
+		"position": 6,
+		"name": "Schnepp, Gunnar",
+		"wins": 1,
+		"remis": 0,
+		"lost": 2,
+		"points": 4.0,
+		"buchholz": 18.5
+	},
+	{
+		"position": 7,
+		"name": "Cöllen, Florian",
+		"wins": 0,
+		"remis": 1,
+		"lost": 2,
+		"points": 4.0,
+		"buchholz": 12.0
+	},
+	{
+		"position": 8,
+		"name": "Fabry, Laurin",
+		"wins": 0,
+		"remis": 1,
+		"lost": 2,
+		"points": 3.0,
+		"buchholz": 16.0
+	}
+]

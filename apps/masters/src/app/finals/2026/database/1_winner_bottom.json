@@ -1,0 +1,65 @@
+[
+	{
+		"position": 1,
+		"name": "Wadiei, Soroush",
+		"wins": 3,
+		"remis": 0,
+		"lost": 0,
+		"points": 12.0,
+		"buchholz": 19.0
+	},
+	{
+		"position": 2,
+		"name": "Lehmann, Stefan",
+		"wins": 2,
+		"remis": 0,
+		"lost": 1,
+		"points": 9.5,
+		"buchholz": 22.5
+	},
+	{
+		"position": 3,
+		"name": "Gustain, Marc",
+		"wins": 2,
+		"remis": 0,
+		"lost": 1,
+		"points": 8.5,
+		"buchholz": 20.0
+	},
+	{
+		"position": 4,
+		"name": "Heilig, Tim Markus",
+		"wins": 2,
+		"remis": 0,
+		"lost": 1,
+		"points": 6.5,
+		"buchholz": 18.0
+	},
+	{
+		"position": 5,
+		"name": "Ruff, Marc",
+		"wins": 1,
+		"remis": 0,
+		"lost": 2,
+		"points": 5.5,
+		"buchholz": 22.0
+	},
+	{
+		"position": 6,
+		"name": "Cilo, Seyyid",
+		"wins": 1,
+		"remis": 0,
+		"lost": 2,
+		"points": 5.5,
+		"buchholz": 21.0
+	},
+	{
+		"position": 7,
+		"name": "Retzlaff, Nick",
+		"wins": 1,
+		"remis": 0,
+		"lost": 2,
+		"points": 4.5,
+		"buchholz": 21.5
+	}
+]
