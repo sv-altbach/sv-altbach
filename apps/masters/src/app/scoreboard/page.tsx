@@ -26,7 +26,7 @@ const ScoreboardPage = () => {
 							Aktuelle Ranglisten-Tabelle der SVA Masters.
 						</Text>
 
-						<Text as="p" aria-hidden="true">
+						<Text as="p" aria-hidden="true" mb="5">
 							Nach allen Qualifikations-Turnieren, werden die besten 16 Spieler, die
 							an mindestens drei Turnieren teilgenommen haben, für das Finale
 							nominiert.
@@ -45,6 +45,22 @@ const ScoreboardPage = () => {
 							Spieler, die neben ihrem Namen ein
 							<IconX className="inline text-lg text-red-600" aria-hidden="true" />
 							haben, sind nicht für das Finale qualifiziert.
+						</Text>
+
+						<Text as="p" mt="5" mb="2">
+							Jedes Turnier berechnet sich mit folgender Formel:
+						</Text>
+
+						<Text as="p">
+							<span className="rounded-lg bg-red-100 px-2 py-1 font-bold text-red-700">
+								Masters-Punkte
+							</span>{" "}
+							= 100 × (erzielte Punkte / maximal erreichbare Punkte) × Turnierfaktor
+						</Text>
+
+						<Text as="p" my="2">
+							Um die genaue Zusammensetzung der Punkte für das einzelne Turnier zu
+							sehen, klicke auf deine Punkte in der Tabelle.
 						</Text>
 					</header>
 
