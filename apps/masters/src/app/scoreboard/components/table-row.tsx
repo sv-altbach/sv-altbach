@@ -1,5 +1,4 @@
 import { Table, Tooltip } from "@radix-ui/themes";
-import { cn } from "@sv-altbach/ui/lib/utils";
 import { IconArrowBadgeUp, IconX } from "@tabler/icons-react";
 import type { Player, PlayerMarker } from "@/app/types";
 import { getPlayerName } from "@/utils/utils";
@@ -23,16 +22,12 @@ export function TableRow({ playerRowData }: Props) {
 	}
 
 	return (
-		<Table.Row
-			className={cn([
-				index === 0 && "bg-[#FFD700]",
-				index === 1 && "bg-[#C0C0C0]",
-				index === 2 && "bg-[#CD7F32]",
-			])}
-		>
+		<Table.Row>
 			<Table.RowHeaderCell>{index + 1}</Table.RowHeaderCell>
-			<Table.Cell minWidth="250px" className="flex items-center">
-				{getPlayerName(player.name)} {displayNotQualifiedMarker(marker)}
+			<Table.Cell minWidth="250px">
+				<div className="flex items-center">
+					{getPlayerName(player.name)} {displayNotQualifiedMarker(marker)}
+				</div>
 			</Table.Cell>
 
 			<Table.Cell justify="center">
