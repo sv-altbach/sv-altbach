@@ -98,10 +98,10 @@ export const tournamentData = [
 			normalRegistration: "20",
 		},
 		venue: "TaPlo (Tanzschule Plochingen, 2. OG), Esslingerstr. 14, 73207 Plochingen",
-		announcementPath: null,
+		announcementPath: "/masters/Ausschreibung_Turnier-5_SVA-Masters.pdf",
 		listOfAttendeesUrl: null,
 		generalInformation:
-			"Wir bieten Pizza und Getränke an. Während des gesamten Turniers läuft Hintergrundmusik. Auch während den Partien!",
+			"Wir bieten Pizza und Getränke an. Während des gesamten Turniers läuft (leise) Hintergrundmusik. Auch während den Partien! Ihr dürft gerne verkleidet erscheinen!",
 	},
 	{
 		name: "SVA Masters Finale",
