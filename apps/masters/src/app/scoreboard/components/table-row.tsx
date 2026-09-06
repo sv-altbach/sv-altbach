@@ -3,6 +3,9 @@ import { cn } from "@sv-altbach/ui/lib/utils";
 import { IconArrowBadgeUp, IconX } from "@tabler/icons-react";
 import type { Player, PlayerMarker } from "@/app/types";
 import { getPlayerName } from "@/utils/utils";
+import { DisplayResult } from "@/app/scoreboard/components/DisplayResult";
+import { prettyNumbers } from "@/app/scoreboard/utils/prettyNumbers";
+import { getMasterPointsCalculationDetailsText } from "@/app/scoreboard/utils/getMasterPointsCalculationDetailsText";
 
 interface Props {
 	playerRowData: {
@@ -31,23 +34,41 @@ export function TableRow({ playerRowData }: Props) {
 			<Table.Cell minWidth="250px" className="flex items-center">
 				{getPlayerName(player.name)} {displayNotQualifiedMarker(marker)}
 			</Table.Cell>
-			<Table.Cell justify="center">{prettyNumbers(player.tournament1)}</Table.Cell>
-			<Table.Cell justify="center">{prettyNumbers(player.tournament2)}</Table.Cell>
-			<Table.Cell justify="center">{prettyNumbers(player.tournament3)}</Table.Cell>
-			<Table.Cell justify="center">{prettyNumbers(player.tournament4)}</Table.Cell>
-			<Table.Cell justify="center">{prettyNumbers(player.tournament5)}</Table.Cell>
+
+			<Table.Cell justify="center">
+				<DisplayResult
+					points={player.tournament1}
+					tooltip={getMasterPointsCalculationDetailsText(player, "tournament_1")}
+				/>
+			</Table.Cell>
+			<Table.Cell justify="center">
+				<DisplayResult
+					points={player.tournament2}
+					tooltip={getMasterPointsCalculationDetailsText(player, "tournament_2")}
+				/>
+			</Table.Cell>
+			<Table.Cell justify="center">
+				<DisplayResult
+					points={player.tournament3}
+					tooltip={getMasterPointsCalculationDetailsText(player, "tournament_3")}
+				/>
+			</Table.Cell>
+			<Table.Cell justify="center">
+				<DisplayResult
+					points={player.tournament4}
+					tooltip={getMasterPointsCalculationDetailsText(player, "tournament_4")}
+				/>
+			</Table.Cell>
+			<Table.Cell justify="center">
+				<DisplayResult
+					points={player.tournament5}
+					tooltip={getMasterPointsCalculationDetailsText(player, "tournament_5")}
+				/>
+			</Table.Cell>
 			<Table.Cell justify="center">{prettyNumbers(player.averageRank)}</Table.Cell>
 			<Table.Cell justify="center">{prettyNumbers(player.tournamentPoints)}</Table.Cell>
 		</Table.Row>
 	);
-}
-
-function prettyNumbers(number: number | undefined) {
-	if (!number) {
-		number = 0;
-	}
-
-	return number.toFixed(2).toString();
 }
 
 function displayNotQualifiedMarker(marker: PlayerMarker) {
