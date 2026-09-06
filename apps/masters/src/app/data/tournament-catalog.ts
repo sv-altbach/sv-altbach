@@ -76,8 +76,7 @@ export const tournamentData = [
 		evaluation: "FIDE Rapid Elo",
 		entryFee: null,
 		venue: "Stadthalle Plochingen, Hermannstraße 25, 73207 Plochingen",
-		announcementPath:
-			"https://schachfreunde-plochingen.de/veranstaltungshinweise/26-plochinger-marquardt-schnellschachturnier-2026/",
+		announcementPath: "/masters/Ausschreibung_Turnier-4_SVA-Masters.pdf",
 		listOfAttendeesUrl:
 			"https://openpairing.org/public/tournaments/26-plochinger-marquardt-schnellschachturnier-4-sva-masters-2026-27/players",
 		generalInformation:
