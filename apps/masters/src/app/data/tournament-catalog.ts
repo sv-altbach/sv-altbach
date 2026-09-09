@@ -99,7 +99,8 @@ export const tournamentData = [
 		},
 		venue: "TaPlo (Tanzschule Plochingen, 2. OG), Esslingerstr. 14, 73207 Plochingen",
 		announcementPath: "/masters/Ausschreibung_Turnier-5_SVA-Masters.pdf",
-		listOfAttendeesUrl: null,
+		listOfAttendeesUrl:
+			"https://openpairing.org/public/tournaments/sva-masters-freestyle-rapid-2627/players",
 		generalInformation:
 			"Wir bieten Pizza und Getränke an. Während des gesamten Turniers läuft (leise) Hintergrundmusik. Auch während den Partien! Ihr dürft gerne verkleidet erscheinen!",
 	},
