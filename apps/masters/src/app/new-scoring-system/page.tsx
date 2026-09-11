@@ -62,7 +62,12 @@ export default function NewScoringSystemPage() {
 					</li>
 				</ul>
 
-				<Heading as="h3" size={{ initial: "3", md: "4", lg: "5" }} mt="3">
+				<Heading
+					as="h3"
+					size={{ initial: "3", md: "4", lg: "5" }}
+					mt="3"
+					id="tournamentFactor"
+				>
 					Turnierfaktor
 				</Heading>
 				<Text as="p" mb="2">

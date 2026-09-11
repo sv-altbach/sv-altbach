@@ -55,7 +55,13 @@ const ScoreboardPage = () => {
 							<span className="rounded-lg bg-red-100 px-2 py-1 font-bold text-red-700">
 								Masters-Punkte
 							</span>{" "}
-							= 100 × (erzielte Punkte / maximal erreichbare Punkte) × Turnierfaktor
+							= 100 × (erzielte Punkte / maximal erreichbare Punkte) ×{" "}
+							<Link
+								href="/new-scoring-system#tournamentFactor"
+								className="rounded-md p-0.5 text-red-700 underline focus:outline-2 focus:outline-red-700"
+							>
+								Turnierfaktor
+							</Link>
 						</Text>
 
 						<Text as="p" my="2">
