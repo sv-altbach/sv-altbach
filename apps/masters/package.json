@@ -26,7 +26,6 @@
 		"@types/react-dom": "catalog:",
 		"babel-plugin-react-compiler": "^1.0.0",
 		"postcss": "^8.5.26",
-		"shadcn": "^4.19.0",
 		"tailwindcss": "^4.3.3"
 	}
 }
