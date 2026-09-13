@@ -1,5 +1,5 @@
-import type { Player, TournamentResult, TournamentResultPlayer } from "@/app/types";
 import { getTournamentFactor } from "@/app/scoreboard/utils/getTournamentFactor";
+import type { Player, TournamentResult, TournamentResultPlayer } from "@/app/types";
 
 export const fillPlayerDatabase = (
 	tournamentResult: TournamentResult,

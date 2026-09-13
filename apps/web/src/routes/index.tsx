@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+
 import { AboutUsTimeline } from "@/components/about-us-timeline";
 import { BasicInfoSection } from "@/components/basic-info";
 import { BlogSection } from "@/components/blog";

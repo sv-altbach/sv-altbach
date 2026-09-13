@@ -1,8 +1,9 @@
-import { type Player, type TournamentResult } from "@/app/types";
 import fs from "node:fs";
-import { scoreboardDatabaseDir } from "@/app/paths";
 import path from "node:path";
+
+import { scoreboardDatabaseDir } from "@/app/paths";
 import { getTournamentFactor } from "@/app/scoreboard/utils/getTournamentFactor";
+import { type Player, type TournamentResult } from "@/app/types";
 
 export function getMasterPointsCalculationDetailsText(
 	player: Player,

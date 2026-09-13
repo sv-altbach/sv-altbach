@@ -1,7 +1,9 @@
 "use client";
 
 import { Box, Heading, Tabs } from "@radix-ui/themes";
+
 import { tournamentData } from "@/app/data/tournament-catalog";
+
 import { TournamentContent } from "./tournament-content";
 
 export function Tournaments() {

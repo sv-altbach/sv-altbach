@@ -1,6 +1,7 @@
 "use client";
 
 import { Button, Popover, Text } from "@radix-ui/themes";
+
 import { prettyNumbers } from "@/app/scoreboard/utils/prettyNumbers";
 
 export function DisplayResult({ points, tooltip }: Props) {

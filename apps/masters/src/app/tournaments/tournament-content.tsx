@@ -1,4 +1,5 @@
 import { Heading, Table, Tabs } from "@radix-ui/themes";
+
 import { AnnouncementPDF } from "@/app/tournaments/components/announcement-pdf";
 import { BasicInformation } from "@/app/tournaments/components/basic-information";
 import { EntryFees } from "@/app/tournaments/components/entry-fees";

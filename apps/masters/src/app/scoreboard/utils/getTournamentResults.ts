@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+
 import { scoreboardDatabaseDir } from "@/app/paths";
 import type { TournamentResult } from "@/app/types";
 

@@ -2,6 +2,7 @@
 
 import { Grid, Heading, Text } from "@radix-ui/themes";
 import Image from "next/image";
+
 import { imageLoader } from "@/utils/utils";
 
 export function Sponsoring() {

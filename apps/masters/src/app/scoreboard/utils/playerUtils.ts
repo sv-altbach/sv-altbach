@@ -1,4 +1,5 @@
 import fs from "node:fs";
+
 import { scoreboardDatabaseDir } from "@/app/paths";
 
 export function hasPlayedAllTournaments(numberOfPlayedTournaments: number) {

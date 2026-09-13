@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+
 import { finals2026DatabaseDir } from "@/app/paths";
 
 export interface TournamentResult {
