@@ -7,7 +7,12 @@
 			"packages/*"
 		],
 		"catalog": {
-			"@types/node": "^24.13.3"
+			"@types/node": "^24.13.3",
+			"@types/react": "^19.2.18",
+			"@types/react-dom": "^19.2.5",
+			"react": "^19.2.8",
+			"react-dom": "^19.2.8",
+			"next": "^16.3.3"
 		}
 	},
 	"type": "module",
