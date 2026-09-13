@@ -16,14 +16,14 @@
 		"check:types": "tsc --noEmit"
 	},
 	"dependencies": {
-		"@payloadcms/db-vercel-postgres": "3.88.0",
-		"@payloadcms/next": "3.88.0",
-		"@payloadcms/richtext-lexical": "3.88.0",
-		"@payloadcms/storage-vercel-blob": "3.88.0",
-		"@payloadcms/ui": "3.88.0",
+		"@payloadcms/db-vercel-postgres": "3.89.0",
+		"@payloadcms/next": "3.89.0",
+		"@payloadcms/richtext-lexical": "3.89.0",
+		"@payloadcms/storage-vercel-blob": "3.89.0",
+		"@payloadcms/ui": "3.89.0",
 		"graphql": "^16.12.0",
 		"next": "catalog:",
-		"payload": "3.88.0",
+		"payload": "3.89.0",
 		"react": "catalog:",
 		"react-dom": "catalog:",
 		"sharp": "0.35.4"
@@ -33,7 +33,7 @@
 		"@types/node": "catalog:",
 		"@types/react": "catalog:",
 		"@types/react-dom": "catalog:",
-		"sass": "^1.103.1",
+		"sass": "^1.104.1",
 		"typescript": "7.0.2"
 	}
 }
