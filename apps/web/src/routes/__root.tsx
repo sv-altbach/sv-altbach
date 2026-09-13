@@ -1,11 +1,11 @@
 /* oxlint-disable nextjs/no-head-element -- Not a Next.js app */
 
+import { Toaster } from "@sv-altbach/ui/components/toast";
 import { TanStackDevtools } from "@tanstack/react-devtools";
 import { formDevtoolsPlugin } from "@tanstack/react-form-devtools";
 import { createRootRoute, HeadContent, Outlet, Scripts } from "@tanstack/react-router";
 
 import { RootFooter } from "@/components/footer";
-import { Toaster } from "@/components/sonner";
 import { ThemeProvider } from "@/components/theme-provider";
 
 import styles from "@/styles.css?url";
@@ -41,7 +41,7 @@ function RootComponent() {
 				<RootFooter />
 			</div>
 
-			<Toaster position="bottom-center" closeButton richColors />
+			<Toaster />
 
 			<TanStackDevtools plugins={[formDevtoolsPlugin()]} />
 		</ThemeProvider>

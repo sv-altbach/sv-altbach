@@ -1,9 +1,9 @@
 import { Button } from "@sv-altbach/ui/components/button";
 import { FieldGroup } from "@sv-altbach/ui/components/field";
 import { Spinner } from "@sv-altbach/ui/components/spinner";
+import { toast } from "@sv-altbach/ui/components/toast";
 import { Link } from "@tanstack/react-router";
-import { useTransition } from "react";
-import { toast } from "sonner";
+import React from "react";
 
 import { useAppForm } from "@/hooks/form";
 
@@ -11,7 +11,7 @@ import { submitContactForm } from "./action";
 import { ContactFormFields, contactFormOptions } from "./options";
 
 export function ContactForm() {
-	const [isPending, startTransition] = useTransition();
+	const [isPending, startTransition] = React.useTransition();
 
 	const form = useAppForm({
 		...contactFormOptions,
@@ -22,16 +22,21 @@ export function ContactForm() {
 			startTransition(async () => {
 				try {
 					const result = await submitContactForm({ data: value });
-					if (result.status === "SUCCESS") {
-						toast.success(result.message);
-						form.reset();
-					} else if (result.status === "ERROR") {
-						toast.error(result.message);
+
+					switch (result.status) {
+						case "SUCCESS":
+							toast.add({ type: "success", title: result.message });
+							form.reset();
+							break;
+						case "ERROR":
+							toast.add({ type: "error", title: result.message });
+							break;
 					}
 				} catch {
-					toast.error(
-						"Beim Senden Ihrer Nachricht ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut.",
-					);
+					toast.add({
+						type: "error",
+						title: "Beim Senden Ihrer Nachricht ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut.",
+					});
 				}
 			});
 		},
