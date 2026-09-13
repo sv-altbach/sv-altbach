@@ -12,6 +12,7 @@ export default defineConfig({
 		"apps/cms/src/payload-types.ts",
 		"apps/cms/src/app/importMap.js",
 	],
+	sortImports: true,
 	sortTailwindcss: {
 		stylesheet: "./packages/ui/src/styles/globals.css",
 		functions: tailwindFunctions,
