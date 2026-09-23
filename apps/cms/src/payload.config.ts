@@ -8,8 +8,10 @@ import { buildConfig } from "payload";
 import sharp from "sharp";
 
 import { Media } from "./collections/Media";
+import { Posts } from "./collections/Posts";
 import { Users } from "./collections/Users";
 import { migrations } from "./migrations";
+import { publishedPostsHandler } from "./published-posts";
 
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
@@ -26,8 +28,15 @@ export default buildConfig({
 	routes: {
 		admin: "/",
 	},
-	collections: [Users, Media],
+	collections: [Users, Media, Posts],
 	editor: lexicalEditor(),
+	endpoints: [
+		{
+			path: "/published-posts",
+			method: "get",
+			handler: publishedPostsHandler,
+		},
+	],
 	secret: process.env.PAYLOAD_SECRET || "",
 	serverURL: process.env.NEXT_PUBLIC_SERVER_URL || "",
 	sharp,
