@@ -11,7 +11,7 @@ export function Tournaments() {
 				Turnierplan
 			</Heading>
 
-			<Tabs.Root defaultValue="tournament_4">
+			<Tabs.Root defaultValue="tournament_5">
 				<Tabs.List size="2">
 					{tournamentData.map((tournament, index) => (
 						<Tabs.Trigger
