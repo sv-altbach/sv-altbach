@@ -7,6 +7,7 @@ import {
 	TableRow,
 } from "@sv-altbach/ui/components/table";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@sv-altbach/ui/components/tabs";
+
 import { trainingTypes } from "@/data/training";
 
 export function TrainingSection() {

@@ -1,10 +1,11 @@
 import { Table, Tooltip } from "@radix-ui/themes";
 import { IconArrowBadgeUp, IconX } from "@tabler/icons-react";
+
+import { DisplayResult } from "@/app/scoreboard/components/DisplayResult";
+import { getMasterPointsCalculationDetailsText } from "@/app/scoreboard/utils/getMasterPointsCalculationDetailsText";
+import { prettyNumbers } from "@/app/scoreboard/utils/prettyNumbers";
 import type { Player, PlayerMarker } from "@/app/types";
 import { getPlayerName } from "@/utils/utils";
-import { DisplayResult } from "@/app/scoreboard/components/DisplayResult";
-import { prettyNumbers } from "@/app/scoreboard/utils/prettyNumbers";
-import { getMasterPointsCalculationDetailsText } from "@/app/scoreboard/utils/getMasterPointsCalculationDetailsText";
 
 interface Props {
 	playerRowData: {

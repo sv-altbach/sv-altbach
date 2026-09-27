@@ -11,6 +11,7 @@ export const ContactFormFields = v.object({
 export type ContactFormFields = v.InferOutput<typeof ContactFormFields>;
 
 export const contactFormOptions = formOptions({
+	formId: "contact-form",
 	defaultValues: {
 		name: "",
 		email: "",

@@ -1,7 +1,9 @@
 import ContactInternalEmail from "@emails/contact-internal";
 import ContactUserConfirmationEmail from "@emails/contact-user";
 import { createServerFn } from "@tanstack/react-start";
+
 import { EMAIL_ADDRESSES, resend } from "@/integrations/email";
+
 import { ContactFormFields } from "./options";
 
 export const submitContactForm = createServerFn({ method: "POST" })

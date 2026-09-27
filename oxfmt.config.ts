@@ -1,13 +1,18 @@
 import { defineConfig } from "oxfmt";
 
-const ignorePatterns = [".agents/**", "**/routeTree.gen.ts", "apps/cms/src/payload-types.ts"];
-
 const tailwindFunctions = ["cn", "cva"];
 
 export default defineConfig({
 	useTabs: true,
 	tabWidth: 4,
-	ignorePatterns,
+	ignorePatterns: [
+		".agents/**",
+		"skills-lock.json",
+		"**/routeTree.gen.ts",
+		"apps/cms/src/payload-types.ts",
+		"apps/cms/src/app/importMap.js",
+	],
+	sortImports: true,
 	sortTailwindcss: {
 		stylesheet: "./packages/ui/src/styles/globals.css",
 		functions: tailwindFunctions,

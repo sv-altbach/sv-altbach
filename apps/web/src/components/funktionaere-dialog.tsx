@@ -14,6 +14,7 @@ import {
 	TableHeader,
 	TableRow,
 } from "@sv-altbach/ui/components/table";
+
 import { funktionaere } from "@/data/funktionaere";
 
 export function FunktionaereDialog() {

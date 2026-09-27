@@ -2,7 +2,9 @@ import { Button, Container, Heading, Table as RadixTable, Table, Text } from "@r
 import { cn } from "@sv-altbach/ui/lib/utils";
 import Link from "next/link";
 import { Fragment } from "react";
+
 import { getPlayerName } from "@/utils/utils";
+
 import { getTournamentResults } from "./utils/getTournamentResults";
 
 const Final2024 = () => {

@@ -1,5 +1,6 @@
 import { Link, Table, Text } from "@radix-ui/themes";
 import { IconExternalLink } from "@tabler/icons-react";
+
 import type { TournamentDataTypes } from "@/app/types";
 
 export function ListOfAttendeesLink({ tournament }: Props) {

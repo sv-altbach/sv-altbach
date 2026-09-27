@@ -1,5 +1,6 @@
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+
 import { vercelPostgresAdapter } from "@payloadcms/db-vercel-postgres";
 import { lexicalEditor } from "@payloadcms/richtext-lexical";
 import { vercelBlobStorage } from "@payloadcms/storage-vercel-blob";
@@ -44,11 +45,7 @@ export default buildConfig({
 			collections: {
 				media: true,
 			},
-			// Disabled until monorepo dep resolution is fixed: clientUploads pulls in a
-			// second @payloadcms/ui context and crashes admin with
-			// "useUploadHandlers must be used within UploadHandlersProvider".
-			// Server-side Blob uploads still work with the token below.
-			clientUploads: false,
+			clientUploads: true,
 			// When unset, the plugin disables itself and media uses local disk.
 			token: process.env.BLOB_READ_WRITE_TOKEN,
 		}),

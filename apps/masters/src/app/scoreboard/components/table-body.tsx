@@ -1,5 +1,6 @@
 import { Flex, Table, Text } from "@radix-ui/themes";
 import { IconArrowBadgeUp } from "@tabler/icons-react";
+
 import { TableRow } from "@/app/scoreboard/components/table-row";
 import { getPlayers } from "@/app/scoreboard/getPlayers";
 import type { PlayerRowData } from "@/app/types";

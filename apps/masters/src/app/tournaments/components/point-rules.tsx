@@ -1,4 +1,5 @@
 import { Table } from "@radix-ui/themes";
+
 import type { TournamentDataTypes } from "@/app/types";
 
 export function PointRules({ tournament }: Props) {

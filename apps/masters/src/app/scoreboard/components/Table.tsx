@@ -1,4 +1,5 @@
 import { Table as RadixTable } from "@radix-ui/themes";
+
 import { TableBody } from "@/app/scoreboard/components/table-body";
 import { TableHead } from "@/app/scoreboard/components/table-head";
 

@@ -1,4 +1,5 @@
 import { Button } from "@radix-ui/themes";
+
 import type { TournamentDataTypes } from "@/app/types";
 
 export function RegisterButton({ tournament }: Props) {

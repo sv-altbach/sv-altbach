@@ -13,7 +13,7 @@ metadata:
   author: resend
   # Skill version is independent from the CLI/package.json version —
   # bump it on skill content changes, not CLI releases.
-  version: "2.5.0"
+  version: "2.12.0"
   homepage: https://resend.com/docs/cli-agents
   source: https://github.com/resend/resend-cli
   openclaw:
@@ -57,6 +57,7 @@ references:
   - references/templates.md
   - references/topics.md
   - references/logs.md
+  - references/careers.md
   - references/suppressions.md
   - references/webhooks.md
   - references/auth.md
@@ -86,17 +87,7 @@ npm install -g resend-cli
 brew install resend/cli/resend
 ```
 
-**Install script** — note: these download and execute a remote script. Prefer npm or Homebrew when available.
-
-```bash
-# macOS / Linux
-curl -fsSL https://resend.com/install.sh | bash
-```
-
-```powershell
-# Windows PowerShell
-irm https://resend.com/install.ps1 | iex
-```
+Other install methods (installer scripts for macOS, Linux, and Windows) are documented at [resend.com/docs/cli](https://resend.com/docs/cli).
 
 After installing, verify:
 ```bash
@@ -121,7 +112,7 @@ The CLI auto-detects non-TTY environments and outputs JSON — no `--json` flag 
 
 ## Authentication
 
-Auth resolves: `--api-key` flag > `RESEND_API_KEY` env > config file (`resend login --key`). Use `--profile` or `RESEND_PROFILE` for multi-profile.
+Auth resolves: `RESEND_API_KEY` env > config file (`resend login --key`). Use `--profile` or `RESEND_PROFILE` for multi-profile.
 
 **Credential safety:**
 - Never write a literal API key into a command, script, or file — it ends up in shell history, logs, and transcripts. Reference the environment (`"$RESEND_API_KEY"`) or use a stored profile (`resend login`).
@@ -131,7 +122,6 @@ Auth resolves: `--api-key` flag > `RESEND_API_KEY` env > config file (`resend lo
 
 | Flag | Description |
 |------|-------------|
-| `--api-key <key>` | Override API key for this invocation |
 | `-p, --profile <name>` | Select stored profile |
 | `--json` | Force JSON output (auto in non-TTY) |
 | `-q, --quiet` | Suppress spinners/status (implies `--json`) |
@@ -140,21 +130,22 @@ Auth resolves: `--api-key` flag > `RESEND_API_KEY` env > config file (`resend lo
 
 | Command Group | What it does |
 |--------------|-------------|
-| `emails` | send, get, list, batch, cancel, update |
+| `emails` | send, get, list, batch, cancel, update, metrics |
 | `emails receiving` | list, get, attachments, forward, listen |
 | `domains` | create, verify, get, claim, update, delete, list |
 | `logs` | list, get, open |
+| `careers` | list, apply — browse open positions at Resend and apply |
 | `suppressions` _(beta)_ | list, add, get, delete, batch — requires account enrollment |
-| `api-keys` | create, list, delete |
-| `automations` | create, get, list, update, delete, stop, open, runs |
+| `api-keys` | create, list, update, delete |
+| `automations` | create, get, list, update, delete, duplicate, stop, open, runs |
 | `events` | create, get, list, update, delete, send, open |
-| `broadcasts` | create, send, update, delete, list |
+| `broadcasts` | create, send, get, update, delete, list, cancel, open, clicked-links, recipients |
 | `contacts` | create, update, delete, segments, topics, imports |
 | `contact-properties` | create, update, delete, list |
-| `segments` | create, get, list, delete, contacts |
+| `segments` | create, get, list, update, delete, contacts |
 | `templates` | create, publish, duplicate, delete, list |
 | `topics` | create, update, delete, list |
-| `webhooks` | create, update, listen, delete, list |
+| `webhooks` | create, update, rotate-signing-secret, listen, delete, list, events (list, get, attempts, replay) |
 | `auth` | login, logout, switch, rename, remove |
 | `whoami` / `doctor` / `update` / `open` / `commands` | Utility commands |
 
@@ -175,12 +166,18 @@ Read the matching reference file for detailed flags and output shapes.
 | 7 | **Passing `--events` to `webhooks update` expecting additive behavior** | `--events` replaces the entire subscription list — always pass the complete set |
 | 8 | **Expecting `logs list` to include request/response bodies** | List returns summary fields only — use `logs get <id>` for full `request_body` and `response_body` |
 | 9 | **CSV import fails with `create_error` ("missing required email column")** | `contacts imports create` matches columns case-sensitively by lowercase names (`email`, `first_name`, `last_name`) — use `--column-map` for headers like `Email`/`First Name` |
+| 10 | **URL attachment "succeeds" but the email never arrives** | The API fetches `--attachment "https://..."` URLs after returning the email ID — an unreachable URL fails the email asynchronously. Verify with `emails get <id>` (`last_event: "failed"`), and always pass `;filename=` and `;type=` since neither is derived from the URL (defaults: `attachment-0`, `application/octet-stream`) |
 
 ## Common Patterns
 
 **Send an email:**
 ```bash
 resend emails send --from "you@domain.com" --to user@example.com --subject "Hello" --text "Body"
+```
+
+**Send an inline image (CID attachment) — always double-quote `;` params (required on bash, PowerShell, and cmd):**
+```bash
+resend emails send --from "you@domain.com" --to user@example.com --subject "Hello" --html "<img src=cid:logo>" --attachment "./logo.png;cid=logo"
 ```
 
 **Send a React Email template (.tsx):**
@@ -222,6 +219,7 @@ resend doctor -q
 - **Defining contact properties** → [references/contact-properties.md](references/contact-properties.md)
 - **Working with templates** → [references/templates.md](references/templates.md)
 - **Viewing API request logs** → [references/logs.md](references/logs.md)
+- **Browsing or applying to jobs at Resend** → [references/careers.md](references/careers.md)
 - **Managing the suppression list** (beta) → [references/suppressions.md](references/suppressions.md)
 - **Creating automations or sending events** → [references/automations.md](references/automations.md)
 - **Setting up webhooks or listening for events** → [references/webhooks.md](references/webhooks.md)

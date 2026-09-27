@@ -24,10 +24,26 @@ Send an email via the Resend API.
 | `--bcc <addresses...>` | string[] | No | BCC recipients |
 | `--reply-to <address>` | string | No | Reply-to address |
 | `--scheduled-at <datetime>` | string | No | Schedule for later — ISO 8601 or natural language (e.g. `"in 1 hour"`, `"tomorrow at 9am ET"`) |
-| `--attachment <paths...>` | string[] | No | File paths to attach (not compatible with `--template`) |
+| `--attachment <specs...>` | string[] | No | File path or `https://` URL to attach, with optional `;cid=`, `;type=`, `;filename=` params (not compatible with `--template`) |
+| `--attachments-file <path>` | string | No | Path to a JSON array of attachment objects (`"-"` for stdin; not compatible with `--template`) |
 | `--headers <key=value...>` | string[] | No | Custom headers |
 | `--tags <name=value...>` | string[] | No | Email tags |
 | `--idempotency-key <key>` | string | No | Deduplicate request |
+
+**Attachment syntax:** append `;cid=<id>` (inline content-id referenced as `cid:` in HTML), `;type=<mime>`, and/or `;filename=<name>` to the path or URL. ALWAYS double-quote values containing `;` — single quotes break on Windows cmd, and unquoted `;` breaks on every shell:
+
+```bash
+resend emails send ... --html "<img src=cid:logo>" --attachment "./logo.png;cid=logo"
+resend emails send ... --attachment "https://example.com/report.pdf;type=application/pdf"
+```
+
+For paths containing a literal `;key=` or for scripted use, pass `--attachments-file` with a JSON array of objects with `content` (base64) or `path` (URL), plus optional `filename`, `content_type`, `content_id` (camelCase also accepted).
+
+**URL attachment caveats:** the API fetches the URL *after* the send request returns an email ID — an unreachable URL fails the email asynchronously (`last_event: "failed"` on `emails get <id>`). Filename and MIME type are NOT derived from the URL (stored as `attachment-0` / `application/octet-stream`), so pass `;filename=` and `;type=` with every URL attachment:
+
+```bash
+resend emails send ... --attachment "https://example.com/report.pdf;filename=report.pdf;type=application/pdf"
+```
 
 **Output:** `{"id":"<uuid>"}`
 
@@ -49,7 +65,7 @@ Retrieve a sent email by ID.
   "to": ["user@example.com"],
   "subject": "Hello",
   "last_event": "delivered",
-  "created_at": "<iso-date>",
+  "created_at": "<date>",
   "scheduled_at": null
 }
 ```
@@ -119,6 +135,28 @@ Update a scheduled email.
 | `--scheduled-at <datetime>` | string | Yes | New schedule — ISO 8601 or natural language |
 
 **Output:** `{"object":"email","id":"..."}`
+
+---
+
+## emails metrics
+
+Retrieve account-level email metrics for a date range, with optional breakdowns.
+
+| Flag | Type | Default | Description |
+|------|------|---------|-------------|
+| `--start-date <date>` | string | 6 days before `--end-date` | ISO 8601 date or datetime |
+| `--end-date <date>` | string | now | ISO 8601 date or datetime |
+| `--timezone <tz>` | string | UTC | IANA timezone used to bucket periods |
+| `--granularity <granularity>` | string | daily | `hourly`, `daily`, `weekly`, or `monthly` |
+| `--metrics <list>` | string | all | Comma-separated metrics to include |
+| `--dimensions <list>` | string | — | Comma-separated breakdowns: `period`, `domain`, `email`, `broadcast` |
+| `--domain-id <list>` | string | — | Comma-separated sending domain IDs (max 100) |
+| `--email-id <list>` | string | — | Comma-separated email IDs (max 100) |
+| `--broadcast-id <list>` | string | — | Comma-separated broadcast IDs (max 100) |
+
+The `email` and `broadcast` dimensions/filters cannot be combined. Without `--dimensions`, the response has totals only and no `data` array.
+
+**Output:** `{"object":"metrics","start_date":"...","end_date":"...","metrics":["sent",...],"dimensions":["period"],"granularity":"daily","totals":{"sent":100,...},"data":[{"period":"2026-07-01","sent":10,...}]}`
 
 ---
 

@@ -1,5 +1,6 @@
 import { Box, Button, Flex, Grid, Heading, Link as RadixLink, Text } from "@radix-ui/themes";
 import Link from "next/link";
+
 import { News } from "@/app/components/news";
 
 export function About() {

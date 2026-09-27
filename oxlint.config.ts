@@ -1,8 +1,6 @@
 import { defineConfig } from "oxlint";
 
-const ignorePatterns = [".agents/**", "**/routeTree.gen.ts", "apps/cms/src/payload-types.ts"];
-
-const basePlugins = [
+const BASE_PLUGINS = [
 	"eslint",
 	"typescript",
 	"unicorn",
@@ -13,8 +11,8 @@ const basePlugins = [
 ] as const;
 
 export default defineConfig({
-	ignorePatterns,
-	plugins: [...basePlugins],
+	ignorePatterns: [".agents/**", "**/routeTree.gen.ts", "apps/cms/src/payload-types.ts"],
+	plugins: [...BASE_PLUGINS],
 	jsPlugins: ["oxlint-tailwindcss"],
 	settings: {
 		next: {
@@ -51,7 +49,7 @@ export default defineConfig({
 	overrides: [
 		{
 			files: ["apps/masters/**/*.{js,jsx,ts,tsx}", "apps/cms/**/*.{js,jsx,ts,tsx}"],
-			plugins: [...basePlugins, "nextjs"],
+			plugins: [...BASE_PLUGINS, "nextjs"],
 		},
 	],
 });
