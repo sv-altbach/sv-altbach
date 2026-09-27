@@ -1,4 +1,10 @@
 export type PlayerMarker = "none" | "successor" | "not-qualified";
+export type TournamentIds =
+	| "tournament_1"
+	| "tournament_2"
+	| "tournament_3"
+	| "tournament_4"
+	| "tournament_5";
 
 export interface PlayerRowData {
 	player: Player;
@@ -14,8 +20,14 @@ export interface Player {
 	rankSum: number;
 	averageRank: number;
 	playedTournaments: number;
-	[key: `tournament${number}`]: number | undefined;
-	// hasPlayedThreeOrMoreTournaments?: boolean;
+	worstTournament?: TournamentIds;
+	tournaments: Omit<
+		TournamentResultPlayer & {
+			tournamentId: TournamentIds;
+			points: number;
+		},
+		"playerId" | "name"
+	>[];
 }
 
 export interface TournamentResultPlayer {
