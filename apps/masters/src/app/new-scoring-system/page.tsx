@@ -14,8 +14,9 @@ export default function NewScoringSystemPage() {
 				</Heading>
 				<Text as="p">
 					Die SVA Masters bestehen aus mehreren eigenständigen Schachturnieren, die zu
-					einer gemeinsamen Gesamtwertung zusammengefasst werden. Ziel ist es, sowohl
-					Einzelleistungen als auch konstante Teilnahme über die Serie hinweg zu belohnen.
+					einer gemeinsamen Gesamtwertung zusammengefasst werden. Ziel ist es, gute
+					Leistungen über mehrere Turniere hinweg zu belohnen und gleichzeitig ein
+					schwaches oder verpasstes Turnier ausgleichen zu können.
 				</Text>
 			</Box>
 
@@ -95,39 +96,64 @@ export default function NewScoringSystemPage() {
 
 			<Box px={{ initial: "5", lg: "9" }} py="4">
 				<Heading as="h2" size={{ initial: "5", md: "6", lg: "8" }}>
-					Gesamtwertung (Streichergebnisse)
+					Gesamtwertung (Streichergebnis)
 				</Heading>
 				<Text as="p">
-					Für die Masters-Gesamtwertung werden nicht alle Turniere gewertet.
+					Für die Masters-Gesamtwertung werden nicht alle Ergebnisse gewertet. Das
+					schwächste Ergebnis jedes Spielers wird nach Abschluss der Qualifikation
+					gestrichen.
 				</Text>
 
 				<Heading as="h3" size={{ initial: "3", md: "4", lg: "5" }} mt="3" mb="2">
 					Regel
 				</Heading>
 				<ul className="list-disc pl-5">
+					<li>Es finden fünf Qualifikationsturniere statt.</li>
 					<li>
-						Es finden{" "}
-						<span className="font-bold text-neutral-700">
-							fünf bis sechs Qualifikationsturniere
-						</span>{" "}
-						statt
+						Für jedes nicht gespielte Qualifikationsturnier werden in der Gesamtwertung
+						0 Punkte angesetzt.
 					</li>
 					<li>
-						Für die Gesamtwertung zählen die{" "}
-						<span className="font-bold text-neutral-700">
-							besten vier bis fünf Ergebnisse
-						</span>
+						Nach dem letzten Qualifikationsturnier wird das niedrigste Ergebnis jedes
+						Spielers gestrichen.
 					</li>
-					<li>Das schwächste Ergebnis wird gestrichen</li>
+					<li>Bei fünf Qualifikationsturnieren zählen die besten vier Ergebnisse.</li>
+					<li>
+						Wer mehrere Turniere nicht spielt, kann nur eine dieser Nichtteilnahmen
+						streichen. Weitere Nichtteilnahmen bleiben mit 0 Punkten in der Wertung.
+					</li>
 				</ul>
+
+				<Heading as="h3" size={{ initial: "3", md: "4", lg: "5" }} mt="3" mb="2">
+					Beispiel
+				</Heading>
+				<Text as="p" mb="2">
+					Ein Spieler erreicht bei fünf Qualifikationsturnieren 80, 70, 60 und 50 Punkte
+					und nimmt an einem Turnier nicht teil. Die Nichtteilnahme wird mit 0 Punkten
+					gewertet und als schwächstes Ergebnis gestrichen.
+				</Text>
+				<Text as="p" mb="2">
+					Für die Gesamtwertung zählen damit 80 + 70 + 60 + 50 = 260 Punkte.
+				</Text>
+				<Text as="p">
+					Nimmt ein Spieler an zwei Turnieren nicht teil, kann nur eines der beiden
+					Ergebnisse mit 0 Punkten gestrichen werden. Das andere bleibt Teil der
+					Gesamtwertung.
+				</Text>
 
 				<Heading as="h3" size={{ initial: "3", md: "4", lg: "5" }} mt="3" mb="2">
 					Ziel
 				</Heading>
 				<ul className="list-disc pl-5">
-					<li>Ein einzelnes Top-Ergebnis entscheidet nicht die gesamte Serie</li>
-					<li>Schwächere Turniere fallen weniger stark ins Gewicht</li>
-					<li>Mehrere Teilnahmen werden belohnt</li>
+					<li>Ein einzelnes Top-Ergebnis entscheidet nicht die gesamte Serie.</li>
+					<li>Ein schwaches oder verpasstes Turnier kann ausgeglichen werden.</li>
+					<li>
+						Für eine gute Gesamtplatzierung sind mehrere gute Ergebnisse erforderlich.
+					</li>
+					<li>
+						Wer häufiger teilnimmt, hat mehr Möglichkeiten, ein schwächeres Ergebnis
+						durch ein besseres zu ersetzen.
+					</li>
 				</ul>
 			</Box>
 
@@ -147,7 +173,10 @@ export default function NewScoringSystemPage() {
 							mindestens drei Turnieren
 						</span>
 					</li>
-					<li>Qualifikation über die Masters-Gesamtwertung</li>
+					<li>
+						Die besten 16 Spieler der Gesamtwertung, die an mindestens drei Turnieren
+						teilgenommen haben, qualifizieren sich für das Finale.
+					</li>
 				</ul>
 
 				<Heading as="h3" size={{ initial: "3", md: "4", lg: "5" }} mt="3">

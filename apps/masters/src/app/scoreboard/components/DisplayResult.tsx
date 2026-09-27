@@ -14,7 +14,14 @@ export function DisplayResult({ points, tooltip, isActive }: Props) {
 					color={!isActive ? "red" : points === undefined ? "gray" : "green"}
 					className={`cursor-pointer! focus:outline-offset-2! ${!isActive ? "text-red-800! line-through!" : points === undefined ? "text-gray-800!" : "text-green-800!"}`}
 				>
-					{prettyNumbers(points ?? 0)}
+					{points === undefined ? (
+						<>
+							<span aria-hidden="true">–</span>
+							<span className="sr-only">Turnierinformation öffnen</span>
+						</>
+					) : (
+						prettyNumbers(points)
+					)}
 				</Button>
 			</Popover.Trigger>
 			<Popover.Content size="2">
