@@ -13,7 +13,8 @@
 		"generate:importmap": "bunx payload generate:importmap",
 		"generate:types": "bunx payload generate:types",
 		"typegen": "next typegen",
-		"check:types": "tsc --noEmit"
+		"check:types": "tsc --noEmit",
+		"test": "vitest run"
 	},
 	"dependencies": {
 		"@payloadcms/db-vercel-postgres": "3.89.0",
@@ -34,6 +35,7 @@
 		"@types/react": "catalog:",
 		"@types/react-dom": "catalog:",
 		"sass": "^1.104.1",
-		"typescript": "7.0.2"
+		"typescript": "7.0.2",
+		"vitest": "^5.0.1"
 	}
 }
