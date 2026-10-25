@@ -1,5 +1,5 @@
 import { getTournamentFactor } from "@/app/scoreboard/utils/getTournamentFactor";
-import type { Player, TournamentResult, TournamentResultPlayer } from "@/app/types";
+import type { Player, TournamentIds, TournamentResult, TournamentResultPlayer } from "@/app/types";
 
 export const fillPlayerDatabase = (
 	tournamentResult: TournamentResult,
@@ -11,11 +11,16 @@ export const fillPlayerDatabase = (
 		if (playerExists) {
 			playerDatabase.forEach((p) => {
 				if (p.id === playerExists.id) {
-					p[`tournament${tournamentResult.data.tournamentNumber}`] = getMastersPoints(
-						player,
-						tournamentResult,
-					);
 					p.playedTournaments += 1;
+					p.tournaments.push({
+						tournamentId:
+							`tournament_${tournamentResult.data.tournamentNumber}` as TournamentIds,
+						points: getMastersPoints(player, tournamentResult),
+						rank: player.rank,
+						score: player.score,
+						buchholz: player.buchholz,
+						rating: player.rating,
+					});
 					p.tournamentPoints += getMastersPoints(player, tournamentResult);
 					p.buchholz += player.buchholz;
 					p.rankSum += player.rank;
@@ -34,19 +39,22 @@ export const fillPlayerDatabase = (
 			buchholz: player.buchholz,
 			rankSum: player.rank,
 			averageRank: player.rank,
+			tournaments: [
+				{
+					tournamentId:
+						`tournament_${tournamentResult.data.tournamentNumber}` as TournamentIds,
+					points: getMastersPoints(player, tournamentResult),
+					rank: player.rank,
+					score: player.score,
+					buchholz: player.buchholz,
+					rating: player.rating,
+				},
+			],
 		};
-
-		const tournamentKey =
-			`tournament${tournamentResult.data.tournamentNumber}` as `tournament${number}`;
-		newPlayer[tournamentKey] = getMastersPoints(player, tournamentResult);
 
 		playerDatabase.push(newPlayer);
 	});
 };
-
-// function getAverageRank() {
-//
-// }
 
 function getMastersPoints(player: TournamentResultPlayer, tournamentResult: TournamentResult) {
 	const BY_100 = 100;

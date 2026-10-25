@@ -16,7 +16,15 @@ export function getMasterPointsCalculationDetailsText(
 		);
 
 		const tournamentResult = JSON.parse(tournamentFileContent) as TournamentResult;
-		const score = tournamentResult.data.rows.find((p) => p.playerId === player.id)?.score ?? 0;
+		const tournamentResultPlayer = tournamentResult.data.rows.find(
+			(p) => p.playerId === player.id,
+		);
+
+		if (!tournamentResultPlayer) {
+			return "An Turnier nicht teilgenommen";
+		}
+
+		const score = tournamentResultPlayer?.score ?? 0;
 
 		return getDetailsString(score, tournamentResult);
 	} catch (error: unknown) {

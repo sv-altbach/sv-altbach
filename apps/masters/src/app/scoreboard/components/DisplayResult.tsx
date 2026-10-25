@@ -4,16 +4,24 @@ import { Button, Popover, Text } from "@radix-ui/themes";
 
 import { prettyNumbers } from "@/app/scoreboard/utils/prettyNumbers";
 
-export function DisplayResult({ points, tooltip }: Props) {
+export function DisplayResult({ points, tooltip, isActive }: Props) {
 	return (
 		<Popover.Root>
 			<Popover.Trigger>
 				<Button
 					size="1"
 					variant="soft"
-					className="cursor-pointer! focus:outline-2! focus:outline-offset-2! focus:outline-red-400!"
+					color={!isActive ? "red" : points === undefined ? "gray" : "green"}
+					className={`cursor-pointer! focus:outline-offset-2! ${!isActive ? "text-red-800! line-through!" : points === undefined ? "text-gray-800!" : "text-green-800!"}`}
 				>
-					{prettyNumbers(points ?? 0)}
+					{points === undefined ? (
+						<>
+							<span aria-hidden="true">–</span>
+							<span className="sr-only">Turnierinformation öffnen</span>
+						</>
+					) : (
+						prettyNumbers(points)
+					)}
 				</Button>
 			</Popover.Trigger>
 			<Popover.Content size="2">
@@ -28,4 +36,5 @@ export function DisplayResult({ points, tooltip }: Props) {
 interface Props {
 	points: number | undefined;
 	tooltip: string;
+	isActive: boolean;
 }

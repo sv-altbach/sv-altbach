@@ -24,17 +24,27 @@ const ScoreboardPage = () => {
 							Scoreboard SVA Masters
 						</Heading>
 
-						<Text as="p" aria-hidden="true">
-							Aktuelle Ranglisten-Tabelle der SVA Masters.
+						<Text as="p">
+							Die Rangliste zeigt die aktuelle Gesamtwertung der SVA Masters.
 						</Text>
 
-						<Text as="p" aria-hidden="true" mb="5">
-							Nach allen Qualifikations-Turnieren, werden die besten 16 Spieler, die
-							an mindestens drei Turnieren teilgenommen haben, für das Finale
-							nominiert.
+						<Text as="p" mt="2">
+							Nach Abschluss aller Qualifikationsturniere wird bei jedem Spieler das
+							schwächste Ergebnis gestrichen. Eine Nichtteilnahme wird dabei mit 0
+							Punkten gewertet und kann als Streichergebnis dienen.
 						</Text>
 
-						<Text as="p" aria-hidden="true">
+						<Text as="p" mt="2">
+							Bei fünf Qualifikationsturnieren zählen die besten vier Ergebnisse.
+						</Text>
+
+						<Text as="p" mt="2" mb="5">
+							Die besten 16 Spieler der Gesamtwertung, die an mindestens drei
+							Qualifikationsturnieren teilgenommen haben, qualifizieren sich für das
+							Finale.
+						</Text>
+
+						<Text as="p">
 							Spieler, die neben ihrem Namen einen doppelten Pfeil nach oben haben
 							<IconArrowBadgeUp
 								className="inline text-lg text-red-600"
@@ -47,6 +57,12 @@ const ScoreboardPage = () => {
 							Spieler, die neben ihrem Namen ein
 							<IconX className="inline text-lg text-red-600" aria-hidden="true" />
 							haben, sind nicht für das Finale qualifiziert.
+						</Text>
+
+						<Text as="p" mt="2">
+							Ein Strich in einer Turnierspalte bedeutet, dass kein Ergebnis vorliegt.
+							Nach Abschluss des Turniers zählt eine Nichtteilnahme intern mit 0
+							Punkten.
 						</Text>
 
 						<Text as="p" mt="5" mb="2">

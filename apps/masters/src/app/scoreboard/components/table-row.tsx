@@ -33,32 +33,47 @@ export function TableRow({ playerRowData }: Props) {
 
 			<Table.Cell justify="center">
 				<DisplayResult
-					points={player.tournament1}
+					points={
+						player.tournaments.find((p) => p.tournamentId === "tournament_1")?.points
+					}
 					tooltip={getMasterPointsCalculationDetailsText(player, "tournament_1")}
+					isActive={player.worstTournament !== "tournament_1"}
 				/>
 			</Table.Cell>
 			<Table.Cell justify="center">
 				<DisplayResult
-					points={player.tournament2}
+					points={
+						player.tournaments.find((p) => p.tournamentId === "tournament_2")?.points
+					}
 					tooltip={getMasterPointsCalculationDetailsText(player, "tournament_2")}
+					isActive={player.worstTournament !== "tournament_2"}
 				/>
 			</Table.Cell>
 			<Table.Cell justify="center">
 				<DisplayResult
-					points={player.tournament3}
+					points={
+						player.tournaments.find((p) => p.tournamentId === "tournament_3")?.points
+					}
 					tooltip={getMasterPointsCalculationDetailsText(player, "tournament_3")}
+					isActive={player.worstTournament !== "tournament_3"}
 				/>
 			</Table.Cell>
 			<Table.Cell justify="center">
 				<DisplayResult
-					points={player.tournament4}
+					points={
+						player.tournaments.find((p) => p.tournamentId === "tournament_4")?.points
+					}
 					tooltip={getMasterPointsCalculationDetailsText(player, "tournament_4")}
+					isActive={player.worstTournament !== "tournament_4"}
 				/>
 			</Table.Cell>
 			<Table.Cell justify="center">
 				<DisplayResult
-					points={player.tournament5}
+					points={
+						player.tournaments.find((p) => p.tournamentId === "tournament_5")?.points
+					}
 					tooltip={getMasterPointsCalculationDetailsText(player, "tournament_5")}
+					isActive={player.worstTournament !== "tournament_5"}
 				/>
 			</Table.Cell>
 			<Table.Cell justify="center">{prettyNumbers(player.averageRank)}</Table.Cell>
