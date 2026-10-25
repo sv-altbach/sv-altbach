@@ -6,6 +6,8 @@ import { headersWithCors } from "payload";
 export const PUBLISHED_POST_EXCERPT_LENGTH = 180;
 export const PUBLISHED_POSTS_DEFAULT_LIMIT = 20;
 export const PUBLISHED_POSTS_MAX_LIMIT = 100;
+/** Club route that renders a single Post: `/blog/{slug}`. */
+export const PUBLISHED_POST_PATH_PREFIX = "/blog";
 
 /**
  * Public read constraint. `changed` means a published Post has a newer draft;
@@ -23,7 +25,6 @@ export type PublishedPostSource = {
 	title?: string | null;
 	excerpt?: string | null;
 	slug?: string | null;
-	url?: string | null;
 	publishedAt?: string | null;
 	body?: unknown;
 };
@@ -53,14 +54,13 @@ export function parsePublishedPostsLimit(value: string | null | undefined) {
 
 export function toPublishedPostTeaser(doc: PublishedPostSource): PublishedPostTeaser {
 	const slug = doc.slug?.trim() ?? "";
-	const explicitUrl = doc.url?.trim() ?? "";
 
 	return {
 		id: String(doc.id),
 		title: normalizeWhitespace(doc.title ?? ""),
 		excerpt: resolveExcerpt(doc.excerpt, doc.body),
 		slug,
-		url: explicitUrl || (slug ? `/${slug}` : ""),
+		url: slug ? `${PUBLISHED_POST_PATH_PREFIX}/${slug}` : "",
 		publishedAt: toIsoTimestamp(doc.publishedAt),
 	};
 }

@@ -30,7 +30,6 @@ function lexicalBody(text: string): NonNullable<Post["body"]> {
 function publishedPost(data: {
 	title: string;
 	excerpt?: string;
-	url?: string;
 	publishedAt?: string;
 	body?: Post["body"];
 	image?: number;
@@ -94,7 +93,6 @@ describe("published-posts HTTP contract", () => {
 			data: publishedPost({
 				title: "Newer news",
 				excerpt: "Second",
-				url: "https://example.com/newer",
 				publishedAt: "2024-06-01T00:00:00.000Z",
 			}),
 		});
@@ -107,10 +105,10 @@ describe("published-posts HTTP contract", () => {
 			title: "Newer news",
 			excerpt: "Second",
 			slug: "newer-news",
-			url: "https://example.com/newer",
+			url: "/blog/newer-news",
 			publishedAt: "2024-06-01T00:00:00.000Z",
 		});
-		expect(docs[1]?.url).toBe("/older-news");
+		expect(docs[1]?.url).toBe("/blog/older-news");
 	});
 
 	test("keeps the last published version when a newer draft exists", async () => {
@@ -190,6 +188,22 @@ describe("published-posts HTTP contract", () => {
 		const docs = await listPublishedPosts(payload);
 		expect(docs[0]?.excerpt).toBe("Hello from the body of the post.");
 		expect(docs[0]?.slug).toBe("with-image");
+	});
+
+	test("generates readable slugs from German titles", async () => {
+		await payload.create({
+			collection: "posts",
+			draft: false,
+			data: publishedPost({
+				title: "Rückblick auf März",
+				excerpt: "Umlaute",
+				publishedAt: "2024-03-31T00:00:00.000Z",
+			}),
+		});
+
+		const docs = await listPublishedPosts(payload);
+		expect(docs[0]?.slug).toBe("rueckblick-auf-maerz");
+		expect(docs[0]?.url).toBe("/blog/rueckblick-auf-maerz");
 	});
 
 	test("sets publishedAt when a Post is published without one", async () => {
@@ -301,7 +315,7 @@ describe("published-posts HTTP contract", () => {
 				title: "Newer news",
 				excerpt: "Second",
 				slug: "newer-news",
-				url: "/newer-news",
+				url: "/blog/newer-news",
 				publishedAt: "2024-06-01T00:00:00.000Z",
 			}),
 		]);

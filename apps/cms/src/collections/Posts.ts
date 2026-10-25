@@ -2,6 +2,7 @@ import type { CollectionConfig, DateField } from "payload";
 import { slugField } from "payload";
 
 import { authenticated, authenticatedOrPublished } from "../access/authenticated";
+import { slugifyPostTitle } from "../slugify";
 
 const publishedAtField: DateField = {
 	name: "publishedAt",
@@ -58,16 +59,7 @@ export const Posts: CollectionConfig = {
 			name: "body",
 			type: "richText",
 		},
-		slugField({ useAsSlug: "title" }),
-		{
-			name: "url",
-			type: "text",
-			admin: {
-				description:
-					"Public link for this Post (for example a Tumblr archive URL). Leave empty to use /{slug}.",
-				position: "sidebar",
-			},
-		},
+		slugField({ slugify: slugifyPostTitle, useAsSlug: "title" }),
 		publishedAtField,
 		{
 			name: "image",

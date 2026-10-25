@@ -195,10 +195,6 @@ export interface Post {
   generateSlug?: boolean | null;
   slug: string;
   /**
-   * Public link for this Post (for example a Tumblr archive URL). Leave empty to use /{slug}.
-   */
-  url?: string | null;
-  /**
    * When this Post became public. Filled automatically on first publish.
    */
   publishedAt?: string | null;
@@ -335,7 +331,6 @@ export interface PostsSelect<T extends boolean = true> {
   body?: T;
   generateSlug?: T;
   slug?: T;
-  url?: T;
   publishedAt?: T;
   image?: T;
   updatedAt?: T;
