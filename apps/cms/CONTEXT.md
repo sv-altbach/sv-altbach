@@ -18,8 +18,10 @@ Headless content layer for SV Altbach editorial content. Workspace package: `app
 - Persistence: **Vercel Postgres** (`POSTGRES_URL`) + **Vercel Blob** (`BLOB_READ_WRITE_TOKEN` for media). Hosted as its **own Vercel project/origin** (Root Directory `apps/cms`), separate from Club and Masters. See ADR-0004.
 - Local default port: `3003` (`http://localhost:3003`). Admin is mounted at `/` (Payload-only Next shell; no separate frontend). Club will read via server env such as `CMS_URL` once cut over.
 - Editor auth: Payload built-in **Users** collection (email/password). First admin user is created on first visit to `/`.
-- Scaffold collections: **Users** (auth) and **Media** (uploads → Blob when token is set). **Posts** land in a follow-up ticket.
-- Content bootstrap: one-shot import from Tumblr JSON API into Posts; then CMS is source of truth for the live Club feed.
+- Collections: **Users** (auth), **Media** (uploads → Blob when token is set), and **Posts** (draft/publish news with title, excerpt, body, slug, `publishedAt`, and a media upload). Slugs transliterate German umlauts (`Rückblick` → `rueckblick`) because they become public Club URLs.
+- Public read of Posts excludes drafts. Writes and version history require a logged-in editor.
+- Published list: `GET /api/published-posts` returns newest-first teasers (`id`, `title`, `excerpt`, `slug`, `url`, `publishedAt`). `url` is the Club Post page path `/blog/{slug}` (Club route still to be built). Optional `?limit=` (default 20, max 100). Excerpt falls back to plain text from the body.
+- Content bootstrap: one-shot import from Tumblr JSON API into Posts; then CMS is source of truth for the live Club feed. Club still reads Tumblr until that cutover. Nothing Tumblr-specific is stored on Posts: after the import the Tumblr blog is removed and every Post lives under `/blog/{slug}` on Club.
 
 ## Local development
 

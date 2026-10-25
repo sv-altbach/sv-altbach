@@ -129,7 +129,10 @@ bun run start       # serve the production build on port 3003
 bun run payload     # Payload CLI (migrate, generate:types, …)
 bun run typegen     # generate Next.js route/cache types
 bun run check:types # TypeScript type check
+bun run test        # Posts published-list contract tests (needs Postgres)
 ```
+
+Published Posts for the Club home feed: `GET /api/published-posts` (newest first; drafts excluded).
 
 ## CMS hosting (third Vercel project)
 
