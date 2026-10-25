@@ -67,17 +67,15 @@ export function BasicInfoSection() {
 				{infoItems.map((item) => {
 					const Icon = item.icon;
 					return (
-						<Card key={item.title} className="text-center text-balance">
+						<Card key={item.title} className="text-center">
 							<CardHeader>
 								<div className="mb-3 flex justify-center">
 									<Icon className="h-8 w-8 text-primary" />
 								</div>
-								<CardTitle className="uppercase">{item.title}</CardTitle>
+								<CardTitle>{item.title}</CardTitle>
 							</CardHeader>
 							<CardContent>
-								<CardDescription className="text-sm">
-									{item.description}
-								</CardDescription>
+								<CardDescription>{item.description}</CardDescription>
 							</CardContent>
 						</Card>
 					);
@@ -85,9 +83,7 @@ export function BasicInfoSection() {
 			</div>
 
 			<div className="mt-8 text-center text-balance">
-				<Button className="uppercase" onClick={handleScroll}>
-					Schreib uns
-				</Button>
+				<Button onClick={handleScroll}>Schreib uns</Button>
 			</div>
 		</div>
 	);

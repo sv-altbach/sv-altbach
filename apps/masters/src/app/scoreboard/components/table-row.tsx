@@ -98,9 +98,9 @@ function displayNotQualifiedMarker(marker: PlayerMarker) {
 				}
 			>
 				{marker === "successor" ? (
-					<IconArrowBadgeUp className="text-3xl text-red-600" aria-hidden="true" />
+					<IconArrowBadgeUp className="text-3xl text-primary" aria-hidden="true" />
 				) : (
-					<IconX className="text-3xl text-red-600" aria-hidden="true" />
+					<IconX className="text-3xl text-primary" aria-hidden="true" />
 				)}
 			</Tooltip>
 

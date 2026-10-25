@@ -12,7 +12,7 @@ export function DisplayResult({ points, tooltip, isActive }: Props) {
 					size="1"
 					variant="soft"
 					color={!isActive ? "red" : points === undefined ? "gray" : "green"}
-					className={`cursor-pointer! focus:outline-offset-2! ${!isActive ? "text-red-800! line-through!" : points === undefined ? "text-gray-800!" : "text-green-800!"}`}
+					className={`cursor-pointer! focus:outline-offset-2! ${!isActive ? "line-through!" : ""}`}
 				>
 					{points === undefined ? (
 						<>

@@ -90,7 +90,7 @@ function HomePage() {
 		<div className="flex flex-col gap-20">
 			<section
 				id="hero"
-				className="relative flex min-h-screen items-center justify-center bg-gray-900"
+				className="relative flex min-h-screen items-center justify-center bg-black"
 			>
 				<HeroSection>
 					<CrowdfundingBanner />

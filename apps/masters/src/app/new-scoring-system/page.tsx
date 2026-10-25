@@ -1,4 +1,4 @@
-import { Box, Heading, Text } from "@radix-ui/themes";
+import { Badge, Box, Heading, Text } from "@radix-ui/themes";
 
 export default function NewScoringSystemPage() {
 	return (
@@ -7,7 +7,7 @@ export default function NewScoringSystemPage() {
 				px={{ initial: "5", lg: "9" }}
 				pb="4"
 				pt="6"
-				className="rounded-t-lg bg-red-100 text-red-700"
+				className="rounded-t-lg bg-primary/10 text-primary"
 			>
 				<Heading as="h1" size={{ initial: "7", md: "8", lg: "9" }} mb="2">
 					Neues Punktesystem
@@ -33,10 +33,8 @@ export default function NewScoringSystemPage() {
 					Formel
 				</Heading>
 				<Text as="p">
-					<span className="rounded-lg bg-red-100 px-2 py-1 font-bold text-red-700">
-						Masters-Punkte
-					</span>{" "}
-					= 100 × (erzielte Punkte / maximal erreichbare Punkte) × Turnierfaktor
+					<Badge size="2">Masters-Punkte</Badge> = 100 × (erzielte Punkte / maximal
+					erreichbare Punkte) × Turnierfaktor
 				</Text>
 
 				<Heading as="h3" size={{ initial: "3", md: "4", lg: "5" }} mt="3" mb="2">
@@ -44,22 +42,20 @@ export default function NewScoringSystemPage() {
 				</Heading>
 				<ul className="list-disc pl-5">
 					<li>
-						<span className="font-bold text-neutral-700">Erzielte Punkte</span> = die im
-						Turnier erreichten Punkte
+						<span className="font-bold">Erzielte Punkte</span> = die im Turnier
+						erreichten Punkte
 					</li>
 					<li>
-						<span className="font-bold text-neutral-700">
-							Maximal erreichbare Punkte
-						</span>
-						= Anzahl der Runden × Punkte im jeweiligen Wertungssystem
+						<span className="font-bold">Maximal erreichbare Punkte</span>= Anzahl der
+						Runden × Punkte im jeweiligen Wertungssystem
 					</li>
 					<li>
-						<span className="font-bold text-neutral-700">100</span> = sorgt für eine gut
-						lesbare Punkteskala
+						<span className="font-bold">100</span> = sorgt für eine gut lesbare
+						Punkteskala
 					</li>
 					<li>
-						<span className="font-bold text-neutral-700">Turnierfaktor</span> =
-						berücksichtigt Größe und Stärke des Turniers
+						<span className="font-bold">Turnierfaktor</span> = berücksichtigt Größe und
+						Stärke des Turniers
 					</li>
 				</ul>
 
@@ -77,19 +73,19 @@ export default function NewScoringSystemPage() {
 				<ul className="list-disc pl-5">
 					<li>
 						Turnierfaktor für ein Turnier bis 40 Teilnehmer ={" "}
-						<span className="font-bold text-neutral-700">1,00</span>
+						<span className="font-bold">1,00</span>
 					</li>
 					<li>
 						Turnierfaktor für ein Turnier mit 41 bis 70 Teilnehmern ={" "}
-						<span className="font-bold text-neutral-700">1,05</span>
+						<span className="font-bold">1,05</span>
 					</li>
 					<li>
 						Turnierfaktor für ein Turnier mit 71 bis 100 Teilnehmern ={" "}
-						<span className="font-bold text-neutral-700">1,10</span>
+						<span className="font-bold">1,10</span>
 					</li>
 					<li>
 						Turnierfaktor für ein Turnier ab 101 Teilnehmern ={" "}
-						<span className="font-bold text-neutral-700">1,15</span>
+						<span className="font-bold">1,15</span>
 					</li>
 				</ul>
 			</Box>
@@ -168,10 +164,7 @@ export default function NewScoringSystemPage() {
 				</Heading>
 				<ul className="list-disc pl-5">
 					<li>
-						Teilnahme an{" "}
-						<span className="font-bold text-neutral-700">
-							mindestens drei Turnieren
-						</span>
+						Teilnahme an <span className="font-bold">mindestens drei Turnieren</span>
 					</li>
 					<li>
 						Die besten 16 Spieler der Gesamtwertung, die an mindestens drei Turnieren
