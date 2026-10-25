@@ -2,7 +2,7 @@ import type { CollectionConfig, DateField } from "payload";
 import { slugField } from "payload";
 
 import { authenticated, authenticatedOrPublished } from "../access/authenticated";
-import { slugifyPostTitle } from "../slugify";
+import { slugifyGerman, slugifyPostTitle } from "../slugify";
 
 const publishedAtField: DateField = {
 	name: "publishedAt",
@@ -40,6 +40,25 @@ export const Posts: CollectionConfig = {
 		read: authenticatedOrPublished,
 		readVersions: authenticated,
 		update: authenticated,
+	},
+	hooks: {
+		beforeValidate: [
+			// Payload >= 3.90.2 validates the required slug before slugField's async
+			// generator assigns it, so creates without a slug fail (payloadcms/payload#18334).
+			// Fill it here, before validation, until that is fixed upstream.
+			({ data, operation }) => {
+				if (
+					operation === "create" &&
+					data &&
+					!data.slug &&
+					typeof data.title === "string"
+				) {
+					data.slug = slugifyGerman(data.title);
+				}
+
+				return data;
+			},
+		],
 	},
 	fields: [
 		{
