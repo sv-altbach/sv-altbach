@@ -208,49 +208,43 @@ export function MannschaftenPage() {
 					<Table>
 						<TableHeader>
 							<TableRow>
-								<TableHead className="text-center text-balance">Saison</TableHead>
-								<TableHead className="text-center text-balance">
-									Landesliga
-								</TableHead>
-								<TableHead className="text-center text-balance">
-									Bezirksliga
-								</TableHead>
-								<TableHead className="text-center text-balance" colSpan={2}>
+								<TableHead className="text-center">Saison</TableHead>
+								<TableHead className="text-center">Landesliga</TableHead>
+								<TableHead className="text-center">Bezirksliga</TableHead>
+								<TableHead className="text-center" colSpan={2}>
 									Kreisklasse
 								</TableHead>
-								<TableHead className="text-center text-balance" colSpan={2}>
+								<TableHead className="text-center" colSpan={2}>
 									A-Klasse
 								</TableHead>
-								<TableHead className="text-center text-balance" colSpan={2}>
+								<TableHead className="text-center" colSpan={2}>
 									B-Klasse
 								</TableHead>
-								<TableHead className="text-center text-balance" colSpan={3}>
+								<TableHead className="text-center" colSpan={3}>
 									C-Klasse
 								</TableHead>
-								<TableHead className="text-center text-balance">D-Klasse</TableHead>
+								<TableHead className="text-center">D-Klasse</TableHead>
 							</TableRow>
 						</TableHeader>
 						<TableBody>
 							{teamResults.map((result) => (
 								<TableRow key={result.saison}>
-									<TableCell className="text-center text-balance">
-										{result.saison}
-									</TableCell>
-									<TableCell className="text-center text-balance">-</TableCell>
-									<TableCell className="text-center text-balance">-</TableCell>
-									<TableCell className="text-center text-balance" colSpan={2}>
+									<TableCell className="text-center">{result.saison}</TableCell>
+									<TableCell className="text-center">-</TableCell>
+									<TableCell className="text-center">-</TableCell>
+									<TableCell className="text-center" colSpan={2}>
 										{result.kreisklasse || "-"}
 									</TableCell>
-									<TableCell className="text-center text-balance" colSpan={2}>
+									<TableCell className="text-center" colSpan={2}>
 										{result.aKlasse || "-"}
 									</TableCell>
-									<TableCell className="text-center text-balance" colSpan={2}>
+									<TableCell className="text-center" colSpan={2}>
 										{result.bKlasse || "-"}
 									</TableCell>
-									<TableCell className="text-center text-balance" colSpan={3}>
+									<TableCell className="text-center" colSpan={3}>
 										{result.cKlasse || "-"}
 									</TableCell>
-									<TableCell className="text-center text-balance">-</TableCell>
+									<TableCell className="text-center">-</TableCell>
 								</TableRow>
 							))}
 						</TableBody>

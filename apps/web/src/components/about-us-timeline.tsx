@@ -4,7 +4,7 @@ export function AboutUsTimeline() {
 	return (
 		<div className="relative">
 			{/* Vertical line - visible only on desktop */}
-			<div className="absolute top-0 bottom-0 left-1/2 hidden w-0.5 -translate-x-1/2 bg-[#e1e1e1] md:block" />
+			<div className="absolute top-0 bottom-0 left-1/2 hidden w-0.5 -translate-x-1/2 bg-border md:block" />
 
 			{timelineEvents.map((event) => (
 				<div
@@ -17,7 +17,7 @@ export function AboutUsTimeline() {
 							alt={`${event.year} - ${event.title}`}
 							width={200}
 							height={200}
-							className="h-auto w-full rounded-full border-[5px] border-[#e1e1e1]"
+							className="h-auto w-full rounded-full border-4"
 						/>
 					</div>
 					<div className="order-1 col-span-12 mb-5 flex flex-col justify-center sm:order-2 sm:col-span-9 md:col-span-5 group-odd/item:md:col-start-8 group-even/item:md:order-1 group-even/item:md:col-start-1 group-even/item:md:text-right">

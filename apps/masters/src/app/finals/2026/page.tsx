@@ -72,9 +72,9 @@ export default function Final2026() {
 										<Table.Row
 											key={player.name}
 											className={cn([
-												player.position === 1 && "bg-[#FFD700]",
-												player.position === 2 && "bg-[#C0C0C0]",
-												player.position === 3 && "bg-[#CD7F32]",
+												player.position === 1 && "bg-gold",
+												player.position === 2 && "bg-silver",
+												player.position === 3 && "bg-bronze",
 											])}
 										>
 											<Table.RowHeaderCell>

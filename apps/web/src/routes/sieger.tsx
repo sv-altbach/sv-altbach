@@ -252,49 +252,37 @@ export function SiegerPage() {
 					<Table>
 						<TableHeader>
 							<TableRow>
-								<TableHead className="text-center text-balance">Jahr</TableHead>
-								<TableHead className="text-center text-balance">
-									Vereinsmeister
-								</TableHead>
-								<TableHead className="text-center text-balance">
-									Pokalsieger
-								</TableHead>
-								<TableHead className="text-center text-balance">
+								<TableHead className="text-center">Jahr</TableHead>
+								<TableHead className="text-center">Vereinsmeister</TableHead>
+								<TableHead className="text-center">Pokalsieger</TableHead>
+								<TableHead className="text-center">
 									Bernhard-Frey-Pokal-Sieger
 								</TableHead>
-								<TableHead className="text-center text-balance">
-									Jugendmeister
-								</TableHead>
-								<TableHead className="text-center text-balance">
-									Blitzmeister
-								</TableHead>
-								<TableHead className="text-center text-balance">
-									Jugend-Blitzmeister
-								</TableHead>
+								<TableHead className="text-center">Jugendmeister</TableHead>
+								<TableHead className="text-center">Blitzmeister</TableHead>
+								<TableHead className="text-center">Jugend-Blitzmeister</TableHead>
 							</TableRow>
 						</TableHeader>
 						<TableBody>
 							{winners.map((winner) => (
 								<TableRow key={winner.year}>
-									<TableCell className="text-center text-balance">
-										{winner.year}
-									</TableCell>
-									<TableCell className="text-center text-balance">
+									<TableCell className="text-center">{winner.year}</TableCell>
+									<TableCell className="text-center">
 										{winner.vereinsmeister}
 									</TableCell>
-									<TableCell className="text-center text-balance">
+									<TableCell className="text-center">
 										{winner.pokalsieger}
 									</TableCell>
-									<TableCell className="text-center text-balance">
+									<TableCell className="text-center">
 										{winner.bernhardFreyPokal}
 									</TableCell>
-									<TableCell className="text-center text-balance">
+									<TableCell className="text-center">
 										{winner.jugendmeister}
 									</TableCell>
-									<TableCell className="text-center text-balance">
+									<TableCell className="text-center">
 										{winner.blitzmeister}
 									</TableCell>
-									<TableCell className="text-center text-balance">
+									<TableCell className="text-center">
 										{winner.jugendBlitzmeister}
 									</TableCell>
 								</TableRow>

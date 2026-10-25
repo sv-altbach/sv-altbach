@@ -8,7 +8,7 @@ export function Header() {
 			<IconChessKnightFilled className="mb-5 text-5xl text-white" />
 
 			<Heading as="h1" className="text-white" size="9">
-				SVA <Text className="text-red-600">Masters</Text>
+				SVA <Text className="text-primary">Masters</Text>
 			</Heading>
 
 			<Text as="p" size="5" className="text-white">

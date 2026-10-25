@@ -59,7 +59,7 @@ export function About() {
 						Ehemalige Sieger
 					</Heading>
 
-					<Box my="2" className="h-fit rounded-md bg-red-50 p-5">
+					<Box my="2" className="h-fit rounded-md bg-primary/5 p-5">
 						<Grid
 							asChild
 							columns="repeat(2, 100px)"
@@ -68,13 +68,13 @@ export function About() {
 							width="min-content"
 						>
 							<dl>
-								<dt className="font-bold text-red-700">Name</dt>
+								<dt className="font-bold text-primary">Name</dt>
 								<dd>Tobias Kölle</dd>
 
-								<dt className="font-bold text-red-700">Jahr</dt>
+								<dt className="font-bold text-primary">Jahr</dt>
 								<dd>2024</dd>
 
-								<dt className="font-bold text-red-700">Saison</dt>
+								<dt className="font-bold text-primary">Saison</dt>
 								<dd>1. Saison</dd>
 							</dl>
 						</Grid>
@@ -90,7 +90,7 @@ export function About() {
 						</Button>
 					</Box>
 
-					<Box my="2" className="h-fit rounded-md bg-red-50 p-5">
+					<Box my="2" className="h-fit rounded-md bg-primary/5 p-5">
 						<Grid
 							asChild
 							columns="repeat(2, 100px)"
@@ -99,13 +99,13 @@ export function About() {
 							width="min-content"
 						>
 							<dl>
-								<dt className="font-bold text-red-700">Name</dt>
+								<dt className="font-bold text-primary">Name</dt>
 								<dd>Tobias Kölle</dd>
 
-								<dt className="font-bold text-red-700">Jahr</dt>
+								<dt className="font-bold text-primary">Jahr</dt>
 								<dd>2026</dd>
 
-								<dt className="font-bold text-red-700">Saison</dt>
+								<dt className="font-bold text-primary">Saison</dt>
 								<dd>2. Saison</dd>
 							</dl>
 						</Grid>
