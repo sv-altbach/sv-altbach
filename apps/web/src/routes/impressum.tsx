@@ -1,8 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
 
+import { funktionaere } from "@/data/funktionaere";
+
 export const Route = createFileRoute("/impressum")({
 	component: ImpressumPage,
 });
+
+const FIRST_CHAIRMAN = "1. Vorsitzender";
+const SECOND_CHAIRMAN = "2. Vorsitzender";
+const FINANCE_CHAIRMAN = "Schatzmeister";
 
 export function ImpressumPage() {
 	return (
@@ -30,16 +36,31 @@ export function ImpressumPage() {
 					<p className="mb-2 font-bold">Vertreten durch:</p>
 					<ul className="mb-6 list-inside list-disc space-y-1">
 						<li>
-							1. Vorsitzender: Alexander Hande, Drosselweg 30, 70734 Fellbach,
-							01520-9186437, am2702 (ät) aol.com
+							{funktionaere.find((f) => f.funktion === FIRST_CHAIRMAN)?.funktion}
+							{", "}
+							{funktionaere.find((f) => f.funktion === FIRST_CHAIRMAN)?.name}
+							{", "}
+							{funktionaere.find((f) => f.funktion === FIRST_CHAIRMAN)?.anschrift}
+							{", "}
+							{funktionaere.find((f) => f.funktion === FIRST_CHAIRMAN)?.kontakt}
 						</li>
 						<li>
-							2. Vorsitzender: Deniz Gazitepe, Sonnenhalde 3, 73776 Altbach,
-							0176-63893890, deniz.gazitepe (ät) gmail.com
+							{funktionaere.find((f) => f.funktion === SECOND_CHAIRMAN)?.funktion}
+							{", "}
+							{funktionaere.find((f) => f.funktion === SECOND_CHAIRMAN)?.name}
+							{", "}
+							{funktionaere.find((f) => f.funktion === SECOND_CHAIRMAN)?.anschrift}
+							{", "}
+							{funktionaere.find((f) => f.funktion === SECOND_CHAIRMAN)?.kontakt}
 						</li>
 						<li>
-							Finanzverwalter: Peter Wolf, Hofstraße 45, 73776 Altbach, 0177-8806113,
-							peter.wolf (ät) onlinehome.de
+							{funktionaere.find((f) => f.funktion === FINANCE_CHAIRMAN)?.funktion}
+							{", "}
+							{funktionaere.find((f) => f.funktion === FINANCE_CHAIRMAN)?.name}
+							{", "}
+							{funktionaere.find((f) => f.funktion === FINANCE_CHAIRMAN)?.anschrift}
+							{", "}
+							{funktionaere.find((f) => f.funktion === FINANCE_CHAIRMAN)?.kontakt}
 						</li>
 					</ul>
 
