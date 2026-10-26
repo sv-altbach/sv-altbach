@@ -27,7 +27,7 @@ export function FunktionaereDialog() {
 					</button>
 				}
 			/>
-			<DialogContent className="max-h-[80vh] max-w-4xl overflow-y-auto">
+			<DialogContent className="max-h-[80vh] overflow-y-auto md:max-w-max!">
 				<DialogHeader>
 					<DialogTitle>Funktionäre</DialogTitle>
 					<DialogDescription>
