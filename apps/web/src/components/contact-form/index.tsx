@@ -52,7 +52,7 @@ export function ContactForm() {
 			className="mx-auto max-w-4xl"
 		>
 			<div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-				<FieldGroup className="gap-4">
+				<FieldGroup>
 					<form.AppField name="name">
 						{(field) => (
 							<field.Root>
@@ -83,15 +83,9 @@ export function ContactForm() {
 									required
 								/>
 								<field.Error />
-								<field.Description className="text-xs">
-									Sichere Verarbeitung Ihrer Daten durch E-Mail-Dienst Resend.
-									<Button
-										render={<Link to="/datenschutz">Datenschutzerklärung</Link>}
-										nativeButton={false}
-										variant="link"
-										size="xs"
-										className="px-0 font-normal"
-									/>
+								<field.Description>
+									Sichere Verarbeitung Ihrer Daten durch E-Mail-Dienst Resend.{" "}
+									<Link to="/datenschutz">Datenschutzerklärung</Link>
 								</field.Description>
 							</field.Root>
 						)}
@@ -138,11 +132,7 @@ export function ContactForm() {
 			<div className="mt-6 text-center text-balance">
 				<form.Subscribe selector={({ canSubmit }) => canSubmit}>
 					{(canSubmit) => (
-						<Button
-							type="submit"
-							className="uppercase"
-							disabled={!canSubmit || isPending}
-						>
+						<Button type="submit" disabled={!canSubmit || isPending}>
 							{isPending ? <Spinner /> : "Senden"}
 						</Button>
 					)}

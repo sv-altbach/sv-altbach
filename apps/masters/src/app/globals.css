@@ -2,6 +2,9 @@
 
 @theme inline {
 	--background-image-header: url("../../public/masters/header.jpg");
+	--color-gold: #ffd700;
+	--color-silver: #c0c0c0;
+	--color-bronze: #cd7f32;
 }
 
 :root {

@@ -20,13 +20,7 @@ import { funktionaere } from "@/data/funktionaere";
 export function FunktionaereDialog() {
 	return (
 		<Dialog>
-			<DialogTrigger
-				render={
-					<button type="button" className="text-sm transition-colors hover:text-primary">
-						Funktionäre
-					</button>
-				}
-			/>
+			<DialogTrigger>Funktionäre</DialogTrigger>
 			<DialogContent className="max-h-[80vh] overflow-y-auto md:max-w-max!">
 				<DialogHeader>
 					<DialogTitle>Funktionäre</DialogTitle>

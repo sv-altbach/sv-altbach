@@ -1,4 +1,4 @@
-import { Container, Heading, Text } from "@radix-ui/themes";
+import { Badge, Container, Heading, Link as RadixLink, Text } from "@radix-ui/themes";
 import { Button } from "@sv-altbach/ui/components/button";
 import { IconArrowBadgeUp, IconX } from "@tabler/icons-react";
 import Link from "next/link";
@@ -47,7 +47,7 @@ const ScoreboardPage = () => {
 						<Text as="p">
 							Spieler, die neben ihrem Namen einen doppelten Pfeil nach oben haben
 							<IconArrowBadgeUp
-								className="inline text-lg text-red-600"
+								className="inline text-lg text-primary"
 								aria-hidden="true"
 							/>
 							, sind ebenfalls für das Finale qualifiziert.
@@ -55,7 +55,7 @@ const ScoreboardPage = () => {
 
 						<Text as="p" aria-hidden="true">
 							Spieler, die neben ihrem Namen ein
-							<IconX className="inline text-lg text-red-600" aria-hidden="true" />
+							<IconX className="inline text-lg text-primary" aria-hidden="true" />
 							haben, sind nicht für das Finale qualifiziert.
 						</Text>
 
@@ -70,16 +70,13 @@ const ScoreboardPage = () => {
 						</Text>
 
 						<Text as="p">
-							<span className="rounded-lg bg-red-100 px-2 py-1 font-bold text-red-700">
-								Masters-Punkte
-							</span>{" "}
-							= 100 × (erzielte Punkte / maximal erreichbare Punkte) ×{" "}
-							<Link
-								href="/new-scoring-system#tournamentFactor"
-								className="rounded-md p-0.5 text-red-700 underline focus:outline-2 focus:outline-red-700"
-							>
-								Turnierfaktor
-							</Link>
+							<Badge size="2">Masters-Punkte</Badge> = 100 × (erzielte Punkte /
+							maximal erreichbare Punkte) ×{" "}
+							<RadixLink asChild underline="always">
+								<Link href="/new-scoring-system#tournamentFactor">
+									Turnierfaktor
+								</Link>
+							</RadixLink>
 						</Text>
 
 						<Text as="p" my="2">

@@ -59,7 +59,7 @@ export function MembershipSection() {
 								</li>
 							))}
 						</ul>
-						<Button className="w-full uppercase" onClick={handleScroll}>
+						<Button className="w-full" onClick={handleScroll}>
 							Kontakt
 						</Button>
 					</CardContent>

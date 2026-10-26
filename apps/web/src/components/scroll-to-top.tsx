@@ -1,13 +1,8 @@
 import { Button } from "@sv-altbach/ui/components/button";
-import { cn } from "@sv-altbach/ui/lib/utils";
 import { IconArrowUp } from "@tabler/icons-react";
 import { useEffect, useEffectEvent, useState } from "react";
 
-export function ScrollToTopButton({
-	className,
-	children,
-	...props
-}: React.ComponentProps<typeof Button>) {
+export function ScrollToTopButton({ children, ...props }: React.ComponentProps<typeof Button>) {
 	const [visible, setVisible] = useState(false);
 
 	const updateVisibility = useEffectEvent(() => {
@@ -21,15 +16,12 @@ export function ScrollToTopButton({
 		return () => window.removeEventListener("scroll", updateVisibility);
 	}, []);
 
+	if (!visible) return null;
+
 	return (
 		<Button
 			variant="default"
 			size="icon-xl"
-			className={cn(
-				"rounded-full transition-opacity duration-200",
-				visible ? "opacity-100" : "pointer-events-none opacity-0",
-				className,
-			)}
 			onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
 			aria-label="Scroll to top"
 			{...props}

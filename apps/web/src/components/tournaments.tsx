@@ -177,9 +177,7 @@ export function TournamentsSection() {
 			<Accordion defaultValue={["masters"]}>
 				{tournaments.map((tournament) => (
 					<AccordionItem key={tournament.id} value={tournament.id}>
-						<AccordionTrigger className="text-lg font-semibold">
-							{tournament.title}
-						</AccordionTrigger>
+						<AccordionTrigger>{tournament.title}</AccordionTrigger>
 						<AccordionContent>
 							<div className="overflow-x-auto">
 								<Table>

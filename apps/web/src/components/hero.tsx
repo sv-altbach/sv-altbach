@@ -24,7 +24,7 @@ export function HeroSection({ children }: { children?: ReactNode }) {
 				<h1 className="mb-6 text-4xl font-bold text-white md:text-6xl lg:text-7xl">
 					Schachverein Altbach e.V.
 				</h1>
-				<Button size="xl" className="uppercase" onClick={handleScroll}>
+				<Button size="xl" onClick={handleScroll}>
 					Über den Verein
 				</Button>
 				{children}

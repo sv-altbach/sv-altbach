@@ -2,7 +2,7 @@ import { Container, Flex, Heading, Link, Separator, Text } from "@radix-ui/theme
 
 export function Footer() {
 	return (
-		<footer className="bg-[#0D1321] p-10">
+		<footer className="bg-black p-10">
 			<Container>
 				<Flex
 					className="text-white lg:mx-10"

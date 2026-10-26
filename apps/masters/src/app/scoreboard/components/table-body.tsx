@@ -33,9 +33,9 @@ export function TableBody() {
 			<Table.Row>
 				<Table.Cell className="py-5 text-center font-bold uppercase" colSpan={10}>
 					<Flex justify="center" align="center">
-						<IconArrowBadgeUp className="text-3xl text-red-600" />
+						<IconArrowBadgeUp className="text-3xl text-primary" />
 						<Text>Für das Finale qualifiziert</Text>
-						<IconArrowBadgeUp className="text-3xl text-red-600" />
+						<IconArrowBadgeUp className="text-3xl text-primary" />
 					</Flex>
 				</Table.Cell>
 			</Table.Row>
