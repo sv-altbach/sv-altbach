@@ -30,7 +30,8 @@ export function ImpressumPage() {
 						9186437
 					</p>
 					<p className="mb-6">
-						<span className="font-semibold text-primary">E-Mail:</span> am2702@aol.com
+						<span className="font-semibold text-primary">E-Mail:</span>{" "}
+						alexander.hande@svw.info
 					</p>
 
 					<p className="mb-2 font-bold">Vertreten durch:</p>

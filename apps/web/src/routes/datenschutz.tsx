@@ -62,7 +62,7 @@ export function DatenschutzPage() {
 					<p>
 						Telefon: +49 (0) 1520 9186437
 						<br />
-						E-Mail: am2702@aol.com
+						E-Mail: alexander.hande@svw.info
 					</p>
 					<p>Die oder der Datenschutzbeauftragte beim Anbieter ist:</p>
 					<p>
