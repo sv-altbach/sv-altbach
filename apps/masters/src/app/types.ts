@@ -56,7 +56,7 @@ export interface TournamentDataTypes {
 	date: string | null;
 	startTime: string | null;
 	endTime: string | null;
-	type: "blitz" | "rapid" | "960" | "final";
+	type: "blitz" | "rapid" | "960" | "final" | null;
 	mode: string | null;
 	pointRule: "1-point" | "3-point" | null;
 	evaluation: string | null;

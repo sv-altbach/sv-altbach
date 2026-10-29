@@ -12,7 +12,12 @@ export function Header() {
 			</Heading>
 
 			<Text as="p" size="5" className="text-white">
-				31. Oktober 2026, 73207 Plochingen
+				<span className="uppercase">Abgesagt: </span>{" "}
+				<del>31. Oktober 2026, 73207 Plochingen</del>
+			</Text>
+
+			<Text as="p" size="5" className="text-white">
+				Ein Ersatzturnier ist geplant. Der Termin wird in Kürze bekanntgegeben.
 			</Text>
 
 			<Flex gap="4" mt="5">
