@@ -4,7 +4,7 @@ import {
 	AccordionItem,
 	AccordionTrigger,
 } from "@sv-altbach/ui/components/accordion";
-import { Button } from "@sv-altbach/ui/components/button";
+// import { Button } from "@sv-altbach/ui/components/button";
 import {
 	Table,
 	TableBody,
@@ -14,164 +14,66 @@ import {
 	TableRow,
 } from "@sv-altbach/ui/components/table";
 
-const mastersUrl = import.meta.env.VITE_MASTERS_URL ?? "http://localhost:3001";
+// const mastersUrl = import.meta.env.VITE_MASTERS_URL ?? "http://localhost:3001";
 
-const tournaments = [
-	{
-		id: "masters",
-		title: "SVA Masters Finale (Einladungsturnier)",
-		details: [
-			{ label: "Wann?", value: "18.04.2026" },
-			{
-				label: "Wo?",
-				value: (
-					<address className="not-italic">
-						Schachvereich Altbach e. V.
-						<br />
-						Esslinger Str. 90
-						<br />
-						73776 Altbach
-					</address>
-				),
-			},
-			{
-				label: "Wie?",
-				value: "Finalturnier inkl. Elo-Auswertung. (Infos siehe Ausschreibung)",
-			},
-			{
-				label: "Startgebühr",
-				value: "Keine - Einladungsturnier",
-			},
-			{
-				label: "Weitere Infos",
-				value: (
-					<>
-						<p>
-							Dies ist ein Einladungsturnier. Es sind nur die Finalisten der SVA
-							Masters qualifiziert und zugelassen.
-						</p>
-
-						<Button
-							render={
-								<a href={mastersUrl} target="_blank" rel="noopener noreferrer">
-									Homepage SVA Masters
-								</a>
-							}
-							nativeButton={false}
-						/>
-					</>
-				),
-			},
-		],
-	},
-	{
-		id: "ko-wam",
-		title: "Altbacher ko-WAM",
-		subtitle: "Turnier der Württembergischen Amateurmeisterschaft",
-		details: [
-			{ label: "Wann?", value: "18.04.2026" },
-			{
-				label: "Wo?",
-				value: (
-					<address className="not-italic">
-						Bürgerzentrum Altbach (Bücherei)
-						<br />
-						Kelterstr. 1 (am Marktplatz)
-						<br />
-						73776 Altbach
-					</address>
-				),
-			},
-			{
-				label: "Wie?",
-				value: "Pokale für alle Gruppensieger, Medaillen für Platz 2 und 3, kleine Preise, mit DWZ-Auswertung",
-			},
-			{
-				label: "Startgebühr",
-				value: (
-					<>
-						<span>
-							<strong>15 €</strong> Frühbucher mit Voranmeldung bis 15.04.2026
-						</span>
-						<br />
-						<span>
-							<strong>18,00 €</strong> mit Voranmeldung bis 17.04.2026, 21:00 Uhr
-						</span>
-						<br />
-						<span>
-							<strong>20,00 €</strong> danach und am Turniertag
-						</span>
-					</>
-				),
-			},
-			{
-				label: "Weitere Infos",
-				value: (
-					<Button
-						render={
-							<a
-								href="/root/docs/Ausschreibung_KO-WAM-Altbach_2026.pdf"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								Ausschreibung
-							</a>
-						}
-						nativeButton={false}
-					/>
-				),
-			},
-		],
-	},
-	{
-		id: "wam",
-		title: "WAM / WJPT / SSGT",
-		subtitle:
-			"Württembergische Amateur-Meisterschaft + Jugend-Pokal-Turnier + Schulschach-Grand-Prix-Turnier",
-		details: [
-			{ label: "Wann?", value: "14.06.2026" },
-			{
-				label: "Wo?",
-				value: (
-					<address className="not-italic">
-						Sporthalle
-						<br />
-						Esslinger Straße 90
-						<br />
-						73776 Altbach
-					</address>
-				),
-			},
-			{
-				label: "Wie?",
-				value: "mit Pokalen, teilweise mit DWZ-Auswertung und Sachpreisen",
-			},
-			{
-				label: "Startgebühr",
-				value: "15 € bei Voranmeldung bis 12.06. / danach 20 €",
-			},
-			{
-				label: "Weitere Infos",
-				value: (
-					<Button
-						render={
-							<a
-								href="/root/docs/AUS-Altbacher Turniere_Schachzeitung_2026.pdf"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								Ausschreibung
-							</a>
-						}
-						nativeButton={false}
-					/>
-				),
-			},
-		],
-	},
+const tournaments: Tournament[] = [
+	// {
+	// 	id: "wam",
+	// 	title: "WAM / WJPT / SSGT",
+	// 	subtitle:
+	// 		"Württembergische Amateur-Meisterschaft + Jugend-Pokal-Turnier + Schulschach-Grand-Prix-Turnier",
+	// 	details: [
+	// 		{ label: "Wann?", value: "14.06.2026" },
+	// 		{
+	// 			label: "Wo?",
+	// 			value: (
+	// 				<address className="not-italic">
+	// 					Sporthalle
+	// 					<br />
+	// 					Esslinger Straße 90
+	// 					<br />
+	// 					73776 Altbach
+	// 				</address>
+	// 			),
+	// 		},
+	// 		{
+	// 			label: "Wie?",
+	// 			value: "mit Pokalen, teilweise mit DWZ-Auswertung und Sachpreisen",
+	// 		},
+	// 		{
+	// 			label: "Startgebühr",
+	// 			value: "15 € bei Voranmeldung bis 12.06. / danach 20 €",
+	// 		},
+	// 		{
+	// 			label: "Weitere Infos",
+	// 			value: (
+	// 				<Button
+	// 					render={
+	// 						<a
+	// 							href="/root/docs/AUS-Altbacher Turniere_Schachzeitung_2026.pdf"
+	// 							target="_blank"
+	// 							rel="noopener noreferrer"
+	// 						>
+	// 							Ausschreibung
+	// 						</a>
+	// 					}
+	// 					nativeButton={false}
+	// 				/>
+	// 			),
+	// 		},
+	// 	],
+	// },
 ];
 
 export function TournamentsSection() {
+	if (tournaments.length === 0) {
+		return (
+			<p className="text-md text-center leading-relaxed text-balance text-muted-foreground">
+				Es gibt aktuell keine anstehenden Turniere.
+			</p>
+		);
+	}
+
 	return (
 		<div className="mx-auto max-w-4xl">
 			<Accordion defaultValue={["masters"]}>
@@ -207,4 +109,14 @@ export function TournamentsSection() {
 			</Accordion>
 		</div>
 	);
+}
+
+interface Tournament {
+	id: string;
+	title: string;
+	subtitle: string;
+	details: {
+		label: string;
+		value: string | import("react").ReactElement;
+	}[];
 }
