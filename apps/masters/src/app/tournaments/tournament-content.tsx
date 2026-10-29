@@ -80,12 +80,18 @@ export function TournamentContent({ tournament }: Props) {
 	);
 }
 
-function getTypeValue(type: "blitz" | "rapid" | "960" | "final"): string {
+function getTypeValue(type: "blitz" | "rapid" | "960" | "final" | null): string {
+	const MESSAGE = "Modus wird bald bekanntgegeben.";
+
+	if (type === null) {
+		return MESSAGE;
+	}
+
 	const map: Record<"blitz" | "rapid" | "960" | "final", string> = {
 		blitz: "Blitz",
 		rapid: "Rapid",
 		"960": "Rapid Chess960",
-		final: "Modus wird bald bekanntgegeben.",
+		final: MESSAGE,
 	};
 
 	return map[type];
